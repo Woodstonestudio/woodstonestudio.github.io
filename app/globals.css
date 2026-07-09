@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #100f0c;
+  --surface: #1a1814;
+  --bone: #efeae0;
+  --line: rgba(239, 234, 224, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--bone);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(239, 234, 224, 0.18);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 1.5px solid rgba(239, 234, 224, 0.7);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Atmosphere: restrained warm key light + fine grain                  */
+/* ------------------------------------------------------------------ */
+
+.bg-keylight {
+  background:
+    radial-gradient(64% 48% at 50% -8%, rgba(255, 244, 224, 0.07), transparent 70%),
+    radial-gradient(90% 70% at 50% 115%, rgba(0, 0, 0, 0.5), transparent 60%);
+}
+
+
+/* Organic material grain — fibrous, ~1.5% — sits beneath content */
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.16' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 340px 340px;
+  opacity: 0.016;
+  mix-blend-mode: overlay;
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.028;
+}
+
+/* Cursor sheen — a hint of material catching light, not a spotlight */
+.spotlight {
+  background: radial-gradient(
+    460px circle at var(--spot-x, 50%) var(--spot-y, 30%),
+    rgba(255, 244, 224, 0.022),
+    transparent 72%
+  );
+}
+
+.hairline {
+  background: linear-gradient(to right, transparent, rgba(239, 234, 224, 0.12), transparent);
+  height: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
