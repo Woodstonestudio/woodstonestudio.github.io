@@ -15,33 +15,34 @@ export function Hero() {
         <div>
           <Reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
-              Independent Product Studio
+              Digital Technology Studio
             </p>
           </Reveal>
 
           <Reveal delay={0.1}>
             <h1 className="mt-8 text-[54px] font-light leading-[1.03] tracking-tightest text-bone sm:text-[67px] lg:text-[80px]">
-              Building products
+              We build what
               <br />
-              that last.
+              businesses run on.
             </h1>
           </Reveal>
 
           <Reveal delay={0.18}>
             <div className="mt-9 flex max-w-lg items-center gap-4">
               <span className="whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.2em] text-gray-warm">
-                Precision software
+                Design · Software
               </span>
               <span aria-hidden className="h-px flex-1 bg-line" />
               <span className="whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.2em] text-gray-warm">
-                Crafted with intention
+                Automation
               </span>
             </div>
           </Reveal>
 
           <Reveal delay={0.26}>
             <p className="mt-7 max-w-md text-lg leading-relaxed text-gray-warm">
-              Software as a craft. Built to last, down to the detail.
+              A technology studio that designs, builds and automates
+              digital businesses — with the craft of a product company.
             </p>
           </Reveal>
 

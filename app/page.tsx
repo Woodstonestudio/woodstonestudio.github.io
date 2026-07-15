@@ -1,8 +1,10 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
+import { ProductsIntro } from "@/components/products-intro";
 import { ContractorySection } from "@/components/contractory-section";
 import { AlphaOSSection } from "@/components/alphaos-section";
 import { AuthorAISection } from "@/components/authorai-section";
+import { Services } from "@/components/services";
 import { Studio } from "@/components/studio";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
@@ -18,9 +20,11 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <ProductsIntro />
         <ContractorySection />
         <AlphaOSSection />
         <AuthorAISection />
+        <Services />
         <Studio />
         <Contact />
       </main>

@@ -16,7 +16,6 @@ const capabilities = [
 export function ContractorySection() {
   return (
     <section
-      id="products"
       className="relative mx-auto flex min-h-svh max-w-6xl scroll-mt-16 items-center overflow-x-clip px-6 py-28 lg:px-8 lg:py-36"
     >
       <div className="grid w-full items-center gap-16 lg:grid-cols-[0.86fr_1fr] lg:gap-20">

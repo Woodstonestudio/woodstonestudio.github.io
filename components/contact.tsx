@@ -19,16 +19,23 @@ export function Contact() {
         <div className="w-full">
           <Reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
-              Contact
+              Start a project
             </p>
           </Reveal>
 
           <Reveal delay={0.08}>
             <h2 className="mt-8 max-w-4xl text-5xl font-light leading-[1.05] tracking-tightest text-bone sm:text-6xl lg:text-[80px]">
-              Let&apos;s build something
+              Have something
               <br />
-              remarkable.
+              to build?
             </h2>
+          </Reveal>
+
+          <Reveal delay={0.14}>
+            <p className="mt-8 max-w-md text-[17px] leading-[1.8] text-gray-warm">
+              Tell us what you&apos;re building — a product, a platform, or a
+              process worth automating. We&apos;ll take it from there.
+            </p>
           </Reveal>
 
           <Reveal delay={0.18}>

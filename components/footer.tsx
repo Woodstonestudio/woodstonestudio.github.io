@@ -38,6 +38,12 @@ export function Footer() {
               Products
             </a>
             <a
+              href="/#services"
+              className="text-sm text-gray-warm transition-colors hover:text-bone"
+            >
+              Services
+            </a>
+            <a
               href="/#studio"
               className="text-sm text-gray-warm transition-colors hover:text-bone"
             >

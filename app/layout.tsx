@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s — Woodstone Studio",
   },
   description:
-    "We design and build thoughtful AI, Web and Blockchain products with exceptional attention to detail.",
+    "Woodstone Studio is a technology studio that designs, builds and automates digital businesses — products, software, AI and web.",
   keywords: [
     "product studio",
     "software studio",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Woodstone Studio",
     description:
-      "Independent product studio. Building products that matter.",
+      "A technology studio that designs, builds and automates digital businesses.",
     url: "https://woodstonestudio.com",
     siteName: "Woodstone Studio",
     type: "website",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Woodstone Studio",
     description:
-      "Independent product studio. Building products that matter.",
+      "A technology studio that designs, builds and automates digital businesses.",
   },
   robots: { index: true, follow: true },
 };

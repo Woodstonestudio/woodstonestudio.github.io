@@ -21,9 +21,9 @@ export function Studio() {
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-8 max-w-3xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl lg:text-[56px]">
-                We build fewer things,
+                We solve problems
                 <br />
-                and build them to last.
+                worth solving well.
               </h2>
             </Reveal>
           </div>
@@ -31,9 +31,10 @@ export function Studio() {
           <div className="lg:pt-4">
             <Reveal delay={0.16}>
               <p className="max-w-sm text-[17px] leading-[1.8] text-gray-warm">
-                Woodstone is an independent product studio. We don&apos;t make
-                software for its own sake — we shape a small number of products
-                with care, precision, and an intent to endure.
+                Woodstone is a technology studio. We work across design,
+                software and automation — because most real problems don&apos;t
+                respect the line between them — and we hold every piece to a
+                product-maker&apos;s standard.
               </p>
             </Reveal>
             <Reveal delay={0.24}>
