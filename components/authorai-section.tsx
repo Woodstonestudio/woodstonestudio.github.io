@@ -3,9 +3,9 @@ import { Instrument } from "@/components/contractory/instrument";
 import { AuthorAIConsole } from "@/components/authorai/console";
 
 const capabilities = [
-  { name: "Draft", note: "A focused, distraction-free page" },
-  { name: "Suggest", note: "Offered in the margin, on request" },
-  { name: "Shape", note: "Structure that stays out of the way" },
+  { name: "Yaz", note: "Odaklı, dikkat dağıtmayan sayfa" },
+  { name: "Öner", note: "İstendiğinde kenarda sunulur" },
+  { name: "Biçimlendir", note: "Aradan çekilen yapı" },
 ];
 
 /**
@@ -30,17 +30,17 @@ export function AuthorAISection() {
 
           <Reveal delay={0.08}>
             <h2 className="mt-7 text-4xl font-light leading-[1.08] tracking-tightest text-bone sm:text-5xl lg:text-[54px]">
-              Writing, with the
+              Yapay zekâ arka planda,
               <br />
-              machine kept quiet.
+              odak sizde.
             </h2>
           </Reveal>
 
           <Reveal delay={0.16}>
             <p className="mt-8 max-w-md text-[17px] leading-[1.75] text-gray-warm">
-              AuthorAI is a writing instrument, not an autopilot. A focused
-              page where suggestions wait to be asked and the words remain
-              unmistakably yours.
+              AuthorAI bir yazma aracıdır, otomatik pilot değil. Yapay zekâ
+              yalnızca siz istediğinizde devreye girer; sayfa sizin, cümleler
+              sizin, son söz her zaman sizde.
             </p>
           </Reveal>
 
@@ -68,7 +68,7 @@ export function AuthorAISection() {
                 href="https://woodstonestudio.com"
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-white"
               >
-                View Project
+                Projeyi İncele
                 <span
                   aria-hidden
                   className="transition-transform duration-300 ease-soft group-hover:translate-x-1"
@@ -88,7 +88,7 @@ export function AuthorAISection() {
             </Instrument>
           </div>
           <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm lg:mt-8">
-            Nº 03 — Writing instrument
+            Nº 03 — Yazma aracı
           </p>
         </Reveal>
       </div>

@@ -18,9 +18,9 @@ import {
 } from "@/lib/contractory";
 
 export const metadata: Metadata = {
-  title: "Contractory — Deploy smart contracts with precision",
+  title: "Contractory — Akıllı sözleşmeleri hassasiyetle dağıtın",
   description:
-    "Contractory is a deployment workstation for Arc — typed deploys, built-in verification and revert detection for ERC-20, 721 and 1155.",
+    "Contractory, Arc için bir dağıtım çalışma istasyonudur — tipli dağıtımlar, yerleşik doğrulama ve ERC-20, 721 ve 1155 için hata tespiti.",
   alternates: { canonical: "/contractory" },
 };
 
@@ -38,21 +38,21 @@ export default function ContractoryPage() {
               </Reveal>
               <Reveal delay={0.08}>
                 <h1 className="mt-7 text-[54px] font-light leading-[1.03] tracking-tightest text-bone sm:text-[64px] lg:text-[76px]">
-                  Deploy smart
+                  Akıllı sözleşmeleri
                   <br />
-                  contracts with
+                  hassasiyetle
                   <br />
-                  precision.
+                  dağıtın.
                 </h1>
               </Reveal>
               <Reveal delay={0.16}>
                 <div className="mt-9 flex max-w-md items-center gap-4">
                   <span className="whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.2em] text-gray-warm">
-                    Developer OS
+                    Geliştirici OS
                   </span>
                   <span aria-hidden className="h-px flex-1 bg-line" />
                   <span className="whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.2em] text-gray-warm">
-                    Built for Arc
+                    Arc için
                   </span>
                 </div>
               </Reveal>
@@ -64,13 +64,13 @@ export default function ContractoryPage() {
                     rel="noopener noreferrer"
                     className="rounded-full bg-gradient-to-b from-[#F4F0E7] to-[#E2DCCF] px-7 py-3 text-sm font-medium text-[#14120e] shadow-[0_1px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                   >
-                    Launch Contractory
+                    Contractory'yi Aç
                   </a>
                   <Link
                     href="/#products"
                     className="rounded-full border border-line px-7 py-3 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(239,234,224,0.24)] hover:bg-[rgba(239,234,224,0.04)]"
                   >
-                    All products
+                    Tüm ürünler
                   </Link>
                 </div>
               </Reveal>
@@ -83,7 +83,7 @@ export default function ContractoryPage() {
                 </Instrument>
               </div>
               <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm lg:mt-8">
-                Nº 01 — Deployment console · Arc
+                Nº 01 — Dağıtım konsolu · Arc
               </p>
             </Reveal>
           </div>
@@ -93,7 +93,7 @@ export default function ContractoryPage() {
         <Band>
           <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr] lg:gap-20">
             <Reveal>
-              <Eyebrow>Overview</Eyebrow>
+              <Eyebrow>Genel bakış</Eyebrow>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-2xl font-light leading-[1.5] tracking-tight text-bone">
@@ -124,7 +124,7 @@ export default function ContractoryPage() {
         {/* ── Core Features ── */}
         <Band>
           <Reveal>
-            <Eyebrow>Core features</Eyebrow>
+            <Eyebrow>Temel özellikler</Eyebrow>
           </Reveal>
           <div className="mt-14 grid gap-x-16 gap-y-px sm:grid-cols-2">
             {features.map((f, i) => (
@@ -149,7 +149,7 @@ export default function ContractoryPage() {
 
         {/* ── Technology ── */}
         <Band>
-          <SectionHead eyebrow="Technology" headline="Built on a deliberate stack." />
+          <SectionHead eyebrow="Teknoloji" headline="Özenle seçilmiş bir yığın üzerine." />
           <div className="mt-14 grid gap-x-16 sm:grid-cols-2">
             {tech.map(([k, v], i) => (
               <Reveal key={k} delay={(i % 2) * 0.05}>
@@ -169,8 +169,8 @@ export default function ContractoryPage() {
         {/* ── Gallery / Product Screens ── */}
         <Band>
           <SectionHead
-            eyebrow="Product screens"
-            headline="The console, up close."
+            eyebrow="Ürün ekranları"
+            headline="Konsol, yakından."
           />
           <div className="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-14">
             <Reveal y={24}>
@@ -178,7 +178,7 @@ export default function ContractoryPage() {
                 <ContractoryConsole />
               </Instrument>
               <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm">
-                Deploy — typed constructor, live build log
+                Dağıt — tipli constructor, canlı derleme günlüğü
               </p>
             </Reveal>
             <Reveal y={24} delay={0.1}>
@@ -187,7 +187,7 @@ export default function ContractoryPage() {
                   <ContractoryConsole />
                 </Instrument>
                 <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm">
-                  Activity — recent deployments &amp; status
+                  Etkinlik — son dağıtımlar ve durum
                 </p>
               </div>
             </Reveal>
@@ -197,8 +197,8 @@ export default function ContractoryPage() {
         {/* ── Architecture ── */}
         <Band>
           <SectionHead
-            eyebrow="Architecture"
-            headline="Source to verified, in four moves."
+            eyebrow="Mimari"
+            headline="Kaynaktan doğrulanmışa, dört hamlede."
           />
           <div className="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
             {architecture.map((a, i) => (
@@ -221,7 +221,7 @@ export default function ContractoryPage() {
 
         {/* ── Roadmap ── */}
         <Band>
-          <SectionHead eyebrow="Roadmap" headline="Shipping, then sharpening." />
+          <SectionHead eyebrow="Yol haritası" headline="Önce yayına, sonra keskinleştirme." />
           <div className="mt-14 space-y-px">
             {roadmap.map((r, i) => (
               <Reveal key={r.when} delay={i * 0.06}>
@@ -252,7 +252,7 @@ export default function ContractoryPage() {
 
         {/* ── FAQ ── */}
         <Band>
-          <SectionHead eyebrow="FAQ" headline="Questions, answered." />
+          <SectionHead eyebrow="SSS" headline="Sorular, yanıtlar." />
           <div className="mt-14 grid gap-x-16 gap-y-px lg:grid-cols-2">
             {faq.map((item, i) => (
               <Reveal key={item.q} delay={(i % 2) * 0.06}>
@@ -274,9 +274,9 @@ export default function ContractoryPage() {
           <div className="flex flex-col items-start gap-10">
             <Reveal>
               <h2 className="max-w-3xl text-4xl font-light leading-[1.08] tracking-tightest text-bone sm:text-5xl lg:text-[60px]">
-                Deploy your next contract
+                Sıradaki sözleşmenizi
                 <br />
-                on Contractory.
+                Contractory'de dağıtın.
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
@@ -287,13 +287,13 @@ export default function ContractoryPage() {
                   rel="noopener noreferrer"
                   className="rounded-full bg-gradient-to-b from-[#F4F0E7] to-[#E2DCCF] px-7 py-3.5 text-sm font-medium text-[#14120e] shadow-[0_1px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                 >
-                  Launch Contractory
+                  Contractory'yi Aç
                 </a>
                 <Link
                   href="/#contact"
                   className="rounded-full border border-line px-7 py-3.5 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(239,234,224,0.24)] hover:bg-[rgba(239,234,224,0.04)]"
                 >
-                  Talk to the studio
+                  Stüdyoyla konuşun
                 </Link>
               </div>
             </Reveal>

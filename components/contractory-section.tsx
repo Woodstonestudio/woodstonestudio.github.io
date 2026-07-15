@@ -3,9 +3,9 @@ import { Instrument } from "@/components/contractory/instrument";
 import { ContractoryConsole } from "@/components/contractory/console";
 
 const capabilities = [
-  { name: "Deploy", note: "ERC-20 · 721 · 1155 to Arc" },
-  { name: "Verify", note: "Source verified on explorer" },
-  { name: "Manage", note: "Lifecycle from one surface" },
+  { name: "Dağıt", note: "Arc'a ERC-20 · 721 · 1155" },
+  { name: "Doğrula", note: "Gezginde kaynak doğrulaması" },
+  { name: "Yönet", note: "Tek yüzeyden yaşam döngüsü" },
 ];
 
 /**
@@ -29,17 +29,17 @@ export function ContractorySection() {
 
           <Reveal delay={0.08}>
             <h2 className="mt-7 text-4xl font-light leading-[1.08] tracking-tightest text-bone sm:text-5xl lg:text-[54px]">
-              Deploy smart contracts
+              Akıllı sözleşme dağıtımı,
               <br />
-              with precision.
+              baştan sona tek yerde.
             </h2>
           </Reveal>
 
           <Reveal delay={0.16}>
             <p className="mt-8 max-w-md text-[17px] leading-[1.75] text-gray-warm">
-              Contractory simplifies smart contract deployment, verification
-              and lifecycle management with tools built for serious blockchain
-              teams.
+              Derlemeden doğrulamaya, akıllı sözleşmenin tüm yaşam döngüsünü
+              tek bir yüzeyde toplar. Üretimde iş çıkaran blockchain ekipleri
+              için kurulmuş, sade ve güvenilir bir araç.
             </p>
           </Reveal>
 
@@ -70,7 +70,7 @@ export function ContractorySection() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-white"
               >
-                View Project
+                Projeyi İncele
                 <span
                   aria-hidden
                   className="transition-transform duration-300 ease-soft group-hover:translate-x-1"
@@ -91,7 +91,7 @@ export function ContractorySection() {
           </div>
           {/* Etched caption — ties type to object */}
           <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm lg:mt-8">
-            Nº 01 — Deployment console · Arc
+            Nº 01 — Dağıtım konsolu · Arc
           </p>
         </Reveal>
       </div>

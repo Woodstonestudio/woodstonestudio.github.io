@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Woodstone Studio",
   ],
   openGraph: {
-    title: "Woodstone Studio",
+    title: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
     description:
       "A technology studio that designs, builds and automates digital businesses.",
     url: "https://woodstonestudio.com",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Woodstone Studio",
+    title: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
     description:
       "A technology studio that designs, builds and automates digital businesses.",
   },
@@ -42,7 +42,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="tr" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="font-sans bg-base text-bone antialiased">
         {/* Ambient background layers */}
         <div aria-hidden className="pointer-events-none fixed inset-0 z-0">

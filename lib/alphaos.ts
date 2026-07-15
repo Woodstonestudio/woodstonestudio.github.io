@@ -1,56 +1,56 @@
-/** Content model for the AlphaOS product page. */
+/** AlphaOS ürün sayfasının içerik modeli (Türkçe). */
 
 export const overview =
-  "AlphaOS is a reputation layer for Base. It turns on-chain activity into a score anyone can audit — quests completed, XP earned, badges held and Founder Passes verified, every operator resolved to a Basename and ranked in the open.";
+  "AlphaOS, Base için bir itibar katmanıdır. Zincir üstü etkinliği herkesin denetleyebileceği bir puana dönüştürür — tamamlanan görevler, kazanılan XP, sahip olunan rozetler ve doğrulanmış Founder Pass'ler; her operatör bir Basename'e çözümlenir ve açıkça sıralanır.";
 
 export const problem = {
-  eyebrow: "The problem",
-  headline: "On-chain trust is mostly a claim.",
-  body: "Wallets are anonymous by default and reputation lives in screenshots and follower counts. There is no shared, verifiable measure of who has actually shown up, contributed and earned standing in a network.",
+  eyebrow: "Sorun",
+  headline: "Zincir üstü güven, çoğunlukla bir iddiadan ibaret.",
+  body: "Cüzdanlar varsayılan olarak anonimdir; itibar ise ekran görüntülerinde ve takipçi sayılarında yaşar. Kimin gerçekten emek verdiğini, katkı sunduğunu ve bir ağda konum kazandığını gösteren ortak, doğrulanabilir bir ölçü yoktur.",
 };
 
 export const solution = {
-  eyebrow: "The solution",
-  headline: "Reputation, measured on-chain.",
-  body: "AlphaOS records contribution as it happens — quests, XP and badges settled to Base — and ranks operators on a leaderboard resolved to Basenames. Every score traces back to a transaction, so standing is earned, not asserted.",
+  eyebrow: "Çözüm",
+  headline: "İtibar, zincir üstünde ölçülür.",
+  body: "AlphaOS katkıyı oluştuğu anda kaydeder — Base'e işlenen görevler, XP ve rozetler — ve operatörleri Basename'lere çözümlenmiş bir lider tablosunda sıralar. Her puan bir işleme kadar izlenebilir; yani konum iddia edilmez, kazanılır.",
 };
 
 export const features = [
-  { n: "01", name: "Reputation score", body: "A single, auditable score per operator, computed from on-chain activity and verifiable down to the transaction." },
-  { n: "02", name: "Quests", body: "Structured on-chain tasks that grant XP and badges on completion — contribution turned into a measurable act." },
-  { n: "03", name: "XP & levels", body: "Experience accrues as operators participate, with tiers that reflect sustained standing rather than a single moment." },
-  { n: "04", name: "Founder Pass", body: "An ERC-721 pass that verifies early standing and unlocks free access across the network via a signed check." },
-  { n: "05", name: "On-chain identity", body: "Every operator is resolved to a Basename with a TTL cache, so the leaderboard reads as people, not hex." },
-  { n: "06", name: "Live leaderboard", body: "An open ranking that updates as scores settle on Base — reputation visible to the whole network." },
+  { n: "01", name: "İtibar puanı", body: "Operatör başına tek, denetlenebilir bir puan; zincir üstü etkinlikten hesaplanır ve işleme kadar doğrulanabilir." },
+  { n: "02", name: "Görevler", body: "Tamamlandığında XP ve rozet kazandıran yapılandırılmış zincir üstü görevler — katkıyı ölçülebilir bir eyleme dönüştürür." },
+  { n: "03", name: "XP ve seviyeler", body: "Operatörler katıldıkça deneyim birikir; kademeler tek bir anı değil, süregelen konumu yansıtır." },
+  { n: "04", name: "Founder Pass", body: "Erken konumu doğrulayan ve imzalı bir kontrolle ağ genelinde ücretsiz erişim açan bir ERC-721 pass." },
+  { n: "05", name: "Zincir üstü kimlik", body: "Her operatör TTL önbellekli bir Basename'e çözümlenir; böylece lider tablosu hex değil, kişiler olarak okunur." },
+  { n: "06", name: "Canlı lider tablosu", body: "Puanlar Base'e işlendikçe güncellenen açık bir sıralama — itibar tüm ağa görünür." },
 ];
 
 export const tech = [
-  ["Framework", "Next.js · React"],
-  ["Chain", "Base (mainnet)"],
-  ["Identity", "Basenames · TTL cache"],
-  ["Passes", "ERC-721 · ERC-8021 dataSuffix"],
-  ["Access", "x402 · signed verification"],
-  ["Data", "Supabase analytics"],
-  ["Interface", "MCP server"],
-  ["Styling", "Tailwind CSS"],
+  ["Çatı", "Next.js · React"],
+  ["Zincir", "Base (mainnet)"],
+  ["Kimlik", "Basename · TTL önbellek"],
+  ["Pass'ler", "ERC-721 · ERC-8021 dataSuffix"],
+  ["Erişim", "x402 · imzalı doğrulama"],
+  ["Veri", "Supabase analitiği"],
+  ["Arayüz", "MCP sunucusu"],
+  ["Stil", "Tailwind CSS"],
 ];
 
 export const architecture = [
-  { step: "Act", detail: "Operators complete quests and contribute on Base; activity settles on-chain." },
-  { step: "Resolve", detail: "Each address resolves to a Basename, cached with a TTL for fast reads." },
-  { step: "Score", detail: "XP, badges and Founder Pass status compute into an auditable reputation score." },
-  { step: "Rank", detail: "Scores publish to a live, open leaderboard readable by the whole network." },
+  { step: "Katıl", detail: "Operatörler Base üzerinde görev tamamlar ve katkı sunar; etkinlik zincir üstüne işlenir." },
+  { step: "Çözümle", detail: "Her adres bir Basename'e çözümlenir, hızlı okuma için TTL ile önbelleğe alınır." },
+  { step: "Puanla", detail: "XP, rozetler ve Founder Pass durumu denetlenebilir bir itibar puanına dönüşür." },
+  { step: "Sırala", detail: "Puanlar, tüm ağın okuyabildiği canlı ve açık bir lider tablosunda yayımlanır." },
 ];
 
 export const roadmap = [
-  { when: "Live", title: "Reputation on Base", detail: "Quests, XP, badges, Founder Pass and a Basename-resolved leaderboard, live on Base mainnet.", done: true },
-  { when: "Next", title: "Builder Network", detail: "Project profiles with deployer-match verification and an append-only contribution ledger.", done: false },
-  { when: "Later", title: "Conditional rewards", detail: "Earnout infrastructure — rewards released against verified on-chain contribution.", done: false },
+  { when: "Canlı", title: "Base üzerinde itibar", detail: "Görevler, XP, rozetler, Founder Pass ve Basename'e çözümlenen lider tablosu — Base mainnet'te canlı.", done: true },
+  { when: "Sıradaki", title: "Builder Network", detail: "Deployer eşleştirmeli doğrulama ve yalnızca eklenen (append-only) katkı defteriyle proje profilleri.", done: false },
+  { when: "İleride", title: "Koşullu ödüller", detail: "Earnout altyapısı — ödüller, doğrulanmış zincir üstü katkıya karşılık serbest bırakılır.", done: false },
 ];
 
 export const faq = [
-  { q: "Which network does AlphaOS use?", a: "Base mainnet. Scores, quests and passes all settle on-chain, and the leaderboard reads directly from Base." },
-  { q: "What is the Founder Pass?", a: "An ERC-721 pass that verifies early standing. Holding it unlocks free access across the network through a signed, time-limited check." },
-  { q: "How is reputation calculated?", a: "From on-chain activity — quests completed, XP earned and badges held — combined into a single score that traces back to transactions." },
-  { q: "How are operators identified?", a: "Each address is resolved to a Basename with a TTL cache, so the leaderboard shows names rather than raw addresses." },
+  { q: "AlphaOS hangi ağı kullanıyor?", a: "Base mainnet. Puanlar, görevler ve pass'ler zincir üstüne işlenir; lider tablosu doğrudan Base'den okunur." },
+  { q: "Founder Pass nedir?", a: "Erken konumu doğrulayan bir ERC-721 pass. Sahip olmak, imzalı ve süreli bir kontrolle ağ genelinde ücretsiz erişim açar." },
+  { q: "İtibar nasıl hesaplanıyor?", a: "Zincir üstü etkinlikten — tamamlanan görevler, kazanılan XP ve sahip olunan rozetler — işlemlere kadar izlenebilen tek bir puanda birleştirilerek." },
+  { q: "Operatörler nasıl tanımlanıyor?", a: "Her adres TTL önbellekli bir Basename'e çözümlenir; böylece lider tablosu ham adresler yerine isimler gösterir." },
 ];

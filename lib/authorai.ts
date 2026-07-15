@@ -1,62 +1,62 @@
-/** Content model for the AuthorAI product page. */
+/** AuthorAI ürün sayfasının içerik modeli (Türkçe). */
 
 export const overview =
-  "AuthorAI is a writing instrument, not an autopilot. A focused page where structure stays out of the way, suggestions wait to be asked, and the words remain unmistakably yours — from first draft to finished piece.";
+  "AuthorAI bir yazma aracıdır, otopilot değil. Yapının aradan çekildiği, önerilerin istenene kadar beklediği ve kelimelerin tartışmasız sizin kaldığı odaklı bir sayfa — ilk taslaktan bitmiş metne kadar.";
 
 export const problem = {
-  eyebrow: "The problem",
-  headline: "Most AI writing tools crowd the page.",
-  body: "They interrupt, autocomplete over your voice, and turn writing into a negotiation with a machine. The result reads like everyone else's — competent, generic, and no longer quite yours.",
+  eyebrow: "Sorun",
+  headline: "Çoğu AI yazma aracı sayfayı boğar.",
+  body: "Sözünüzü keser, sesinizin üstüne otomatik tamamlama yapar ve yazmayı bir makineyle pazarlığa çevirir. Sonuç herkesinkine benzer — yetkin, sıradan ve artık tam olarak sizin değil.",
 };
 
 export const solution = {
-  eyebrow: "The solution",
-  headline: "Assistance kept in the margin.",
-  body: "AuthorAI keeps the page clear and the help at arm's length. Suggestions appear when you ask for them, structure is offered rather than imposed, and every sentence stays yours to accept, rewrite or ignore.",
+  eyebrow: "Çözüm",
+  headline: "Yardım, kenarda tutulur.",
+  body: "AuthorAI sayfayı açık, yardımı ise kol mesafesinde tutar. Öneriler yalnızca istediğinizde kenarda belirir, yapı dayatılmaz sunulur ve her cümle kabul etmek, yeniden yazmak ya da görmezden gelmek üzere sizin kalır.",
 };
 
 export const features = [
-  { n: "01", name: "The focused page", body: "A calm, distraction-free editor with a live caret and generous margin — built for long-form work, not quick replies." },
-  { n: "02", name: "Suggestions on request", body: "Continuations and rewrites appear in the margin only when asked, so the machine never writes over your voice." },
-  { n: "03", name: "Structure, offered", body: "Chapter and section outlines you can adopt or ignore — a scaffold that never becomes a cage." },
-  { n: "04", name: "Your voice, preserved", body: "Every suggestion is a proposal. Accept, rewrite or dismiss — the finished text remains unmistakably yours." },
-  { n: "05", name: "Draft to publish", body: "Move from blank page to finished piece in one place, with the manuscript always in view." },
-  { n: "06", name: "Quiet by default", body: "No pop-ups, no autocomplete racing ahead — assistance stays out of the way until you reach for it." },
+  { n: "01", name: "Odaklı sayfa", body: "Canlı imleçli, geniş kenar boşluklu, dikkat dağıtmayan sakin bir editör — hızlı yanıtlar için değil, uzun metinler için kurulmuş." },
+  { n: "02", name: "İstendiğinde öneri", body: "Devam ve yeniden yazma önerileri yalnızca istendiğinde kenarda belirir; makine sesinizin üstüne asla yazmaz." },
+  { n: "03", name: "Sunulan yapı", body: "Benimseyebileceğiniz ya da yok sayabileceğiniz bölüm ve başlık taslakları — asla kafese dönüşmeyen bir iskele." },
+  { n: "04", name: "Sesiniz korunur", body: "Her öneri bir tekliftir. Kabul et, yeniden yaz ya da reddet — bitmiş metin tartışmasız sizin kalır." },
+  { n: "05", name: "Taslaktan yayına", body: "Boş sayfadan bitmiş esere kadar tek yerde ilerleyin; el yazması hep gözünüzün önünde." },
+  { n: "06", name: "Varsayılan sessizlik", body: "Açılır pencere yok, önden koşan otomatik tamamlama yok — siz uzanana kadar yardım kenarda durur." },
 ];
 
 export const workflow = [
-  { step: "Draft", detail: "Open a clean page and write. The editor stays quiet and out of the way." },
-  { step: "Ask", detail: "Request a continuation or rewrite; a suggestion appears in the margin, never on the line." },
-  { step: "Shape", detail: "Adopt an outline where it helps; restructure freely without losing your place." },
-  { step: "Publish", detail: "Take the finished manuscript from draft to published piece in the same surface." },
+  { step: "Yaz", detail: "Temiz bir sayfa açın ve yazın. Editör sessiz ve aradan çekilmiş kalır." },
+  { step: "İste", detail: "Bir devam ya da yeniden yazma isteyin; öneri satırda değil, kenarda belirir." },
+  { step: "Biçimlendir", detail: "Yardımı olduğu yerde bir taslağı benimseyin; yerinizi kaybetmeden serbestçe yeniden düzenleyin." },
+  { step: "Yayımla", detail: "Bitmiş el yazmasını aynı yüzeyde taslaktan yayımlanmış esere taşıyın." },
 ];
 
 export const assistance = [
-  { name: "Continue", body: "A proposed next passage in your voice, offered in the margin for you to accept or refine." },
-  { name: "Rewrite", body: "A gentler or sharper version of a selected passage, without overwriting the original until you choose." },
-  { name: "Outline", body: "A structural suggestion for chapters and sections you can adopt piece by piece." },
+  { name: "Devam et", body: "Sizin sesinizde önerilen bir sonraki pasaj; kabul etmeniz ya da inceltmeniz için kenarda sunulur." },
+  { name: "Yeniden yaz", body: "Seçili bir pasajın daha yumuşak ya da daha keskin bir hâli; siz seçene kadar orijinalin üstüne yazılmaz." },
+  { name: "Taslak çıkar", body: "Parça parça benimseyebileceğiniz, bölümler ve başlıklar için yapısal bir öneri." },
 ];
 
 export const tech = [
-  ["Framework", "Next.js 15 · React 19"],
-  ["Language", "TypeScript"],
-  ["Assistance", "OpenAI"],
-  ["Data", "Supabase"],
-  ["Auth", "Supabase Auth"],
-  ["Editor", "Focused manuscript surface"],
-  ["Styling", "Tailwind CSS"],
-  ["Status", "In active development"],
+  ["Çatı", "Next.js 15 · React 19"],
+  ["Dil", "TypeScript"],
+  ["Yardım", "OpenAI"],
+  ["Veri", "Supabase"],
+  ["Kimlik", "Supabase Auth"],
+  ["Editör", "Odaklı el yazması yüzeyi"],
+  ["Stil", "Tailwind CSS"],
+  ["Durum", "Aktif geliştirmede"],
 ];
 
 export const roadmap = [
-  { when: "Now", title: "The focused editor", detail: "A distraction-free manuscript surface with margin suggestions and offered structure.", done: true },
-  { when: "Next", title: "Publishing flow", detail: "From finished draft to published piece without leaving the page.", done: false },
-  { when: "Later", title: "Long-form projects", detail: "Multi-chapter manuscripts with structure that holds across a whole book.", done: false },
+  { when: "Şimdi", title: "Odaklı editör", detail: "Kenar önerileri ve sunulan yapıya sahip, dikkat dağıtmayan bir el yazması yüzeyi.", done: true },
+  { when: "Sıradaki", title: "Yayımlama akışı", detail: "Bitmiş taslaktan yayımlanmış esere, sayfadan çıkmadan.", done: false },
+  { when: "İleride", title: "Uzun soluklu projeler", detail: "Bir kitabın tamamında tutarlı kalan yapıyla çok bölümlü el yazmaları.", done: false },
 ];
 
 export const faq = [
-  { q: "Is AuthorAI available yet?", a: "AuthorAI is in active development. The focused editor and margin assistance are taking shape; publishing and long-form project support come next." },
-  { q: "Will AI write for me?", a: "Only when you ask. Suggestions appear in the margin as proposals — the machine never writes over your voice or autocompletes on the line." },
-  { q: "Does it keep my writing mine?", a: "Yes. Every suggestion is accept, rewrite or dismiss. The finished text stays unmistakably yours." },
-  { q: "What is AuthorAI built on?", a: "A Next.js 15 and TypeScript stack with Supabase for data and auth, and OpenAI powering the optional assistance." },
+  { q: "AuthorAI kullanıma hazır mı?", a: "AuthorAI aktif geliştirmede. Odaklı editör ve kenar yardımı şekilleniyor; yayımlama ve uzun soluklu proje desteği sıradaki adımlar." },
+  { q: "AI benim yerime mi yazacak?", a: "Yalnızca istediğinizde. Öneriler kenarda birer teklif olarak belirir — makine sesinizin üstüne yazmaz, satırda otomatik tamamlama yapmaz." },
+  { q: "Yazdıklarım bana ait kalıyor mu?", a: "Evet. Her öneri kabul, yeniden yaz ya da reddet seçeneğidir. Bitmiş metin tartışmasız sizin kalır." },
+  { q: "AuthorAI neyin üstüne kurulu?", a: "Veri ve kimlik için Supabase, isteğe bağlı yardım için OpenAI ile birlikte Next.js 15 ve TypeScript üzerine." },
 ];

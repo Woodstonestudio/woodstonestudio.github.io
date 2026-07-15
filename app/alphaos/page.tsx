@@ -20,9 +20,9 @@ import {
 const BLUE = "text-[#7fa0ff]";
 
 export const metadata: Metadata = {
-  title: "AlphaOS — Reputation you can verify",
+  title: "AlphaOS — Doğrulayabileceğiniz itibar",
   description:
-    "AlphaOS is a reputation layer for Base — quests, XP, badges and Founder Pass, every operator resolved to a Basename and ranked in the open.",
+    "AlphaOS, Base için bir itibar katmanıdır — görevler, XP, rozetler ve Founder Pass; her operatör bir Basename'e çözümlenir ve açıkça sıralanır.",
   alternates: { canonical: "/alphaos" },
 };
 
@@ -42,7 +42,7 @@ export default function AlphaOSPage() {
                 </Instrument>
               </div>
               <p className="mt-6 pl-1 text-right font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm lg:mt-8 lg:pr-1">
-                Nº 02 — Reputation instrument · Base
+                Nº 02 — İtibar aracı · Base
               </p>
             </Reveal>
 
@@ -53,21 +53,21 @@ export default function AlphaOSPage() {
               </Reveal>
               <Reveal delay={0.08}>
                 <h1 className="mt-7 text-[54px] font-light leading-[1.03] tracking-tightest text-bone sm:text-[64px] lg:text-[76px]">
-                  Reputation
+                  Doğrulayabileceğiniz
                   <br />
-                  you can
+                  bir
                   <br />
-                  verify.
+                  itibar.
                 </h1>
               </Reveal>
               <Reveal delay={0.16}>
                 <div className="mt-9 flex max-w-md items-center gap-4">
                   <span className="whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.2em] text-gray-warm">
-                    On-chain reputation
+                    Zincir üstü itibar
                   </span>
                   <span aria-hidden className="h-px flex-1 bg-line" />
                   <span className="whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.2em] text-gray-warm">
-                    Built on Base
+                    Base üzerine
                   </span>
                 </div>
               </Reveal>
@@ -79,13 +79,13 @@ export default function AlphaOSPage() {
                     rel="noopener noreferrer"
                     className="rounded-full bg-gradient-to-b from-[#F4F0E7] to-[#E2DCCF] px-7 py-3 text-sm font-medium text-[#14120e] shadow-[0_1px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                   >
-                    Launch AlphaOS
+                    AlphaOS'u Aç
                   </a>
                   <Link
                     href="/#products"
                     className="rounded-full border border-line px-7 py-3 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(239,234,224,0.24)] hover:bg-[rgba(239,234,224,0.04)]"
                   >
-                    All products
+                    Tüm ürünler
                   </Link>
                 </div>
               </Reveal>
@@ -97,7 +97,7 @@ export default function AlphaOSPage() {
         <Band>
           <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr] lg:gap-20">
             <Reveal>
-              <Eyebrow>Overview</Eyebrow>
+              <Eyebrow>Genel bakış</Eyebrow>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-2xl font-light leading-[1.5] tracking-tight text-bone">
@@ -120,7 +120,7 @@ export default function AlphaOSPage() {
         {/* ── Features ── */}
         <Band>
           <Reveal>
-            <Eyebrow>Features</Eyebrow>
+            <Eyebrow>Özellikler</Eyebrow>
           </Reveal>
           <div className="mt-14 grid gap-x-16 gap-y-px sm:grid-cols-2">
             {features.map((f, i) => (
@@ -143,7 +143,7 @@ export default function AlphaOSPage() {
 
         {/* ── Architecture ── */}
         <Band>
-          <SectionHead eyebrow="Architecture" headline="Activity to reputation, in four moves." />
+          <SectionHead eyebrow="Mimari" headline="Etkinlikten itibara, dört hamlede." />
           <div className="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
             {architecture.map((a, i) => (
               <Reveal key={a.step} delay={i * 0.06}>
@@ -165,14 +165,14 @@ export default function AlphaOSPage() {
 
         {/* ── Gallery ── */}
         <Band>
-          <SectionHead eyebrow="Product screens" headline="The instrument, up close." />
+          <SectionHead eyebrow="Ürün ekranları" headline="Araç, yakından." />
           <div className="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-14">
             <Reveal y={24}>
               <Instrument>
                 <AlphaOSConsole />
               </Instrument>
               <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm">
-                Leaderboard — Basename-resolved, all-time
+                Lider tablosu — Basename'e çözümlenmiş, tüm zamanlar
               </p>
             </Reveal>
             <Reveal y={24} delay={0.1}>
@@ -181,7 +181,7 @@ export default function AlphaOSPage() {
                   <AlphaOSConsole />
                 </Instrument>
                 <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm">
-                  Operator proof — quests, badges, verified
+                  Operatör kanıtı — görevler, rozetler, doğrulanmış
                 </p>
               </div>
             </Reveal>
@@ -190,7 +190,7 @@ export default function AlphaOSPage() {
 
         {/* ── Technology ── */}
         <Band>
-          <SectionHead eyebrow="Technology" headline="Base-native, verifiable by design." />
+          <SectionHead eyebrow="Teknoloji" headline="Base'e özel, tasarımı gereği doğrulanabilir." />
           <div className="mt-14 grid gap-x-16 sm:grid-cols-2">
             {tech.map(([k, v], i) => (
               <Reveal key={k} delay={(i % 2) * 0.05}>
@@ -209,7 +209,7 @@ export default function AlphaOSPage() {
 
         {/* ── Roadmap ── */}
         <Band>
-          <SectionHead eyebrow="Roadmap" headline="From reputation to rewards." />
+          <SectionHead eyebrow="Yol haritası" headline="İtibardan ödüllere." />
           <div className="mt-14 space-y-px">
             {roadmap.map((r, i) => (
               <Reveal key={r.when} delay={i * 0.06}>
@@ -240,7 +240,7 @@ export default function AlphaOSPage() {
 
         {/* ── FAQ ── */}
         <Band>
-          <SectionHead eyebrow="FAQ" headline="Questions, answered." />
+          <SectionHead eyebrow="SSS" headline="Sorular, yanıtlar." />
           <div className="mt-14 grid gap-x-16 gap-y-px lg:grid-cols-2">
             {faq.map((item, i) => (
               <Reveal key={item.q} delay={(i % 2) * 0.06}>
@@ -262,9 +262,9 @@ export default function AlphaOSPage() {
           <div className="flex flex-col items-start gap-10">
             <Reveal>
               <h2 className="max-w-3xl text-4xl font-light leading-[1.08] tracking-tightest text-bone sm:text-5xl lg:text-[60px]">
-                Earn a reputation
+                Kanıtlayabileceğiniz
                 <br />
-                you can prove.
+                bir itibar kazanın.
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
@@ -275,13 +275,13 @@ export default function AlphaOSPage() {
                   rel="noopener noreferrer"
                   className="rounded-full bg-gradient-to-b from-[#F4F0E7] to-[#E2DCCF] px-7 py-3.5 text-sm font-medium text-[#14120e] shadow-[0_1px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                 >
-                  Launch AlphaOS
+                  AlphaOS'u Aç
                 </a>
                 <Link
                   href="/#contact"
                   className="rounded-full border border-line px-7 py-3.5 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(239,234,224,0.24)] hover:bg-[rgba(239,234,224,0.04)]"
                 >
-                  Talk to the studio
+                  Stüdyoyla konuşun
                 </Link>
               </div>
             </Reveal>

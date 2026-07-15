@@ -21,9 +21,9 @@ import {
 const AMBER = "text-[#c79a4e]";
 
 export const metadata: Metadata = {
-  title: "AuthorAI — A quieter way to write",
+  title: "AuthorAI — Yazmanın daha sakin yolu",
   description:
-    "AuthorAI is a writing instrument, not an autopilot — a focused page where assistance waits in the margin and the words stay yours.",
+    "AuthorAI bir yazma aracıdır, otopilot değil — yardımın kenarda beklediği ve kelimelerin sizin kaldığı odaklı bir sayfa.",
   alternates: { canonical: "/authorai" },
 };
 
@@ -41,21 +41,21 @@ export default function AuthorAIPage() {
               </Reveal>
               <Reveal delay={0.08}>
                 <h1 className="mt-7 text-[54px] font-light leading-[1.03] tracking-tightest text-bone sm:text-[64px] lg:text-[76px]">
-                  A quieter
+                  Yazmanın
                   <br />
-                  way to
+                  daha sakin
                   <br />
-                  write.
+                  yolu.
                 </h1>
               </Reveal>
               <Reveal delay={0.16}>
                 <div className="mt-9 flex max-w-md items-center gap-4">
                   <span className="whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.2em] text-gray-warm">
-                    A writing instrument
+                    Bir yazma aracı
                   </span>
                   <span aria-hidden className="h-px flex-1 bg-line" />
                   <span className="whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.2em] text-gray-warm">
-                    Not an autopilot
+                    Otopilot değil
                   </span>
                 </div>
               </Reveal>
@@ -65,13 +65,13 @@ export default function AuthorAIPage() {
                     href="https://woodstonestudio.com"
                     className="rounded-full bg-gradient-to-b from-[#F4F0E7] to-[#E2DCCF] px-7 py-3 text-sm font-medium text-[#14120e] shadow-[0_1px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                   >
-                    Request early access
+                    Erken erişim isteyin
                   </a>
                   <Link
                     href="/#products"
                     className="rounded-full border border-line px-7 py-3 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(239,234,224,0.24)] hover:bg-[rgba(239,234,224,0.04)]"
                   >
-                    All products
+                    Tüm ürünler
                   </Link>
                 </div>
               </Reveal>
@@ -85,7 +85,7 @@ export default function AuthorAIPage() {
                 </Instrument>
               </div>
               <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm lg:mt-8">
-                Nº 03 — Writing instrument
+                Nº 03 — Yazma aracı
               </p>
             </Reveal>
           </div>
@@ -95,7 +95,7 @@ export default function AuthorAIPage() {
         <Band>
           <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr] lg:gap-20">
             <Reveal>
-              <Eyebrow>Overview</Eyebrow>
+              <Eyebrow>Genel bakış</Eyebrow>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-2xl font-light leading-[1.5] tracking-tight text-bone">
@@ -118,7 +118,7 @@ export default function AuthorAIPage() {
         {/* ── Core Features ── */}
         <Band>
           <Reveal>
-            <Eyebrow>Core features</Eyebrow>
+            <Eyebrow>Temel özellikler</Eyebrow>
           </Reveal>
           <div className="mt-14 grid gap-x-16 gap-y-px sm:grid-cols-2">
             {features.map((f, i) => (
@@ -141,7 +141,7 @@ export default function AuthorAIPage() {
 
         {/* ── Writing Workflow ── */}
         <Band>
-          <SectionHead eyebrow="Writing workflow" headline="Draft to published, without interruption." />
+          <SectionHead eyebrow="Yazma akışı" headline="Taslaktan yayına, kesintisiz." />
           <div className="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
             {workflow.map((w, i) => (
               <Reveal key={w.step} delay={i * 0.06}>
@@ -164,9 +164,9 @@ export default function AuthorAIPage() {
         {/* ── AI Assistance ── */}
         <Band>
           <SectionHead
-            eyebrow="AI assistance"
-            headline="Help that waits to be asked."
-            body="Three ways AuthorAI offers a hand — each a proposal in the margin, never a change made on your behalf."
+            eyebrow="AI yardımı"
+            headline="İstenene kadar bekleyen yardım."
+            body="AuthorAI'nin el uzattığı üç yol — her biri kenarda bir teklif, asla sizin adınıza yapılan bir değişiklik değil."
           />
           <div className="mt-14 grid gap-x-16 gap-y-px sm:grid-cols-3">
             {assistance.map((a, i) => (
@@ -186,14 +186,14 @@ export default function AuthorAIPage() {
 
         {/* ── Gallery / Product Screens ── */}
         <Band>
-          <SectionHead eyebrow="Product screens" headline="The page, up close." />
+          <SectionHead eyebrow="Ürün ekranları" headline="Sayfa, yakından." />
           <div className="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-14">
             <Reveal y={24}>
               <Instrument>
                 <AuthorAIConsole />
               </Instrument>
               <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm">
-                Manuscript — focused page, live caret
+                El yazması — odaklı sayfa, canlı imleç
               </p>
             </Reveal>
             <Reveal y={24} delay={0.1}>
@@ -202,7 +202,7 @@ export default function AuthorAIPage() {
                   <AuthorAIConsole />
                 </Instrument>
                 <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm">
-                  Margin — a suggestion, offered on request
+                  Kenar — istendiğinde sunulan bir öneri
                 </p>
               </div>
             </Reveal>
@@ -211,7 +211,7 @@ export default function AuthorAIPage() {
 
         {/* ── Technology ── */}
         <Band>
-          <SectionHead eyebrow="Technology" headline="A quiet, deliberate stack." />
+          <SectionHead eyebrow="Teknoloji" headline="Sakin, özenle seçilmiş bir yığın." />
           <div className="mt-14 grid gap-x-16 sm:grid-cols-2">
             {tech.map(([k, v], i) => (
               <Reveal key={k} delay={(i % 2) * 0.05}>
@@ -230,7 +230,7 @@ export default function AuthorAIPage() {
 
         {/* ── Roadmap ── */}
         <Band>
-          <SectionHead eyebrow="Roadmap" headline="From page to publication." />
+          <SectionHead eyebrow="Yol haritası" headline="Sayfadan yayına." />
           <div className="mt-14 space-y-px">
             {roadmap.map((r, i) => (
               <Reveal key={r.when} delay={i * 0.06}>
@@ -261,7 +261,7 @@ export default function AuthorAIPage() {
 
         {/* ── FAQ ── */}
         <Band>
-          <SectionHead eyebrow="FAQ" headline="Questions, answered." />
+          <SectionHead eyebrow="SSS" headline="Sorular, yanıtlar." />
           <div className="mt-14 grid gap-x-16 gap-y-px lg:grid-cols-2">
             {faq.map((item, i) => (
               <Reveal key={item.q} delay={(i % 2) * 0.06}>
@@ -283,9 +283,9 @@ export default function AuthorAIPage() {
           <div className="flex flex-col items-start gap-10">
             <Reveal>
               <h2 className="max-w-3xl text-4xl font-light leading-[1.08] tracking-tightest text-bone sm:text-5xl lg:text-[60px]">
-                Write with the
+                Makineyi sessiz tutarak
                 <br />
-                machine kept quiet.
+                yazın.
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
@@ -294,13 +294,13 @@ export default function AuthorAIPage() {
                   href="https://woodstonestudio.com"
                   className="rounded-full bg-gradient-to-b from-[#F4F0E7] to-[#E2DCCF] px-7 py-3.5 text-sm font-medium text-[#14120e] shadow-[0_1px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                 >
-                  Request early access
+                  Erken erişim isteyin
                 </a>
                 <Link
                   href="/#contact"
                   className="rounded-full border border-line px-7 py-3.5 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(239,234,224,0.24)] hover:bg-[rgba(239,234,224,0.04)]"
                 >
-                  Talk to the studio
+                  Stüdyoyla konuşun
                 </Link>
               </div>
             </Reveal>

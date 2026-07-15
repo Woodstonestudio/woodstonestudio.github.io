@@ -3,9 +3,9 @@ import { Instrument } from "@/components/contractory/instrument";
 import { AlphaOSConsole } from "@/components/alphaos/console";
 
 const capabilities = [
-  { name: "Measure", note: "Activity into reputation" },
-  { name: "Rank", note: "Live operator leaderboard" },
-  { name: "Verify", note: "Every score auditable on-chain" },
+  { name: "Ölç", note: "Etkinlikten itibara" },
+  { name: "Sırala", note: "Canlı operatör lider tablosu" },
+  { name: "Doğrula", note: "Her puan zincir üstünde denetlenebilir" },
 ];
 
 /**
@@ -28,7 +28,7 @@ export function AlphaOSSection() {
             </Instrument>
           </div>
           <p className="mt-6 pl-1 text-right font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm lg:mt-8 lg:pr-1">
-            Nº 02 — Reputation instrument · Base
+            Nº 02 — İtibar aracı · Base
           </p>
         </Reveal>
 
@@ -42,17 +42,17 @@ export function AlphaOSSection() {
 
           <Reveal delay={0.08}>
             <h2 className="mt-7 text-4xl font-light leading-[1.08] tracking-tightest text-bone sm:text-5xl lg:text-[54px]">
-              Reputation you
+              Doğrulanabilir
               <br />
-              can verify.
+              dijital itibar.
             </h2>
           </Reveal>
 
           <Reveal delay={0.16}>
             <p className="mt-8 max-w-md text-[17px] leading-[1.75] text-gray-warm">
-              AlphaOS measures on-chain reputation on Base — quests, badges and
-              a live leaderboard, every operator resolved to a Basename and
-              verifiable down to the transaction.
+              AlphaOS, zincir üstü katkıyı ölçülebilir bir itibara dönüştürür.
+              Görevler, rozetler ve canlı bir lider tablosu; her operatör bir
+              Basename'e çözümlenir, her puan işleme kadar izlenebilir.
             </p>
           </Reveal>
 
@@ -82,7 +82,7 @@ export function AlphaOSSection() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-white"
               >
-                View Project
+                Projeyi İncele
                 <span
                   aria-hidden
                   className="transition-transform duration-300 ease-soft group-hover:translate-x-1"

@@ -1,9 +1,8 @@
 import { Reveal } from "@/components/motion/reveal";
 
 /**
- * Products intro — a short editorial lead-in that reframes the
- * product sections as proof of capability, not the studio's sole
- * purpose. No new UI language; same eyebrow + headline rhythm.
+ * Ürünler girişi — ürünleri, stüdyonun tek amacı değil,
+ * yeteneğinin kanıtı olarak konumlandıran kısa bir editoryal giriş.
  */
 export function ProductsIntro() {
   return (
@@ -13,22 +12,22 @@ export function ProductsIntro() {
           <div>
             <Reveal>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
-                Products
+                Ürünler
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-8 max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
-                We build for others.
+                Müşterilerimiz için geliştiriyoruz.
                 <br />
-                We also build our own.
+                Kendimiz için de.
               </h2>
             </Reveal>
           </div>
           <Reveal delay={0.16}>
             <p className="max-w-md text-[17px] leading-[1.8] text-gray-warm lg:pt-4">
-              Our own products are where we prove the craft — the same
-              engineering we bring to client work, held to our own standard.
-              Three of them follow.
+              Kendi ürünlerimiz, mühendislik gücümüzü keskinleştirdiğimiz
+              yerdir. Müşteri projelerimize taşıdığımız disiplini önce
+              kendi işlerimizde sınarız. Üç örneği aşağıda.
             </p>
           </Reveal>
         </div>

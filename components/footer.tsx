@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 /**
- * Footer — the one place the full brand signature appears.
- * Quiet, hairline-topped, editorial.
+ * Footer — tam marka imzasının göründüğü tek yer.
  */
 export function Footer() {
   const year = new Date().getFullYear();
@@ -10,7 +9,6 @@ export function Footer() {
     <footer className="border-t border-line">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-end sm:justify-between">
-          {/* Full brand signature */}
           <div className="flex items-center gap-4">
             <Image
               src="/brand/logo-transparent.png"
@@ -24,36 +22,23 @@ export function Footer() {
                 Woodstone Studio
               </div>
               <div className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-gray-warm">
-                Independent Product Studio
+                Bağımsız Ürün Stüdyosu
               </div>
             </div>
           </div>
 
-          {/* Links */}
-          <nav aria-label="Footer" className="flex gap-8">
-            <a
-              href="/#products"
-              className="text-sm text-gray-warm transition-colors hover:text-bone"
-            >
-              Products
+          <nav aria-label="Alt menü" className="flex gap-8">
+            <a href="/#products" className="text-sm text-gray-warm transition-colors hover:text-bone">
+              Ürünler
             </a>
-            <a
-              href="/#services"
-              className="text-sm text-gray-warm transition-colors hover:text-bone"
-            >
-              Services
+            <a href="/#services" className="text-sm text-gray-warm transition-colors hover:text-bone">
+              Hizmetler
             </a>
-            <a
-              href="/#studio"
-              className="text-sm text-gray-warm transition-colors hover:text-bone"
-            >
-              Studio
+            <a href="/#studio" className="text-sm text-gray-warm transition-colors hover:text-bone">
+              Stüdyo
             </a>
-            <a
-              href="/#contact"
-              className="text-sm text-gray-warm transition-colors hover:text-bone"
-            >
-              Contact
+            <a href="/#contact" className="text-sm text-gray-warm transition-colors hover:text-bone">
+              İletişim
             </a>
           </nav>
         </div>
@@ -63,7 +48,7 @@ export function Footer() {
             © {year} Woodstone Studio
           </p>
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-warm">
-            Designed &amp; built by Woodstone Studio
+            İzmir'de tasarlandı ve geliştirildi
           </p>
         </div>
       </div>

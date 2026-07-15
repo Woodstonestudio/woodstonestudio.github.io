@@ -7,10 +7,10 @@
  */
 
 const outline = [
-  { t: "I · The Quiet Machine", active: true },
-  { t: "II · On Restraint", active: false },
-  { t: "III · The Margin", active: false },
-  { t: "IV · Silence, Measured", active: false },
+  { t: "I · Sessiz Makine", active: true },
+  { t: "II · Ölçülü Olmak Üzerine", active: false },
+  { t: "III · Kenar", active: false },
+  { t: "IV · Ölçülü Sessizlik", active: false },
 ];
 
 export function AuthorAIConsole() {
@@ -25,13 +25,13 @@ export function AuthorAIConsole() {
           <span className="text-[11px] font-medium tracking-tight text-zinc-100">
             AuthorAI
           </span>
-          <span className="text-[9px] text-zinc-600">/ manuscript</span>
+          <span className="text-[9px] text-zinc-600">/ el yazması</span>
         </div>
         <div className="flex items-center gap-2 text-[9px] text-zinc-500">
           <span className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2 py-1">
-            Draft
+            Taslak
           </span>
-          <span className="tabular-nums">1,284 words</span>
+          <span className="tabular-nums">1.284 kelime</span>
         </div>
       </div>
 
@@ -39,7 +39,7 @@ export function AuthorAIConsole() {
         {/* Outline rail */}
         <div className="hidden w-[116px] shrink-0 flex-col gap-0.5 border-r border-white/[0.06] p-2 font-mono sm:flex">
           <span className="px-2 pb-1 text-[7px] uppercase tracking-[0.14em] text-zinc-600">
-            Contents
+            İçindekiler
           </span>
           {outline.map((o) => (
             <span
@@ -61,15 +61,15 @@ export function AuthorAIConsole() {
           {/* The page */}
           <div className="flex min-w-0 flex-col justify-center px-5 py-4">
             <div className="font-serif text-[14px] font-medium tracking-tight text-zinc-100">
-              The Quiet Machine
+              Sessiz Makine
             </div>
             <div className="mt-3 space-y-2 text-[10px] leading-[1.75] text-zinc-400">
               <p>
-                Good tools disappear. The best of them return your attention
-                rather than competing for it.
+                İyi araçlar görünmez olur. En iyileri, dikkatinizle
+                yarışmak yerine onu size geri verir.
               </p>
               <p>
-                That is the promise every maker makes and few keep
+                Bu, her yapımcının verdiği ama azının tuttuğu bir sözdür
                 <span className="ml-[1px] inline-block h-[12px] w-[1.5px] translate-y-[2px] animate-pulse-soft bg-[#e0b877]" />
               </p>
             </div>
@@ -79,11 +79,11 @@ export function AuthorAIConsole() {
           <div className="hidden min-w-0 flex-col justify-center border-l border-white/[0.06] px-3.5 py-4 sm:flex">
             <div className="animate-[riseIn_0.9s_cubic-bezier(0.22,1,0.36,1)_1s_both] border-l-2 border-[#c79a4e]/45 pl-2.5">
               <div className="font-mono text-[7px] uppercase tracking-[0.14em] text-[#e0b877]/80">
-                Suggested
+                Öneri
               </div>
               <p className="mt-1.5 text-[9.5px] italic leading-[1.65] text-zinc-500">
-                …and fewer still measure. Consider a tool whose silence you
-                have felt but never noticed.
+                …ve daha da azı ölçer. Sessizliğini hissettiğiniz ama
+                hiç fark etmediğiniz bir aracı düşünün.
               </p>
               <div className="mt-2.5 flex gap-1.5 font-mono">
                 <span className="rounded-[4px] bg-[#c79a4e] px-2 py-1 text-[8px] font-medium text-[#1a1509]">

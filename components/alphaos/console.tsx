@@ -6,9 +6,9 @@
  */
 
 const cells = [
-  ["OPERATORS", "10+"],
-  ["QUESTS", "24"],
-  ["VERIFIED", "100%"],
+  ["OPERATÖR", "10+"],
+  ["GÖREV", "24"],
+  ["DOĞRULANMIŞ", "100%"],
 ];
 
 const board = [
@@ -65,9 +65,9 @@ export function AlphaOSConsole() {
         <div className="flex min-w-0 flex-col">
           <div className="mb-2.5 flex items-center justify-between">
             <span className="text-[7px] tracking-[0.16em] text-zinc-500">
-              OPERATOR REPUTATION
+              OPERATÖR İTİBARI
             </span>
-            <span className="text-[7px] text-zinc-600">ALL-TIME</span>
+            <span className="text-[7px] text-zinc-600">TÜM ZAMANLAR</span>
           </div>
           <div className="space-y-[7px]">
             {board.map((b, i) => (
@@ -114,9 +114,9 @@ export function AlphaOSConsole() {
 
           <div className="mt-3 space-y-2">
             {[
-              ["Quests", "18 / 24"],
-              ["Badges", "6"],
-              ["Since", "block 19.2M"],
+              ["Görevler", "18 / 24"],
+              ["Rozetler", "6"],
+              ["Bu yana", "blok 19.2M"],
             ].map(([k, v]) => (
               <div key={k} className="flex items-center justify-between">
                 <span className="text-[8px] text-zinc-500">{k}</span>
@@ -127,7 +127,7 @@ export function AlphaOSConsole() {
 
           <div className="mt-auto flex items-center gap-1.5 pt-3 text-[8px] text-[#7fa0ff]">
             <span className="h-1.5 w-1.5 animate-pulse-soft rounded-full bg-[#3b6bff]" />
-            Verified on Base
+            Base üzerinde doğrulandı
           </div>
         </div>
       </div>

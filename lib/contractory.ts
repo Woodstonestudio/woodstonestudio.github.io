@@ -1,80 +1,80 @@
-/** Content model for the Contractory product page. */
+/** Contractory ürün sayfasının içerik modeli (Türkçe). */
 
 export const overview =
-  "Contractory is a deployment workstation for Arc. It folds the whole lifecycle of a smart contract — compilation, constructor configuration, deployment and verification — into a single, deliberate surface built for teams who ship in production.";
+  "Contractory, Arc için bir dağıtım (deployment) çalışma istasyonudur. Bir akıllı sözleşmenin tüm yaşam döngüsünü — derleme, constructor yapılandırması, dağıtım ve doğrulama — tek ve özenli bir yüzeyde toplar; üretimde iş çıkaran ekipler için tasarlanmıştır.";
 
 export const problem = {
-  eyebrow: "The problem",
-  headline: "Deployment became a ritual of a dozen tools.",
-  body: "Shipping a contract means stitching together a compiler, a script, a wallet, a block explorer and a verification step — each with its own failure mode. The work that matters gets buried under ceremony, and a single missed constructor argument can cost a redeploy.",
+  eyebrow: "Sorun",
+  headline: "Dağıtım, bir düzine aracın ritüeline dönüştü.",
+  body: "Bir sözleşmeyi yayına almak; bir derleyiciyi, bir script'i, bir cüzdanı, bir blok gezginini ve bir doğrulama adımını birbirine dikmek demek — her birinin kendi hata biçimiyle. Asıl önemli iş, tören altında kaybolur; tek bir eksik constructor argümanı yeniden dağıtıma mal olur.",
 };
 
 export const solution = {
-  eyebrow: "The solution",
-  headline: "One surface, from source to verified.",
-  body: "Contractory reads constructor inputs straight from the compiled ABI, generates typed defaults, and takes a contract from compilation to a verified address without leaving the page. Deployment reverts are caught before they cost you.",
+  eyebrow: "Çözüm",
+  headline: "Tek yüzey: kaynaktan doğrulanmışa.",
+  body: "Contractory, constructor girdilerini doğrudan derlenmiş ABI'den okur, tipli varsayılanlar üretir ve bir sözleşmeyi derlemeden doğrulanmış adrese kadar sayfadan çıkmadan taşır. Dağıtım hataları, size maliyet çıkarmadan önce yakalanır.",
 };
 
 export const features = [
   {
     n: "01",
-    name: "Typed deployment",
-    body: "Constructor inputs are read from the compiled ABI and rendered as typed fields with sensible defaults — no hand-written scripts.",
+    name: "Tipli dağıtım",
+    body: "Constructor girdileri derlenmiş ABI'den okunur ve makul varsayılanlarla tipli alanlar olarak sunulur — elle yazılan script yok.",
   },
   {
     n: "02",
-    name: "Verification, built in",
-    body: "Source verification runs as part of deployment, not as an afterthought. Every address lands verified on the explorer.",
+    name: "Yerleşik doğrulama",
+    body: "Kaynak doğrulaması, sonradan yapılan bir iş değil, dağıtımın parçasıdır. Her adres gezginde doğrulanmış olarak yerini alır.",
   },
   {
     n: "03",
-    name: "Revert detection",
-    body: "Failing deploys are detected and surfaced before they consume gas, with the revert reason read back plainly.",
+    name: "Hata tespiti",
+    body: "Başarısız dağıtımlar, gaz harcamadan önce tespit edilir ve revert sebebi sade biçimde geri okunur.",
   },
   {
     n: "04",
-    name: "Standards, covered",
-    body: "ERC-20, ERC-721 and ERC-1155 out of the box, each with its constructor shape understood.",
+    name: "Standartlar kapsamda",
+    body: "ERC-20, ERC-721 ve ERC-1155 kutudan çıktığı gibi — her birinin constructor yapısı anlaşılmış olarak.",
   },
   {
     n: "05",
-    name: "Lifecycle in one place",
-    body: "Deploy, verify and review recent activity from a single console — no context-switching between tools.",
+    name: "Yaşam döngüsü tek yerde",
+    body: "Dağıt, doğrula ve son etkinliği tek konsoldan gözden geçir — araçlar arası geçiş yok.",
   },
   {
     n: "06",
-    name: "Arc-native",
-    body: "Built for Circle's Arc — USDC-native gas, Chain ID 5042002 — with the network's specifics handled for you.",
+    name: "Arc'a özel",
+    body: "Circle'ın Arc'ı için kurulmuş — USDC tabanlı gaz, Chain ID 5042002 — ağa özgü ayrıntılar sizin yerinize halledilir.",
   },
 ];
 
 export const tech = [
-  ["Framework", "Next.js 15 · React 19"],
-  ["Language", "TypeScript"],
-  ["Contracts", "Solidity · ABI-driven"],
-  ["Chain", "Arc — Chain ID 5042002"],
-  ["Wallet", "wagmi · RainbowKit"],
-  ["Editor", "Monaco"],
-  ["Data", "Supabase"],
-  ["Styling", "Tailwind CSS"],
+  ["Çatı", "Next.js 15 · React 19"],
+  ["Dil", "TypeScript"],
+  ["Sözleşmeler", "Solidity · ABI tabanlı"],
+  ["Zincir", "Arc — Chain ID 5042002"],
+  ["Cüzdan", "wagmi · RainbowKit"],
+  ["Editör", "Monaco"],
+  ["Veri", "Supabase"],
+  ["Stil", "Tailwind CSS"],
 ];
 
 export const architecture = [
-  { step: "Compile", detail: "solc compiles the contract; the ABI becomes the source of truth for inputs." },
-  { step: "Configure", detail: "Constructor fields are generated from the ABI and typed automatically." },
-  { step: "Deploy", detail: "The transaction is submitted to Arc; reverts are detected before gas is spent." },
-  { step: "Verify", detail: "Source is verified on the explorer as part of the same flow." },
+  { step: "Derle", detail: "solc sözleşmeyi derler; ABI, girdiler için tek doğruluk kaynağı olur." },
+  { step: "Yapılandır", detail: "Constructor alanları ABI'den üretilir ve otomatik olarak tiplenir." },
+  { step: "Dağıt", detail: "İşlem Arc'a gönderilir; hatalar gaz harcanmadan önce tespit edilir." },
+  { step: "Doğrula", detail: "Kaynak, aynı akış içinde gezginde doğrulanır." },
 ];
 
 export const roadmap = [
-  { when: "v1.0", title: "Deployment workstation", detail: "Typed deploys, verification and revert detection for ERC-20/721/1155 on Arc.", done: true },
-  { when: "v1.1", title: "Contract intelligence", detail: "Guided fixes and inline analysis for common contract issues.", done: false },
-  { when: "v1.2", title: "Team workspaces", detail: "Shared deployment history and roles for production teams.", done: false },
+  { when: "v1.0", title: "Dağıtım çalışma istasyonu", detail: "Arc üzerinde ERC-20/721/1155 için tipli dağıtım, doğrulama ve hata tespiti.", done: true },
+  { when: "v1.1", title: "Sözleşme zekâsı", detail: "Sık görülen sözleşme sorunları için yönlendirmeli düzeltmeler ve satır içi analiz.", done: false },
+  { when: "v1.2", title: "Takım çalışma alanları", detail: "Üretim ekipleri için paylaşılan dağıtım geçmişi ve roller.", done: false },
 ];
 
 export const faq = [
-  { q: "Which chain does Contractory target?", a: "Circle's Arc — an EVM L1 with USDC-native gas, Chain ID 5042002. The network's specifics are handled inside the tool." },
-  { q: "Which token standards are supported?", a: "ERC-20, ERC-721 and ERC-1155, each with its constructor shape understood and generated from the compiled ABI." },
-  { q: "Is Contractory open source?", a: "Yes. The repository ships with a README, MIT licence and contribution guidelines." },
-  { q: "How does verification work?", a: "Source verification runs as part of the deployment flow, so contracts land verified on the explorer without a separate step." },
+  { q: "Contractory hangi zinciri hedefliyor?", a: "Circle'ın Arc'ını — USDC tabanlı gaza sahip bir EVM L1, Chain ID 5042002. Ağa özgü ayrıntılar aracın içinde halledilir." },
+  { q: "Hangi token standartları destekleniyor?", a: "ERC-20, ERC-721 ve ERC-1155; her birinin constructor yapısı anlaşılmış ve derlenmiş ABI'den üretilmiş olarak." },
+  { q: "Contractory açık kaynak mı?", a: "Evet. Depo; README, MIT lisansı ve katkı yönergeleriyle birlikte gelir." },
+  { q: "Doğrulama nasıl çalışıyor?", a: "Kaynak doğrulaması dağıtım akışının parçası olarak çalışır; böylece sözleşmeler ayrı bir adım olmadan gezginde doğrulanmış olarak yerini alır." },
 ];

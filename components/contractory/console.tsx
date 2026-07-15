@@ -7,9 +7,9 @@
  */
 
 const rail = [
-  { label: "Deploy", active: true },
-  { label: "Verify", active: false },
-  { label: "Activity", active: false },
+  { label: "Dağıt", active: true },
+  { label: "Doğrula", active: false },
+  { label: "Etkinlik", active: false },
 ];
 
 const log = [
@@ -22,9 +22,9 @@ const log = [
 ];
 
 const recent = [
-  { name: "WoodToken", std: "ERC-20", status: "Deployed", tone: "ok" },
-  { name: "AtelierPass", std: "ERC-721", status: "Verifying", tone: "run" },
-  { name: "EditionsV2", std: "ERC-1155", status: "Pending", tone: "wait" },
+  { name: "WoodToken", std: "ERC-20", status: "Dağıtıldı", tone: "ok" },
+  { name: "AtelierPass", std: "ERC-721", status: "Doğrulanıyor", tone: "run" },
+  { name: "EditionsV2", std: "ERC-1155", status: "Beklemede", tone: "wait" },
 ];
 
 function Dot({ tone }: { tone: string }) {
@@ -83,10 +83,10 @@ export function ContractoryConsole() {
           ))}
           <div className="my-1 h-px bg-white/[0.06]" />
           <span className="rounded-[5px] px-2.5 py-1.5 text-[10px] text-zinc-600">
-            Contracts
+            Sözleşmeler
           </span>
           <span className="rounded-[5px] px-2.5 py-1.5 text-[10px] text-zinc-600">
-            Settings
+            Ayarlar
           </span>
         </div>
 
@@ -113,10 +113,10 @@ export function ContractoryConsole() {
             {/* Fields */}
             <div className="grid grid-cols-2 gap-2">
               {[
-                ["Name", "WoodToken"],
-                ["Symbol", "WOOD"],
-                ["Supply", "1,000,000"],
-                ["Decimals", "18"],
+                ["Ad", "WoodToken"],
+                ["Sembol", "WOOD"],
+                ["Arz", "1.000.000"],
+                ["Ondalık", "18"],
               ].map(([k, v]) => (
                 <div
                   key={k}
@@ -147,7 +147,7 @@ export function ContractoryConsole() {
             <div className="min-h-0 flex-1 overflow-hidden rounded-md border border-white/[0.07] bg-black/45 p-2.5">
               <div className="mb-1.5 flex items-center justify-between">
                 <span className="text-[7px] uppercase tracking-[0.14em] text-zinc-500">
-                  Build log
+                  Derleme günlüğü
                 </span>
                 <span className="flex items-center gap-1 text-[7px] text-emerald-300">
                   <span className="h-1 w-1 animate-pulse-soft rounded-full bg-emerald-400" />
@@ -179,7 +179,7 @@ export function ContractoryConsole() {
             {/* Recent deployments */}
             <div className="rounded-md border border-white/[0.07] bg-white/[0.02] p-2.5">
               <div className="mb-1.5 text-[7px] uppercase tracking-[0.14em] text-zinc-500">
-                Recent deployments
+                Son dağıtımlar
               </div>
               <div className="space-y-1.5">
                 {recent.map((d) => (
