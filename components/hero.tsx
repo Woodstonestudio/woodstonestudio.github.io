@@ -49,7 +49,7 @@ export function Hero() {
             <div className="mt-11 flex flex-wrap items-center gap-4">
               <a
                 href="#products"
-                className="rounded-full bg-gradient-to-b from-[#F4F0E7] to-[#E2DCCF] px-7 py-3 text-sm font-medium text-[#14120e] shadow-[0_1px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-soft hover:-translate-y-px hover:shadow-[0_6px_20px_-6px_rgba(244,240,231,0.25)] active:translate-y-0 active:scale-[0.98]"
+                className="rounded-full bg-gradient-to-b from-[#3A342B] to-[#26231E] px-7 py-3 text-sm font-medium text-surface shadow-[0_1px_2px_rgba(38,35,30,0.25)] transition-all duration-300 ease-soft hover:-translate-y-px hover:shadow-[0_6px_20px_-6px_rgba(38,35,30,0.35)] active:translate-y-0 active:scale-[0.98]"
               >
                 Çalışmalarımızı Görün
               </a>

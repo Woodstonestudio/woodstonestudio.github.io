@@ -66,7 +66,7 @@ export function AuthorAISection() {
             <div className="mt-11">
               <a
                 href="https://woodstonestudio.com"
-                className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-white"
+                className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-bone"
               >
                 Projeyi İncele
                 <span

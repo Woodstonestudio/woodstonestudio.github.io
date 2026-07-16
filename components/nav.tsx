@@ -40,7 +40,7 @@ export function Nav() {
       >
         <Link
           href="/"
-          className="group flex items-center gap-3 text-[17px] font-medium tracking-tight text-white"
+          className="group flex items-center gap-3 text-[17px] font-medium tracking-tight text-bone"
         >
           <Image
             src="/brand/monogram.png"

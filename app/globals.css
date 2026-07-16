@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --bg: #100f0c;
-  --surface: #1a1814;
-  --bone: #efeae0;
-  --line: rgba(239, 234, 224, 0.1);
+  --bg: #e9e5dd;
+  --surface: #f3f0ea;
+  --bone: #26231e;
+  --line: rgba(38, 35, 30, 0.14);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -22,12 +22,12 @@ body {
 }
 
 ::selection {
-  background: rgba(239, 234, 224, 0.18);
-  color: #fff;
+  background: rgba(38, 35, 30, 0.14);
+  color: #1a1815;
 }
 
 :focus-visible {
-  outline: 1.5px solid rgba(239, 234, 224, 0.7);
+  outline: 1.5px solid rgba(38, 35, 30, 0.6);
   outline-offset: 3px;
   border-radius: 2px;
 }

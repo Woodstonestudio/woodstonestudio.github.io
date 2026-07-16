@@ -9,17 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        base: "#100F0C", // warm black
-        surface: "#1A1814",
+        base: "#E9E5DD", // light warm stone
+        surface: "#F3F0EA", // lighter stone surface
         bone: {
-          DEFAULT: "#EFEAE0", // warm white
-          dim: "#CFC9BC",
+          DEFAULT: "#26231E", // dark warm stone (main text)
+          dim: "#5A554C",
         },
         gray: {
-          warm: "#8A8478", // warm neutral gray
+          warm: "#7A7266", // warm stone-wood gray
         },
-        line: "rgba(239,234,224,0.10)",
-        "line-soft": "rgba(239,234,224,0.06)",
+        line: "rgba(38,35,30,0.14)",
+        "line-soft": "rgba(38,35,30,0.08)",
         // Product accent — reserved exclusively for Contractory UI surfaces
         contractory: {
           DEFAULT: "#8B7CF6",

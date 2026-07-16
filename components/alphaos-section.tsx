@@ -80,7 +80,7 @@ export function AlphaOSSection() {
                 href="https://alphaos.site"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-white"
+                className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-bone"
               >
                 Projeyi İncele
                 <span

@@ -46,12 +46,9 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 border-t border-line pt-8">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-warm">
             © {year} Woodstone Studio
-          </p>
-          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-warm">
-            İzmir'de tasarlandı ve geliştirildi
           </p>
         </div>
       </div>
