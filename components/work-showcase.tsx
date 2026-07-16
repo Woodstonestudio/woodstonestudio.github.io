@@ -32,6 +32,14 @@ const works = [
     href: "https://mona-demo-rho.vercel.app",
     img: "/work/mona-preview.jpg",
   },
+  {
+    title: "Zentarado",
+    kind: "Konsept çalışma",
+    field: "SaaS · Ürün",
+    desc: "Küçük ekipler için bir proje yönetim aracı — canlı ürün arayüzü, görsel panolar ve fiyatlandırmayla eksiksiz bir SaaS sitesi.",
+    href: "https://zentarado-demo-ecru.vercel.app",
+    img: "/work/zentarado-preview.jpg",
+  },
 ];
 
 export function WorkShowcase() {
