@@ -34,6 +34,9 @@ export function Footer() {
             <a href="/#services" className="text-sm text-gray-warm transition-colors hover:text-bone">
               Hizmetler
             </a>
+            <a href="/#work" className="text-sm text-gray-warm transition-colors hover:text-bone">
+              Çalışmalar
+            </a>
             <a href="/#studio" className="text-sm text-gray-warm transition-colors hover:text-bone">
               Stüdyo
             </a>

@@ -5,6 +5,7 @@ import { ContractorySection } from "@/components/contractory-section";
 import { AlphaOSSection } from "@/components/alphaos-section";
 import { AuthorAISection } from "@/components/authorai-section";
 import { Services } from "@/components/services";
+import { WorkShowcase } from "@/components/work-showcase";
 import { Studio } from "@/components/studio";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
@@ -25,6 +26,7 @@ export default function Home() {
         <AlphaOSSection />
         <AuthorAISection />
         <Services />
+        <WorkShowcase />
         <Studio />
         <Contact />
       </main>
