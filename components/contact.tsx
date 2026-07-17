@@ -1,8 +1,7 @@
 import { Reveal } from "@/components/motion/reveal";
 
 const channels = [
-  { label: "GitHub", href: "https://github.com/Woodstonestudio" },
-  { label: "E-posta", href: "mailto:info@woodstonestudio.com" },
+  { label: "Bize Ulaşın", href: "mailto:info@woodstonestudio.com" },
 ];
 
 /**
