@@ -65,7 +65,7 @@ export function AuthorAISection() {
           <Reveal delay={0.32}>
             <div className="mt-11">
               <a
-                href="https://woodstonestudio.com"
+                href="/authorai"
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-bone"
               >
                 Projeyi İncele

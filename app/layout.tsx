@@ -7,33 +7,46 @@ import { Spotlight } from "@/components/fx/spotlight";
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
   title: {
-    default: "Woodstone Studio — Independent Product Studio",
+    default: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
     template: "%s — Woodstone Studio",
   },
   description:
-    "Woodstone Studio is a technology studio that designs, builds and automates digital businesses — products, software, AI and web.",
+    "Woodstone Studio; web siteleri, mobil uygulamalar, yapay zekâ çözümleri, iş süreçleri otomasyonu ve özel yazılım geliştiren bir dijital teknoloji stüdyosudur.",
   keywords: [
-    "product studio",
-    "software studio",
-    "AI products",
-    "Web3",
-    "Next.js",
     "Woodstone Studio",
+    "web tasarım",
+    "kurumsal web sitesi",
+    "mobil uygulama geliştirme",
+    "özel yazılım",
+    "yapay zeka çözümleri",
+    "yapay zeka otomasyonu",
+    "SaaS geliştirme",
+    "blockchain geliştirme",
+    "İzmir yazılım",
   ],
   openGraph: {
     title: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
     description:
-      "A technology studio that designs, builds and automates digital businesses.",
+      "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
     url: "https://woodstonestudio.com",
     siteName: "Woodstone Studio",
     type: "website",
-    locale: "en_US",
+    locale: "tr_TR",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
     description:
-      "A technology studio that designs, builds and automates digital businesses.",
+      "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
+    images: ["/og-image.jpg"],
   },
   robots: { index: true, follow: true },
 };
@@ -58,9 +71,24 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Woodstone Studio",
               url: "https://woodstonestudio.com",
+              logo: "https://woodstonestudio.com/brand/logo.png",
+              image: "https://woodstonestudio.com/og-image.jpg",
               description:
-                "Independent product studio building thoughtful AI, Web and Blockchain products.",
+                "Web siteleri, mobil uygulamalar, yapay zekâ çözümleri, otomasyon ve özel yazılım geliştiren bir dijital teknoloji stüdyosu.",
+              email: "info@woodstonestudio.com",
               foundingLocation: "İzmir, Türkiye",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "İzmir",
+                addressCountry: "TR",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "info@woodstonestudio.com",
+                contactType: "customer support",
+                availableLanguage: ["Turkish", "English"],
+              },
+              sameAs: ["https://github.com/Woodstonestudio"],
             }),
           }}
         />

@@ -62,7 +62,7 @@ export default function AuthorAIPage() {
               <Reveal delay={0.24}>
                 <div className="mt-11 flex flex-wrap items-center gap-4">
                   <a
-                    href="https://woodstonestudio.com"
+                    href="/#contact"
                     className="rounded-full bg-gradient-to-b from-[#F4F0E7] to-[#E2DCCF] px-7 py-3 text-sm font-medium text-[#14120e] shadow-[0_1px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                   >
                     Erken erişim isteyin
@@ -291,7 +291,7 @@ export default function AuthorAIPage() {
             <Reveal delay={0.12}>
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href="https://woodstonestudio.com"
+                  href="/#contact"
                   className="rounded-full bg-gradient-to-b from-[#F4F0E7] to-[#E2DCCF] px-7 py-3.5 text-sm font-medium text-[#14120e] shadow-[0_1px_2px_rgba(0,0,0,0.5)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                 >
                   Erken erişim isteyin
