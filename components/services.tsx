@@ -9,23 +9,24 @@ const groups = [
   {
     title: "Tasarım",
     line: "Modern, kullanıcı odaklı dijital deneyimler tasarlıyoruz.",
-    items: ["Premium web siteleri", "UI / UX tasarımı", "Marka kimliği"],
+    items: ["Premium web siteleri", "Kurumsal web sitesi", "UI / UX tasarımı", "Marka kimliği"],
   },
   {
     title: "Geliştirme",
-    line: "Ölçeklenebilir web, mobil ve özel yazılım çözümleri geliştiriyoruz.",
+    line: "Web, mobil ve özel yazılım çözümlerini fikirden yayına geliştiriyoruz.",
     items: [
-      "Web uygulamaları",
       "SaaS geliştirme",
-      "Mobil uygulamalar",
-      "Oyun geliştirme",
+      "MVP geliştirme",
+      "Web uygulamaları (React, Next.js)",
+      "Mobil uygulamalar (Flutter, iOS, Android)",
+      "Özel yazılım",
       "API entegrasyonları",
     ],
   },
   {
     title: "Otomasyon",
     line: "Yapay zekâ destekli otomasyonlarla iş süreçlerini hızlandırıyoruz.",
-    items: ["AI ajanları", "AI otomasyonu", "İş süreçleri otomasyonu"],
+    items: ["Yapay zekâ çözümleri", "AI ajan geliştirme", "AI otomasyonu", "Blockchain & akıllı sözleşme"],
   },
   {
     title: "Süreklilik",

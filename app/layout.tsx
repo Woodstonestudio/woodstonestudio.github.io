@@ -92,6 +92,50 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Woodstone Studio",
+              url: "https://woodstonestudio.com",
+              inLanguage: "tr-TR",
+              publisher: {
+                "@type": "Organization",
+                name: "Woodstone Studio",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              serviceType: [
+                "Web tasarım",
+                "Kurumsal web sitesi",
+                "Mobil uygulama geliştirme",
+                "SaaS geliştirme",
+                "MVP geliştirme",
+                "Özel yazılım geliştirme",
+                "Yapay zekâ çözümleri",
+                "AI otomasyonu",
+                "AI ajan geliştirme",
+                "Blockchain ve akıllı sözleşme geliştirme",
+              ],
+              provider: {
+                "@type": "Organization",
+                name: "Woodstone Studio",
+                url: "https://woodstonestudio.com",
+              },
+              areaServed: { "@type": "Country", name: "Türkiye" },
+              availableLanguage: ["Turkish", "English"],
+            }),
+          }}
+        />
         <Spotlight />
         <div className="relative z-10">{children}</div>
       </body>
