@@ -2,18 +2,14 @@ import { Reveal } from "@/components/motion/reveal";
 import { Instrument } from "@/components/contractory/instrument";
 import { AuthorAIConsole } from "@/components/authorai/console";
 
-const capabilities = [
-  { name: "Yaz", note: "Odaklı, dikkat dağıtmayan sayfa" },
-  { name: "Öner", note: "İstendiğinde kenarda sunulur" },
-  { name: "Biçimlendir", note: "Aradan çekilen yapı" },
-];
-
 /**
  * AuthorAI — presented as a single crafted object.
  * Composition alternates back: text left, object right.
  * Same container, eyebrow and type as its siblings.
  */
-export function AuthorAISection() {
+import { trSections, type SectionsDict } from "@/lib/i18n";
+
+export function AuthorAISection({ t = trSections.authorai }: { t?: SectionsDict["authorai"] }) {
   return (
     <section
       id="authorai"
@@ -30,23 +26,21 @@ export function AuthorAISection() {
 
           <Reveal delay={0.08}>
             <h2 className="mt-7 text-4xl font-light leading-[1.08] tracking-tightest text-bone sm:text-5xl lg:text-[54px]">
-              Yapay zekâ arka planda,
+              {t.t1}
               <br />
-              odak sizde.
+              {t.t2}
             </h2>
           </Reveal>
 
           <Reveal delay={0.16}>
             <p className="mt-8 max-w-md text-[17px] leading-[1.75] text-gray-warm">
-              AuthorAI bir yazma aracıdır, otomatik pilot değil. Yapay zekâ
-              yalnızca siz istediğinizde devreye girer; sayfa sizin, cümleler
-              sizin, son söz her zaman sizde.
+              {t.lead}
             </p>
           </Reveal>
 
           <Reveal delay={0.24}>
             <ul className="mt-11 max-w-sm divide-y divide-line border-y border-line">
-              {capabilities.map((c) => (
+              {t.caps.map((c) => (
                 <li
                   key={c.name}
                   className="flex items-baseline justify-between gap-6 py-3.5"
@@ -68,7 +62,7 @@ export function AuthorAISection() {
                 href="/authorai"
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-bone"
               >
-                Projeyi İncele
+                {t.cta}
                 <span
                   aria-hidden
                   className="transition-transform duration-300 ease-soft group-hover:translate-x-1"
@@ -88,7 +82,7 @@ export function AuthorAISection() {
             </Instrument>
           </div>
           <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm lg:mt-8">
-            Nº 03 — Yazma aracı
+            {t.caption}
           </p>
         </Reveal>
       </div>

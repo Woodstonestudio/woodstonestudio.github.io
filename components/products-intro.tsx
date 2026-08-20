@@ -4,7 +4,9 @@ import { Reveal } from "@/components/motion/reveal";
  * Ürünler girişi — ürünleri, stüdyonun tek amacı değil,
  * yeteneğinin kanıtı olarak konumlandıran kısa bir editoryal giriş.
  */
-export function ProductsIntro() {
+import { trSections, type SectionsDict } from "@/lib/i18n";
+
+export function ProductsIntro({ t = trSections.productsIntro }: { t?: SectionsDict["productsIntro"] }) {
   return (
     <section id="products" className="relative scroll-mt-16 border-t border-line">
       <div className="mx-auto max-w-6xl px-6 py-28 lg:px-8 lg:py-36">
@@ -12,22 +14,20 @@ export function ProductsIntro() {
           <div>
             <Reveal>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
-                Ürünler
+                {t.eyebrow}
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-8 max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
-                Müşterilerimiz için geliştiriyoruz.
+                {t.t1}
                 <br />
-                Kendimiz için de.
+                {t.t2}
               </h2>
             </Reveal>
           </div>
           <Reveal delay={0.16}>
             <p className="max-w-md text-[17px] leading-[1.8] text-gray-warm lg:pt-4">
-              Kendi ürünlerimiz, mühendislik gücümüzü keskinleştirdiğimiz
-              yerdir. Müşteri projelerimize taşıdığımız disiplini önce
-              kendi işlerimizde sınarız. Üç örneği aşağıda.
+              {t.lead}
             </p>
           </Reveal>
         </div>

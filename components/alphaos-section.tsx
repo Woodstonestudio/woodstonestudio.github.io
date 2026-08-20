@@ -2,18 +2,14 @@ import { Reveal } from "@/components/motion/reveal";
 import { Instrument } from "@/components/contractory/instrument";
 import { AlphaOSConsole } from "@/components/alphaos/console";
 
-const capabilities = [
-  { name: "Ölç", note: "Etkinlikten itibara" },
-  { name: "Sırala", note: "Canlı operatör lider tablosu" },
-  { name: "Doğrula", note: "Her puan zincir üstünde denetlenebilir" },
-];
-
 /**
  * AlphaOS — presented as a single crafted object.
  * Flipped composition: object left, text right — keynote rhythm
  * alternating from Contractory. Same container, eyebrow and type.
  */
-export function AlphaOSSection() {
+import { trSections, type SectionsDict } from "@/lib/i18n";
+
+export function AlphaOSSection({ t = trSections.alphaos }: { t?: SectionsDict["alphaos"] }) {
   return (
     <section
       id="alphaos"
@@ -28,7 +24,7 @@ export function AlphaOSSection() {
             </Instrument>
           </div>
           <p className="mt-6 pl-1 text-right font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm lg:mt-8 lg:pr-1">
-            Nº 02 — İtibar aracı · Base
+            {t.caption}
           </p>
         </Reveal>
 
@@ -42,23 +38,21 @@ export function AlphaOSSection() {
 
           <Reveal delay={0.08}>
             <h2 className="mt-7 text-4xl font-light leading-[1.08] tracking-tightest text-bone sm:text-5xl lg:text-[54px]">
-              Doğrulanabilir
+              {t.t1}
               <br />
-              dijital itibar.
+              {t.t2}
             </h2>
           </Reveal>
 
           <Reveal delay={0.16}>
             <p className="mt-8 max-w-md text-[17px] leading-[1.75] text-gray-warm">
-              AlphaOS, zincir üstü katkıyı ölçülebilir bir itibara dönüştürür.
-              Görevler, rozetler ve canlı bir lider tablosu; her operatör bir
-              Basename'e çözümlenir, her puan işleme kadar izlenebilir.
+              {t.lead}
             </p>
           </Reveal>
 
           <Reveal delay={0.24}>
             <ul className="mt-11 max-w-sm divide-y divide-line border-y border-line">
-              {capabilities.map((c) => (
+              {t.caps.map((c) => (
                 <li
                   key={c.name}
                   className="flex items-baseline justify-between gap-6 py-3.5"
@@ -82,7 +76,7 @@ export function AlphaOSSection() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-bone"
               >
-                Projeyi İncele
+                {t.cta}
                 <span
                   aria-hidden
                   className="transition-transform duration-300 ease-soft group-hover:translate-x-1"

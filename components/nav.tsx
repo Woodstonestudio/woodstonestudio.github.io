@@ -3,20 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-const links = [
-  { href: "/#products", label: "Ürünler" },
-  { href: "/#services", label: "Hizmetler" },
-  { href: "/#work", label: "Çalışmalar" },
-  { href: "/#studio", label: "Stüdyo" },
-  { href: "/#contact", label: "İletişim" },
-];
+import { trNav, type NavDict } from "@/lib/i18n";
 
 /**
  * Sabit navigasyon. Sayfanın üstünde şeffaf; 12px kaydırmadan
  * sonra bulanık, ince çizgili bir yüzey kazanır.
  */
-export function Nav() {
+export function Nav({ t = trNav }: { t?: NavDict }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -35,11 +28,11 @@ export function Nav() {
       }`}
     >
       <nav
-        aria-label="Ana menü"
+        aria-label={t.ariaLabel}
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8"
       >
         <Link
-          href="/"
+          href={t.switchHref === "/en" ? "/" : "/en"}
           className="group flex items-center gap-3 text-[17px] font-medium tracking-tight text-bone"
         >
           <Image
@@ -54,7 +47,7 @@ export function Nav() {
         </Link>
 
         <ul className="flex items-center gap-0.5">
-          {links.map((l) => (
+          {t.links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
@@ -64,6 +57,27 @@ export function Nav() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href={t.switchHref}
+              aria-label={t.switchAria}
+              className="ml-2 inline-flex items-center gap-1.5 rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-gray-warm transition-colors duration-300 hover:border-[rgba(38,35,30,0.24)] hover:text-bone"
+            >
+              <svg
+                aria-hidden
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              {t.switchLabel}
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

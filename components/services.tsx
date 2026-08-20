@@ -5,37 +5,9 @@ import { Reveal } from "@/components/motion/reveal";
  * Kart değil: dört yetkinlik grubu, siteyle tutarlı çizgili listeler.
  */
 
-const groups = [
-  {
-    title: "Tasarım",
-    line: "Modern, kullanıcı odaklı dijital deneyimler tasarlıyoruz.",
-    items: ["Premium web siteleri", "Kurumsal web sitesi", "UI / UX tasarımı", "Marka kimliği"],
-  },
-  {
-    title: "Geliştirme",
-    line: "Web, mobil ve özel yazılım çözümlerini fikirden yayına geliştiriyoruz.",
-    items: [
-      "SaaS geliştirme",
-      "MVP geliştirme",
-      "Web uygulamaları (React, Next.js)",
-      "Mobil uygulamalar (Flutter, iOS, Android)",
-      "Özel yazılım",
-      "API entegrasyonları",
-    ],
-  },
-  {
-    title: "Otomasyon",
-    line: "Yapay zekâ destekli otomasyonlarla iş süreçlerini hızlandırıyoruz.",
-    items: ["Yapay zekâ çözümleri", "AI ajan geliştirme", "AI otomasyonu", "Blockchain & akıllı sözleşme"],
-  },
-  {
-    title: "Süreklilik",
-    line: "Yayına aldıktan sonra da geliştirmeye ve destek vermeye devam ediyoruz.",
-    items: ["Teknik danışmanlık", "SEO & performans", "Bakım & destek"],
-  },
-];
+import { trSections, type SectionsDict } from "@/lib/i18n";
 
-export function Services() {
+export function Services({ t = trSections.services }: { t?: SectionsDict["services"] }) {
   return (
     <section id="services" className="relative scroll-mt-16 border-t border-line">
       <div className="mx-auto max-w-6xl px-6 py-28 lg:px-8 lg:py-40">
@@ -43,14 +15,14 @@ export function Services() {
           <div>
             <Reveal>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
-                Hizmetler
+                {t.eyebrow}
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-8 max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
-                Dört disiplin,
+                {t.t1}
                 <br />
-                tek stüdyo.
+                {t.t2}
               </h2>
             </Reveal>
           </div>
@@ -64,7 +36,7 @@ export function Services() {
         </div>
 
         <div className="mt-24 space-y-px lg:mt-32">
-          {groups.map((g, i) => (
+          {t.groups.map((g, i) => (
             <Reveal key={g.title} delay={(i % 2) * 0.05}>
               <div className="grid gap-6 border-t border-line py-10 lg:grid-cols-[0.42fr_0.58fr] lg:gap-16 lg:py-12">
                 <div className="flex items-baseline gap-5">

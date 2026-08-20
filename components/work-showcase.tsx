@@ -7,42 +7,16 @@ import { Reveal } from "@/components/motion/reveal";
  * olarak dürüstçe etiketlenir. Mevcut editoryal dil korunur.
  */
 
-const works = [
-  {
-    title: "Köz",
-    kind: "Konsept çalışma",
-    field: "Restoran · Landing",
-    desc: "Modern bir ocakbaşı için tek sayfalık tanıtım sitesi — canlı menü, rezervasyon akışı ve ateş temalı bir arayüz.",
-    href: "https://koz-demo-nu.vercel.app",
-    img: "/work/koz-preview.jpg",
-  },
-  {
-    title: "Lumen",
-    kind: "Konsept çalışma",
-    field: "Klinik · Landing",
-    desc: "Bir estetik ve güzellik kliniği için ferah, güven veren bir tanıtım sitesi — hizmetler, süreç anlatımı ve randevu formu.",
-    href: "https://lumen-demo-amber.vercel.app",
-    img: "/work/lumen-preview.jpg",
-  },
-  {
-    title: "Atelier Mona",
-    kind: "Konsept çalışma",
-    field: "E-ticaret · Moda",
-    desc: "Bir kadın giyim butiği için sinematik bir mağaza deneyimi — kayan koleksiyon, çalışan sepet ve editoryal bir tasarım.",
-    href: "https://mona-demo-rho.vercel.app",
-    img: "/work/mona-preview.jpg",
-  },
-  {
-    title: "Zentarado",
-    kind: "Konsept çalışma",
-    field: "SaaS · Ürün",
-    desc: "Küçük ekipler için bir proje yönetim aracı — canlı ürün arayüzü, görsel panolar ve fiyatlandırmayla eksiksiz bir SaaS sitesi.",
-    href: "https://zentarado-demo-ecru.vercel.app",
-    img: "/work/zentarado-preview.jpg",
-  },
+const workMeta = [
+  { href: "https://koz-demo-nu.vercel.app", img: "/work/koz-preview.jpg" },
+  { href: "https://lumen-demo-amber.vercel.app", img: "/work/lumen-preview.jpg" },
+  { href: "https://mona-demo-rho.vercel.app", img: "/work/mona-preview.jpg" },
+  { href: "https://zentarado-demo-ecru.vercel.app", img: "/work/zentarado-preview.jpg" },
 ];
 
-export function WorkShowcase() {
+import { trSections, type SectionsDict } from "@/lib/i18n";
+
+export function WorkShowcase({ t = trSections.work }: { t?: SectionsDict["work"] }) {
   return (
     <section id="work" className="relative scroll-mt-16 border-t border-line">
       <div className="mx-auto max-w-6xl px-6 py-28 lg:px-8 lg:py-40">
@@ -50,14 +24,14 @@ export function WorkShowcase() {
           <div>
             <Reveal>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
-                Örnek Çalışmalar
+                {t.eyebrow}
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-8 max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
-                Hayal edin.
+                {t.t1}
                 <br />
-                Biz inşa edelim.
+                {t.t2}
               </h2>
             </Reveal>
           </div>
@@ -71,24 +45,24 @@ export function WorkShowcase() {
         </div>
 
         <div className="mt-20 grid gap-10 sm:grid-cols-2 lg:mt-28">
-          {works.map((w) => (
+          {t.works.map((w, i) => (
             <Reveal key={w.title} y={24}>
               <a
-                href={w.href}
+                href={workMeta[i].href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block overflow-hidden rounded-2xl border border-line bg-[rgba(246,239,228,0.02)] transition-all duration-500 ease-soft hover:border-[rgba(239,234,224,0.2)]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
-                    src={w.img}
-                    alt={`${w.title} — ${w.kind}`}
+                    src={workMeta[i].img}
+                    alt={`${w.title} — ${t.kind}`}
                     width={880}
                     height={545}
                     className="h-full w-full object-cover object-top transition-transform duration-700 ease-soft group-hover:scale-[1.03]"
                   />
                   <span className="absolute left-4 top-4 rounded-full border border-line bg-base/70 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-bone-dim backdrop-blur-md">
-                    {w.kind}
+                    {t.kind}
                   </span>
                 </div>
                 <div className="flex items-start justify-between gap-6 p-7">

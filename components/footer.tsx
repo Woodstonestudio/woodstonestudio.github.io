@@ -3,7 +3,9 @@ import Image from "next/image";
 /**
  * Footer — tam marka imzasının göründüğü tek yer.
  */
-export function Footer() {
+import { trSections, type SectionsDict } from "@/lib/i18n";
+
+export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }) {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-line">
@@ -22,27 +24,17 @@ export function Footer() {
                 Woodstone Studio
               </div>
               <div className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-gray-warm">
-                Bağımsız Ürün Stüdyosu
+                {t.tagline}
               </div>
             </div>
           </div>
 
-          <nav aria-label="Alt menü" className="flex gap-8">
-            <a href="/#products" className="text-sm text-gray-warm transition-colors hover:text-bone">
-              Ürünler
-            </a>
-            <a href="/#services" className="text-sm text-gray-warm transition-colors hover:text-bone">
-              Hizmetler
-            </a>
-            <a href="/#work" className="text-sm text-gray-warm transition-colors hover:text-bone">
-              Çalışmalar
-            </a>
-            <a href="/#studio" className="text-sm text-gray-warm transition-colors hover:text-bone">
-              Stüdyo
-            </a>
-            <a href="/#contact" className="text-sm text-gray-warm transition-colors hover:text-bone">
-              İletişim
-            </a>
+          <nav aria-label={t.ariaLabel} className="flex gap-8">
+            {t.links.map((l) => (
+              <a key={l.href} href={l.href} className="text-sm text-gray-warm transition-colors hover:text-bone">
+                {l.label}
+              </a>
+            ))}
           </nav>
         </div>
 

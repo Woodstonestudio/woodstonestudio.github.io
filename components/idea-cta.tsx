@@ -1,11 +1,12 @@
 import { Reveal } from "@/components/motion/reveal";
+import { trSections, type SectionsDict } from "@/lib/i18n";
 
 /**
  * Fikir CTA — henüz yazılımı olmayan, elinde yalnızca fikir olan
  * müşterileri karşılayan dönüşüm bölümü. Site diliyle birebir uyumlu:
  * aynı tipografi, renk, spacing ve Reveal animasyonu.
  */
-export function IdeaCTA() {
+export function IdeaCTA({ t = trSections.idea }: { t?: SectionsDict["idea"] }) {
   return (
     <section
       id="fikir"
@@ -16,31 +17,28 @@ export function IdeaCTA() {
           <div>
             <Reveal>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
-                Fikirden ürüne
+                {t.eyebrow}
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-8 max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
-                Bir fikriniz mi var?
+                {t.t1}
                 <br />
-                Birlikte geliştirelim.
+                {t.t2}
               </h2>
             </Reveal>
           </div>
           <Reveal delay={0.16}>
             <div className="lg:pt-4">
               <p className="max-w-md text-[17px] leading-[1.8] text-gray-warm">
-                Elinizde yalnızca bir fikir olması yeterli. Bir SaaS ürünü, bir
-                mobil uygulama ya da yapay zekâ destekli bir çözüm — fikrinizi
-                birlikte tanımlıyor, bir MVP ile başlatıyor ve adım adım
-                büyütüyoruz.
+                {t.lead}
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
-                  href="/#contact"
+                  href={t.ctaHref}
                   className="group inline-flex items-center gap-2.5 rounded-full border border-line px-7 py-3.5 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(38,35,30,0.24)] hover:bg-[rgba(38,35,30,0.04)]"
                 >
-                  Fikrinizi Anlatın
+                  {t.cta}
                   <span
                     aria-hidden
                     className="text-gray-warm transition-all duration-300 ease-soft group-hover:translate-x-0.5 group-hover:text-bone"

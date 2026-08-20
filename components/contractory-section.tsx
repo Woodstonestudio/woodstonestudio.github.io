@@ -2,18 +2,14 @@ import { Reveal } from "@/components/motion/reveal";
 import { Instrument } from "@/components/contractory/instrument";
 import { ContractoryConsole } from "@/components/contractory/console";
 
-const capabilities = [
-  { name: "Dağıt", note: "Arc'a ERC-20 · 721 · 1155" },
-  { name: "Doğrula", note: "Gezginde kaynak doğrulaması" },
-  { name: "Yönet", note: "Tek yüzeyden yaşam döngüsü" },
-];
-
 /**
  * Contractory — presented as a single crafted object.
  * Text left, instrument right, near-full viewport, aligned to
  * the Hero's rhythm (same container, eyebrow, type weights).
  */
-export function ContractorySection() {
+import { trSections, type SectionsDict } from "@/lib/i18n";
+
+export function ContractorySection({ t = trSections.contractory }: { t?: SectionsDict["contractory"] }) {
   return (
     <section
       className="relative mx-auto flex min-h-svh max-w-6xl scroll-mt-16 items-center overflow-x-clip px-6 py-28 lg:px-8 lg:py-36"
@@ -29,24 +25,22 @@ export function ContractorySection() {
 
           <Reveal delay={0.08}>
             <h2 className="mt-7 text-4xl font-light leading-[1.08] tracking-tightest text-bone sm:text-5xl lg:text-[54px]">
-              Akıllı sözleşme dağıtımı,
+              {t.t1}
               <br />
-              baştan sona tek yerde.
+              {t.t2}
             </h2>
           </Reveal>
 
           <Reveal delay={0.16}>
             <p className="mt-8 max-w-md text-[17px] leading-[1.75] text-gray-warm">
-              Derlemeden doğrulamaya, akıllı sözleşmenin tüm yaşam döngüsünü
-              tek bir yüzeyde toplar. Üretimde iş çıkaran blockchain ekipleri
-              için kurulmuş, sade ve güvenilir bir araç.
+              {t.lead}
             </p>
           </Reveal>
 
           {/* Three capabilities — editorial, ruled, not cards */}
           <Reveal delay={0.24}>
             <ul className="mt-11 max-w-sm divide-y divide-line border-y border-line">
-              {capabilities.map((c) => (
+              {t.caps.map((c) => (
                 <li
                   key={c.name}
                   className="flex items-baseline justify-between gap-6 py-3.5"
@@ -70,7 +64,7 @@ export function ContractorySection() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-bone"
               >
-                Projeyi İncele
+                {t.cta}
                 <span
                   aria-hidden
                   className="transition-transform duration-300 ease-soft group-hover:translate-x-1"
@@ -91,7 +85,7 @@ export function ContractorySection() {
           </div>
           {/* Etched caption — ties type to object */}
           <p className="mt-6 pl-1 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm lg:mt-8">
-            Nº 01 — Dağıtım konsolu · Arc
+            {t.caption}
           </p>
         </Reveal>
       </div>

@@ -1,36 +1,33 @@
 import { Reveal } from "@/components/motion/reveal";
-
-const channels = [
-  { label: "Bize Ulaşın", href: "mailto:info@woodstonestudio.com" },
-];
+import { trSections, type SectionsDict } from "@/lib/i18n";
 
 /**
  * İletişim — büyük tipografi, sade. Projeye başlamaya bir davet.
  */
-export function Contact() {
+export function Contact({ t = trSections.contact }: { t?: SectionsDict["contact"] }) {
+  const channels = [{ label: t.channel, href: "mailto:info@woodstonestudio.com" }];
+
   return (
     <section id="contact" className="relative scroll-mt-16 border-t border-line">
       <div className="mx-auto flex min-h-[80svh] max-w-6xl items-center px-6 py-28 lg:px-8 lg:py-40">
         <div className="w-full">
           <Reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
-              Projeye başlayın
+              {t.eyebrow}
             </p>
           </Reveal>
 
           <Reveal delay={0.08}>
             <h2 className="mt-8 max-w-4xl text-5xl font-light leading-[1.05] tracking-tightest text-bone sm:text-6xl lg:text-[80px]">
-              Bir sonraki projenizi
+              {t.t1}
               <br />
-              birlikte hayata geçirelim.
+              {t.t2}
             </h2>
           </Reveal>
 
           <Reveal delay={0.14}>
             <p className="mt-8 max-w-md text-[17px] leading-[1.8] text-gray-warm">
-              İster bir web sitesi, ister özel yazılım, ister yapay zekâ
-              destekli otomasyon ya da eksiksiz bir dijital ürün — fikrinizi
-              dinlemekten memnuniyet duyarız.
+              {t.lead}
             </p>
           </Reveal>
 

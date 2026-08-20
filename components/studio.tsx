@@ -1,9 +1,10 @@
 import { Reveal } from "@/components/motion/reveal";
+import { trSections, type SectionsDict } from "@/lib/i18n";
 
 /**
  * Stüdyo — kısa, editoryal bir felsefe ifadesi.
  */
-export function Studio() {
+export function Studio({ t = trSections.studio }: { t?: SectionsDict["studio"] }) {
   return (
     <section id="studio" className="relative scroll-mt-16 border-t border-line">
       <div className="mx-auto flex min-h-[80svh] max-w-6xl items-center px-6 py-28 lg:px-8 lg:py-40">
@@ -11,14 +12,14 @@ export function Studio() {
           <div>
             <Reveal>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
-                Stüdyo
+                {t.eyebrow}
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-8 max-w-3xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl lg:text-[56px]">
-                Çözmeye değer
+                {t.t1}
                 <br />
-                sorunları çözeriz.
+                {t.t2}
               </h2>
             </Reveal>
           </div>
@@ -26,15 +27,12 @@ export function Studio() {
           <div className="lg:pt-4">
             <Reveal delay={0.16}>
               <p className="max-w-sm text-[17px] leading-[1.8] text-gray-warm">
-                Woodstone bir teknoloji stüdyosu. Tasarım, yazılım ve
-                otomasyonu birlikte ele alıyoruz; çünkü gerçek sorunlar bu
-                ayrımları tanımaz. Her işi, kendi ürünümüzmüş gibi bir
-                standartla ele alıyoruz.
+                {t.lead}
               </p>
             </Reveal>
             <Reveal delay={0.24}>
               <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-gray-warm">
-                Woodstone Studio tarafından tasarlandı ve geliştirildi
+                {t.signature}
               </p>
             </Reveal>
           </div>
