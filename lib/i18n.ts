@@ -5,6 +5,7 @@
  */
 
 export const trNav = {
+  locale: "tr",
   ariaLabel: "Ana menü",
   links: [
     { href: "/#products", label: "Ürünler" },
@@ -19,6 +20,7 @@ export const trNav = {
 };
 
 export const enNav = {
+  locale: "en",
   ariaLabel: "Main menu",
   links: [
     { href: "/en#products", label: "Products" },
@@ -52,6 +54,32 @@ export const enHero = {
   lead: "Websites, web and mobile applications, AI solutions, business process automation and custom software — all designed and built with the discipline of a product team.",
   ctaPrimary: "See Our Work",
   ctaSecondary: "Get in Touch",
+};
+
+export const sqNav = {
+  locale: "sq",
+  ariaLabel: "Menyra kryesore",
+  links: [
+    { href: "/sq#products", label: "Produkte" },
+    { href: "/sq#services", label: "Shërbime" },
+    { href: "/sq#work", label: "Punët" },
+    { href: "/sq#studio", label: "Studio" },
+    { href: "/sq#contact", label: "Kontakt" },
+  ],
+  switchHref: "/",
+  switchLabel: "SQ",
+  switchAria: "Kalo në shqip",
+};
+
+export const sqHero = {
+  eyebrow: "Studio Teknologjie Dixhitale",
+  titleLine1: "Idetë dixhitale i kthejmë",
+  titleLine2: "në produkte të fuqishme.",
+  strip1: "Dizajn · Softuer",
+  strip2: "Automatizim",
+  lead: "Faqe interneti, aplikacione web dhe mobile, zgjidhje me inteligjencë artificiale, automatizim të proceseve të biznesit dhe softuer të personalizuar — të gjitha të dizajnuara dhe të ndërtuara me përkushtimin e një ekipi produkti.",
+  ctaPrimary: "Shihni Punët Tona",
+  ctaSecondary: "Na Kontaktoni",
 };
 
 export type NavDict = typeof trNav;
@@ -287,6 +315,123 @@ export const enSections: typeof trSections = {
       { href: "/en#work", label: "Work" },
       { href: "/en#studio", label: "Studio" },
       { href: "/en#contact", label: "Contact" },
+    ],
+  },
+};
+
+export const sqSections: typeof trSections = {
+  productsIntro: {
+    eyebrow: "Produkte",
+    t1: "Ndërtojmë për klientët tanë.",
+    t2: "Dhe për veten tonë.",
+    lead: "Produktet tona janë vendi ku e mprehim mjeshtërinë tonë inxhinierike. Përkushtimin që e sjellim në projektet e klientëve e provojmë fillimisht në produktet tona. Tri shembuj më poshtë.",
+  },
+  contractory: {
+    t1: "Vendosje e kontratave inteligjente,",
+    t2: "nga fillimi në fund në një vend.",
+    lead: "Nga kompilimi te verifikimi, e sjell të gjithë ciklin jetësor të kontratës inteligjente në një sipërfaqe të vetme. Një mjet i thjeshtë dhe i besueshëm, i ndërtuar për ekipet blockchain që punojnë në prodhim.",
+    caps: [
+      { name: "Vendos", note: "ERC-20 · 721 · 1155 në Arc" },
+      { name: "Verifiko", note: "Verifikim i burimit në explorer" },
+      { name: "Menaxho", note: "Cikli i plotë nga një sipërfaqe" },
+    ],
+    cta: "Shiko Projektin",
+    caption: "Nº 01 — Konsola e vendosjes · Arc",
+  },
+  alphaos: {
+    t1: "Reputacion dixhital",
+    t2: "i verifikueshëm.",
+    lead: "AlphaOS e kthen kontributin on-chain në një reputacion të matshëm. Detyra, distinktivë dhe një tabelë renditjeje e drejtpërdrejtë; çdo operator zgjidhet në një Basename dhe çdo pikë gjurmohet deri te transaksioni.",
+    caps: [
+      { name: "Mat", note: "Nga aktiviteti te reputacioni" },
+      { name: "Rendit", note: "Tabelë e drejtpërdrejtë e operatorëve" },
+      { name: "Verifiko", note: "Çdo pikë e auditueshme on-chain" },
+    ],
+    cta: "Shiko Projektin",
+    caption: "Nº 02 — Mjet reputacioni · Base",
+  },
+  authorai: {
+    t1: "Inteligjenca artificiale në sfond,",
+    t2: "fokusi te ju.",
+    lead: "AuthorAI është një mjet shkrimi, jo një pilot automatik. Inteligjenca artificiale ndërhyn vetëm kur ju e kërkoni; faqja është e juaja, fjalitë janë të juajat dhe fjala e fundit është gjithmonë e juaja.",
+    caps: [
+      { name: "Shkruaj", note: "Një faqe e fokusuar, pa shpërqendrime" },
+      { name: "Sugjero", note: "Ofrohet anash, sipas kërkesës" },
+      { name: "Formato", note: "Strukturë që rri mënjanë" },
+    ],
+    cta: "Shiko Projektin",
+    caption: "Nº 03 — Mjet shkrimi",
+  },
+  services: {
+    eyebrow: "Shërbime",
+    t1: "Katër disiplina,",
+    t2: "një studio.",
+    groups: [
+      { title: "Dizajn", line: "Dizajnojmë përvoja dixhitale moderne, të përqendruara te përdoruesi.", items: ["Faqe interneti premium", "Faqe interneti korporative", "Dizajn UI / UX", "Identitet marke"] },
+      { title: "Zhvillim", line: "Ndërtojmë softuer web, mobile dhe të personalizuar nga ideja në publikim.", items: ["Zhvillim SaaS", "Zhvillim MVP", "Aplikacione web (React, Next.js)", "Aplikacione mobile (Flutter, iOS, Android)", "Softuer i personalizuar", "Integrime API"] },
+      { title: "Automatizim", line: "Përshpejtojmë proceset e biznesit me automatizim të fuqizuar nga inteligjenca artificiale.", items: ["Zgjidhje me inteligjencë artificiale", "Zhvillim agjentësh AI", "Automatizim AI", "Blockchain & kontrata inteligjente"] },
+      { title: "Vazhdimësi", line: "Vazhdojmë ta përmirësojmë dhe ta mbështesim produktin edhe pas publikimit.", items: ["Konsulencë teknike", "SEO & performancë", "Mirëmbajtje & mbështetje"] },
+    ],
+  },
+  work: {
+    eyebrow: "Punë të Zgjedhura",
+    t1: "Imagjinojeni.",
+    t2: "Ne do ta ndërtojmë.",
+    kind: "Punë koncepti",
+    works: [
+      { title: "Köz", field: "Restorant · Landing", desc: "Një faqe e vetme për një zgarë moderne — meny e drejtpërdrejtë, rrjedhë rezervimesh dhe një ndërfaqe me temë zjarri." },
+      { title: "Lumen", field: "Klinikë · Landing", desc: "Një faqe e qetë dhe frymëzuese besimi për një klinikë estetike — shërbime, shpjegim i procesit dhe një formular termini." },
+      { title: "Atelier Mona", field: "E-commerce · Modë", desc: "Një përvojë dyqani kinematografike për një butik veshjesh grash — koleksion me rrëshqitje, shportë funksionale dhe një dizajn editorial." },
+      { title: "Zentarado", field: "SaaS · Produkt", desc: "Një mjet menaxhimi projektesh për ekipe të vogla — një faqe e plotë SaaS me ndërfaqe produkti të drejtpërdrejtë, borde vizuale dhe çmime." },
+    ],
+  },
+  idea: {
+    eyebrow: "Nga ideja te produkti",
+    t1: "Keni një ide?",
+    t2: "Ta ndërtojmë së bashku.",
+    lead: "Mjafton të keni një ide. Një produkt SaaS, një aplikacion mobil ose një zgjidhje me inteligjencë artificiale — e përcaktojmë së bashku, e nisim me një MVP dhe e rrisim hap pas hapi.",
+    cta: "Na Tregoni Idenë Tuaj",
+    ctaHref: "/sq#contact",
+  },
+  studio: {
+    eyebrow: "Studio",
+    t1: "Zgjidhim probleme",
+    t2: "që ia vlen t'i zgjidhësh.",
+    lead: "Woodstone është një studio teknologjie. Dizajnin, softuerin dhe automatizimin i trajtojmë si një mjeshtëri të vetme, sepse problemet e vërteta nuk i njohin këto ndarje. Çdo projekt e mbajmë në standardin e produkteve tona.",
+    signature: "Dizajnuar dhe ndërtuar nga Woodstone Studio",
+  },
+  faq: {
+    eyebrow: "Pyetje të bëra shpesh",
+    t1: "Pyetjet në",
+    t2: "mendjen tuaj.",
+    faqs: [
+      { q: "Kam vetëm një ide — a mund të më ndihmoni?", a: "Po. Shumë nga projektet tona nisin vetëm me një ide. E përcaktojmë së bashku, e qartësojmë fushëveprimin dhe e sjellim në jetë me një MVP." },
+      { q: "A zhvilloni produkte SaaS?", a: "Po. Ndërtojmë produkte SaaS nga ideja në publikim, përfshirë aplikacione web me abonim, me menaxhim përdoruesish, pagesa dhe arkitekturë të shkallëzueshme." },
+      { q: "A mund të ndërtoni një MVP?", a: "Po. Për ta bërë një produkt të testueshëm sa më shpejt, fillimisht ndërtojmë një MVP me veçoritë thelbësore dhe pastaj e rrisim me reagime." },
+      { q: "A zhvilloni aplikacione mobile?", a: "Po. Ndërtojmë aplikacione mobile për iOS dhe Android, duke përdorur Flutter për të publikuar në të dyja platformat nga një kod i vetëm." },
+      { q: "A mund të ndërtoni agjentë AI?", a: "Po. Ndërtojmë automatizime të fuqizuara nga inteligjenca artificiale dhe agjentë AI për detyra specifike, dhe i integrojmë në rrjedhat tuaja ekzistuese të punës." },
+      { q: "A përdorni Flutter?", a: "Po. Përdorim Flutter për zhvillimin mobil. Në web punojmë kryesisht me React dhe Next.js." },
+      { q: "A ndërtoni faqe interneti?", a: "Po. Dizajnojmë dhe ndërtojmë faqe interneti korporative dhe premium, me shpejtësinë, aksesueshmërinë dhe përputhshmërinë me motorët e kërkimit si themel." },
+      { q: "A zhvilloni softuer korporativ?", a: "Po. Ndërtojmë softuer të personalizuar, mjete të brendshme dhe integrime API për bizneset — zgjidhje të përshtatura dhe të shkallëzueshme." },
+      { q: "A mund të ndërtoni projekte blockchain?", a: "Po. Kemi përvojë në aplikacione blockchain dhe zhvillim të kontratave inteligjente, dhe ndërtojmë edhe produktet tona Web3." },
+    ],
+  },
+  contact: {
+    eyebrow: "Nisni një projekt",
+    t1: "Projektin tuaj të radhës",
+    t2: "ta sjellim në jetë së bashku.",
+    lead: "Një faqe interneti, softuer i personalizuar, automatizim i fuqizuar nga AI ose një produkt dixhital i plotë — do të kishim kënaqësinë të dëgjojmë idenë tuaj.",
+    channel: "Na Kontaktoni",
+  },
+  footer: {
+    tagline: "Studio e Pavarur Produktesh",
+    ariaLabel: "Menyra e fundit",
+    links: [
+      { href: "/sq#products", label: "Produkte" },
+      { href: "/sq#services", label: "Shërbime" },
+      { href: "/sq#work", label: "Punët" },
+      { href: "/sq#studio", label: "Studio" },
+      { href: "/sq#contact", label: "Kontakt" },
     ],
   },
 };

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-cover.jpg",
         width: 1200,
         height: 630,
         alt: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
     description:
       "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
-    images: ["/og-image.jpg"],
+    images: ["/og-cover.jpg"],
   },
   robots: { index: true, follow: true },
 };
@@ -72,7 +72,7 @@ export default function RootLayout({
               name: "Woodstone Studio",
               url: "https://woodstonestudio.com",
               logo: "https://woodstonestudio.com/brand/logo.png",
-              image: "https://woodstonestudio.com/og-image.jpg",
+              image: "https://woodstonestudio.com/og-cover.jpg",
               description:
                 "Web siteleri, mobil uygulamalar, yapay zekâ çözümleri, otomasyon ve özel yazılım geliştiren bir dijital teknoloji stüdyosu.",
               email: "info@woodstonestudio.com",

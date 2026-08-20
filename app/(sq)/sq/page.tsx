@@ -11,12 +11,12 @@ import { Studio } from "@/components/studio";
 import { FAQ } from "@/components/faq";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
-import { enNav, enHero, enSections } from "@/lib/i18n";
+import { sqNav, sqHero, sqSections } from "@/lib/i18n";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "/en",
+    canonical: "/sq",
     languages: {
       tr: "https://woodstonestudio.com/",
       en: "https://woodstonestudio.com/en",
@@ -25,24 +25,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomeEN() {
+export default function HomeSQ() {
   return (
     <>
-      <Nav t={enNav} />
+      <Nav t={sqNav} />
       <main>
-        <Hero t={enHero} />
-        <ProductsIntro t={enSections.productsIntro} />
-        <ContractorySection t={enSections.contractory} />
-        <AlphaOSSection t={enSections.alphaos} />
-        <AuthorAISection t={enSections.authorai} />
-        <Services t={enSections.services} />
-        <WorkShowcase t={enSections.work} />
-        <IdeaCTA t={enSections.idea} />
-        <Studio t={enSections.studio} />
-        <FAQ t={enSections.faq} />
-        <Contact t={enSections.contact} />
+        <Hero t={sqHero} />
+        <ProductsIntro t={sqSections.productsIntro} />
+        <ContractorySection t={sqSections.contractory} />
+        <AlphaOSSection t={sqSections.alphaos} />
+        <AuthorAISection t={sqSections.authorai} />
+        <Services t={sqSections.services} />
+        <WorkShowcase t={sqSections.work} />
+        <IdeaCTA t={sqSections.idea} />
+        <Studio t={sqSections.studio} />
+        <FAQ t={sqSections.faq} />
+        <Contact t={sqSections.contact} />
       </main>
-      <Footer t={enSections.footer} />
+      <Footer t={sqSections.footer} />
     </>
   );
 }

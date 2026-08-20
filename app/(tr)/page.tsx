@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     languages: {
       tr: "https://woodstonestudio.com/",
       en: "https://woodstonestudio.com/en",
+      sq: "https://woodstonestudio.com/sq",
     },
   },
 };

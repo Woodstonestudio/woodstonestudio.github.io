@@ -7,45 +7,45 @@ import { Spotlight } from "@/components/fx/spotlight";
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
   title: {
-    default: "Woodstone Studio — Digital Technology Studio",
+    default: "Woodstone Studio — Studio Teknologjie Dixhitale",
     template: "%s — Woodstone Studio",
   },
   description:
-    "Woodstone Studio is a digital technology studio building websites, mobile applications, AI solutions, business process automation and custom software.",
+    "Woodstone Studio është një studio teknologjie dixhitale që ndërton faqe interneti, aplikacione mobile, zgjidhje me inteligjencë artificiale, automatizim të proceseve të biznesit dhe softuer të personalizuar.",
   keywords: [
     "Woodstone Studio",
-    "web design",
-    "corporate website",
-    "mobile app development",
-    "custom software",
-    "AI solutions",
-    "AI automation",
-    "SaaS development",
-    "blockchain development",
-    "software studio Turkey",
+    "dizajn web",
+    "faqe interneti korporative",
+    "zhvillim aplikacionesh mobile",
+    "softuer i personalizuar",
+    "zgjidhje me inteligjencë artificiale",
+    "automatizim AI",
+    "zhvillim SaaS",
+    "zhvillim blockchain",
+    "studio softueri",
   ],
   openGraph: {
-    title: "Woodstone Studio — Digital Technology Studio",
+    title: "Woodstone Studio — Studio Teknologjie Dixhitale",
     description:
-      "Web, mobile, AI and custom software — we design and build digital products with the discipline of a product team.",
+      "Web, mobile, inteligjencë artificiale dhe softuer i personalizuar — dizajnojmë dhe ndërtojmë produkte dixhitale me përkushtimin e një ekipi produkti.",
     url: "https://woodstonestudio.com",
     siteName: "Woodstone Studio",
     type: "website",
-    locale: "en_US",
+    locale: "sq_AL",
     images: [
       {
         url: "/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Woodstone Studio — Digital Technology Studio",
+        alt: "Woodstone Studio — Studio Teknologjie Dixhitale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Woodstone Studio — Digital Technology Studio",
+    title: "Woodstone Studio — Studio Teknologjie Dixhitale",
     description:
-      "Web, mobile, AI and custom software — we design and build digital products with the discipline of a product team.",
+      "Web, mobile, inteligjencë artificiale dhe softuer i personalizuar — dizajnojmë dhe ndërtojmë produkte dixhitale me përkushtimin e një ekipi produkti.",
     images: ["/og-cover.jpg"],
   },
   robots: { index: true, follow: true },
@@ -55,7 +55,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="sq" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="font-sans bg-base text-bone antialiased">
         {/* Ambient background layers */}
         <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
@@ -74,7 +74,7 @@ export default function RootLayout({
               logo: "https://woodstonestudio.com/brand/logo.png",
               image: "https://woodstonestudio.com/og-cover.jpg",
               description:
-                "A digital technology studio building websites, mobile applications, AI solutions, automation and custom software.",
+                "Një studio teknologjie dixhitale që ndërton faqe interneti, aplikacione mobile, zgjidhje me inteligjencë artificiale, automatizim dhe softuer të personalizuar.",
               email: "info@woodstonestudio.com",
               foundingLocation: "İzmir, Türkiye",
               address: {
@@ -100,7 +100,7 @@ export default function RootLayout({
               "@type": "WebSite",
               name: "Woodstone Studio",
               url: "https://woodstonestudio.com",
-              inLanguage: "en-US",
+              inLanguage: "sq-AL",
               publisher: {
                 "@type": "Organization",
                 name: "Woodstone Studio",
@@ -115,16 +115,16 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Service",
               serviceType: [
-                "Web design",
-                "Corporate websites",
-                "Mobile app development",
-                "SaaS development",
-                "MVP development",
-                "Custom software development",
-                "AI solutions",
-                "AI automation",
-                "AI agent development",
-                "Blockchain and smart contract development",
+                "Dizajn web",
+                "Faqe interneti korporative",
+                "Zhvillim aplikacionesh mobile",
+                "Zhvillim SaaS",
+                "Zhvillim MVP",
+                "Zhvillim softueri të personalizuar",
+                "Zgjidhje me inteligjencë artificiale",
+                "Automatizim AI",
+                "Zhvillim agjentësh AI",
+                "Zhvillim blockchain dhe kontratash inteligjente",
               ],
               provider: {
                 "@type": "Organization",
