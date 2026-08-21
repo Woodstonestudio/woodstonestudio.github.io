@@ -140,6 +140,7 @@ export const trSections = {
     ],
   },
   work: {
+    locale: "tr",
     eyebrow: "Örnek Çalışmalar",
     t1: "Hayal edin.",
     t2: "Biz inşa edelim.",
@@ -257,6 +258,7 @@ export const enSections: typeof trSections = {
     ],
   },
   work: {
+    locale: "en",
     eyebrow: "Selected Work",
     t1: "Imagine it.",
     t2: "We will build it.",
@@ -374,6 +376,7 @@ export const sqSections: typeof trSections = {
     ],
   },
   work: {
+    locale: "sq",
     eyebrow: "Punë të Zgjedhura",
     t1: "Imagjinojeni.",
     t2: "Ne do ta ndërtojmë.",

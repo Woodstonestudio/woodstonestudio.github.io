@@ -8,15 +8,17 @@ import { Reveal } from "@/components/motion/reveal";
  */
 
 const workMeta = [
-  { href: "https://koz-demo1.vercel.app", img: "/work/koz-preview.jpg" },
-  { href: "https://lumen-demo-1.vercel.app", img: "/work/lumen-preview.jpg" },
-  { href: "https://mona-demo-1.vercel.app", img: "/work/mona-preview.jpg" },
-  { href: "https://zentarado-demo-1.vercel.app", img: "/work/zentarado-preview.jpg" },
+  { href: "https://koz-demo1.vercel.app", img: "/work/koz-preview" },
+  { href: "https://lumen-demo-1.vercel.app", img: "/work/lumen-preview" },
+  { href: "https://mona-demo-1.vercel.app", img: "/work/mona-preview" },
+  { href: "https://zentarado-demo-1.vercel.app", img: "/work/zentarado-preview" },
 ];
 
 import { trSections, type SectionsDict } from "@/lib/i18n";
 
 export function WorkShowcase({ t = trSections.work }: { t?: SectionsDict["work"] }) {
+  // Dile göre önizleme görseli: TR varsayılan (suffix yok), EN/SQ ayrı görsel
+  const imgSuffix = t.locale === "en" ? "-en" : t.locale === "sq" ? "-sq" : "";
   return (
     <section id="work" className="relative scroll-mt-16 border-t border-line">
       <div className="mx-auto max-w-6xl px-6 py-28 lg:px-8 lg:py-40">
@@ -55,7 +57,7 @@ export function WorkShowcase({ t = trSections.work }: { t?: SectionsDict["work"]
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
-                    src={workMeta[i].img}
+                    src={`${workMeta[i].img}${imgSuffix}.jpg`}
                     alt={`${w.title} — ${t.kind}`}
                     width={880}
                     height={545}
