@@ -125,6 +125,8 @@ export default function RootLayout({
                 "Automatizim AI",
                 "Zhvillim agjentësh AI",
                 "Zhvillim blockchain dhe kontratash inteligjente",
+                "Menaxhim i mediave sociale",
+                "Prodhim përmbajtjeje",
               ],
               provider: {
                 "@type": "Organization",

@@ -130,13 +130,14 @@ export const trSections = {
   },
   services: {
     eyebrow: "Hizmetler",
-    t1: "Dört disiplin,",
+    t1: "Beş disiplin,",
     t2: "tek stüdyo.",
     groups: [
       { title: "Tasarım", line: "Modern, kullanıcı odaklı dijital deneyimler tasarlıyoruz.", items: ["Premium web siteleri", "Kurumsal web sitesi", "UI / UX tasarımı", "Marka kimliği"] },
       { title: "Geliştirme", line: "Web, mobil ve özel yazılım çözümlerini fikirden yayına geliştiriyoruz.", items: ["SaaS geliştirme", "MVP geliştirme", "Web uygulamaları (React, Next.js)", "Mobil uygulamalar (Flutter, iOS, Android)", "Özel yazılım", "API entegrasyonları"] },
       { title: "Otomasyon", line: "Yapay zekâ destekli otomasyonlarla iş süreçlerini hızlandırıyoruz.", items: ["Yapay zekâ çözümleri", "AI ajan geliştirme", "AI otomasyonu", "Blockchain & akıllı sözleşme"] },
       { title: "Süreklilik", line: "Yayına aldıktan sonra da geliştirmeye ve destek vermeye devam ediyoruz.", items: ["Teknik danışmanlık", "SEO & performans", "Bakım & destek"] },
+      { title: "Sosyal Medya", line: "Sosyal medya hesaplarınızı yönetiyor, içerik üretiyor ve organik büyümeyi destekliyoruz.", items: ["Instagram & profil yönetimi", "İçerik üretimi (Reels, video)", "YouTube kanal yönetimi", "Sayfa düzenleme & optimizasyon", "Organik büyüme & görünürlük"] },
     ],
   },
   work: {
@@ -181,6 +182,7 @@ export const trSections = {
       { q: "Web sitesi yapıyor musunuz?", a: "Evet. Kurumsal web siteleri ve premium tanıtım siteleri tasarlıyor ve geliştiriyoruz. Hız, erişilebilirlik ve arama motoru uyumluluğunu temel alıyoruz." },
       { q: "Kurumsal yazılım geliştiriyor musunuz?", a: "Evet. İşletmelere özel yazılımlar, iç araçlar ve API entegrasyonları geliştiriyoruz. İhtiyaca göre özelleştirilmiş, ölçeklenebilir çözümler kuruyoruz." },
       { q: "Blockchain projesi geliştirebilir misiniz?", a: "Evet. Blockchain uygulamaları ve akıllı sözleşme (smart contract) geliştirme konusunda deneyimliyiz; kendi Web3 ürünlerimizi de geliştiriyoruz." },
+      { q: "Sosyal medya yönetimi yapıyor musunuz?", a: "Evet. Instagram, YouTube ve diğer platformlarda hesap yönetimi, içerik üretimi, sayfa düzenleme ve organik büyüme hizmetleri sunuyoruz. Odağımız kalıcı, organik görünürlük." },
     ],
   },
   contact: {
@@ -248,13 +250,14 @@ export const enSections: typeof trSections = {
   },
   services: {
     eyebrow: "Services",
-    t1: "Four disciplines,",
+    t1: "Five disciplines,",
     t2: "one studio.",
     groups: [
       { title: "Design", line: "We design modern, user-centred digital experiences.", items: ["Premium websites", "Corporate websites", "UI / UX design", "Brand identity"] },
       { title: "Development", line: "We build web, mobile and custom software from idea to launch.", items: ["SaaS development", "MVP development", "Web applications (React, Next.js)", "Mobile apps (Flutter, iOS, Android)", "Custom software", "API integrations"] },
       { title: "Automation", line: "We accelerate business processes with AI-powered automation.", items: ["AI solutions", "AI agent development", "AI automation", "Blockchain & smart contracts"] },
       { title: "Continuity", line: "We keep improving and supporting your product after launch.", items: ["Technical consulting", "SEO & performance", "Maintenance & support"] },
+      { title: "Social Media", line: "We manage your social media accounts, produce content and support organic growth.", items: ["Instagram & profile management", "Content production (Reels, video)", "YouTube channel management", "Page setup & optimisation", "Organic growth & visibility"] },
     ],
   },
   work: {
@@ -299,6 +302,7 @@ export const enSections: typeof trSections = {
       { q: "Do you build websites?", a: "Yes. We design and build corporate and premium marketing websites, with speed, accessibility and search-engine friendliness as fundamentals." },
       { q: "Do you build enterprise software?", a: "Yes. We build custom software, internal tools and API integrations for businesses — tailored, scalable solutions." },
       { q: "Can you build blockchain projects?", a: "Yes. We are experienced in blockchain applications and smart contract development, and we build our own Web3 products as well." },
+      { q: "Do you offer social media management?", a: "Yes. We offer account management, content production, page setup and organic growth across Instagram, YouTube and other platforms. Our focus is lasting, organic visibility." },
     ],
   },
   contact: {
@@ -366,13 +370,14 @@ export const sqSections: typeof trSections = {
   },
   services: {
     eyebrow: "Shërbime",
-    t1: "Katër disiplina,",
+    t1: "Pesë disiplina,",
     t2: "një studio.",
     groups: [
       { title: "Dizajn", line: "Dizajnojmë përvoja dixhitale moderne, të përqendruara te përdoruesi.", items: ["Faqe interneti premium", "Faqe interneti korporative", "Dizajn UI / UX", "Identitet marke"] },
       { title: "Zhvillim", line: "Ndërtojmë softuer web, mobile dhe të personalizuar nga ideja në publikim.", items: ["Zhvillim SaaS", "Zhvillim MVP", "Aplikacione web (React, Next.js)", "Aplikacione mobile (Flutter, iOS, Android)", "Softuer i personalizuar", "Integrime API"] },
       { title: "Automatizim", line: "Përshpejtojmë proceset e biznesit me automatizim të fuqizuar nga inteligjenca artificiale.", items: ["Zgjidhje me inteligjencë artificiale", "Zhvillim agjentësh AI", "Automatizim AI", "Blockchain & kontrata inteligjente"] },
       { title: "Vazhdimësi", line: "Vazhdojmë ta përmirësojmë dhe ta mbështesim produktin edhe pas publikimit.", items: ["Konsulencë teknike", "SEO & performancë", "Mirëmbajtje & mbështetje"] },
+      { title: "Media Sociale", line: "Menaxhojmë llogaritë tuaja në media sociale, prodhojmë përmbajtje dhe mbështesim rritjen organike.", items: ["Menaxhim i Instagram & profilit", "Prodhim përmbajtjeje (Reels, video)", "Menaxhim i kanalit YouTube", "Rregullim & optimizim i faqes", "Rritje organike & dukshmëri"] },
     ],
   },
   work: {
@@ -417,6 +422,7 @@ export const sqSections: typeof trSections = {
       { q: "A ndërtoni faqe interneti?", a: "Po. Dizajnojmë dhe ndërtojmë faqe interneti korporative dhe premium, me shpejtësinë, aksesueshmërinë dhe përputhshmërinë me motorët e kërkimit si themel." },
       { q: "A zhvilloni softuer korporativ?", a: "Po. Ndërtojmë softuer të personalizuar, mjete të brendshme dhe integrime API për bizneset — zgjidhje të përshtatura dhe të shkallëzueshme." },
       { q: "A mund të ndërtoni projekte blockchain?", a: "Po. Kemi përvojë në aplikacione blockchain dhe zhvillim të kontratave inteligjente, dhe ndërtojmë edhe produktet tona Web3." },
+      { q: "A ofroni menaxhim të mediave sociale?", a: "Po. Ofrojmë menaxhim llogarish, prodhim përmbajtjeje, rregullim faqesh dhe rritje organike në Instagram, YouTube dhe platforma të tjera. Fokusi ynë është dukshmëria e qëndrueshme dhe organike." },
     ],
   },
   contact: {

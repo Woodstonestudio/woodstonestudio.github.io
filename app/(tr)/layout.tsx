@@ -125,6 +125,8 @@ export default function RootLayout({
                 "AI otomasyonu",
                 "AI ajan geliştirme",
                 "Blockchain ve akıllı sözleşme geliştirme",
+                "Sosyal medya yönetimi",
+                "İçerik üretimi",
               ],
               provider: {
                 "@type": "Organization",
