@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "../globals.css";
@@ -56,6 +57,19 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="sq" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      {/* Google Analytics 4 (GA4) — resmi Google tag */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-V7NRECZQ92"
+        strategy="afterInteractive"
+      />
+      <Script id="ga4-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-V7NRECZQ92');
+        `}
+      </Script>
       <body className="font-sans bg-base text-bone antialiased">
         {/* Ambient background layers */}
         <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
