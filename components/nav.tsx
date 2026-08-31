@@ -8,8 +8,8 @@ import { trNav, type NavDict } from "@/lib/i18n";
 /**
  * Sabit navigasyon. Sayfanın üstünde şeffaf; 12px kaydırmadan
  * sonra bulanık, ince çizgili bir yüzey kazanır.
- * Masaüstü: yatay linkler + üç dilli dil seçici.
- * Mobil: hamburger menü (linkler açılır) + dil seçici.
+ * Masaüstü (lg+): yatay linkler + üç dilli dil seçici.
+ * Tablet/Mobil (<lg): hamburger menü (linkler açılır) + dil seçici.
  */
 
 const LOCALES: { code: string; label: string; href: string }[] = [
@@ -20,39 +20,29 @@ const LOCALES: { code: string; label: string; href: string }[] = [
 
 const HOME_HREF: Record<string, string> = { tr: "/", en: "/en", sq: "/sq" };
 
-export function Nav({ t = trNav }: { t?: NavDict }) {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false); // dil seçici
-  const [menuOpen, setMenuOpen] = useState(false); // mobil hamburger
-  const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+/** Bağımsız dil seçici — her örneğin kendi state'i ve ref'i olur. */
+function LangSwitcher({ locale, aria }: { locale: string; aria: string }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
     };
     document.addEventListener("mousedown", onDown);
     return () => document.removeEventListener("mousedown", onDown);
   }, []);
 
-  const current = LOCALES.find((l) => l.code === t.locale) ?? LOCALES[0];
+  const current = LOCALES.find((l) => l.code === locale) ?? LOCALES[0];
 
-  const langSwitcher = (
-    <div ref={menuRef} className="relative">
+  return (
+    <div ref={ref} className="relative">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label={t.switchAria}
+        aria-label={aria}
         className="inline-flex items-center gap-1.5 rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-gray-warm transition-colors duration-300 hover:border-[rgba(38,35,30,0.24)] hover:text-bone"
       >
         <svg aria-hidden width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -77,10 +67,10 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-[calc(100%+8px)] min-w-[132px] overflow-hidden rounded-xl border border-line bg-surface/95 py-1 shadow-[0_12px_32px_-12px_rgba(38,35,30,0.28)] backdrop-blur-xl"
+          className="absolute right-0 top-[calc(100%+8px)] z-50 min-w-[132px] overflow-hidden rounded-xl border border-line bg-surface/95 py-1 shadow-[0_12px_32px_-12px_rgba(38,35,30,0.28)] backdrop-blur-xl"
         >
           {LOCALES.map((l) => {
-            const active = l.code === t.locale;
+            const active = l.code === locale;
             return (
               <li key={l.code} role="option" aria-selected={active}>
                 <a
@@ -101,6 +91,18 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
       )}
     </div>
   );
+}
+
+export function Nav({ t = trNav }: { t?: NavDict }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header
@@ -130,8 +132,8 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
           <span className="hidden sm:inline">Woodstone Studio</span>
         </Link>
 
-        {/* Masaüstü: yatay linkler + dil seçici */}
-        <ul className="hidden items-center gap-0.5 md:flex">
+        {/* Masaüstü (lg+): yatay linkler + dil seçici */}
+        <ul className="hidden items-center gap-0.5 lg:flex">
           {t.links.map((l) => (
             <li key={l.href}>
               <a
@@ -142,12 +144,14 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
               </a>
             </li>
           ))}
-          <li className="ml-2">{langSwitcher}</li>
+          <li className="ml-2">
+            <LangSwitcher locale={t.locale} aria={t.switchAria} />
+          </li>
         </ul>
 
-        {/* Mobil: dil seçici + hamburger */}
-        <div className="flex items-center gap-2 md:hidden">
-          {langSwitcher}
+        {/* Tablet/Mobil (<lg): dil seçici + hamburger */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <LangSwitcher locale={t.locale} aria={t.switchAria} />
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
@@ -170,9 +174,9 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
         </div>
       </nav>
 
-      {/* Mobil açılır menü */}
+      {/* Tablet/Mobil açılır menü */}
       {menuOpen && (
-        <div className="border-t border-line bg-base/95 backdrop-blur-xl md:hidden">
+        <div className="border-t border-line bg-base/95 backdrop-blur-xl lg:hidden">
           <ul className="mx-auto flex max-w-6xl flex-col px-6 py-3">
             {t.links.map((l) => (
               <li key={l.href}>
