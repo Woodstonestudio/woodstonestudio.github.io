@@ -8,7 +8,8 @@ import { trNav, type NavDict } from "@/lib/i18n";
 /**
  * Sabit navigasyon. Sayfanın üstünde şeffaf; 12px kaydırmadan
  * sonra bulanık, ince çizgili bir yüzey kazanır.
- * Sağ üstte üç dilli (TR / EN / SQ) açılır dil seçici.
+ * Masaüstü: yatay linkler + üç dilli dil seçici.
+ * Mobil: hamburger menü (linkler açılır) + dil seçici.
  */
 
 const LOCALES: { code: string; label: string; href: string }[] = [
@@ -21,7 +22,8 @@ const HOME_HREF: Record<string, string> = { tr: "/", en: "/en", sq: "/sq" };
 
 export function Nav({ t = trNav }: { t?: NavDict }) {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); // dil seçici
+  const [menuOpen, setMenuOpen] = useState(false); // mobil hamburger
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -43,6 +45,63 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
 
   const current = LOCALES.find((l) => l.code === t.locale) ?? LOCALES[0];
 
+  const langSwitcher = (
+    <div ref={menuRef} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label={t.switchAria}
+        className="inline-flex items-center gap-1.5 rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-gray-warm transition-colors duration-300 hover:border-[rgba(38,35,30,0.24)] hover:text-bone"
+      >
+        <svg aria-hidden width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        </svg>
+        {current.code.toUpperCase()}
+        <svg
+          aria-hidden
+          width="10"
+          height="10"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+
+      {open && (
+        <ul
+          role="listbox"
+          className="absolute right-0 top-[calc(100%+8px)] min-w-[132px] overflow-hidden rounded-xl border border-line bg-surface/95 py-1 shadow-[0_12px_32px_-12px_rgba(38,35,30,0.28)] backdrop-blur-xl"
+        >
+          {LOCALES.map((l) => {
+            const active = l.code === t.locale;
+            return (
+              <li key={l.code} role="option" aria-selected={active}>
+                <a
+                  href={l.href}
+                  className={`flex items-center justify-between gap-3 px-4 py-2.5 text-sm transition-colors duration-200 ${
+                    active ? "text-bone" : "text-gray-warm hover:bg-[rgba(38,35,30,0.05)] hover:text-bone"
+                  }`}
+                >
+                  {l.label}
+                  <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-gray-warm">
+                    {l.code}
+                  </span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ease-soft ${
@@ -55,6 +114,7 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
         aria-label={t.ariaLabel}
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8"
       >
+        {/* Logo */}
         <Link
           href={HOME_HREF[t.locale] ?? "/"}
           className="group flex items-center gap-3 text-[17px] font-medium tracking-tight text-bone"
@@ -70,7 +130,8 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
           <span className="hidden sm:inline">Woodstone Studio</span>
         </Link>
 
-        <ul className="flex items-center gap-0.5">
+        {/* Masaüstü: yatay linkler + dil seçici */}
+        <ul className="hidden items-center gap-0.5 md:flex">
           {t.links.map((l) => (
             <li key={l.href}>
               <a
@@ -81,74 +142,52 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
               </a>
             </li>
           ))}
-          <li>
-            <div ref={menuRef} className="relative ml-2">
-              <button
-                type="button"
-                onClick={() => setOpen((v) => !v)}
-                aria-haspopup="listbox"
-                aria-expanded={open}
-                aria-label={t.switchAria}
-                className="inline-flex items-center gap-1.5 rounded-full border border-line px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-gray-warm transition-colors duration-300 hover:border-[rgba(38,35,30,0.24)] hover:text-bone"
-              >
-                <svg
-                  aria-hidden
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
-                {current.code.toUpperCase()}
-                <svg
-                  aria-hidden
-                  width="10"
-                  height="10"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`}
-                >
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-
-              {open && (
-                <ul
-                  role="listbox"
-                  className="absolute right-0 top-[calc(100%+8px)] min-w-[132px] overflow-hidden rounded-xl border border-line bg-surface/95 py-1 shadow-[0_12px_32px_-12px_rgba(38,35,30,0.28)] backdrop-blur-xl"
-                >
-                  {LOCALES.map((l) => {
-                    const active = l.code === t.locale;
-                    return (
-                      <li key={l.code} role="option" aria-selected={active}>
-                        <a
-                          href={l.href}
-                          className={`flex items-center justify-between gap-3 px-4 py-2.5 text-sm transition-colors duration-200 ${
-                            active
-                              ? "text-bone"
-                              : "text-gray-warm hover:bg-[rgba(38,35,30,0.05)] hover:text-bone"
-                          }`}
-                        >
-                          {l.label}
-                          <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-gray-warm">
-                            {l.code}
-                          </span>
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-            </div>
-          </li>
+          <li className="ml-2">{langSwitcher}</li>
         </ul>
+
+        {/* Mobil: dil seçici + hamburger */}
+        <div className="flex items-center gap-2 md:hidden">
+          {langSwitcher}
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Menü"
+            aria-expanded={menuOpen}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-bone transition-colors duration-300 hover:border-[rgba(38,35,30,0.24)]"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+              {menuOpen ? (
+                <path d="M6 6l12 12M6 18L18 6" />
+              ) : (
+                <>
+                  <path d="M3 6h18" />
+                  <path d="M3 12h18" />
+                  <path d="M3 18h18" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
+
+      {/* Mobil açılır menü */}
+      {menuOpen && (
+        <div className="border-t border-line bg-base/95 backdrop-blur-xl md:hidden">
+          <ul className="mx-auto flex max-w-6xl flex-col px-6 py-3">
+            {t.links.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block py-3 text-[15px] text-bone transition-colors duration-200 hover:text-gray-warm"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 }

@@ -163,8 +163,8 @@ export const trSections = {
   },
   studio: {
     eyebrow: "Stüdyo",
-    t1: "Çözmeye değer",
-    t2: "sorunları çözeriz.",
+    t1: "Teknolojiyi",
+    t2: "işinize çeviriyoruz.",
     lead: "Woodstone bir teknoloji stüdyosu. Tasarım, yazılım ve otomasyonu birlikte ele alıyoruz; çünkü gerçek sorunlar bu ayrımları tanımaz. Her işi, kendi ürünümüzmüş gibi bir standartla ele alıyoruz.",
     signature: "Woodstone Studio tarafından tasarlandı ve geliştirildi",
   },
@@ -283,8 +283,8 @@ export const enSections: typeof trSections = {
   },
   studio: {
     eyebrow: "Studio",
-    t1: "We solve problems",
-    t2: "worth solving.",
+    t1: "We turn technology",
+    t2: "into your advantage.",
     lead: "Woodstone is a technology studio. We treat design, software and automation as one craft, because real problems do not respect those boundaries. Every project is held to the standard of our own products.",
     signature: "Designed and built by Woodstone Studio",
   },
@@ -403,8 +403,8 @@ export const sqSections: typeof trSections = {
   },
   studio: {
     eyebrow: "Studio",
-    t1: "Zgjidhim probleme",
-    t2: "që ia vlen t'i zgjidhësh.",
+    t1: "Teknologjinë e kthejmë",
+    t2: "në avantazhin tuaj.",
     lead: "Woodstone është një studio teknologjie. Dizajnin, softuerin dhe automatizimin i trajtojmë si një mjeshtëri të vetme, sepse problemet e vërteta nuk i njohin këto ndarje. Çdo projekt e mbajmë në standardin e produkteve tona.",
     signature: "Dizajnuar dhe ndërtuar nga Woodstone Studio",
   },
