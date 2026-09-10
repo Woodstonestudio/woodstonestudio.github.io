@@ -130,14 +130,15 @@ export const trSections = {
   },
   services: {
     eyebrow: "Hizmetler",
+    detailLabel: "Detaylı bilgi →",
     t1: "Beş disiplin,",
     t2: "tek stüdyo.",
     groups: [
-      { title: "Tasarım", line: "Modern, kullanıcı odaklı dijital deneyimler tasarlıyoruz.", items: ["Premium web siteleri", "Kurumsal web sitesi", "UI / UX tasarımı", "Marka kimliği"] },
-      { title: "Geliştirme", line: "Web, mobil ve özel yazılım çözümlerini fikirden yayına geliştiriyoruz.", items: ["SaaS geliştirme", "MVP geliştirme", "Web uygulamaları (React, Next.js)", "Mobil uygulamalar (Flutter, iOS, Android)", "Özel yazılım", "API entegrasyonları"] },
-      { title: "Otomasyon", line: "Yapay zekâ destekli otomasyonlarla iş süreçlerini hızlandırıyoruz.", items: ["Yapay zekâ çözümleri", "AI ajan geliştirme", "AI otomasyonu", "Blockchain & akıllı sözleşme"] },
-      { title: "Süreklilik", line: "Yayına aldıktan sonra da geliştirmeye ve destek vermeye devam ediyoruz.", items: ["Teknik danışmanlık", "SEO & performans", "Bakım & destek"] },
-      { title: "Sosyal Medya", line: "Sosyal medya hesaplarınızı yönetiyor, içerik üretiyor ve organik büyümeyi destekliyoruz.", items: ["Instagram & profil yönetimi", "İçerik üretimi (Reels, video)", "YouTube kanal yönetimi", "Sayfa düzenleme & optimizasyon", "Organik büyüme & görünürlük"] },
+      { title: "Tasarım", href: "/web-tasarim", line: "Modern, kullanıcı odaklı dijital deneyimler tasarlıyoruz.", items: ["Premium web siteleri", "Kurumsal web sitesi", "UI / UX tasarımı", "Marka kimliği"] },
+      { title: "Geliştirme", href: "/saas-gelistirme", href2: "/mobil-uygulama", href2Label: "Mobil uygulama →", line: "Web, mobil ve özel yazılım çözümlerini fikirden yayına geliştiriyoruz.", items: ["SaaS geliştirme", "MVP geliştirme", "Web uygulamaları (React, Next.js)", "Mobil uygulamalar (Flutter, iOS, Android)", "Özel yazılım", "API entegrasyonları"] },
+      { title: "Otomasyon", href: "/yapay-zeka", line: "Yapay zekâ destekli otomasyonlarla iş süreçlerini hızlandırıyoruz.", items: ["Yapay zekâ çözümleri", "AI ajan geliştirme", "AI otomasyonu", "Blockchain & akıllı sözleşme"] },
+      { title: "Süreklilik", href: undefined as string | undefined, href2: undefined as string | undefined, href2Label: undefined as string | undefined, line: "Yayına aldıktan sonra da geliştirmeye ve destek vermeye devam ediyoruz.", items: ["Teknik danışmanlık", "SEO & performans", "Bakım & destek"] },
+      { title: "Sosyal Medya", href: "/sosyal-medya", line: "Sosyal medya hesaplarınızı yönetiyor, içerik üretiyor ve organik büyümeyi destekliyoruz.", items: ["Instagram & profil yönetimi", "İçerik üretimi (Reels, video)", "YouTube kanal yönetimi", "Sayfa düzenleme & optimizasyon", "Organik büyüme & görünürlük"] },
     ],
   },
   work: {
@@ -250,14 +251,15 @@ export const enSections: typeof trSections = {
   },
   services: {
     eyebrow: "Services",
+    detailLabel: "Learn more →",
     t1: "Five disciplines,",
     t2: "one studio.",
     groups: [
-      { title: "Design", line: "We design modern, user-centred digital experiences.", items: ["Premium websites", "Corporate websites", "UI / UX design", "Brand identity"] },
-      { title: "Development", line: "We build web, mobile and custom software from idea to launch.", items: ["SaaS development", "MVP development", "Web applications (React, Next.js)", "Mobile apps (Flutter, iOS, Android)", "Custom software", "API integrations"] },
-      { title: "Automation", line: "We accelerate business processes with AI-powered automation.", items: ["AI solutions", "AI agent development", "AI automation", "Blockchain & smart contracts"] },
-      { title: "Continuity", line: "We keep improving and supporting your product after launch.", items: ["Technical consulting", "SEO & performance", "Maintenance & support"] },
-      { title: "Social Media", line: "We manage your social media accounts, produce content and support organic growth.", items: ["Instagram & profile management", "Content production (Reels, video)", "YouTube channel management", "Page setup & optimisation", "Organic growth & visibility"] },
+      { title: "Design", href: "/en/web-design", line: "We design modern, user-centred digital experiences.", items: ["Premium websites", "Corporate websites", "UI / UX design", "Brand identity"] },
+      { title: "Development", href: "/en/saas-development", href2: "/en/mobile-apps", href2Label: "Mobile apps →", line: "We build web, mobile and custom software from idea to launch.", items: ["SaaS development", "MVP development", "Web applications (React, Next.js)", "Mobile apps (Flutter, iOS, Android)", "Custom software", "API integrations"] },
+      { title: "Automation", href: "/en/ai-solutions", line: "We accelerate business processes with AI-powered automation.", items: ["AI solutions", "AI agent development", "AI automation", "Blockchain & smart contracts"] },
+      { title: "Continuity", href: undefined, href2: undefined, href2Label: undefined, line: "We keep improving and supporting your product after launch.", items: ["Technical consulting", "SEO & performance", "Maintenance & support"] },
+      { title: "Social Media", href: "/en/social-media", line: "We manage your social media accounts, produce content and support organic growth.", items: ["Instagram & profile management", "Content production (Reels, video)", "YouTube channel management", "Page setup & optimisation", "Organic growth & visibility"] },
     ],
   },
   work: {
@@ -370,14 +372,15 @@ export const sqSections: typeof trSections = {
   },
   services: {
     eyebrow: "Shërbime",
+    detailLabel: "Më shumë →",
     t1: "Pesë disiplina,",
     t2: "një studio.",
     groups: [
-      { title: "Dizajn", line: "Dizajnojmë përvoja dixhitale moderne, të përqendruara te përdoruesi.", items: ["Faqe interneti premium", "Faqe interneti korporative", "Dizajn UI / UX", "Identitet marke"] },
-      { title: "Zhvillim", line: "Ndërtojmë softuer web, mobile dhe të personalizuar nga ideja në publikim.", items: ["Zhvillim SaaS", "Zhvillim MVP", "Aplikacione web (React, Next.js)", "Aplikacione mobile (Flutter, iOS, Android)", "Softuer i personalizuar", "Integrime API"] },
-      { title: "Automatizim", line: "Përshpejtojmë proceset e biznesit me automatizim të fuqizuar nga inteligjenca artificiale.", items: ["Zgjidhje me inteligjencë artificiale", "Zhvillim agjentësh AI", "Automatizim AI", "Blockchain & kontrata inteligjente"] },
-      { title: "Vazhdimësi", line: "Vazhdojmë ta përmirësojmë dhe ta mbështesim produktin edhe pas publikimit.", items: ["Konsulencë teknike", "SEO & performancë", "Mirëmbajtje & mbështetje"] },
-      { title: "Media Sociale", line: "Menaxhojmë llogaritë tuaja në media sociale, prodhojmë përmbajtje dhe mbështesim rritjen organike.", items: ["Menaxhim i Instagram & profilit", "Prodhim përmbajtjeje (Reels, video)", "Menaxhim i kanalit YouTube", "Rregullim & optimizim i faqes", "Rritje organike & dukshmëri"] },
+      { title: "Dizajn", href: "/sq/dizajn-web", line: "Dizajnojmë përvoja dixhitale moderne, të përqendruara te përdoruesi.", items: ["Faqe interneti premium", "Faqe interneti korporative", "Dizajn UI / UX", "Identitet marke"] },
+      { title: "Zhvillim", href: "/sq/zhvillim-saas", href2: "/sq/aplikacione-mobile", href2Label: "Aplikacione mobile →", line: "Ndërtojmë softuer web, mobile dhe të personalizuar nga ideja në publikim.", items: ["Zhvillim SaaS", "Zhvillim MVP", "Aplikacione web (React, Next.js)", "Aplikacione mobile (Flutter, iOS, Android)", "Softuer i personalizuar", "Integrime API"] },
+      { title: "Automatizim", href: "/sq/inteligjence-artificiale", line: "Përshpejtojmë proceset e biznesit me automatizim të fuqizuar nga inteligjenca artificiale.", items: ["Zgjidhje me inteligjencë artificiale", "Zhvillim agjentësh AI", "Automatizim AI", "Blockchain & kontrata inteligjente"] },
+      { title: "Vazhdimësi", href: undefined, href2: undefined, href2Label: undefined, line: "Vazhdojmë ta përmirësojmë dhe ta mbështesim produktin edhe pas publikimit.", items: ["Konsulencë teknike", "SEO & performancë", "Mirëmbajtje & mbështetje"] },
+      { title: "Media Sociale", href: "/sq/media-sociale", line: "Menaxhojmë llogaritë tuaja në media sociale, prodhojmë përmbajtje dhe mbështesim rritjen organike.", items: ["Menaxhim i Instagram & profilit", "Prodhim përmbajtjeje (Reels, video)", "Menaxhim i kanalit YouTube", "Rregullim & optimizim i faqes", "Rritje organike & dukshmëri"] },
     ],
   },
   work: {

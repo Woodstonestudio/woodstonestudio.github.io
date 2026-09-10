@@ -45,11 +45,35 @@ export function Services({ t = trSections.services }: { t?: SectionsDict["servic
                   </span>
                   <div>
                     <h3 className="text-2xl font-light tracking-tight text-bone sm:text-3xl">
-                      {g.title}
+                      {g.href ? (
+                        <a href={g.href} className="transition-colors hover:text-gray-warm">
+                          {g.title}
+                        </a>
+                      ) : (
+                        g.title
+                      )}
                     </h3>
                     <p className="mt-2 text-[15px] leading-relaxed text-gray-warm">
                       {g.line}
                     </p>
+                    {g.href && (
+                      <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+                        <a
+                          href={g.href}
+                          className="font-mono text-[11px] uppercase tracking-[0.14em] text-bone-dim transition-colors hover:text-bone"
+                        >
+                          {t.detailLabel}
+                        </a>
+                        {g.href2 && (
+                          <a
+                            href={g.href2}
+                            className="font-mono text-[11px] uppercase tracking-[0.14em] text-bone-dim transition-colors hover:text-bone"
+                          >
+                            {g.href2Label}
+                          </a>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
 
