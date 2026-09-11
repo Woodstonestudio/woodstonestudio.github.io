@@ -8,13 +8,13 @@ import { Spotlight } from "@/components/fx/spotlight";
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
   title: {
-    default: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
-    template: "%s — Woodstone Studio",
+    default: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
+    template: "%s — WoodstoneStudio",
   },
   description:
-    "Woodstone Studio; web siteleri, mobil uygulamalar, yapay zekâ çözümleri, iş süreçleri otomasyonu ve özel yazılım geliştiren bir dijital teknoloji stüdyosudur.",
+    "WoodstoneStudio; web siteleri, mobil uygulamalar, yapay zekâ çözümleri, iş süreçleri otomasyonu ve özel yazılım geliştiren bir dijital teknoloji stüdyosudur.",
   keywords: [
-    "Woodstone Studio",
+    "WoodstoneStudio",
     "web tasarım",
     "kurumsal web sitesi",
     "mobil uygulama geliştirme",
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     "İzmir yazılım",
   ],
   openGraph: {
-    title: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
+    title: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
     description:
       "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
     url: "https://woodstonestudio.com",
-    siteName: "Woodstone Studio",
+    siteName: "WoodstoneStudio",
     type: "website",
     locale: "tr_TR",
     images: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
+        alt: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Woodstone Studio — Dijital Teknoloji Stüdyosu",
+    title: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
     description:
       "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
     images: ["/og-cover.jpg"],
@@ -83,7 +83,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Woodstone Studio",
+              name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               logo: "https://woodstonestudio.com/brand/logo.png",
               image: "https://woodstonestudio.com/og-cover.jpg",
@@ -112,12 +112,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Woodstone Studio",
+              name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               inLanguage: "tr-TR",
               publisher: {
                 "@type": "Organization",
-                name: "Woodstone Studio",
+                name: "WoodstoneStudio",
               },
             }),
           }}
@@ -144,7 +144,7 @@ export default function RootLayout({
               ],
               provider: {
                 "@type": "Organization",
-                name: "Woodstone Studio",
+                name: "WoodstoneStudio",
                 url: "https://woodstonestudio.com",
               },
               areaServed: { "@type": "Country", name: "Türkiye" },

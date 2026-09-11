@@ -3,7 +3,7 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/motion/reveal";
 import { trNav, enNav, sqNav, trSections, enSections, sqSections } from "@/lib/i18n";
-import { posts, BLOG_BASE, BLOG_LABELS, type BlogPost } from "@/lib/blog";
+import { posts, postsForLocale, BLOG_BASE, BLOG_LABELS, type BlogPost } from "@/lib/blog";
 import type { Locale } from "@/components/service-page";
 
 const NAV = { tr: trNav, en: enNav, sq: sqNav } as const;
@@ -20,7 +20,7 @@ function fmtDate(iso: string, locale: Locale) {
 export function BlogList({ locale }: { locale: Locale }) {
   const L = BLOG_LABELS[locale];
   const base = BLOG_BASE[locale];
-  const sorted = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const sorted = postsForLocale(locale);
 
   return (
     <>
@@ -99,10 +99,10 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
     description: post.excerpt[locale],
     datePublished: post.date,
     inLanguage: locale,
-    author: { "@type": "Organization", name: "Woodstone Studio", url: SITE },
+    author: { "@type": "Organization", name: "WoodstoneStudio", url: SITE },
     publisher: {
       "@type": "Organization",
-      name: "Woodstone Studio",
+      name: "WoodstoneStudio",
       logo: { "@type": "ImageObject", url: `${SITE}/brand/logo.png` },
     },
     mainEntityOfPage: `${SITE}${base}/${post.slug}`,
@@ -199,16 +199,16 @@ export function blogListMetadata(locale: Locale) {
 }
 
 export function blogPostMetadata(post: BlogPost, locale: Locale) {
+  const langs: Record<string, string> = {};
+  if (post.locales.includes("tr")) langs.tr = `${SITE}/blog/${post.slug}`;
+  if (post.locales.includes("en")) langs.en = `${SITE}/en/blog/${post.slug}`;
+  if (post.locales.includes("sq")) langs.sq = `${SITE}/sq/blog/${post.slug}`;
   return {
     title: post.title[locale],
     description: post.excerpt[locale],
     alternates: {
       canonical: `${BLOG_BASE[locale]}/${post.slug}`,
-      languages: {
-        tr: `${SITE}/blog/${post.slug}`,
-        en: `${SITE}/en/blog/${post.slug}`,
-        sq: `${SITE}/sq/blog/${post.slug}`,
-      },
+      languages: langs,
     },
     openGraph: {
       title: post.title[locale],

@@ -18,7 +18,7 @@ export function AboutPage({ c }: { c: AboutContent }) {
     name: c.meta.title,
     url: `${SITE}${c.slug}`,
     description: c.meta.description,
-    about: { "@type": "Organization", name: "Woodstone Studio", url: SITE },
+    about: { "@type": "Organization", name: "WoodstoneStudio", url: SITE },
   };
 
   return (

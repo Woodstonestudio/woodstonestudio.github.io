@@ -129,7 +129,7 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
             priority
             className="rounded-full ring-1 ring-[rgba(239,234,224,0.22)] drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)] transition-transform duration-500 ease-soft group-hover:scale-105"
           />
-          <span className="hidden sm:inline">Woodstone Studio</span>
+          <span className="hidden sm:inline">WoodstoneStudio</span>
         </Link>
 
         {/* Masaüstü (lg+): yatay linkler + dil seçici */}

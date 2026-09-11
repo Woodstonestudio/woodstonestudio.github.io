@@ -2,6 +2,7 @@ import type { Locale } from "@/components/service-page";
 
 export type BlogPost = {
   slug: string; // dil-bağımsız kısa kimlik (URL'de dile göre önek eklenir)
+  locales: Locale[]; // bu yazının yayınlandığı diller (pazar hedefli içerik için)
   date: string; // ISO
   readMin: number;
   category: Record<Locale, string>;
@@ -56,6 +57,7 @@ export const BLOG_LABELS: Record<Locale, { eyebrow: string; title: [string, stri
 export const posts: BlogPost[] = [
   {
     slug: "web-sitesi-maliyeti",
+    locales: ["tr", "en", "sq"],
     date: "2026-09-08",
     readMin: 5,
     category: { tr: "Web", en: "Web", sq: "Web" },
@@ -131,6 +133,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "mvp-nedir",
+    locales: ["tr", "en", "sq"],
     date: "2026-09-06",
     readMin: 4,
     category: { tr: "Ürün", en: "Product", sq: "Produkt" },
@@ -188,6 +191,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "yapay-zeka-kucuk-isletme",
+    locales: ["tr", "en", "sq"],
     date: "2026-09-04",
     readMin: 4,
     category: { tr: "Yapay Zekâ", en: "AI", sq: "Inteligjencë Artificiale" },
@@ -240,8 +244,234 @@ export const posts: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: "faqe-interneti-shqiperi-cmimi",
+    locales: ["sq", "en"],
+    date: "2026-09-10",
+    readMin: 6,
+    category: { tr: "Web", en: "Web", sq: "Web" },
+    title: {
+      tr: "Faqe interneti në Shqipëri: sa kushton?",
+      en: "How much does a website cost in Albania?",
+      sq: "Sa kushton një faqe interneti në Shqipëri?",
+    },
+    excerpt: {
+      tr: "",
+      en: "What does a website really cost in Albania, and what drives the price? A clear, honest guide for businesses in Tirana, Durrës and beyond.",
+      sq: "Sa kushton vërtet një faqe interneti në Shqipëri dhe çfarë e përcakton çmimin? Një udhëzues i qartë dhe i ndershëm për bizneset në Tiranë, Durrës dhe më gjerë.",
+    },
+    body: {
+      tr: [],
+      en: [
+        { type: "p", text: "\"How much does a website cost?\" is one of the most common questions from business owners in Albania — and it rarely gets a straight answer. Prices in Tirana and beyond range from a few hundred euros to several thousand, and that spread confuses everyone. Here is an honest breakdown of what actually sets the price." },
+        { type: "h2", text: "Why prices vary so much" },
+        { type: "p", text: "A website is not a single product; it's a range. A one-page site for a small shop and a multi-page corporate site with online booking are simply different amounts of work. Before comparing quotes, it helps to know the factors below." },
+        { type: "h2", text: "1. Scope and number of pages" },
+        { type: "p", text: "A landing page, a 5-page business site and a 20-page corporate site are very different jobs. The more pages, sections and content, the higher the cost." },
+        { type: "h2", text: "2. Template vs custom design" },
+        { type: "p", text: "A ready-made theme is cheap but looks like thousands of others. A custom design costs more but sets your brand apart — which matters if you compete for customers online." },
+        { type: "h2", text: "3. Features" },
+        { type: "p", text: "The base price rises with each custom feature:" },
+        { type: "ul", items: ["Multiple languages (Albanian, English, Italian…)", "E-commerce: products, cart, online payment", "Booking or appointment system", "Admin panel to update content yourself"] },
+        { type: "h2", text: "4. SEO and speed" },
+        { type: "p", text: "A site that shows up on Google and loads fast doesn't happen by accident. Technical SEO and performance should be part of the price — cheap builds usually skip them and cost you later." },
+        { type: "h2", text: "5. Maintenance after launch" },
+        { type: "p", text: "Ask whether updates, small changes and support are included after launch. This is where many cheap offers fall short." },
+        { type: "h2", text: "So, a realistic range for Albania" },
+        { type: "p", text: "As a rough guide: a simple, professional business site typically starts in the low hundreds of euros; a custom, multi-page or multilingual site with SEO runs higher; e-commerce and custom features raise it further. The right question isn't \"what's the cheapest?\" but \"what do I actually need, and is the quote clear about it?\"" },
+        { type: "p", text: "We work with clients across Albania and Kosovo, in Albanian, English and Turkish. If you're planning a website, we can clarify the scope and cost in a free consultation — with no hidden items." },
+      ],
+      sq: [
+        { type: "p", text: "\"Sa kushton një faqe interneti?\" është një nga pyetjet më të shpeshta të pronarëve të bizneseve në Shqipëri — dhe rrallë merr një përgjigje të drejtpërdrejtë. Çmimet në Tiranë e më gjerë shkojnë nga disa qindra euro deri në disa mijëra, dhe kjo diferencë i hutón të gjithë. Ja një ndarje e ndershme e asaj që vërtet e përcakton çmimin." },
+        { type: "h2", text: "Pse ndryshojnë kaq shumë çmimet" },
+        { type: "p", text: "Një faqe interneti nuk është një produkt i vetëm; është një gamë e tërë. Një faqe e vetme për një dyqan të vogël dhe një faqe korporative me shumë faqe e me rezervim online janë thjesht sasi të ndryshme pune. Para se të krahasoni oferta, ndihmon të njihni faktorët e mëposhtëm." },
+        { type: "h2", text: "1. Fushëveprimi dhe numri i faqeve" },
+        { type: "p", text: "Një landing page, një faqe biznesi me 5 faqe dhe një faqe korporative me 20 faqe janë punë shumë të ndryshme. Sa më shumë faqe, seksione dhe përmbajtje, aq më i lartë kostoja." },
+        { type: "h2", text: "2. Shabllon apo dizajn i personalizuar" },
+        { type: "p", text: "Një temë e gatshme është e lirë, por u ngjan mijëra faqeve të tjera. Një dizajn i personalizuar kushton më shumë, por e dallon markën tuaj — gjë që ka rëndësi nëse konkurroni për klientë online." },
+        { type: "h2", text: "3. Funksionet" },
+        { type: "p", text: "Çmimi bazë rritet me çdo funksion të veçantë:" },
+        { type: "ul", items: ["Shumë gjuhë (shqip, anglisht, italisht…)", "E-commerce: produkte, shportë, pagesë online", "Sistem rezervimi ose termini", "Panel administrimi për ta përditësuar vetë përmbajtjen"] },
+        { type: "h2", text: "4. SEO dhe shpejtësia" },
+        { type: "p", text: "Që një faqe të dalë në Google dhe të ngarkohet shpejt nuk ndodh rastësisht. SEO teknike dhe performanca duhet të jenë pjesë e çmimit — ndërtimet e lira zakonisht i anashkalojnë dhe ju kushtojnë më vonë." },
+        { type: "h2", text: "5. Mirëmbajtja pas publikimit" },
+        { type: "p", text: "Pyesni nëse përditësimet, ndryshimet e vogla dhe mbështetja përfshihen pas publikimit. Këtu shumë oferta të lira lënë për të dëshiruar." },
+        { type: "h2", text: "Atëherë, një gamë realiste për Shqipërinë" },
+        { type: "p", text: "Si udhëzues i përafërt: një faqe biznesi e thjeshtë dhe profesionale zakonisht nis nga disa qindra euro; një faqe e personalizuar, me shumë faqe ose shumëgjuhëshe me SEO shkon më lart; e-commerce dhe funksionet e veçanta e rrisin edhe më. Pyetja e duhur nuk është \"cila është më e lira?\" por \"çfarë më duhet vërtet, dhe a është oferta e qartë për këtë?\"" },
+        { type: "p", text: "Punojmë me klientë në Shqipëri dhe Kosovë, në shqip, anglisht dhe turqisht. Nëse po planifikoni një faqe interneti, mund të qartësojmë fushëveprimin dhe koston në një konsultë falas — pa zëra të fshehur." },
+      ],
+    },
+  },
+  {
+    slug: "biznesi-online-shqiperi",
+    locales: ["sq"],
+    date: "2026-09-09",
+    readMin: 5,
+    category: { tr: "", en: "", sq: "Biznes" },
+    title: {
+      tr: "",
+      en: "",
+      sq: "Pse çdo biznes në Shqipëri ka nevojë për një prani online",
+    },
+    excerpt: {
+      tr: "",
+      en: "",
+      sq: "Klientët tuaj po ju kërkojnë në Google dhe Instagram çdo ditë. Ja pse një prani online profesionale nuk është më luks, por domosdoshmëri për bizneset shqiptare.",
+    },
+    body: {
+      tr: [], en: [],
+      sq: [
+        { type: "p", text: "Dikur, një biznes i vogël në Shqipëri mund të mbijetonte vetëm me një tabelë të mirë dhe fjalën gojë më gojë. Sot, gjëja e parë që bën një klient para se të zgjedhë një restorant, një klinikë apo një dyqan është të kërkojë në Google ose Instagram. Nëse nuk ju gjejnë atje, ju kanë humbur para se t'ju njohin." },
+        { type: "h2", text: "Ku ju kërkojnë klientët sot" },
+        { type: "p", text: "Sjellja e blerësit ka ndryshuar. Para se të marrin një vendim, njerëzit kërkojnë, krahasojnë dhe lexojnë. Nëse biznesi juaj nuk shfaqet kur dikush kërkon \"restorant në Tiranë\" ose \"klinikë estetike Durrës\", ai klient shkon te konkurrenti që shfaqet." },
+        { type: "h2", text: "Prania online nuk është vetëm një faqe interneti" },
+        { type: "p", text: "Një prani e plotë online ka disa pjesë që punojnë së bashku:" },
+        { type: "ul", items: ["Një faqe interneti profesionale — shtëpia juaj dixhitale, që e kontrolloni ju", "Google Business Profile — që të shfaqeni në Google Maps dhe kërkime lokale", "Rrjete sociale aktive — Instagram dhe Facebook ku klientët ju gjejnë dhe ju besojnë", "Përmbajtje e rregullt — që tregon se biznesi juaj është i gjallë dhe serioz"] },
+        { type: "h2", text: "Pse një faqe interneti mbetet thelbësore" },
+        { type: "p", text: "Shumë biznese shqiptare mbështeten vetëm në Instagram. Kjo është një fillim i mirë, por ka një problem: llogaria juaj në Instagram nuk është e juaja — algoritmi vendos kush e sheh, dhe rregullat ndryshojnë. Një faqe interneti është e vetmja pronë dixhitale që kontrolloni plotësisht. Aty ndodhen shërbimet, çmimet, kontakti dhe besueshmëria juaj, gjithmonë të disponueshme dhe të gjegjshme në Google." },
+        { type: "h2", text: "Besimi vjen nga profesionalizmi" },
+        { type: "p", text: "Një faqe e ngadaltë, e vjetruar ose që nuk funksionon në celular i largon klientët. Në të kundërt, një prani e pastër dhe profesionale ndërton besim që në sekondën e parë. Në një treg ku shumë konkurrentë ende nuk e kanë këtë, një prani e mirë online ju vendos menjëherë përpara." },
+        { type: "h2", text: "Nga të fillohet?" },
+        { type: "p", text: "Nuk keni nevojë të bëni gjithçka menjëherë. Filloni me një faqe interneti të thjeshtë dhe profesionale që shpjegon qartë çfarë bëni, ku ndodheni dhe si t'ju kontaktojnë. Pastaj ndërtoni mbi të: Google Maps, rrjete sociale, përmbajtje. Hap pas hapi, prania juaj online bëhet burimi juaj më i qëndrueshëm i klientëve." },
+        { type: "p", text: "Nëse doni ta ndërtoni ose ta përmirësoni praninë tuaj online, mund të flasim në një konsultë falas dhe të gjejmë hapin e parë të duhur për biznesin tuaj." },
+      ],
+    },
+  },
+  {
+    slug: "aplikacion-mobile-shqiperi",
+    locales: ["sq", "en"],
+    date: "2026-09-08",
+    readMin: 5,
+    category: { tr: "Mobile", en: "Mobile", sq: "Mobile" },
+    title: {
+      tr: "",
+      en: "Developing a mobile app in Albania: what to know before you start",
+      sq: "Si të zhvilloni një aplikacion mobile në Shqipëri: çfarë duhet të dini",
+    },
+    excerpt: {
+      tr: "",
+      en: "Thinking of building an app for the Albanian market? Here's a practical guide to costs, timelines and the choices that matter most.",
+      sq: "Po mendoni të ndërtoni një aplikacion për tregun shqiptar? Ja një udhëzues praktik për kostot, afatet dhe zgjedhjet që kanë më shumë rëndësi.",
+    },
+    body: {
+      tr: [],
+      en: [
+        { type: "p", text: "The Albanian market is increasingly mobile-first. Whether it's food delivery, services, booking or a product idea, a well-made app can reach customers directly on their phones. But before you start, a few decisions shape the whole project — and its cost." },
+        { type: "h2", text: "1. iOS, Android, or both?" },
+        { type: "p", text: "In Albania, Android has the larger share, but iOS users are often higher-value. The good news: with modern tools like Flutter, you can build both platforms from a single codebase — far cheaper than building each separately." },
+        { type: "h2", text: "2. Start with an MVP" },
+        { type: "p", text: "Don't try to build every feature at once. Start with a Minimum Viable Product — the core features that prove your idea works. Launch, learn from real users, then grow. This saves money and reduces risk." },
+        { type: "h2", text: "3. What drives the cost" },
+        { type: "ul", items: ["Number and complexity of features", "Backend needs (accounts, database, notifications)", "Payments or subscriptions", "Design complexity", "Store publishing and maintenance"] },
+        { type: "h2", text: "4. Publishing and upkeep" },
+        { type: "p", text: "Getting an app onto the App Store and Google Play involves review processes, store listings and ongoing updates. Factor maintenance in from the start — an app is a living product, not a one-time build." },
+        { type: "h2", text: "Where we fit in" },
+        { type: "p", text: "We build iOS and Android apps from a single Flutter codebase and handle everything from design to store release. Our own apps are live in the stores, so we know the process first-hand — and we work with clients across Albania and Kosovo. If you have an app idea, we can map the MVP scope together in a free assessment." },
+      ],
+      sq: [
+        { type: "p", text: "Tregu shqiptar po bëhet gjithnjë e më shumë mobile-first. Qoftë shpërndarje ushqimi, shërbime, rezervime apo një ide produkti, një aplikacion i bërë mirë mund t'i arrijë klientët drejtpërdrejt në telefonat e tyre. Por para se të filloni, disa vendime e formësojnë të gjithë projektin — dhe koston e tij." },
+        { type: "h2", text: "1. iOS, Android, apo të dyja?" },
+        { type: "p", text: "Në Shqipëri, Android ka pjesën më të madhe, por përdoruesit e iOS shpesh janë me vlerë më të lartë. Lajmi i mirë: me mjete moderne si Flutter, mund të ndërtoni të dyja platformat nga një kod i vetëm — shumë më lirë se t'i ndërtoni veç e veç." },
+        { type: "h2", text: "2. Filloni me një MVP" },
+        { type: "p", text: "Mos u përpiqni të ndërtoni çdo veçori menjëherë. Filloni me një Minimum Viable Product — veçoritë thelbësore që provojnë se ideja juaj funksionon. Publikoni, mësoni nga përdoruesit realë, pastaj rriteni. Kjo kursen para dhe ul rrezikun." },
+        { type: "h2", text: "3. Çfarë e përcakton koston" },
+        { type: "ul", items: ["Numri dhe kompleksiteti i veçorive", "Nevojat e backend-it (llogari, bazë të dhënash, njoftime)", "Pagesa ose abonime", "Kompleksiteti i dizajnit", "Publikimi në dyqane dhe mirëmbajtja"] },
+        { type: "h2", text: "4. Publikimi dhe mirëmbajtja" },
+        { type: "p", text: "Nxjerrja e një aplikacioni në App Store dhe Google Play përfshin procese rishikimi, tekste dyqani dhe përditësime të vazhdueshme. Llogariteni mirëmbajtjen që në fillim — një aplikacion është produkt i gjallë, jo një ndërtim një herë e mirë." },
+        { type: "h2", text: "Ku hyjmë ne" },
+        { type: "p", text: "Ndërtojmë aplikacione iOS dhe Android nga një kod i vetëm Flutter dhe kujdesemi për gjithçka, nga dizajni te publikimi në dyqane. Aplikacionet tona janë live në dyqane, ndaj procesin e njohim nga përvoja — dhe punojmë me klientë në Shqipëri dhe Kosovë. Nëse keni një ide aplikacioni, mund të hartojmë së bashku fushëveprimin e MVP-së në një vlerësim falas." },
+      ],
+    },
+  },
+
+  {
+    slug: "izmir-web-tasarim-fiyatlari",
+    locales: ["tr"],
+    date: "2026-09-07",
+    readMin: 5,
+    category: { tr: "Web", en: "", sq: "" },
+    title: {
+      tr: "İzmir'de web tasarım fiyatları: neye göre değişir?",
+      en: "",
+      sq: "",
+    },
+    excerpt: {
+      tr: "İzmir'de web sitesi yaptırmak isteyenlerin en çok merak ettiği soru: fiyat. Bir teklifin arkasındaki gerçek etkenleri ve doğru bütçeyi nasıl planlayacağınızı anlatıyoruz.",
+      en: "", sq: "",
+    },
+    body: {
+      en: [], sq: [],
+      tr: [
+        { type: "p", text: "İzmir'de bir işletme sahibiyseniz ve web sitesi yaptırmayı düşünüyorsanız, aklınızdaki ilk soru büyük ihtimalle şudur: \"Ne kadar tutar?\" Aldığınız teklifler birbirinden çok farklı çıkabilir ve bu kafa karıştırıcıdır. İşte fiyatı belirleyen gerçek etkenler." },
+        { type: "h2", text: "Fiyatlar neden bu kadar farklı?" },
+        { type: "p", text: "Çünkü \"web sitesi\" tek bir şey değil. Tek sayfalık bir tanıtım sitesiyle, onlarca sayfalı, çok dilli, e-ticaretli bir kurumsal site arasında dağlar kadar fark vardır. Teklifleri karşılaştırmadan önce aşağıdaki etkenleri bilmek işinizi kolaylaştırır." },
+        { type: "h2", text: "1. Kapsam ve sayfa sayısı" },
+        { type: "p", text: "Tek sayfalık landing, 5 sayfalık kurumsal site, 20 sayfalık büyük kurumsal site — hepsi farklı iş yüküdür. Ne kadar çok sayfa ve içerik, o kadar yüksek maliyet." },
+        { type: "h2", text: "2. Hazır tema mı, özel tasarım mı?" },
+        { type: "p", text: "Hazır bir şablon ucuzdur ama binlerce siteye benzer. Markanıza özel tasarım daha pahalıdır ama sizi rakiplerinizden ayırır. İzmir gibi rekabetin yoğun olduğu bir pazarda, özel tasarım çoğu zaman kendini amorti eder." },
+        { type: "h2", text: "3. Özel işlevler" },
+        { type: "p", text: "Temel fiyatın üstüne, her özel işlev maliyeti artırır:" },
+        { type: "ul", items: ["Çok dilli yapı (Türkçe, İngilizce, ihtiyaca göre başka diller)", "E-ticaret: ürün, sepet, online ödeme", "Randevu / rezervasyon sistemi", "Kendi içeriğinizi güncelleyebileceğiniz yönetim paneli"] },
+        { type: "h2", text: "4. SEO ve hız" },
+        { type: "p", text: "Sitenin Google'da çıkması ve hızlı açılması kendiliğinden olmaz. Teknik SEO ve performans, iyi bir teklife dahil olmalıdır. Ucuz tekliflerde bunlar genellikle atlanır ve sonradan \"neden Google'da çıkmıyorum?\" derdine dönüşür." },
+        { type: "h2", text: "5. Yayın sonrası bakım" },
+        { type: "p", text: "Site yayına girince iş bitmez. Güncelleme, küçük değişiklik ve teknik destek için bir anlaşma olup olmadığını baştan sorun. Ucuz tekliflerin çoğu burada eksik kalır." },
+        { type: "h2", text: "İzmir için gerçekçi bir bakış" },
+        { type: "p", text: "Kaba bir rehber: sade ama profesyonel bir kurumsal site birkaç yüz eurodan (ya da TL karşılığından) başlar; özel tasarımlı, çok sayfalı veya çok dilli, SEO'lu bir site daha yukarıdadır; e-ticaret ve özel işlevler fiyatı daha da artırır. Doğru soru \"en ucuz hangisi?\" değil, \"bana gerçekten ne lazım ve teklif bunu net anlatıyor mu?\" olmalı." },
+        { type: "p", text: "İzmir merkezliyiz ama Türkiye'nin her yerinden müşteriyle çalışıyoruz. Bir web sitesi düşünüyorsanız, ücretsiz ön görüşmede kapsamı ve maliyeti birlikte netleştirebiliriz — gizli kalem olmadan." },
+      ],
+    },
+  },
+  {
+    slug: "kobi-dijital-donusum",
+    locales: ["tr"],
+    date: "2026-09-05",
+    readMin: 5,
+    category: { tr: "Dijital", en: "", sq: "" },
+    title: {
+      tr: "KOBİ'ler için dijital dönüşüm: nereden başlamalı?",
+      en: "", sq: "",
+    },
+    excerpt: {
+      tr: "Dijital dönüşüm büyük şirketlere özel bir şey değil. Küçük ve orta ölçekli bir işletmenin bugün somut olarak atabileceği adımları, karmaşaya boğulmadan anlatıyoruz.",
+      en: "", sq: "",
+    },
+    body: {
+      en: [], sq: [],
+      tr: [
+        { type: "p", text: "\"Dijital dönüşüm\" kulağa büyük şirketlere özel, pahalı ve karmaşık bir şey gibi geliyor. Oysa küçük ve orta ölçekli bir işletme için dijital dönüşüm, aslında birkaç somut ve ulaşılabilir adımdan ibarettir. Amacı da tek: daha az emekle daha çok iş yapmak ve müşteriye daha kolay ulaşmak." },
+        { type: "h2", text: "Dijital dönüşüm aslında ne demek?" },
+        { type: "p", text: "Karmaşık tanımları bir kenara bırakalım: işinizin elle, kağıtla ya da dağınık şekilde yürüyen kısımlarını, dijital araçlarla daha hızlı ve düzenli hale getirmektir. Hepsini bir anda değil, en çok zaman kaybettiğiniz yerden başlayarak." },
+        { type: "h2", text: "1. Görünürlük: sizi bulabiliyorlar mı?" },
+        { type: "p", text: "İlk adım genellikle profesyonel bir web sitesi ve Google'da bulunabilirliktir. Müşteri sizi ararken bulamıyorsa, en iyi ürün bile satılmaz. Web sitesi + Google Business Profili, en yüksek etkili ilk yatırımdır." },
+        { type: "h2", text: "2. Süreçleri otomatikleştirme" },
+        { type: "p", text: "Her gün tekrar eden işler — randevu takibi, sipariş kaydı, müşteri sorularına aynı cevaplar — otomatikleştirilebilir. Bu, hem zaman kazandırır hem hata azaltır. Küçük bir başlangıç bile büyük fark yaratır." },
+        { type: "h2", text: "3. Müşteri iletişimini dijitalleştirme" },
+        { type: "p", text: "WhatsApp, e-posta, sosyal medya — müşterinizin olduğu yerde olmak. Düzenli ve profesyonel bir iletişim, güven ve tekrar eden müşteri demektir." },
+        { type: "h2", text: "4. Veriyle karar verme" },
+        { type: "p", text: "Sitenize kim geliyor, nereden geliyor, ne arıyor? Basit analiz araçları (örneğin Google Analytics) bu soruların cevabını verir. Tahminle değil, gerçek veriyle karar vermek, kaynağınızı doğru yere ayırmanızı sağlar." },
+        { type: "h2", text: "Nereden başlamalı?" },
+        { type: "p", text: "Hepsini birden yapmaya çalışmayın. Tek bir soruyla başlayın: \"İşimde en çok zamanımı ne alıyor ya da en çok müşteriyi nerede kaybediyorum?\" Cevap, ilk dijital adımınızın ne olması gerektiğini söyler. Küçük başlayıp işe yaradığını görünce büyütmek en sağlıklı yoldur." },
+        { type: "p", text: "İşletmeniz için dijital dönüşümün nereden başlaması gerektiğinden emin değilseniz, ücretsiz ön görüşmede birlikte en yüksek etkili ilk adımı belirleyebiliriz." },
+      ],
+    },
+  },
+
 ];
 
 export function findPost(slug: string) {
   return posts.find((p) => p.slug === slug);
+}
+
+/** Belirli bir dilde yayınlanan yazılar (tarihe göre yeni→eski). */
+export function postsForLocale(locale: Locale) {
+  return posts
+    .filter((p) => p.locales.includes(locale))
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+/** Bir yazının belirli dilde yayınlanıp yayınlanmadığı. */
+export function postInLocale(slug: string, locale: Locale) {
+  const p = findPost(slug);
+  return p ? p.locales.includes(locale) : false;
 }

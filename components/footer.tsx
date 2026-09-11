@@ -14,14 +14,14 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
           <div className="flex items-center gap-4">
             <Image
               src="/brand/logo-transparent.png"
-              alt="Woodstone Studio"
+              alt="WoodstoneStudio"
               width={48}
               height={48}
               className="drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
             />
             <div>
               <div className="text-[15px] font-medium tracking-tight text-bone">
-                Woodstone Studio
+                WoodstoneStudio
               </div>
               <div className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-gray-warm">
                 {t.tagline}
@@ -40,7 +40,7 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
 
         <div className="mt-12 border-t border-line pt-8">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-warm">
-            © {year} Woodstone Studio
+            © {year} WoodstoneStudio
           </p>
         </div>
       </div>

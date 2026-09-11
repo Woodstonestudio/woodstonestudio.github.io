@@ -8,13 +8,13 @@ import { Spotlight } from "@/components/fx/spotlight";
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
   title: {
-    default: "Woodstone Studio — Studio Teknologjie Dixhitale",
-    template: "%s — Woodstone Studio",
+    default: "WoodstoneStudio — Studio Teknologjie Dixhitale",
+    template: "%s — WoodstoneStudio",
   },
   description:
-    "Woodstone Studio është një studio teknologjie dixhitale që ndërton faqe interneti, aplikacione mobile, zgjidhje me inteligjencë artificiale, automatizim të proceseve të biznesit dhe softuer të personalizuar.",
+    "WoodstoneStudio është një studio teknologjie dixhitale që ndërton faqe interneti, aplikacione mobile, zgjidhje me inteligjencë artificiale, automatizim të proceseve të biznesit dhe softuer të personalizuar.",
   keywords: [
-    "Woodstone Studio",
+    "WoodstoneStudio",
     "dizajn web",
     "faqe interneti korporative",
     "zhvillim aplikacionesh mobile",
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     "studio softueri",
   ],
   openGraph: {
-    title: "Woodstone Studio — Studio Teknologjie Dixhitale",
+    title: "WoodstoneStudio — Studio Teknologjie Dixhitale",
     description:
       "Web, mobile, inteligjencë artificiale dhe softuer i personalizuar — dizajnojmë dhe ndërtojmë produkte dixhitale me përkushtimin e një ekipi produkti.",
     url: "https://woodstonestudio.com",
-    siteName: "Woodstone Studio",
+    siteName: "WoodstoneStudio",
     type: "website",
     locale: "sq_AL",
     images: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Woodstone Studio — Studio Teknologjie Dixhitale",
+        alt: "WoodstoneStudio — Studio Teknologjie Dixhitale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Woodstone Studio — Studio Teknologjie Dixhitale",
+    title: "WoodstoneStudio — Studio Teknologjie Dixhitale",
     description:
       "Web, mobile, inteligjencë artificiale dhe softuer i personalizuar — dizajnojmë dhe ndërtojmë produkte dixhitale me përkushtimin e një ekipi produkti.",
     images: ["/og-cover.jpg"],
@@ -83,7 +83,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Woodstone Studio",
+              name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               logo: "https://woodstonestudio.com/brand/logo.png",
               image: "https://woodstonestudio.com/og-cover.jpg",
@@ -112,12 +112,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Woodstone Studio",
+              name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               inLanguage: "sq-AL",
               publisher: {
                 "@type": "Organization",
-                name: "Woodstone Studio",
+                name: "WoodstoneStudio",
               },
             }),
           }}
@@ -144,7 +144,7 @@ export default function RootLayout({
               ],
               provider: {
                 "@type": "Organization",
-                name: "Woodstone Studio",
+                name: "WoodstoneStudio",
                 url: "https://woodstonestudio.com",
               },
               areaServed: { "@type": "Country", name: "Türkiye" },

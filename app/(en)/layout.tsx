@@ -8,13 +8,13 @@ import { Spotlight } from "@/components/fx/spotlight";
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
   title: {
-    default: "Woodstone Studio — Digital Technology Studio",
-    template: "%s — Woodstone Studio",
+    default: "WoodstoneStudio — Digital Technology Studio",
+    template: "%s — WoodstoneStudio",
   },
   description:
-    "Woodstone Studio is a digital technology studio building websites, mobile applications, AI solutions, business process automation and custom software.",
+    "WoodstoneStudio is a digital technology studio building websites, mobile applications, AI solutions, business process automation and custom software.",
   keywords: [
-    "Woodstone Studio",
+    "WoodstoneStudio",
     "web design",
     "corporate website",
     "mobile app development",
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     "software studio Turkey",
   ],
   openGraph: {
-    title: "Woodstone Studio — Digital Technology Studio",
+    title: "WoodstoneStudio — Digital Technology Studio",
     description:
       "Web, mobile, AI and custom software — we design and build digital products with the discipline of a product team.",
     url: "https://woodstonestudio.com",
-    siteName: "Woodstone Studio",
+    siteName: "WoodstoneStudio",
     type: "website",
     locale: "en_US",
     images: [
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         url: "/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Woodstone Studio — Digital Technology Studio",
+        alt: "WoodstoneStudio — Digital Technology Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Woodstone Studio — Digital Technology Studio",
+    title: "WoodstoneStudio — Digital Technology Studio",
     description:
       "Web, mobile, AI and custom software — we design and build digital products with the discipline of a product team.",
     images: ["/og-cover.jpg"],
@@ -83,7 +83,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Woodstone Studio",
+              name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               logo: "https://woodstonestudio.com/brand/logo.png",
               image: "https://woodstonestudio.com/og-cover.jpg",
@@ -112,12 +112,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Woodstone Studio",
+              name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               inLanguage: "en-US",
               publisher: {
                 "@type": "Organization",
-                name: "Woodstone Studio",
+                name: "WoodstoneStudio",
               },
             }),
           }}
@@ -144,7 +144,7 @@ export default function RootLayout({
               ],
               provider: {
                 "@type": "Organization",
-                name: "Woodstone Studio",
+                name: "WoodstoneStudio",
                 url: "https://woodstonestudio.com",
               },
               areaServed: { "@type": "Country", name: "Türkiye" },

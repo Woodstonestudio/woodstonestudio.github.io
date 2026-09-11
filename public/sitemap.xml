@@ -134,7 +134,7 @@
   <url>
     <loc>https://woodstonestudio.com/blog/web-sitesi-maliyeti</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://woodstonestudio.com/en/blog/web-sitesi-maliyeti</loc>
@@ -149,7 +149,7 @@
   <url>
     <loc>https://woodstonestudio.com/blog/mvp-nedir</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://woodstonestudio.com/en/blog/mvp-nedir</loc>
@@ -164,7 +164,7 @@
   <url>
     <loc>https://woodstonestudio.com/blog/yapay-zeka-kucuk-isletme</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://woodstonestudio.com/en/blog/yapay-zeka-kucuk-isletme</loc>
@@ -173,6 +173,41 @@
   </url>
   <url>
     <loc>https://woodstonestudio.com/sq/blog/yapay-zeka-kucuk-isletme</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://woodstonestudio.com/sq/blog/faqe-interneti-shqiperi-cmimi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://woodstonestudio.com/en/blog/faqe-interneti-shqiperi-cmimi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://woodstonestudio.com/sq/blog/biznesi-online-shqiperi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://woodstonestudio.com/sq/blog/aplikacion-mobile-shqiperi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://woodstonestudio.com/en/blog/aplikacion-mobile-shqiperi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://woodstonestudio.com/blog/izmir-web-tasarim-fiyatlari</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://woodstonestudio.com/blog/kobi-dijital-donusum</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -68,13 +68,13 @@ export function ServicePage({ c }: { c: ServiceContent }) {
     description: c.meta.description,
     url: `${SITE}${c.slug}`,
     areaServed: c.areaServed,
-    provider: { "@type": "Organization", name: "Woodstone Studio", url: SITE },
+    provider: { "@type": "Organization", name: "WoodstoneStudio", url: SITE },
   };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Woodstone Studio", item: `${SITE}${HOME[c.locale]}` },
+      { "@type": "ListItem", position: 1, name: "WoodstoneStudio", item: `${SITE}${HOME[c.locale]}` },
       { "@type": "ListItem", position: 2, name: c.eyebrow, item: `${SITE}${c.slug}` },
     ],
   };
