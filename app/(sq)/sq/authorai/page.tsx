@@ -4,15 +4,15 @@ import { Instrument } from "@/components/contractory/instrument";
 import { AuthorAIConsole } from "@/components/authorai/console";
 import { authoraiContent } from "@/lib/authorai-i18n";
 
-export const metadata: Metadata = productMetadata(authoraiContent.tr, "authorai", "tr");
+export const metadata: Metadata = productMetadata(authoraiContent.sq, "authorai", "sq");
 
 export default function Page() {
   return (
     <ProductPage
-      c={authoraiContent.tr}
-      locale="tr"
+      c={authoraiContent.sq}
+      locale="sq"
       slug="authorai"
-      externalUrl="/#contact"
+      externalUrl="/sq#contact"
       accentClass="text-contractory-soft"
       console={<Instrument><AuthorAIConsole /></Instrument>}
     />
