@@ -31,9 +31,9 @@ export default function Home() {
       <main>
         <Hero />
         <ProductsIntro />
-        <ContractorySection />
-        <AlphaOSSection />
-        <AuthorAISection />
+        <ContractorySection locale="tr" />
+        <AlphaOSSection locale="tr" />
+        <AuthorAISection locale="tr" />
         <Services />
         <WorkShowcase />
         <IdeaCTA />

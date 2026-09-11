@@ -32,9 +32,9 @@ export default function HomeSQ() {
       <main>
         <Hero t={sqHero} />
         <ProductsIntro t={sqSections.productsIntro} />
-        <ContractorySection t={sqSections.contractory} />
-        <AlphaOSSection t={sqSections.alphaos} />
-        <AuthorAISection t={sqSections.authorai} />
+        <ContractorySection t={sqSections.contractory} locale="sq" />
+        <AlphaOSSection t={sqSections.alphaos} locale="sq" />
+        <AuthorAISection t={sqSections.authorai} locale="sq" />
         <Services t={sqSections.services} />
         <WorkShowcase t={sqSections.work} />
         <IdeaCTA t={sqSections.idea} />

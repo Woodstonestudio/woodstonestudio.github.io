@@ -9,7 +9,9 @@ import { ContractoryConsole } from "@/components/contractory/console";
  */
 import { trSections, type SectionsDict } from "@/lib/i18n";
 
-export function ContractorySection({ t = trSections.contractory }: { t?: SectionsDict["contractory"] }) {
+const DETAIL = { tr: "/contractory", en: "/en/contractory", sq: "/sq/contractory" } as const;
+
+export function ContractorySection({ t = trSections.contractory, locale = "tr" }: { t?: SectionsDict["contractory"]; locale?: "tr" | "en" | "sq" }) {
   return (
     <section
       className="relative mx-auto flex min-h-svh max-w-6xl scroll-mt-16 items-center overflow-x-clip px-6 py-28 lg:px-8 lg:py-36"
@@ -59,9 +61,7 @@ export function ContractorySection({ t = trSections.contractory }: { t?: Section
           <Reveal delay={0.32}>
             <div className="mt-11">
               <a
-                href="https://contractory.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={DETAIL[locale]}
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-bone"
               >
                 {t.cta}

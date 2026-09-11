@@ -24,8 +24,30 @@ type Props = {
 
 export function ProductPage({ c, locale, slug, externalUrl, accentClass, console: consoleNode }: Props) {
   const softClass = accentClass.startsWith("text-") ? accentClass : "text-contractory-soft";
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: c.meta.title.split(" — ")[0],
+    description: c.meta.description,
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "Web",
+    url: `${SITE}${{ tr: "", en: "/en", sq: "/sq" }[locale]}/${slug}`,
+    author: { "@type": "Organization", name: "WoodstoneStudio", url: SITE },
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: c.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Nav t={NAV[locale]} />
       <main>
         {/* Hero */}

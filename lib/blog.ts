@@ -3,6 +3,7 @@ import type { Locale } from "@/components/service-page";
 export type BlogPost = {
   slug: string; // dil-bağımsız kısa kimlik (URL'de dile göre önek eklenir)
   locales: Locale[]; // bu yazının yayınlandığı diller (pazar hedefli içerik için)
+  relatedService?: string; // ilgili hizmet slug-kökü: "web" | "mobile" | "saas" | "ai" | "social"
   date: string; // ISO
   readMin: number;
   category: Record<Locale, string>;
@@ -57,6 +58,7 @@ export const BLOG_LABELS: Record<Locale, { eyebrow: string; title: [string, stri
 export const posts: BlogPost[] = [
   {
     slug: "web-sitesi-maliyeti",
+    relatedService: "web",
     locales: ["tr", "en", "sq"],
     date: "2026-09-08",
     readMin: 5,
@@ -133,6 +135,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "mvp-nedir",
+    relatedService: "saas",
     locales: ["tr", "en", "sq"],
     date: "2026-09-06",
     readMin: 4,
@@ -191,6 +194,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "yapay-zeka-kucuk-isletme",
+    relatedService: "ai",
     locales: ["tr", "en", "sq"],
     date: "2026-09-04",
     readMin: 4,
@@ -246,6 +250,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "faqe-interneti-shqiperi-cmimi",
+    relatedService: "web",
     locales: ["sq", "en"],
     date: "2026-09-10",
     readMin: 6,
@@ -304,6 +309,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "biznesi-online-shqiperi",
+    relatedService: "web",
     locales: ["sq"],
     date: "2026-09-09",
     readMin: 5,
@@ -339,6 +345,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "aplikacion-mobile-shqiperi",
+    relatedService: "mobile",
     locales: ["sq", "en"],
     date: "2026-09-08",
     readMin: 5,
@@ -386,6 +393,7 @@ export const posts: BlogPost[] = [
 
   {
     slug: "izmir-web-tasarim-fiyatlari",
+    relatedService: "web",
     locales: ["tr"],
     date: "2026-09-07",
     readMin: 5,
@@ -424,6 +432,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "kobi-dijital-donusum",
+    relatedService: "ai",
     locales: ["tr"],
     date: "2026-09-05",
     readMin: 5,

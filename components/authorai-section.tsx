@@ -9,7 +9,9 @@ import { AuthorAIConsole } from "@/components/authorai/console";
  */
 import { trSections, type SectionsDict } from "@/lib/i18n";
 
-export function AuthorAISection({ t = trSections.authorai }: { t?: SectionsDict["authorai"] }) {
+const DETAIL = { tr: "/authorai", en: "/en/authorai", sq: "/sq/authorai" } as const;
+
+export function AuthorAISection({ t = trSections.authorai, locale = "tr" }: { t?: SectionsDict["authorai"]; locale?: "tr" | "en" | "sq" }) {
   return (
     <section
       id="authorai"
@@ -59,7 +61,7 @@ export function AuthorAISection({ t = trSections.authorai }: { t?: SectionsDict[
           <Reveal delay={0.32}>
             <div className="mt-11">
               <a
-                href="/authorai"
+                href={DETAIL[locale]}
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-bone"
               >
                 {t.cta}

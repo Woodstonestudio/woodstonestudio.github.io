@@ -9,7 +9,9 @@ import { AlphaOSConsole } from "@/components/alphaos/console";
  */
 import { trSections, type SectionsDict } from "@/lib/i18n";
 
-export function AlphaOSSection({ t = trSections.alphaos }: { t?: SectionsDict["alphaos"] }) {
+const DETAIL = { tr: "/alphaos", en: "/en/alphaos", sq: "/sq/alphaos" } as const;
+
+export function AlphaOSSection({ t = trSections.alphaos, locale = "tr" }: { t?: SectionsDict["alphaos"]; locale?: "tr" | "en" | "sq" }) {
   return (
     <section
       id="alphaos"
@@ -71,9 +73,7 @@ export function AlphaOSSection({ t = trSections.alphaos }: { t?: SectionsDict["a
           <Reveal delay={0.32}>
             <div className="mt-11">
               <a
-                href="https://alphaos.site"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={DETAIL[locale]}
                 className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone transition-colors hover:text-bone"
               >
                 {t.cta}

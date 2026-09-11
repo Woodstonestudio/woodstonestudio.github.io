@@ -87,6 +87,20 @@ export function BlogList({ locale }: { locale: Locale }) {
   );
 }
 
+
+const SERVICE_URL: Record<string, Record<Locale, string>> = {
+  web: { tr: "/web-tasarim", en: "/en/web-design", sq: "/sq/dizajn-web" },
+  mobile: { tr: "/mobil-uygulama", en: "/en/mobile-apps", sq: "/sq/aplikacione-mobile" },
+  saas: { tr: "/saas-gelistirme", en: "/en/saas-development", sq: "/sq/zhvillim-saas" },
+  ai: { tr: "/yapay-zeka", en: "/en/ai-solutions", sq: "/sq/inteligjence-artificiale" },
+  social: { tr: "/sosyal-medya", en: "/en/social-media", sq: "/sq/media-sociale" },
+};
+const SERVICE_LABEL: Record<Locale, string> = {
+  tr: "İlgili hizmet →",
+  en: "Related service →",
+  sq: "Shërbimi përkatës →",
+};
+
 // ── Tekil yazı sayfası ──
 export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale }) {
   const L = BLOG_LABELS[locale];
@@ -169,6 +183,14 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
             >
               {locale === "tr" ? "Bize Ulaşın" : locale === "en" ? "Get in Touch" : "Na Kontaktoni"}
             </a>
+            {post.relatedService && SERVICE_URL[post.relatedService] && (
+              <Link
+                href={SERVICE_URL[post.relatedService][locale]}
+                className="text-sm text-bone-dim transition-colors hover:text-bone"
+              >
+                {SERVICE_LABEL[locale]}
+              </Link>
+            )}
             <Link href={base} className="text-sm text-gray-warm transition-colors hover:text-bone">
               ← {L.back}
             </Link>
