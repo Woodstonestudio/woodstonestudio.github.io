@@ -1,9 +1,6 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { ProductsIntro } from "@/components/products-intro";
-import { ContractorySection } from "@/components/contractory-section";
-import { AlphaOSSection } from "@/components/alphaos-section";
-import { AuthorAISection } from "@/components/authorai-section";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
 import { IdeaCTA } from "@/components/idea-cta";
@@ -32,9 +29,6 @@ export default function HomeSQ() {
       <main>
         <Hero t={sqHero} />
         <ProductsIntro t={sqSections.productsIntro} />
-        <ContractorySection t={sqSections.contractory} locale="sq" />
-        <AlphaOSSection t={sqSections.alphaos} locale="sq" />
-        <AuthorAISection t={sqSections.authorai} locale="sq" />
         <Services t={sqSections.services} />
         <WorkShowcase t={sqSections.work} />
         <IdeaCTA t={sqSections.idea} />

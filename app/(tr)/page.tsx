@@ -1,9 +1,6 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { ProductsIntro } from "@/components/products-intro";
-import { ContractorySection } from "@/components/contractory-section";
-import { AlphaOSSection } from "@/components/alphaos-section";
-import { AuthorAISection } from "@/components/authorai-section";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
 import { IdeaCTA } from "@/components/idea-cta";
@@ -31,9 +28,6 @@ export default function Home() {
       <main>
         <Hero />
         <ProductsIntro />
-        <ContractorySection locale="tr" />
-        <AlphaOSSection locale="tr" />
-        <AuthorAISection locale="tr" />
         <Services />
         <WorkShowcase />
         <IdeaCTA />

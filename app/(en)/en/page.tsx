@@ -1,9 +1,6 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { ProductsIntro } from "@/components/products-intro";
-import { ContractorySection } from "@/components/contractory-section";
-import { AlphaOSSection } from "@/components/alphaos-section";
-import { AuthorAISection } from "@/components/authorai-section";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
 import { IdeaCTA } from "@/components/idea-cta";
@@ -32,9 +29,6 @@ export default function HomeEN() {
       <main>
         <Hero t={enHero} />
         <ProductsIntro t={enSections.productsIntro} />
-        <ContractorySection t={enSections.contractory} locale="en" />
-        <AlphaOSSection t={enSections.alphaos} locale="en" />
-        <AuthorAISection t={enSections.authorai} locale="en" />
         <Services t={enSections.services} />
         <WorkShowcase t={enSections.work} />
         <IdeaCTA t={enSections.idea} />

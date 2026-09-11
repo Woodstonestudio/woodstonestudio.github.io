@@ -93,7 +93,13 @@ export const trSections = {
     eyebrow: "Ürünler",
     t1: "Müşterilerimiz için geliştiriyoruz.",
     t2: "Kendimiz için de.",
-    lead: "Kendi ürünlerimiz, mühendislik gücümüzü keskinleştirdiğimiz yerdir. Müşteri projelerimize taşıdığımız disiplini önce kendi işlerimizde sınarız. Üç örneği aşağıda.",
+    lead: "Kendi ürünlerimiz, mühendislik gücümüzü keskinleştirdiğimiz yerdir. Müşteri projelerimize taşıdığımız disiplini önce kendi işlerimizde sınarız.",
+    cards: [
+      { name: "Contractory", tag: "Web3 · Arc", desc: "Akıllı sözleşmeleri tek yüzeyden derleyin, dağıtın ve doğrulayın.", href: "/contractory" },
+      { name: "AlphaOS", tag: "Web3 · Base", desc: "Zincir üstü katkıyı denetlenebilir bir itibara dönüştüren ağ.", href: "/alphaos" },
+      { name: "AuthorAI", tag: "Yapay Zekâ", desc: "Yapay zekânın arka planda kaldığı, odaklı bir yazma aracı.", href: "/authorai" },
+    ],
+    cardCta: "İncele",
   },
   contractory: {
     t1: "Akıllı sözleşme dağıtımı,",
@@ -214,7 +220,13 @@ export const enSections: typeof trSections = {
     eyebrow: "Products",
     t1: "We build for our clients.",
     t2: "And for ourselves.",
-    lead: "Our own products are where we sharpen our engineering. The discipline we bring to client work is tested on our own products first. Three examples below.",
+    lead: "Our own products are where we sharpen our engineering. The discipline we bring to client work is tested on our own products first.",
+    cards: [
+      { name: "Contractory", tag: "Web3 · Arc", desc: "Compile, deploy and verify smart contracts from a single surface.", href: "/en/contractory" },
+      { name: "AlphaOS", tag: "Web3 · Base", desc: "A network that turns on-chain contribution into auditable reputation.", href: "/en/alphaos" },
+      { name: "AuthorAI", tag: "AI", desc: "A focused writing tool where the AI stays in the background.", href: "/en/authorai" },
+    ],
+    cardCta: "Explore",
   },
   contractory: {
     t1: "Smart contract deployment,",
@@ -335,7 +347,13 @@ export const sqSections: typeof trSections = {
     eyebrow: "Produkte",
     t1: "Ndërtojmë për klientët tanë.",
     t2: "Dhe për veten tonë.",
-    lead: "Produktet tona janë vendi ku e mprehim mjeshtërinë tonë inxhinierike. Përkushtimin që e sjellim në projektet e klientëve e provojmë fillimisht në produktet tona. Tri shembuj më poshtë.",
+    lead: "Produktet tona janë vendi ku e mprehim mjeshtërinë tonë inxhinierike. Përkushtimin që sjellim në projektet e klientëve e provojmë fillimisht në produktet tona.",
+    cards: [
+      { name: "Contractory", tag: "Web3 · Arc", desc: "Kompiloni, vendosni dhe verifikoni kontrata inteligjente nga një sipërfaqe.", href: "/sq/contractory" },
+      { name: "AlphaOS", tag: "Web3 · Base", desc: "Një rrjet që e kthen kontributin on-chain në reputacion të auditueshëm.", href: "/sq/alphaos" },
+      { name: "AuthorAI", tag: "Inteligjencë Artificiale", desc: "Një mjet shkrimi i fokusuar ku AI rri në sfond.", href: "/sq/authorai" },
+    ],
+    cardCta: "Shiko",
   },
   contractory: {
     t1: "Vendosje e kontratave inteligjente,",
