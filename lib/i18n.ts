@@ -96,8 +96,8 @@ export type HeroDict = typeof trHero;
 export const trSections = {
   productsIntro: {
     eyebrow: "Ürünler",
-    t1: "Müşterilerimiz için geliştiriyoruz.",
-    t2: "Kendimiz için de.",
+    t1: "Sadece geliştirmiyoruz.",
+    t2: "Kendi ürünlerimizi de inşa ediyoruz.",
     lead: "Kendi ürünlerimiz, mühendislik gücümüzü keskinleştirdiğimiz yerdir. Müşteri projelerimize taşıdığımız disiplini önce kendi işlerimizde sınarız.",
     cards: [
       { name: "Contractory", tag: "Web3 · Arc", desc: "Akıllı sözleşmeleri tek yüzeyden derleyin, dağıtın ve doğrulayın.", href: "/contractory" },
@@ -223,8 +223,8 @@ export const trSections = {
 export const enSections: typeof trSections = {
   productsIntro: {
     eyebrow: "Products",
-    t1: "We build for our clients.",
-    t2: "And for ourselves.",
+    t1: "We don't just build for clients.",
+    t2: "We build our own products too.",
     lead: "Our own products are where we sharpen our engineering. The discipline we bring to client work is tested on our own products first.",
     cards: [
       { name: "Contractory", tag: "Web3 · Arc", desc: "Compile, deploy and verify smart contracts from a single surface.", href: "/en/contractory" },
@@ -350,8 +350,8 @@ export const enSections: typeof trSections = {
 export const sqSections: typeof trSections = {
   productsIntro: {
     eyebrow: "Produkte",
-    t1: "Ndërtojmë për klientët tanë.",
-    t2: "Dhe për veten tonë.",
+    t1: "Nuk ndërtojmë vetëm për klientë.",
+    t2: "Ndërtojmë edhe produktet tona.",
     lead: "Produktet tona janë vendi ku e mprehim mjeshtërinë tonë inxhinierike. Përkushtimin që sjellim në projektet e klientëve e provojmë fillimisht në produktet tona.",
     cards: [
       { name: "Contractory", tag: "Web3 · Arc", desc: "Kompiloni, vendosni dhe verifikoni kontrata inteligjente nga një sipërfaqe.", href: "/sq/contractory" },
