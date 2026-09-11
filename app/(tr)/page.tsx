@@ -4,8 +4,6 @@ import { ProductsIntro } from "@/components/products-intro";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
 import { IdeaCTA } from "@/components/idea-cta";
-import { Studio } from "@/components/studio";
-import { FAQ } from "@/components/faq";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
@@ -31,8 +29,6 @@ export default function Home() {
         <Services />
         <WorkShowcase />
         <IdeaCTA />
-        <Studio />
-        <FAQ />
         <Contact />
       </main>
       <Footer />

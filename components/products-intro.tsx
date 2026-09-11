@@ -9,7 +9,7 @@ import { trSections, type SectionsDict } from "@/lib/i18n";
 export function ProductsIntro({ t = trSections.productsIntro }: { t?: SectionsDict["productsIntro"] }) {
   return (
     <section id="products" className="relative scroll-mt-16 border-t border-line">
-      <div className="mx-auto max-w-6xl px-6 py-28 lg:px-8 lg:py-36">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24 lg:px-8 lg:py-32">
         <div className="grid gap-10 lg:grid-cols-[0.5fr_0.5fr] lg:gap-20">
           <div>
             <Reveal>

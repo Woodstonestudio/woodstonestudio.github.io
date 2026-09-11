@@ -4,8 +4,6 @@ import { ProductsIntro } from "@/components/products-intro";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
 import { IdeaCTA } from "@/components/idea-cta";
-import { Studio } from "@/components/studio";
-import { FAQ } from "@/components/faq";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { sqNav, sqHero, sqSections } from "@/lib/i18n";
@@ -32,8 +30,6 @@ export default function HomeSQ() {
         <Services t={sqSections.services} />
         <WorkShowcase t={sqSections.work} />
         <IdeaCTA t={sqSections.idea} />
-        <Studio t={sqSections.studio} />
-        <FAQ t={sqSections.faq} />
         <Contact t={sqSections.contact} />
       </main>
       <Footer t={sqSections.footer} />

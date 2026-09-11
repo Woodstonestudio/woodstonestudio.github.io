@@ -4,8 +4,6 @@ import { ProductsIntro } from "@/components/products-intro";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
 import { IdeaCTA } from "@/components/idea-cta";
-import { Studio } from "@/components/studio";
-import { FAQ } from "@/components/faq";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { enNav, enHero, enSections } from "@/lib/i18n";
@@ -32,8 +30,6 @@ export default function HomeEN() {
         <Services t={enSections.services} />
         <WorkShowcase t={enSections.work} />
         <IdeaCTA t={enSections.idea} />
-        <Studio t={enSections.studio} />
-        <FAQ t={enSections.faq} />
         <Contact t={enSections.contact} />
       </main>
       <Footer t={enSections.footer} />

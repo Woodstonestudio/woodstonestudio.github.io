@@ -7,7 +7,7 @@ import { trSections, type SectionsDict } from "@/lib/i18n";
 export function Studio({ t = trSections.studio }: { t?: SectionsDict["studio"] }) {
   return (
     <section id="studio" className="relative scroll-mt-16 border-t border-line">
-      <div className="mx-auto flex min-h-[80svh] max-w-6xl items-center px-6 py-28 lg:px-8 lg:py-40">
+      <div className="mx-auto flex min-h-[80svh] max-w-6xl items-center px-6 py-20 sm:py-24 lg:px-8 lg:py-32">
         <div className="grid w-full gap-14 lg:grid-cols-[1fr_0.72fr] lg:gap-24">
           <div>
             <Reveal>

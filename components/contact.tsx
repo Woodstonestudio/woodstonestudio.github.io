@@ -9,7 +9,7 @@ export function Contact({ t = trSections.contact }: { t?: SectionsDict["contact"
 
   return (
     <section id="contact" className="relative scroll-mt-16 border-t border-line">
-      <div className="mx-auto flex min-h-[80svh] max-w-6xl items-center px-6 py-28 lg:px-8 lg:py-40">
+      <div className="mx-auto flex min-h-[80svh] max-w-6xl items-center px-6 py-20 sm:py-24 lg:px-8 lg:py-32">
         <div className="w-full">
           <Reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">

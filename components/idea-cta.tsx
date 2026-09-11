@@ -12,7 +12,7 @@ export function IdeaCTA({ t = trSections.idea }: { t?: SectionsDict["idea"] }) {
       id="fikir"
       className="relative scroll-mt-16 border-t border-line"
     >
-      <div className="mx-auto max-w-6xl px-6 py-28 lg:px-8 lg:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24 lg:px-8 lg:py-32">
         <div className="grid gap-10 lg:grid-cols-[0.55fr_0.45fr] lg:gap-20">
           <div>
             <Reveal>

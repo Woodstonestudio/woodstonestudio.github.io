@@ -21,7 +21,7 @@ export function WorkShowcase({ t = trSections.work }: { t?: SectionsDict["work"]
   const imgSuffix = t.locale === "en" ? "-en" : t.locale === "sq" ? "-sq" : "";
   return (
     <section id="work" className="relative scroll-mt-16 border-t border-line">
-      <div className="mx-auto max-w-6xl px-6 py-28 lg:px-8 lg:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24 lg:px-8 lg:py-32">
         <div className="grid gap-10 lg:grid-cols-[0.5fr_0.5fr] lg:gap-20">
           <div>
             <Reveal>
