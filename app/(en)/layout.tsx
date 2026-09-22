@@ -4,6 +4,8 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "../globals.css";
 import { Spotlight } from "@/components/fx/spotlight";
+import { WhatsAppButton } from "@/components/whatsapp-button";
+import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
@@ -102,7 +104,10 @@ export default function RootLayout({
                 contactType: "customer support",
                 availableLanguage: ["Turkish", "English"],
               },
-              sameAs: ["https://github.com/Woodstonestudio"],
+              sameAs: [
+                "https://github.com/Woodstonestudio",
+                "https://instagram.com/woodstonestudio35",
+              ],
             }),
           }}
         />
@@ -154,6 +159,8 @@ export default function RootLayout({
         />
         <Spotlight />
         <div className="relative z-10">{children}</div>
+        <WhatsAppButton label="Message us on WhatsApp" />
+        <BackToTop label="Back to top" />
       </body>
     </html>
   );

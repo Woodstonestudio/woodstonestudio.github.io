@@ -9,6 +9,7 @@ export const trNav = {
   ariaLabel: "Ana menü",
   links: [
     { href: "/#products", label: "Ürünler" },
+    { href: "/#jovvo", label: "Uygulamalar" },
     { href: "/#services", label: "Hizmetler" },
     { href: "/#work", label: "Çalışmalar" },
     { href: "/hakkimizda", label: "Hakkımızda" },
@@ -26,12 +27,12 @@ export const enNav = {
   ariaLabel: "Main menu",
   links: [
     { href: "/en#products", label: "Products" },
+    { href: "/en#jovvo", label: "Apps" },
     { href: "/en#services", label: "Services" },
     { href: "/en#work", label: "Work" },
     { href: "/en/about", label: "About" },
     { href: "/en/faq", label: "FAQ" },
     { href: "/en/blog", label: "Blog" },
-    { href: "/en/faq", label: "FAQ" },
     { href: "/en#contact", label: "Contact" },
   ],
   switchHref: "/",
@@ -42,7 +43,7 @@ export const enNav = {
 export const trHero = {
   eyebrow: "Dijital Teknoloji Stüdyosu",
   titleLine1: "Dijital fikirleri güçlü",
-  titleLine2: "ürünlere dönüştürüyoruz.",
+  titleLine2: "ürünlere dönüştürüyoruz",
   strip1: "Tasarım · Yazılım",
   strip2: "Otomasyon",
   lead: "Web siteleri, web ve mobil uygulamalar, yapay zekâ çözümleri, iş süreçleri otomasyonu ve özel yazılım — hepsini bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
@@ -53,7 +54,7 @@ export const trHero = {
 export const enHero = {
   eyebrow: "Digital Technology Studio",
   titleLine1: "We turn digital ideas",
-  titleLine2: "into powerful products.",
+  titleLine2: "into powerful products",
   strip1: "Design · Software",
   strip2: "Automation",
   lead: "Websites, web and mobile applications, AI solutions, business process automation and custom software — all designed and built with the discipline of a product team.",
@@ -66,12 +67,12 @@ export const sqNav = {
   ariaLabel: "Menyra kryesore",
   links: [
     { href: "/sq#products", label: "Produkte" },
+    { href: "/sq#jovvo", label: "Aplikacione" },
     { href: "/sq#services", label: "Shërbime" },
     { href: "/sq#work", label: "Punët" },
     { href: "/sq/rreth-nesh", label: "Rreth Nesh" },
     { href: "/sq/pyetje", label: "Pyetje" },
     { href: "/sq/blog", label: "Blog" },
-    { href: "/sq/pyetje", label: "FAQ" },
     { href: "/sq#contact", label: "Kontakt" },
   ],
   switchHref: "/",
@@ -82,7 +83,7 @@ export const sqNav = {
 export const sqHero = {
   eyebrow: "Studio Teknologjie Dixhitale",
   titleLine1: "Idetë dixhitale i kthejmë",
-  titleLine2: "në produkte të fuqishme.",
+  titleLine2: "në produkte të fuqishme",
   strip1: "Dizajn · Softuer",
   strip2: "Automatizim",
   lead: "Faqe interneti, aplikacione web dhe mobile, zgjidhje me inteligjencë artificiale, automatizim të proceseve të biznesit dhe softuer të personalizuar — të gjitha të dizajnuara dhe të ndërtuara me përkushtimin e një ekipi produkti.",
@@ -96,19 +97,36 @@ export type HeroDict = typeof trHero;
 export const trSections = {
   productsIntro: {
     eyebrow: "Ürünler",
-    t1: "Sadece geliştirmiyoruz.",
-    t2: "Kendi ürünlerimizi de inşa ediyoruz.",
+    t1: "Sadece geliştirmiyoruz",
+    t2: "Kendi ürünlerimizi de inşa ediyoruz",
     lead: "Kendi ürünlerimiz, mühendislik gücümüzü keskinleştirdiğimiz yerdir. Müşteri projelerimize taşıdığımız disiplini önce kendi işlerimizde sınarız.",
     cards: [
       { name: "Contractory", tag: "Web3 · Arc", desc: "Akıllı sözleşmeleri tek yüzeyden derleyin, dağıtın ve doğrulayın.", href: "/contractory" },
       { name: "AlphaOS", tag: "Web3 · Base", desc: "Zincir üstü katkıyı denetlenebilir bir itibara dönüştüren ağ.", href: "/alphaos" },
       { name: "AuthorAI", tag: "Yapay Zekâ", desc: "Yapay zekânın arka planda kaldığı, odaklı bir yazma aracı.", href: "/authorai" },
+      { name: "JoVVo", tag: "Sağlık & Fitness · iOS", desc: "Cebindeki yapay zekâ fitness ve beslenme koçun; sana özel program ve fotoğrafla öğün analizi.", href: "/#jovvo" },
     ],
     cardCta: "İncele",
   },
+  jovvo: {
+    eyebrow: "JoVVo · iOS Uygulaması",
+    t1: "Cebindeki",
+    t2: "yapay zekâ koçun",
+    lead: "JoVVo, cebindeki yapay zekâ fitness ve beslenme koçun. Koçun David, hedeflerine ve seviyene göre sana özel antrenman programları hazırlar, öğünlerini analiz eder ve gün boyu yanında olur.",
+    features: [
+      { name: "Branşına özel program", note: "Fitness, CrossFit, HYROX, Strength, Run veya Hybrid — seviyene ve ekipmanına göre haftalık ya da 4 haftalık program. Sakatlığını yaz, David o bölgeyi zorlamaz." },
+      { name: "Fotoğrafla öğün analizi", note: "Yemeğinin fotoğrafını çek; kalori ve makrolar (protein, karbonhidrat, yağ) anında hesaplansın." },
+      { name: "Akıllı takip", note: "Su, adım, kilo, antrenman serisi ve günlük kalori hedefin tek ekranda, kişisel hatırlatmalarla." },
+      { name: "David — 7/24 koçun", note: "Beslenme, antrenman, motivasyon — branşını, seviyeni ve hedefini bilerek cevap verir." },
+    ],
+    freeNote: "Tüm Premium özellikleri 3 gün ücretsiz dene.",
+    cta: "App Store'dan İndir",
+    url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
+    caption: "JoVVo ile hedefine giden yol cebinde.",
+  },
   contractory: {
     t1: "Akıllı sözleşme dağıtımı,",
-    t2: "baştan sona tek yerde.",
+    t2: "baştan sona tek yerde",
     lead: "Derlemeden doğrulamaya, akıllı sözleşmenin tüm yaşam döngüsünü tek bir yüzeyde toplar. Üretimde iş çıkaran blockchain ekipleri için kurulmuş, sade ve güvenilir bir araç.",
     caps: [
       { name: "Dağıt", note: "Arc'a ERC-20 · 721 · 1155" },
@@ -120,7 +138,7 @@ export const trSections = {
   },
   alphaos: {
     t1: "Doğrulanabilir",
-    t2: "dijital itibar.",
+    t2: "dijital itibar",
     lead: "AlphaOS, zincir üstü katkıyı ölçülebilir bir itibara dönüştürür. Görevler, rozetler ve canlı bir lider tablosu; her operatör bir Basename'e çözümlenir, her puan işleme kadar izlenebilir.",
     caps: [
       { name: "Ölç", note: "Etkinlikten itibara" },
@@ -132,7 +150,7 @@ export const trSections = {
   },
   authorai: {
     t1: "Yapay zekâ arka planda,",
-    t2: "odak sizde.",
+    t2: "odak sizde",
     lead: "AuthorAI bir yazma aracıdır, otomatik pilot değil. Yapay zekâ yalnızca siz istediğinizde devreye girer; sayfa sizin, cümleler sizin, son söz her zaman sizde.",
     caps: [
       { name: "Yaz", note: "Odaklı, dikkat dağıtmayan sayfa" },
@@ -146,7 +164,7 @@ export const trSections = {
     eyebrow: "Hizmetler",
     detailLabel: "Detaylı bilgi →",
     t1: "Beş disiplin,",
-    t2: "tek stüdyo.",
+    t2: "tek stüdyo",
     groups: [
       { title: "Tasarım", href: "/web-tasarim", line: "Modern, kullanıcı odaklı web siteleri ve e-ticaret arayüzleri tasarlıyoruz.", items: ["Premium web siteleri", "Kurumsal web sitesi", "E-ticaret / online mağaza", "UI / UX tasarımı", "Marka kimliği"] },
       { title: "Geliştirme", href: "/saas-gelistirme", href2: "/mobil-uygulama", href2Label: "Mobil uygulama →", line: "Web, mobil ve özel yazılım çözümlerini fikirden yayına geliştiriyoruz.", items: ["SaaS geliştirme", "MVP geliştirme", "Web uygulamaları (React, Next.js)", "Mobil uygulamalar (Flutter, iOS, Android)", "Özel yazılım", "API entegrasyonları"] },
@@ -158,8 +176,8 @@ export const trSections = {
   work: {
     locale: "tr",
     eyebrow: "Örnek Çalışmalar",
-    t1: "Hayal edin.",
-    t2: "Biz inşa edelim.",
+    t1: "Hayal edin",
+    t2: "Biz inşa edelim",
     kind: "Konsept çalışma",
     works: [
       { title: "Köz", field: "Restoran · Landing", desc: "Modern bir ocakbaşı için tek sayfalık tanıtım sitesi — canlı menü, rezervasyon akışı ve ateş temalı bir arayüz." },
@@ -171,7 +189,7 @@ export const trSections = {
   idea: {
     eyebrow: "Fikirden ürüne",
     t1: "Bir fikriniz mi var?",
-    t2: "Birlikte geliştirelim.",
+    t2: "Birlikte geliştirelim",
     lead: "Elinizde yalnızca bir fikir olması yeterli. Bir SaaS ürünü, bir mobil uygulama ya da yapay zekâ destekli bir çözüm — fikrinizi birlikte tanımlıyor, bir MVP ile başlatıyor ve adım adım büyütüyoruz.",
     cta: "Fikrinizi Anlatın",
     ctaHref: "/#contact",
@@ -179,14 +197,14 @@ export const trSections = {
   studio: {
     eyebrow: "Stüdyo",
     t1: "Teknolojiyi",
-    t2: "işinize çeviriyoruz.",
+    t2: "işinize çeviriyoruz",
     lead: "Woodstone bir teknoloji stüdyosu. Tasarım, yazılım ve otomasyonu birlikte ele alıyoruz; çünkü gerçek sorunlar bu ayrımları tanımaz. Her işi, kendi ürünümüzmüş gibi bir standartla ele alıyoruz.",
     signature: "WoodstoneStudio tarafından tasarlandı ve geliştirildi",
   },
   faq: {
     eyebrow: "Sık sorulan sorular",
     t1: "Aklınızdaki",
-    t2: "sorular.",
+    t2: "sorular",
     faqs: [
       { q: "Sadece bir fikrim var, yardımcı olabilir misiniz?", a: "Evet. Birçok projeye yalnızca bir fikirle başlıyoruz. Fikri birlikte tanımlıyor, kapsamını netleştiriyor ve bir MVP ile hayata geçiriyoruz." },
       { q: "SaaS geliştiriyor musunuz?", a: "Evet. Abonelik tabanlı web uygulamaları dâhil, fikirden yayına kadar SaaS ürünleri geliştiriyoruz. Kullanıcı yönetimi, ödeme altyapısı ve ölçeklenebilir mimari kuruyoruz." },
@@ -203,9 +221,24 @@ export const trSections = {
   contact: {
     eyebrow: "Projeye başlayın",
     t1: "Bir sonraki projenizi",
-    t2: "birlikte hayata geçirelim.",
+    t2: "birlikte hayata geçirelim",
     lead: "İster bir web sitesi, ister özel yazılım, ister yapay zekâ destekli otomasyon ya da eksiksiz bir dijital ürün — fikrinizi dinlemekten memnuniyet duyarız.",
     channel: "Bize Ulaşın",
+  },
+  testimonials: {
+    eyebrow: "Referanslar",
+    t1: "Yayına aldığımız",
+    t2: "son iş",
+    featuredTag: "Canlı proje",
+    featuredTitle: "CrossFit Bahçeşehir",
+    featuredField: "Spor Salonu · Web Sitesi",
+    featuredDesc: "Bahçeşehir'deki bir CrossFit salonu için baştan sona tasarlayıp geliştirdiğimiz tanıtım sitesi — ders programı, üyelik bilgileri ve hızlı iletişim akışı. Yeni yayında.",
+    featuredUrl: "https://crossfitbahcesehir.fit",
+    featuredHost: "crossfitbahcesehir.fit",
+    featuredCta: "Siteyi Ziyaret Et",
+    items: [
+      { name: "Serpil KURD", role: "Salon Sahibi", quote: "Aklımızdaki salonu tam olarak ekrana taşıdılar; siteyi ilk açtığımızda 'İşte biz buyuz' dedik. Hızlı, sade ve tam bize benziyor. Çalışmak da gerçekten keyifliydi." },
+    ],
   },
   footer: {
     tagline: "Bağımsız Ürün Stüdyosu",
@@ -215,6 +248,8 @@ export const trSections = {
       { href: "/#services", label: "Hizmetler" },
       { href: "/#work", label: "Çalışmalar" },
       { href: "/hakkimizda", label: "Hakkımızda" },
+      { href: "/sss", label: "SSS" },
+      { href: "/blog", label: "Blog" },
       { href: "/#contact", label: "İletişim" },
     ],
   },
@@ -223,19 +258,36 @@ export const trSections = {
 export const enSections: typeof trSections = {
   productsIntro: {
     eyebrow: "Products",
-    t1: "We don't just build for clients.",
-    t2: "We build our own products too.",
+    t1: "We don't just build for clients",
+    t2: "We build our own products too",
     lead: "Our own products are where we sharpen our engineering. The discipline we bring to client work is tested on our own products first.",
     cards: [
       { name: "Contractory", tag: "Web3 · Arc", desc: "Compile, deploy and verify smart contracts from a single surface.", href: "/en/contractory" },
       { name: "AlphaOS", tag: "Web3 · Base", desc: "A network that turns on-chain contribution into auditable reputation.", href: "/en/alphaos" },
       { name: "AuthorAI", tag: "AI", desc: "A focused writing tool where the AI stays in the background.", href: "/en/authorai" },
+      { name: "JoVVo", tag: "Health & Fitness · iOS", desc: "Your AI fitness and nutrition coach in your pocket; tailored programs and photo meal analysis.", href: "/en#jovvo" },
     ],
     cardCta: "Explore",
   },
+  jovvo: {
+    eyebrow: "JoVVo · iOS App",
+    t1: "Your AI coach,",
+    t2: "right in your pocket",
+    lead: "JoVVo is your AI fitness and nutrition coach in your pocket. Your coach David builds training programs tailored to your goals and level, analyses your meals and stays with you throughout the day.",
+    features: [
+      { name: "Sport-specific programs", note: "Fitness, CrossFit, HYROX, Strength, Run or Hybrid — a weekly or 4-week plan for your level and equipment. Note an injury and David avoids straining that area." },
+      { name: "Photo meal analysis", note: "Snap a photo of your meal; calories and macros (protein, carbs, fat) are calculated instantly." },
+      { name: "Smart tracking", note: "Water, steps, weight, training streak and your daily calorie goal on one screen, with personal reminders." },
+      { name: "David — your 24/7 coach", note: "Nutrition, training, motivation — he answers knowing your sport, level and goal." },
+    ],
+    freeNote: "Explore all Premium features free for 3 days.",
+    cta: "Download on the App Store",
+    url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
+    caption: "With JoVVo, the path to your goal is in your pocket.",
+  },
   contractory: {
     t1: "Smart contract deployment,",
-    t2: "end to end in one place.",
+    t2: "end to end in one place",
     lead: "From compilation to verification, it brings the entire smart contract lifecycle onto a single surface. A simple, reliable tool built for blockchain teams shipping in production.",
     caps: [
       { name: "Deploy", note: "ERC-20 · 721 · 1155 to Arc" },
@@ -247,7 +299,7 @@ export const enSections: typeof trSections = {
   },
   alphaos: {
     t1: "Verifiable",
-    t2: "digital reputation.",
+    t2: "digital reputation",
     lead: "AlphaOS turns on-chain contribution into measurable reputation. Quests, badges and a live leaderboard; every operator resolves to a Basename, every point is traceable to a transaction.",
     caps: [
       { name: "Measure", note: "From activity to reputation" },
@@ -259,7 +311,7 @@ export const enSections: typeof trSections = {
   },
   authorai: {
     t1: "AI in the background,",
-    t2: "focus on you.",
+    t2: "focus on you",
     lead: "AuthorAI is a writing tool, not an autopilot. AI steps in only when you ask; the page is yours, the sentences are yours, and the final word is always yours.",
     caps: [
       { name: "Write", note: "A focused, distraction-free page" },
@@ -273,7 +325,7 @@ export const enSections: typeof trSections = {
     eyebrow: "Services",
     detailLabel: "Learn more →",
     t1: "Five disciplines,",
-    t2: "one studio.",
+    t2: "one studio",
     groups: [
       { title: "Design", href: "/en/web-design", line: "We design modern, user-centred websites and e-commerce storefronts.", items: ["Premium websites", "Corporate websites", "E-commerce / online store", "UI / UX design", "Brand identity"] },
       { title: "Development", href: "/en/saas-development", href2: "/en/mobile-apps", href2Label: "Mobile apps →", line: "We build web, mobile and custom software from idea to launch.", items: ["SaaS development", "MVP development", "Web applications (React, Next.js)", "Mobile apps (Flutter, iOS, Android)", "Custom software", "API integrations"] },
@@ -285,8 +337,8 @@ export const enSections: typeof trSections = {
   work: {
     locale: "en",
     eyebrow: "Selected Work",
-    t1: "Imagine it.",
-    t2: "We will build it.",
+    t1: "Imagine it",
+    t2: "We will build it",
     kind: "Concept work",
     works: [
       { title: "Köz", field: "Restaurant · Landing", desc: "A one-page site for a modern grill house — live menu, reservation flow and a fire-themed interface." },
@@ -298,7 +350,7 @@ export const enSections: typeof trSections = {
   idea: {
     eyebrow: "From idea to product",
     t1: "Have an idea?",
-    t2: "Let's build it together.",
+    t2: "Let's build it together",
     lead: "An idea is all you need. A SaaS product, a mobile app or an AI-powered solution — we define it together, start with an MVP and grow it step by step.",
     cta: "Tell Us Your Idea",
     ctaHref: "/en#contact",
@@ -306,14 +358,14 @@ export const enSections: typeof trSections = {
   studio: {
     eyebrow: "Studio",
     t1: "We turn technology",
-    t2: "into your advantage.",
+    t2: "into your advantage",
     lead: "Woodstone is a technology studio. We treat design, software and automation as one craft, because real problems do not respect those boundaries. Every project is held to the standard of our own products.",
     signature: "Designed and built by WoodstoneStudio",
   },
   faq: {
     eyebrow: "Frequently asked questions",
     t1: "Questions on",
-    t2: "your mind.",
+    t2: "your mind",
     faqs: [
       { q: "I only have an idea — can you help?", a: "Yes. Many of our projects start with nothing but an idea. We define it together, clarify the scope and bring it to life with an MVP." },
       { q: "Do you build SaaS products?", a: "Yes. We build SaaS products from idea to launch, including subscription-based web applications, with user management, payments and scalable architecture." },
@@ -330,9 +382,24 @@ export const enSections: typeof trSections = {
   contact: {
     eyebrow: "Start a project",
     t1: "Let's bring your next project",
-    t2: "to life together.",
+    t2: "to life together",
     lead: "A website, custom software, AI-powered automation or a complete digital product — we would love to hear your idea.",
     channel: "Get in Touch",
+  },
+  testimonials: {
+    eyebrow: "References",
+    t1: "The latest work",
+    t2: "we shipped",
+    featuredTag: "Live project",
+    featuredTitle: "CrossFit Bahçeşehir",
+    featuredField: "Gym · Website",
+    featuredDesc: "A marketing site we designed and built end to end for a CrossFit gym in Bahçeşehir — class schedule, membership details and a fast contact flow. Freshly launched.",
+    featuredUrl: "https://crossfitbahcesehir.fit",
+    featuredHost: "crossfitbahcesehir.fit",
+    featuredCta: "Visit the Site",
+    items: [
+      { name: "Serpil KURD", role: "Gym Owner", quote: "They put exactly the gym we had in our heads onto the screen; the first time we opened the site we said 'yes, this is us.' Fast, clean and truly ours — and a real joy to work with." },
+    ],
   },
   footer: {
     tagline: "Independent Product Studio",
@@ -342,6 +409,8 @@ export const enSections: typeof trSections = {
       { href: "/en#services", label: "Services" },
       { href: "/en#work", label: "Work" },
       { href: "/en/about", label: "About" },
+      { href: "/en/faq", label: "FAQ" },
+      { href: "/en/blog", label: "Blog" },
       { href: "/en#contact", label: "Contact" },
     ],
   },
@@ -350,19 +419,36 @@ export const enSections: typeof trSections = {
 export const sqSections: typeof trSections = {
   productsIntro: {
     eyebrow: "Produkte",
-    t1: "Nuk ndërtojmë vetëm për klientë.",
-    t2: "Ndërtojmë edhe produktet tona.",
+    t1: "Nuk ndërtojmë vetëm për klientë",
+    t2: "Ndërtojmë edhe produktet tona",
     lead: "Produktet tona janë vendi ku e mprehim mjeshtërinë tonë inxhinierike. Përkushtimin që sjellim në projektet e klientëve e provojmë fillimisht në produktet tona.",
     cards: [
       { name: "Contractory", tag: "Web3 · Arc", desc: "Kompiloni, vendosni dhe verifikoni kontrata inteligjente nga një sipërfaqe.", href: "/sq/contractory" },
       { name: "AlphaOS", tag: "Web3 · Base", desc: "Një rrjet që e kthen kontributin on-chain në reputacion të auditueshëm.", href: "/sq/alphaos" },
       { name: "AuthorAI", tag: "Inteligjencë Artificiale", desc: "Një mjet shkrimi i fokusuar ku AI rri në sfond.", href: "/sq/authorai" },
+      { name: "JoVVo", tag: "Shëndet & Fitnes · iOS", desc: "Trajneri yt i fitnesit dhe ushqyerjes me AI në xhep; programe të personalizuara dhe analizë vakti me foto.", href: "/sq#jovvo" },
     ],
     cardCta: "Shiko",
   },
+  jovvo: {
+    eyebrow: "JoVVo · Aplikacion iOS",
+    t1: "Trajneri yt me AI,",
+    t2: "pikërisht në xhep",
+    lead: "JoVVo është trajneri yt i fitnesit dhe ushqyerjes me inteligjencë artificiale, në xhepin tënd. Trajneri David ndërton programe stërvitjeje sipas synimeve dhe nivelit tënd, analizon vaktet e tua dhe rri me ty gjatë gjithë ditës.",
+    features: [
+      { name: "Programe sipas sportit", note: "Fitness, CrossFit, HYROX, Strength, Run ose Hybrid — një plan javor ose 4-javor sipas nivelit dhe pajisjeve. Shëno një dëmtim dhe David e shmang atë zonë." },
+      { name: "Analizë vakti me foto", note: "Bëj një foto vaktit; kaloritë dhe makrot (proteina, karbohidrate, yndyra) llogariten menjëherë." },
+      { name: "Ndjekje e mençur", note: "Uji, hapat, pesha, seria e stërvitjes dhe synimi ditor i kalorive në një ekran, me kujtesa personale." },
+      { name: "David — trajneri yt 24/7", note: "Ushqyerje, stërvitje, motivim — përgjigjet duke ditur sportin, nivelin dhe synimin tënd." },
+    ],
+    freeNote: "Provo të gjitha veçoritë Premium falas për 3 ditë.",
+    cta: "Shkarko në App Store",
+    url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
+    caption: "Me JoVVo, rruga drejt synimit është në xhep.",
+  },
   contractory: {
     t1: "Vendosje e kontratave inteligjente,",
-    t2: "nga fillimi në fund në një vend.",
+    t2: "nga fillimi në fund në një vend",
     lead: "Nga kompilimi te verifikimi, e sjell të gjithë ciklin jetësor të kontratës inteligjente në një sipërfaqe të vetme. Një mjet i thjeshtë dhe i besueshëm, i ndërtuar për ekipet blockchain që punojnë në prodhim.",
     caps: [
       { name: "Vendos", note: "ERC-20 · 721 · 1155 në Arc" },
@@ -374,7 +460,7 @@ export const sqSections: typeof trSections = {
   },
   alphaos: {
     t1: "Reputacion dixhital",
-    t2: "i verifikueshëm.",
+    t2: "i verifikueshëm",
     lead: "AlphaOS e kthen kontributin on-chain në një reputacion të matshëm. Detyra, distinktivë dhe një tabelë renditjeje e drejtpërdrejtë; çdo operator zgjidhet në një Basename dhe çdo pikë gjurmohet deri te transaksioni.",
     caps: [
       { name: "Mat", note: "Nga aktiviteti te reputacioni" },
@@ -386,7 +472,7 @@ export const sqSections: typeof trSections = {
   },
   authorai: {
     t1: "Inteligjenca artificiale në sfond,",
-    t2: "fokusi te ju.",
+    t2: "fokusi te ju",
     lead: "AuthorAI është një mjet shkrimi, jo një pilot automatik. Inteligjenca artificiale ndërhyn vetëm kur ju e kërkoni; faqja është e juaja, fjalitë janë të juajat dhe fjala e fundit është gjithmonë e juaja.",
     caps: [
       { name: "Shkruaj", note: "Një faqe e fokusuar, pa shpërqendrime" },
@@ -400,7 +486,7 @@ export const sqSections: typeof trSections = {
     eyebrow: "Shërbime",
     detailLabel: "Më shumë →",
     t1: "Pesë disiplina,",
-    t2: "një studio.",
+    t2: "një studio",
     groups: [
       { title: "Dizajn", href: "/sq/dizajn-web", line: "Dizajnojmë faqe interneti moderne dhe dyqane online, të përqendruara te përdoruesi.", items: ["Faqe interneti premium", "Faqe interneti korporative", "E-commerce / dyqan online", "Dizajn UI / UX", "Identitet marke"] },
       { title: "Zhvillim", href: "/sq/zhvillim-saas", href2: "/sq/aplikacione-mobile", href2Label: "Aplikacione mobile →", line: "Ndërtojmë softuer web, mobile dhe të personalizuar nga ideja në publikim.", items: ["Zhvillim SaaS", "Zhvillim MVP", "Aplikacione web (React, Next.js)", "Aplikacione mobile (Flutter, iOS, Android)", "Softuer i personalizuar", "Integrime API"] },
@@ -412,8 +498,8 @@ export const sqSections: typeof trSections = {
   work: {
     locale: "sq",
     eyebrow: "Punë të Zgjedhura",
-    t1: "Imagjinojeni.",
-    t2: "Ne do ta ndërtojmë.",
+    t1: "Imagjinojeni",
+    t2: "Ne do ta ndërtojmë",
     kind: "Punë koncepti",
     works: [
       { title: "Köz", field: "Restorant · Landing", desc: "Një faqe e vetme për një zgarë moderne — meny e drejtpërdrejtë, rrjedhë rezervimesh dhe një ndërfaqe me temë zjarri." },
@@ -425,7 +511,7 @@ export const sqSections: typeof trSections = {
   idea: {
     eyebrow: "Nga ideja te produkti",
     t1: "Keni një ide?",
-    t2: "Ta ndërtojmë së bashku.",
+    t2: "Ta ndërtojmë së bashku",
     lead: "Mjafton të keni një ide. Një produkt SaaS, një aplikacion mobil ose një zgjidhje me inteligjencë artificiale — e përcaktojmë së bashku, e nisim me një MVP dhe e rrisim hap pas hapi.",
     cta: "Na Tregoni Idenë Tuaj",
     ctaHref: "/sq#contact",
@@ -433,14 +519,14 @@ export const sqSections: typeof trSections = {
   studio: {
     eyebrow: "Studio",
     t1: "Teknologjinë e kthejmë",
-    t2: "në avantazhin tuaj.",
+    t2: "në avantazhin tuaj",
     lead: "Woodstone është një studio teknologjie. Dizajnin, softuerin dhe automatizimin i trajtojmë si një mjeshtëri të vetme, sepse problemet e vërteta nuk i njohin këto ndarje. Çdo projekt e mbajmë në standardin e produkteve tona.",
     signature: "Dizajnuar dhe ndërtuar nga WoodstoneStudio",
   },
   faq: {
     eyebrow: "Pyetje të bëra shpesh",
     t1: "Pyetjet në",
-    t2: "mendjen tuaj.",
+    t2: "mendjen tuaj",
     faqs: [
       { q: "Kam vetëm një ide — a mund të më ndihmoni?", a: "Po. Shumë nga projektet tona nisin vetëm me një ide. E përcaktojmë së bashku, e qartësojmë fushëveprimin dhe e sjellim në jetë me një MVP." },
       { q: "A zhvilloni produkte SaaS?", a: "Po. Ndërtojmë produkte SaaS nga ideja në publikim, përfshirë aplikacione web me abonim, me menaxhim përdoruesish, pagesa dhe arkitekturë të shkallëzueshme." },
@@ -457,9 +543,24 @@ export const sqSections: typeof trSections = {
   contact: {
     eyebrow: "Nisni një projekt",
     t1: "Projektin tuaj të radhës",
-    t2: "ta sjellim në jetë së bashku.",
+    t2: "ta sjellim në jetë së bashku",
     lead: "Një faqe interneti, softuer i personalizuar, automatizim i fuqizuar nga AI ose një produkt dixhital i plotë — do të kishim kënaqësinë të dëgjojmë idenë tuaj.",
     channel: "Na Kontaktoni",
+  },
+  testimonials: {
+    eyebrow: "Referenca",
+    t1: "Puna e fundit",
+    t2: "që publikuam",
+    featuredTag: "Projekt live",
+    featuredTitle: "CrossFit Bahçeşehir",
+    featuredField: "Palestër · Faqe interneti",
+    featuredDesc: "Një faqe promovuese që e dizajnuam dhe ndërtuam nga fillimi në fund për një palestër CrossFit në Bahçeşehir — orari i klasave, detajet e anëtarësisë dhe një rrjedhë e shpejtë kontakti. Sapo e publikuar.",
+    featuredUrl: "https://crossfitbahcesehir.fit",
+    featuredHost: "crossfitbahcesehir.fit",
+    featuredCta: "Vizito Faqen",
+    items: [
+      { name: "Serpil KURD", role: "Pronare palestre", quote: "E sollën në ekran pikërisht palestrën që kishim në mendje; herën e parë që hapëm faqen thamë 'po, kjo jemi ne'. E shpejtë, e pastër dhe krejt e jona — dhe kënaqësi të vërtetë të punosh me ta." },
+    ],
   },
   footer: {
     tagline: "Studio e Pavarur Produktesh",
@@ -469,6 +570,8 @@ export const sqSections: typeof trSections = {
       { href: "/sq#services", label: "Shërbime" },
       { href: "/sq#work", label: "Punët" },
       { href: "/sq/rreth-nesh", label: "Rreth Nesh" },
+      { href: "/sq/pyetje", label: "Pyetje" },
+      { href: "/sq/blog", label: "Blog" },
       { href: "/sq#contact", label: "Kontakt" },
     ],
   },

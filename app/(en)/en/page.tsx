@@ -1,8 +1,10 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { ProductsIntro } from "@/components/products-intro";
+import { JoVVo } from "@/components/jovvo-section";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
+import { Testimonials } from "@/components/testimonials";
 import { IdeaCTA } from "@/components/idea-cta";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
@@ -27,8 +29,10 @@ export default function HomeEN() {
       <main>
         <Hero t={enHero} />
         <ProductsIntro t={enSections.productsIntro} />
+        <JoVVo t={enSections.jovvo} />
         <Services t={enSections.services} />
         <WorkShowcase t={enSections.work} />
+        <Testimonials t={enSections.testimonials} />
         <IdeaCTA t={enSections.idea} />
         <Contact t={enSections.contact} />
       </main>

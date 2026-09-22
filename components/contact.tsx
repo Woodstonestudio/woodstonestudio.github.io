@@ -5,7 +5,11 @@ import { trSections, type SectionsDict } from "@/lib/i18n";
  * İletişim — büyük tipografi, sade. Projeye başlamaya bir davet.
  */
 export function Contact({ t = trSections.contact }: { t?: SectionsDict["contact"] }) {
-  const channels = [{ label: t.channel, href: "mailto:info@woodstonestudio.com" }];
+  const channels = [
+    { label: t.channel, href: "mailto:info@woodstonestudio.com" },
+    { label: "Instagram", href: "https://instagram.com/woodstonestudio35" },
+    { label: "WhatsApp", href: "https://wa.me/905438520257" },
+  ];
 
   return (
     <section id="contact" className="relative scroll-mt-16 border-t border-line">

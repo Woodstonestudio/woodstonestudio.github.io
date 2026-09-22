@@ -29,7 +29,7 @@ export function ProductsIntro({ t = trSections.productsIntro }: { t?: SectionsDi
         </div>
 
         {/* Ürün kartları */}
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3 lg:mt-20">
+        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:mt-20 lg:grid-cols-4">
           {t.cards.map((card, i) => (
             <Reveal key={card.name} delay={i * 0.08}>
               <Link

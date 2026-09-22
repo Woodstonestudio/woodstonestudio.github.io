@@ -1,8 +1,10 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { ProductsIntro } from "@/components/products-intro";
+import { JoVVo } from "@/components/jovvo-section";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
+import { Testimonials } from "@/components/testimonials";
 import { IdeaCTA } from "@/components/idea-cta";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
@@ -26,8 +28,10 @@ export default function Home() {
       <main>
         <Hero />
         <ProductsIntro />
+        <JoVVo />
         <Services />
         <WorkShowcase />
+        <Testimonials />
         <IdeaCTA />
         <Contact />
       </main>
