@@ -7,7 +7,7 @@ import { trSections, type SectionsDict } from "@/lib/i18n";
 export function Contact({ t = trSections.contact }: { t?: SectionsDict["contact"] }) {
   const channels = [
     { label: t.channel, href: "mailto:info@woodstonestudio.com" },
-    { label: "Instagram", href: "https://instagram.com/woodstonestudio35" },
+    { label: "Instagram", href: "https://www.instagram.com/woodstonestudio35" },
     { label: "WhatsApp", href: "https://wa.me/905438520257" },
   ];
 

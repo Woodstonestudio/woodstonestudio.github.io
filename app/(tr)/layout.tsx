@@ -106,7 +106,7 @@ export default function RootLayout({
               },
               sameAs: [
                 "https://github.com/Woodstonestudio",
-                "https://instagram.com/woodstonestudio35",
+                "https://www.instagram.com/woodstonestudio35",
               ],
             }),
           }}
