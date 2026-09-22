@@ -9,9 +9,9 @@ import { AlphaOSConsole } from "@/components/alphaos/console";
  */
 import { trSections, type SectionsDict } from "@/lib/i18n";
 
-const DETAIL = { tr: "/alphaos", en: "/en/alphaos", sq: "/sq/alphaos" } as const;
+const DETAIL = { tr: "/alphaos", en: "/en/alphaos" } as const;
 
-export function AlphaOSSection({ t = trSections.alphaos, locale = "tr" }: { t?: SectionsDict["alphaos"]; locale?: "tr" | "en" | "sq" }) {
+export function AlphaOSSection({ t = trSections.alphaos, locale = "tr" }: { t?: SectionsDict["alphaos"]; locale?: "tr" | "en" }) {
   return (
     <section
       id="alphaos"

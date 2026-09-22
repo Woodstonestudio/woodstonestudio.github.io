@@ -14,7 +14,7 @@ export type Locale = "tr" | "en";
 
 export type ServiceContent = {
   locale: Locale;
-  slug: string; // bu dildeki URL yolu, örn. "/web-tasarim" | "/en/web-design" | "/sq/dizajn-web"
+  slug: string; // bu dildeki URL yolu, örn. "/web-tasarim" | "/en/web-design"
   alternates: Record<Locale, string>; // hreflang için 3 dilin tam yolu
   meta: { title: string; description: string; keywords: string[] };
   eyebrow: string;

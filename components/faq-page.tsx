@@ -40,7 +40,7 @@ export function faqMetadata(locale: Locale) {
     en: "Frequently asked questions about WoodstoneStudio services: web design, mobile apps, SaaS, AI, social media and more.",
     sq: "Pyetje të bëra shpesh mbi shërbimet e WoodstoneStudio: dizajn web, aplikacione mobile, SaaS, AI, media sociale dhe më shumë.",
   } as const;
-  const path = { tr: "/sss", en: "/en/faq", sq: "/sq/pyetje" } as const;
+  const path = { tr: "/sss", en: "/en/faq" } as const;
   return {
     title: titles[locale],
     description: descs[locale],

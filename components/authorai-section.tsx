@@ -9,9 +9,9 @@ import { AuthorAIConsole } from "@/components/authorai/console";
  */
 import { trSections, type SectionsDict } from "@/lib/i18n";
 
-const DETAIL = { tr: "/authorai", en: "/en/authorai", sq: "/sq/authorai" } as const;
+const DETAIL = { tr: "/authorai", en: "/en/authorai" } as const;
 
-export function AuthorAISection({ t = trSections.authorai, locale = "tr" }: { t?: SectionsDict["authorai"]; locale?: "tr" | "en" | "sq" }) {
+export function AuthorAISection({ t = trSections.authorai, locale = "tr" }: { t?: SectionsDict["authorai"]; locale?: "tr" | "en" }) {
   return (
     <section
       id="authorai"

@@ -9,9 +9,9 @@ import { ContractoryConsole } from "@/components/contractory/console";
  */
 import { trSections, type SectionsDict } from "@/lib/i18n";
 
-const DETAIL = { tr: "/contractory", en: "/en/contractory", sq: "/sq/contractory" } as const;
+const DETAIL = { tr: "/contractory", en: "/en/contractory" } as const;
 
-export function ContractorySection({ t = trSections.contractory, locale = "tr" }: { t?: SectionsDict["contractory"]; locale?: "tr" | "en" | "sq" }) {
+export function ContractorySection({ t = trSections.contractory, locale = "tr" }: { t?: SectionsDict["contractory"]; locale?: "tr" | "en" }) {
   return (
     <section
       className="relative mx-auto flex min-h-svh max-w-6xl scroll-mt-16 items-center overflow-x-clip px-6 py-28 lg:px-8 lg:py-36"
