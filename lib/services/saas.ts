@@ -3,7 +3,6 @@ import type { ServiceContent } from "@/components/service-page";
 const alternates = {
   tr: "/saas-gelistirme",
   en: "/en/saas-development",
-  sq: "/sq/zhvillim-saas",
 } as const;
 
 export const saasTR: ServiceContent = {
@@ -120,59 +119,3 @@ export const saasEN: ServiceContent = {
   areaServed: "Worldwide",
 };
 
-export const saasSQ: ServiceContent = {
-  locale: "sq",
-  slug: alternates.sq,
-  alternates,
-  meta: {
-    title: "Zhvillim SaaS dhe MVP — Nga Ideja te Produkti",
-    description:
-      "Studio zhvillimi produktesh SaaS dhe MVP për startup-e dhe biznese në Shqipëri dhe Kosovë. Aplikacione web me abonim, menaxhim përdoruesish, pagesa dhe arkitekturë e shkallëzueshme.",
-    keywords: [
-      "zhvillim SaaS",
-      "zhvillim MVP",
-      "zhvillim softueri Shqipëri",
-      "startup MVP Shqipëri",
-      "aplikacion web me abonim",
-      "zhvillim produkti dixhital",
-      "Next.js SaaS",
-    ],
-  },
-  eyebrow: "SaaS dhe MVP",
-  h1: ["Idenë tuaj SaaS", "kthejeni në produkt të vërtetë."],
-  lead: "WoodstoneStudio është një studio teknologjie dixhitale që ndërton produkte SaaS nga ideja në publikim, për startup-e dhe biznese në Shqipëri, Kosovë dhe më gjerë. Fillojmë me një MVP me veçoritë thelbësore dhe e rrisim me reagimet e përdoruesve realë. Ndërtojmë edhe produktet tona SaaS — mendimin e produktit e njohim nga brenda.",
-  ctaPrimary: "Vlerësim Falas",
-  ctaSecondary: "Shihni Punët Tona",
-  scopeTitle: ["Çfarë", "bëjmë?"],
-  scopeLead: "Një produkt SaaS është më shumë se një ndërfaqe; do të thotë abonime, përdorues, pagesa dhe shkallëzim. I ndërtojmë të gjitha së bashku.",
-  scope: [
-    { title: "Zhvillim MVP", desc: "Një version i parë me veçoritë më kritike të idesë suaj, gati për publikim brenda javësh — për ta testuar tregun herët." },
-    { title: "Aplikacione me abonim", desc: "Struktura e planeve, periudha prove, menaxhim abonimesh dhe faturim; integrim pagesash me ofrues si Stripe." },
-    { title: "Përdorues, ekipe dhe leje", desc: "Regjistrim, hyrje, strukturë ekipi/organizate, role dhe leje — bazë e fortë për produkte me shumë përdorues." },
-    { title: "Panele dhe raportim", desc: "Panele ku përdoruesit menaxhojnë punën, tabela të dhënash, grafikë dhe eksportim." },
-    { title: "API dhe integrime", desc: "Integrim me shërbime të palëve të treta (pagesa, email, CRM, AI) dhe dizajn i API-t tuaj." },
-    { title: "Arkitekturë e shkallëzueshme", desc: "Next.js, React dhe infrastrukturë moderne cloud — një bazë teknike që nuk ju ngadalëson ndërsa rriteni." },
-  ],
-  processTitle: ["Si", "punojmë?"],
-  process: [
-    { step: "01", title: "Vlerësim", desc: "Qartësojmë idenë, përdoruesit e synuar dhe modelin e të ardhurave. Falas." },
-    { step: "02", title: "Fushëveprimi i MVP", desc: "Përcaktojmë veçoritë thelbësore të versionit të parë dhe hartojmë një udhërrëfyes." },
-    { step: "03", title: "Zhvillim", desc: "Dorëzime javore, të testuara së bashku me ju në çdo hap." },
-    { step: "04", title: "Publikim dhe rritje", desc: "Dalim live dhe planifikojmë versionet e ardhshme nga të dhënat reale të përdoruesve." },
-  ],
-  faqTitle: ["Pyetje të", "bëra shpesh."],
-  faq: [
-    { q: "Çfarë është MVP dhe pse të fillohet me të?", a: "MVP është versioni i parë që përmban vetëm veçoritë thelbësore të produktit. Në vend që të ndërtoni gjithçka për muaj, publikoni herët dhe mësoni nga përdoruesit realë — duke ulur koston dhe rrezikun." },
-    { q: "Sa kohë zgjat një MVP?", a: "Zakonisht 4–8 javë sipas fushëveprimit. Në vlerësim përcaktojmë veçoritë thelbësore dhe një afat të qartë." },
-    { q: "Cilat teknologji përdorni?", a: "Next.js dhe React në web, Flutter në mobile; shërbime moderne cloud për bazën e të dhënave dhe autentifikimin; ofrues si Stripe për pagesat." },
-    { q: "A e ngrini sistemin e pagesave dhe abonimeve?", a: "Po. Integrojmë strukturën e planeve, periudhën e provës, menaxhimin e abonimeve dhe faturimin në produkt." },
-    { q: "Nuk kam njohuri teknike — a është problem?", a: "Jo. Mendimin e produktit e ndërtojmë së bashku, vendimet teknike i marrim ne dhe jua shpjegojmë me gjuhë të thjeshtë." },
-    { q: "A vazhdoni pas MVP-së?", a: "Po. Pas publikimit vazhdojmë të zhvillojmë versione të reja bazuar në të dhënat e përdoruesve dhe ndihmojmë në rritjen e produktit." },
-  ],
-  closingTitle: ["Le të flasim për", "idenë tuaj SaaS."],
-  closingLead: "Na tregoni idenë tuaj; në një vlerësim falas qartësojmë së bashku fushëveprimin e MVP-së, afatin dhe koston.",
-  closingCta: "Na Kontaktoni",
-  backLabel: "Faqja kryesore",
-  serviceType: "Zhvillim SaaS dhe MVP",
-  areaServed: "Shqipëri, Kosovë",
-};

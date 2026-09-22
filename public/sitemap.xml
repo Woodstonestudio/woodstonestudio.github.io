@@ -24,20 +24,12 @@
     <loc>https://woodstonestudio.com/en</loc>
   </url>
   <url>
-    <loc>https://woodstonestudio.com/sq</loc>
-  </url>
-  <url>
     <loc>https://woodstonestudio.com/web-tasarim</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://woodstonestudio.com/en/web-design</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/dizajn-web</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -52,22 +44,12 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://woodstonestudio.com/sq/aplikacione-mobile</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://woodstonestudio.com/saas-gelistirme</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://woodstonestudio.com/en/saas-development</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/zhvillim-saas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -82,22 +64,12 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://woodstonestudio.com/sq/inteligjence-artificiale</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://woodstonestudio.com/sosyal-medya</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://woodstonestudio.com/en/social-media</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/media-sociale</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -112,22 +84,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://woodstonestudio.com/sq/rreth-nesh</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://woodstonestudio.com/blog</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://woodstonestudio.com/en/blog</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/blog</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -142,22 +104,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://woodstonestudio.com/sq/blog/sosyal-medya-yonetimi-hizmetleri</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://woodstonestudio.com/blog/web-sitesi-maliyeti</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://woodstonestudio.com/en/blog/web-sitesi-maliyeti</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/blog/web-sitesi-maliyeti</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -172,11 +124,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://woodstonestudio.com/sq/blog/mvp-nedir</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://woodstonestudio.com/blog/yapay-zeka-kucuk-isletme</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -187,27 +134,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://woodstonestudio.com/sq/blog/yapay-zeka-kucuk-isletme</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/blog/faqe-interneti-shqiperi-cmimi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://woodstonestudio.com/en/blog/faqe-interneti-shqiperi-cmimi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/blog/biznesi-online-shqiperi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/blog/aplikacion-mobile-shqiperi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -232,27 +159,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://woodstonestudio.com/sq/contractory</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://woodstonestudio.com/en/alphaos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://woodstonestudio.com/sq/alphaos</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://woodstonestudio.com/en/authorai</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/authorai</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -263,11 +175,6 @@
   </url>
   <url>
     <loc>https://woodstonestudio.com/en/faq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://woodstonestudio.com/sq/pyetje</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

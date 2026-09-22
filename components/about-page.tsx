@@ -2,13 +2,13 @@ import Link from "next/link";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/motion/reveal";
-import { trNav, enNav, sqNav, trSections, enSections, sqSections } from "@/lib/i18n";
+import { trNav, enNav, trSections, enSections } from "@/lib/i18n";
 import type { AboutContent } from "@/lib/about";
 import type { Locale } from "@/components/service-page";
 
-const NAV = { tr: trNav, en: enNav, sq: sqNav } as const;
-const FOOTER = { tr: trSections.footer, en: enSections.footer, sq: sqSections.footer } as const;
-const HOME = { tr: "/", en: "/en", sq: "/sq" } as const;
+const NAV = { tr: trNav, en: enNav } as const;
+const FOOTER = { tr: trSections.footer, en: enSections.footer } as const;
+const HOME = { tr: "/", en: "/en" } as const;
 const SITE = "https://woodstonestudio.com";
 
 export function AboutPage({ c }: { c: AboutContent }) {
@@ -171,7 +171,6 @@ export function aboutMetadata(c: AboutContent) {
       languages: {
         tr: `${SITE}${c.alternates.tr}`,
         en: `${SITE}${c.alternates.en}`,
-        sq: `${SITE}${c.alternates.sq}`,
       },
     },
     openGraph: { title: c.meta.title, description: c.meta.description, url: `${SITE}${c.slug}`, type: "website" },

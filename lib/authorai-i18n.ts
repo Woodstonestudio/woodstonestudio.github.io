@@ -252,4 +252,4 @@ const sq: ProductContent = {
   visitLabel: "Vizito",
 };
 
-export const authoraiContent: Record<Locale, ProductContent> = { tr, en, sq };
+export const authoraiContent: Record<Locale, ProductContent> = { tr, en };

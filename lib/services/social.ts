@@ -3,7 +3,6 @@ import type { ServiceContent } from "@/components/service-page";
 const alternates = {
   tr: "/sosyal-medya",
   en: "/en/social-media",
-  sq: "/sq/media-sociale",
 } as const;
 
 export const socialTR: ServiceContent = {
@@ -120,59 +119,3 @@ export const socialEN: ServiceContent = {
   areaServed: "Worldwide",
 };
 
-export const socialSQ: ServiceContent = {
-  locale: "sq",
-  slug: alternates.sq,
-  alternates,
-  meta: {
-    title: "Menaxhim i Mediave Sociale në Shqipëri — Instagram dhe YouTube",
-    description:
-      "Menaxhim i mediave sociale për biznese në Shqipëri dhe Kosovë: menaxhim llogarish Instagram dhe YouTube, prodhim përmbajtjeje (Reels, video), optimizim profili dhe rritje organike. Përmbajtje e rregullt për dukshmëri të qëndrueshme.",
-    keywords: [
-      "menaxhim i mediave sociale",
-      "menaxhim Instagram Shqipëri",
-      "menaxhim kanali YouTube",
-      "prodhim përmbajtjeje Reels",
-      "rritje organike ndjekësish",
-      "agjenci mediash sociale Tiranë",
-      "marketing në rrjete sociale",
-    ],
-  },
-  eyebrow: "Media Sociale",
-  h1: ["Menaxhim i mediave sociale:", "përmbajtje e rregullt, dukshmëri e qëndrueshme."],
-  lead: "WoodstoneStudio është një studio teknologjie dixhitale që punon me biznese në Shqipëri, Kosovë dhe rajon. Menaxhojmë llogaritë tuaja në Instagram dhe YouTube, prodhojmë përmbajtje në zërin e markës suaj dhe mbështesim rritjen organike. Fokusi ynë nuk janë numrat afatshkurtër, por një prani e qëndrueshme që arrin te audienca e duhur.",
-  ctaPrimary: "Vlerësim Falas i Profilit",
-  ctaSecondary: "Shihni Punët Tona",
-  scopeTitle: ["Çfarë", "bëjmë?"],
-  scopeLead: "Mediat sociale kërkojnë disiplinë: një profil të qartë, një zë të qëndrueshëm dhe përmbajtje të vazhdueshme. Të tria i planifikojmë, prodhojmë dhe menaxhojmë.",
-  scope: [
-    { title: "Menaxhim i llogarisë Instagram", desc: "Kalendar përmbajtjeje, postime, story, menaxhim komentesh dhe mesazhesh — llogaria juaj mbetet aktive dhe e qëndrueshme çdo ditë." },
-    { title: "Menaxhim i kanalit YouTube", desc: "Strukturë kanali, tituj videosh, përshkrime, thumbnail dhe plan publikimi — një kanal që njerëzit mund ta ndjekin." },
-    { title: "Prodhim përmbajtjeje", desc: "Reels dhe video të shkurtra, dizajne vizuale dhe tekste, në zërin e markës suaj dhe gati për publikim." },
-    { title: "Rregullim dhe optimizim i profilit", desc: "Bio, highlights, foto profili, trailer i kanalit — profili juaj shpjegon që në shikim të parë çfarë bëni." },
-    { title: "Rritje organike", desc: "Hashtag-e dhe tema të duhura, menaxhim i ndërveprimit dhe ritëm i qëndrueshëm publikimi për ndjekës të vërtetë." },
-    { title: "Raportim", desc: "Raport mujor performance: shtrirje, ndërveprim, ndryshim ndjekësish dhe përmbajtja më e mirë; drejtimin e vendosim së bashku." },
-  ],
-  processTitle: ["Si", "punojmë?"],
-  process: [
-    { step: "01", title: "Vlerësim i profilit", desc: "Shqyrtojmë llogaritë aktuale, audiencën dhe qëllimet tuaja. Falas." },
-    { step: "02", title: "Strategji dhe kalendar", desc: "Përcaktojmë zërin e markës, llojet e përmbajtjes dhe kalendarin mujor të publikimit." },
-    { step: "03", title: "Prodhim dhe publikim", desc: "Prodhojmë përmbajtjen, e publikojmë me miratimin tuaj dhe menaxhojmë ndërveprimin." },
-    { step: "04", title: "Matje dhe përmirësim", desc: "Raporti mujor tregon çfarë funksionon; planin e përditësojmë sipas tij." },
-  ],
-  faqTitle: ["Pyetje të", "bëra shpesh."],
-  faq: [
-    { q: "A blini ndjekës?", a: "Jo. Ndjekësit e blerë ose bot-ët e dëmtojnë llogarinë tuaj dhe shkelin rregullat e platformave. Ne sjellim rritje reale dhe organike përmes përmbajtjes së rregullt dhe ndërveprimit." },
-    { q: "Sa shpejt vijnë rezultatet?", a: "Rritja organike është kumulative: strukturë dhe ndërveprim më i mirë në 4–6 javët e para, rritje e dukshme e ndjekësve dhe shtrirjes në 3–6 muaj. Vendosim qëllime të matshme, jo premtime boshe." },
-    { q: "Kush e prodhon përmbajtjen?", a: "Ne; nga ju na duhen vetëm informacioni i markës, detajet e produktit/shërbimit dhe, kur nevojitet, pamje të papërpunuara. Çdo përmbajtje ju dorëzohet për miratim para publikimit." },
-    { q: "Në cilat platforma punoni?", a: "Kryesisht Instagram dhe YouTube; sipas nevojës menaxhojmë edhe TikTok dhe LinkedIn." },
-    { q: "A duhet të jap fjalëkalimin?", a: "Jo. Qasja e deleguar përmes Meta Business për Instagram dhe lejet e menaxherit të kanalit për YouTube mjaftojnë." },
-    { q: "Si përcaktohet çmimi?", a: "Paketë mujore sipas numrit të platformave, vëllimit të përmbajtjes dhe fushëveprimit të menaxhimit; mund ta ndaloni në çdo kohë." },
-  ],
-  closingTitle: ["Le të flasim për", "mediat tuaja sociale."],
-  closingLead: "Na dërgoni llogaritë tuaja; në një vlerësim falas të profilit ndajmë çfarë funksionon mirë dhe çfarë mund të përmirësojmë.",
-  closingCta: "Na Kontaktoni",
-  backLabel: "Faqja kryesore",
-  serviceType: "Menaxhim i mediave sociale dhe prodhim përmbajtjeje",
-  areaServed: "Shqipëri, Kosovë",
-};

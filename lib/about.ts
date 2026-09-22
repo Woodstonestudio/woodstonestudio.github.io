@@ -24,7 +24,6 @@ export type AboutContent = {
 const alternates = {
   tr: "/hakkimizda",
   en: "/en/about",
-  sq: "/sq/rreth-nesh",
 } as const;
 
 export const aboutTR: AboutContent = {
@@ -121,49 +120,3 @@ export const aboutEN: AboutContent = {
   backLabel: "Home",
 };
 
-export const aboutSQ: AboutContent = {
-  locale: "sq",
-  slug: alternates.sq,
-  alternates,
-  meta: {
-    title: "Rreth Nesh",
-    description:
-      "WoodstoneStudio është një studio teknologjie dixhitale e pavarur me qendër në İzmir të Turqisë, që punon me klientë në Shqipëri dhe Kosovë. Ndërtojmë web, mobile, AI dhe softuer të personalizuar, dhe publikojmë edhe produktet tona.",
-    keywords: [
-      "rreth WoodstoneStudio",
-      "studio teknologjie dixhitale",
-      "ekip softueri i pavarur",
-      "studio softueri",
-      "zhvillim web dhe mobile",
-    ],
-  },
-  eyebrow: "Rreth Nesh",
-  h1: ["Idetë tuaja", "i kthejmë në produkte."],
-  lead: "WoodstoneStudio është një studio teknologjie dixhitale e pavarur me qendër në İzmir të Turqisë, që punon me klientë në Shqipëri, Kosovë dhe rajon. Ndërtojmë faqe interneti, aplikacione mobile, zgjidhje me inteligjencë artificiale dhe softuer të personalizuar — si për klientët tanë, ashtu edhe për veten.",
-  storyTitle: ["Në çfarë", "besojmë?"],
-  story: [
-    "Woodstone punon më shumë si studio sesa si agjenci. Dizajnin, softuerin dhe automatizimin i trajtojmë si një mjeshtëri të vetme, jo si departamente të ndara, sepse problemet e vërteta nuk i njohin këto kufij.",
-    "Produktet tona janë vendi ku e mprehim mjeshtërinë tonë inxhinierike. Kemi aplikacionet tona live në dyqanet e aplikacioneve — pra dimë nga përvoja se çfarë duhet për ta sjellë një ide te dyqani, për të gjetur përdorues dhe për ta mbajtur një produkt gjallë. Disiplinën që sjellim në punën me klientë e provojmë fillimisht në produktet tona.",
-    "Preferojmë të dorëzojmë softuer që funksionon sesa të bëjmë premtime të mëdha. Çdo projekt e mbajmë në standardin e produkteve tona dhe synojmë rezultate të qarta, të ndershme dhe të matshme, jo bujë.",
-  ],
-  valuesTitle: ["Si", "punojmë?"],
-  values: [
-    { title: "Ndershmëri", desc: "Themi qartë çfarë mundemi dhe çfarë nuk mundemi të bëjmë. Pa kosto të fshehura, pa premtime boshe, pa numra të fryrë." },
-    { title: "Thjeshtësi", desc: "Ndërtojmë fillimisht versionin më të vogël funksional dhe shmangim ndërlikimin e panevojshëm. Produktet e mira nisin me pak, por veçoritë e duhura." },
-    { title: "Vazhdimësi", desc: "Publikimi është një fillim, jo një fund. Vazhdojmë të përmirësojmë dhe të mbështesim edhe pas daljes live." },
-    { title: "Mendim produkti", desc: "Nuk shkruajmë vetëm kod; kuptojmë biznesin, përdoruesit dhe qëllimet tuaja dhe vendosim sipas tyre." },
-  ],
-  stackTitle: ["Teknologjitë me të cilat", "punojmë."],
-  stackLead: "Bëjmë punën e duhur me mjetin e duhur. Teknologjitë kryesore që përdorim:",
-  stack: [
-    { group: "Web", items: "Next.js · React · TypeScript · Tailwind CSS" },
-    { group: "Mobile", items: "Flutter · iOS · Android" },
-    { group: "Backend & Infrastrukturë", items: "Node.js · Firebase · Supabase · REST API" },
-    { group: "Inteligjencë Artificiale", items: "OpenAI · Anthropic · Google AI" },
-    { group: "Blockchain", items: "Kontrata inteligjente · Web3 · Base" },
-  ],
-  closingTitle: ["Gati për të punuar", "së bashku?"],
-  closingLead: "Keni një ide, një projekt ose thjesht një pyetje? Do të kishim kënaqësinë t'ju dëgjojmë.",
-  closingCta: "Na Kontaktoni",
-  backLabel: "Faqja kryesore",
-};

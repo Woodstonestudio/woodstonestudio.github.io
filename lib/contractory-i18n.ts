@@ -291,4 +291,4 @@ const sq: ProductContent = {
   visitLabel: "Vizito",
 };
 
-export const contractoryContent: Record<Locale, ProductContent> = { tr, en, sq };
+export const contractoryContent: Record<Locale, ProductContent> = { tr, en };

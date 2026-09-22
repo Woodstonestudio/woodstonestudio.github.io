@@ -3,7 +3,6 @@ import type { ServiceContent } from "@/components/service-page";
 const alternates = {
   tr: "/web-tasarim",
   en: "/en/web-design",
-  sq: "/sq/dizajn-web",
 } as const;
 
 export const webDesignTR: ServiceContent = {
@@ -120,59 +119,3 @@ export const webDesignEN: ServiceContent = {
   areaServed: "Worldwide",
 };
 
-export const webDesignSQ: ServiceContent = {
-  locale: "sq",
-  slug: alternates.sq,
-  alternates,
-  meta: {
-    title: "Dizajn Faqesh Interneti dhe Faqe Korporative në Shqipëri",
-    description:
-      "Studio dizajni web që punon me klientë në Shqipëri, Tiranë dhe Kosovë. Faqe interneti korporative, landing page dhe e-commerce — të shpejta, të përshtatura për celular dhe të ndërtuara për Google. Konsultë falas.",
-    keywords: [
-      "dizajn faqe interneti",
-      "dizajn web Shqipëri",
-      "faqe interneti Tiranë",
-      "krijim faqe interneti",
-      "faqe interneti korporative",
-      "dizajn web Kosovë",
-      "faqe interneti me Next.js",
-    ],
-  },
-  eyebrow: "Dizajn Web",
-  h1: ["Faqe interneti të shpejta,", "të pastra dhe që sjellin klientë."],
-  lead: "WoodstoneStudio është një studio teknologjie dixhitale që punon me klientë në Shqipëri, Kosovë dhe rajon. Dizajnojmë dhe ndërtojmë faqe interneti korporative, landing page dhe dyqane online — secila e ndërtuar për shpejtësi, përdorim në celular dhe dukshmëri në Google.",
-  ctaPrimary: "Konsultë Falas",
-  ctaSecondary: "Shihni Punët Tona",
-  scopeTitle: ["Çfarë", "bëjmë?"],
-  scopeLead: "Një faqe interneti nuk duhet vetëm të duket bukur; ajo duhet t'ju sjellë klientë. Dizajnin, zhvillimin dhe përgatitjen për motorët e kërkimit i trajtojmë nën një çati.",
-  scope: [
-    { title: "Faqe interneti korporative", desc: "Faqe që e shpjegojnë qartë kompaninë tuaj, ndërtojnë besim dhe funksionojnë pa gabime në celular — me faqe shërbimesh, referenca dhe rrjedhë të qartë kontakti." },
-    { title: "Landing page", desc: "Faqe të përqendruara në konvertim për një produkt, shërbim ose fushatë të vetme, të dizajnuara për ta kthyer trafikun e reklamave në kërkesa." },
-    { title: "Dyqane online (e-commerce)", desc: "Listim produktesh, shportë dhe rrjedhë pagese gati për shitje — me ngarkim të shpejtë dhe blerje të lehtë nga telefoni." },
-    { title: "Ridizajn i faqes ekzistuese", desc: "Faqen tuaj të vjetër, të ngadaltë ose të prishur në celular e kalojmë në një infrastrukturë moderne, duke ruajtur përmbajtjen dhe renditjen në Google." },
-    { title: "Bazë e gatshme për SEO", desc: "Çdo faqe dorëzohet me SEO teknike: ngarkim i shpejtë, strukturë e saktë titujsh, të dhëna të strukturuara dhe kod i pastër që motorët e kërkimit e lexojnë lehtë." },
-    { title: "Mirëmbajtje dhe mbështetje", desc: "Qëndrojmë me ju edhe pas publikimit — përditësime, ndryshime të vogla dhe mbështetje teknike sa herë që ju nevojitet." },
-  ],
-  processTitle: ["Si", "punojmë?"],
-  process: [
-    { step: "01", title: "Konsultë", desc: "Dëgjojmë biznesin, klientët dhe qëllimet tuaja. Falas dhe pa asnjë detyrim." },
-    { step: "02", title: "Dizajn", desc: "Një ndërfaqe e pastër dhe moderne në gjuhën e markës suaj — ecim përpara me miratimin tuaj në çdo hap." },
-    { step: "03", title: "Zhvillim", desc: "E ndërtojmë me teknologji moderne (Next.js, React) që të jetë e shpejtë, e sigurt dhe e përshtatur për celular." },
-    { step: "04", title: "Publikim dhe mbështetje", desc: "Kujdesemi për domenin, hostimin dhe regjistrimin në Google; mbështetja vazhdon edhe pas publikimit." },
-  ],
-  faqTitle: ["Pyetje të", "bëra shpesh."],
-  faq: [
-    { q: "Sa kohë zgjat ndërtimi i një faqeje interneti?", a: "Varet nga fushëveprimi: një landing page zakonisht zgjat 1–2 javë, një faqe korporative me shumë faqe 3–5 javë. Në konsultë ju japim një afat të qartë." },
-    { q: "Si përcaktohen çmimet e dizajnit web?", a: "Ofertën e përgatisim sipas numrit të faqeve, funksioneve të veçanta (formularë, shumë gjuhë, e-commerce) dhe nevojave për përmbajtje. Pa kosto të fshehura — oferta është me shkrim dhe e qartë." },
-    { q: "A do të jetë faqja e përshtatur për celular?", a: "Po. Të gjitha faqet tona dizajnohen fillimisht për celular dhe funksionojnë pa gabime në telefon, tablet dhe kompjuter." },
-    { q: "Çfarë bëni që faqja të dalë në Google?", a: "SEO teknike përfshihet si standard: ngarkim i shpejtë, strukturë e saktë titujsh, të dhëna të strukturuara, hartë e faqes dhe konfigurim i Google Search Console." },
-    { q: "A punoni me klientë në Shqipëri dhe Kosovë?", a: "Po. Punojmë nga distanca me klientë në Shqipëri, Kosovë dhe në të gjithë rajonin; faqja mund të dorëzohet në një gjuhë të vetme ose në sa gjuhë të dëshironi." },
-    { q: "A mund ta rinovoni faqen time ekzistuese?", a: "Po. Faqen tuaj të vjetër ose të ngadaltë e kalojmë në një infrastrukturë moderne duke ruajtur përmbajtjen dhe renditjen ekzistuese në kërkim." },
-  ],
-  closingTitle: ["Le të flasim për", "faqen tuaj të re."],
-  closingLead: "Na tregoni idenë tuaj ose faqen aktuale; në një konsultë falas qartësojmë fushëveprimin, afatin dhe koston.",
-  closingCta: "Na Kontaktoni",
-  backLabel: "Faqja kryesore",
-  serviceType: "Dizajn faqesh interneti dhe zhvillim faqesh korporative",
-  areaServed: "Shqipëri, Kosovë",
-};

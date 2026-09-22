@@ -4,13 +4,13 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/motion/reveal";
 import { Band, SectionHead, Eyebrow } from "@/components/contractory/page/parts";
-import { trNav, enNav, sqNav, trSections, enSections, sqSections } from "@/lib/i18n";
+import { trNav, enNav, trSections, enSections } from "@/lib/i18n";
 import type { ProductContent } from "@/lib/contractory-i18n";
 import type { Locale } from "@/components/service-page";
 
-const NAV = { tr: trNav, en: enNav, sq: sqNav } as const;
-const FOOTER = { tr: trSections.footer, en: enSections.footer, sq: sqSections.footer } as const;
-const HOME = { tr: "/", en: "/en", sq: "/sq" } as const;
+const NAV = { tr: trNav, en: enNav } as const;
+const FOOTER = { tr: trSections.footer, en: enSections.footer } as const;
+const HOME = { tr: "/", en: "/en" } as const;
 const SITE = "https://woodstonestudio.com";
 
 type Props = {
@@ -31,7 +31,7 @@ export function ProductPage({ c, locale, slug, externalUrl, accentClass, console
     description: c.meta.description,
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Web",
-    url: `${SITE}${{ tr: "", en: "/en", sq: "/sq" }[locale]}/${slug}`,
+    url: `${SITE}${{ tr: "", en: "/en" }[locale]}/${slug}`,
     author: { "@type": "Organization", name: "WoodstoneStudio", url: SITE },
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
@@ -271,9 +271,9 @@ export function ProductPage({ c, locale, slug, externalUrl, accentClass, console
 
 export function productMetadata(c: ProductContent, slug: string, locale: Locale) {
   const paths = {
-    contractory: { tr: "/contractory", en: "/en/contractory", sq: "/sq/contractory" },
-    alphaos: { tr: "/alphaos", en: "/en/alphaos", sq: "/sq/alphaos" },
-    authorai: { tr: "/authorai", en: "/en/authorai", sq: "/sq/authorai" },
+    contractory: { tr: "/contractory", en: "/en/contractory" },
+    alphaos: { tr: "/alphaos", en: "/en/alphaos" },
+    authorai: { tr: "/authorai", en: "/en/authorai" },
   } as Record<string, Record<Locale, string>>;
   const p = paths[slug];
   return {
@@ -281,7 +281,7 @@ export function productMetadata(c: ProductContent, slug: string, locale: Locale)
     description: c.meta.description,
     alternates: {
       canonical: p[locale],
-      languages: { tr: `${SITE}${p.tr}`, en: `${SITE}${p.en}`, sq: `${SITE}${p.sq}` },
+      languages: { tr: `${SITE}${p.tr}`, en: `${SITE}${p.en}`  },
     },
     openGraph: { title: c.meta.title, description: c.meta.description, url: `${SITE}${p[locale]}`, type: "website" },
   };

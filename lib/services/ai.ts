@@ -3,7 +3,6 @@ import type { ServiceContent } from "@/components/service-page";
 const alternates = {
   tr: "/yapay-zeka",
   en: "/en/ai-solutions",
-  sq: "/sq/inteligjence-artificiale",
 } as const;
 
 export const aiTR: ServiceContent = {
@@ -120,59 +119,3 @@ export const aiEN: ServiceContent = {
   areaServed: "Worldwide",
 };
 
-export const aiSQ: ServiceContent = {
-  locale: "sq",
-  slug: alternates.sq,
-  alternates,
-  meta: {
-    title: "Zgjidhje me Inteligjencë Artificiale dhe Automatizim për Biznese",
-    description:
-      "Zgjidhje me inteligjencë artificiale për biznese në Shqipëri dhe Kosovë: agjentë AI, asistentë bisede, automatizim i proceseve të biznesit dhe integrim i AI në softuerin ekzistues.",
-    keywords: [
-      "inteligjencë artificiale për biznes",
-      "automatizim me AI",
-      "zhvillim agjentësh AI",
-      "integrim inteligjence artificiale",
-      "chatbot Shqipëri",
-      "automatizim i proceseve",
-      "zgjidhje AI Shqipëri",
-    ],
-  },
-  eyebrow: "Inteligjencë Artificiale",
-  h1: ["Inteligjencën artificiale", "e ndërtojmë brenda biznesit tuaj."],
-  lead: "WoodstoneStudio është një studio teknologjie dixhitale që ndërton zgjidhje me inteligjencë artificiale për biznese në Shqipëri, Kosovë dhe më gjerë. Asistentë bisede, agjentë AI që kryejnë detyra dhe automatizime që heqin punën e përsëritur — të integruara në softuerin dhe proceset tuaja ekzistuese. AI e përdorim në prodhim në produktet tona.",
-  ctaPrimary: "Konsultë Falas",
-  ctaSecondary: "Shihni Punët Tona",
-  scopeTitle: ["Çfarë", "bëjmë?"],
-  scopeLead: "Inteligjenca artificiale është një mjet, jo një shfaqje. Ka vlerë kur zgjidh një problem konkret biznesi — nga aty fillojmë.",
-  scope: [
-    { title: "Asistentë bisede me AI", desc: "Asistentë të trajnuar me të dhënat tuaja që u përgjigjen pyetjeve të klientëve, drejtojnë porositë ose mbështesin ekipin e brendshëm." },
-    { title: "Agjentë AI", desc: "Agjentë që kryejnë një detyrë nga fillimi në fund: mbledhje të dhënash, përgatitje raportesh, klasifikim emailesh, prodhim përmbajtjeje." },
-    { title: "Automatizim i proceseve të biznesit", desc: "Automatizojmë punët manuale të përsëritura; kur mbaron një hap, tjetri fillon vetë." },
-    { title: "Integrim i AI në softuerin ekzistues", desc: "Shtojmë veçori AI në aplikacionin ose faqen që përdorni tashmë — pa e rishkruar nga zero." },
-    { title: "Analizë imazhesh dhe dokumentesh", desc: "Zgjidhje që nxjerrin, klasifikojnë dhe përmbledhin informacion nga foto, dokumente dhe PDF." },
-    { title: "Produkte me AI në qendër", desc: "Produkte të reja web dhe mobile me inteligjencën artificiale në thelb, nga ideja në publikim." },
-  ],
-  processTitle: ["Si", "punojmë?"],
-  process: [
-    { step: "01", title: "Përcaktimi i problemit", desc: "Qartësojmë cila punë ju kushton kohë ose para. Falas." },
-    { step: "02", title: "Pilot", desc: "Një prototip funksional në fushëveprim të vogël, i testuar me të dhëna reale." },
-    { step: "03", title: "Integrim", desc: "E lidhim zgjidhjen me sistemet tuaja ekzistuese dhe rrjedhën e punës së ekipit." },
-    { step: "04", title: "Shtrirje", desc: "Masim rezultatet, zgjerojmë fushëveprimin dhe e mbajmë në mirëmbajtje." },
-  ],
-  faqTitle: ["Pyetje të", "bëra shpesh."],
-  faq: [
-    { q: "A i përshtatet vërtet inteligjenca artificiale biznesit tim?", a: "Për çdo detyrë të përsëritur, të bazuar në rregulla ose me shumë tekst/imazhe, me shumë gjasa po. Në konsultë përcaktojmë një rast konkret përdorimi — dhe nëse nuk përshtatet, e themi hapur." },
-    { q: "Cilat modele AI përdorni?", a: "Sipas nevojës, modele nga OpenAI, Anthropic dhe Google, të personalizuara me të dhënat tuaja kur kërkohet." },
-    { q: "A janë të dhënat e mia të sigurta?", a: "Po. Rregullat e trajtimit të të dhënave i përcaktojmë që në fillim dhe bihet dakord me ju se si ruhen dhe përpunohen të dhënat e ndjeshme." },
-    { q: "A mund të shtohet në softuerin tim ekzistues?", a: "Po. Në shumicën e rasteve integrojmë veçori AI në sistemin që përdorni tashmë, pa rishkrim." },
-    { q: "Sa kohë zgjat një projekt AI?", a: "Një pilot i vogël 2–4 javë; integrimi i plotë 1–3 muaj sipas fushëveprimit. Në konsultë japim një afat të qartë." },
-    { q: "Si përcaktohet çmimi?", a: "Ofertë me shkrim bazuar në fushëveprim dhe thellësinë e integrimit; kostot e përdorimit të modeleve i ndajmë me transparencë." },
-  ],
-  closingTitle: ["Le të flasim për", "idenë tuaj me AI."],
-  closingLead: "Na tregoni cilën punë doni ta përshpejtoni; në një konsultë falas hartojmë një rast konkret përdorimi dhe një udhërrëfyes.",
-  closingCta: "Na Kontaktoni",
-  backLabel: "Faqja kryesore",
-  serviceType: "Zgjidhje me inteligjencë artificiale dhe automatizim",
-  areaServed: "Shqipëri, Kosovë",
-};

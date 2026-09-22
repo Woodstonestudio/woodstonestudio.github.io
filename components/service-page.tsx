@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/motion/reveal";
-import { trNav, enNav, sqNav, trSections, enSections, sqSections } from "@/lib/i18n";
+import { trNav, enNav, trSections, enSections } from "@/lib/i18n";
 
 /**
  * Hizmet sayfası şablonu — SEO odaklı, üç dilli.
@@ -10,7 +10,7 @@ import { trNav, enNav, sqNav, trSections, enSections, sqSections } from "@/lib/i
  * Hero → kapsam → süreç → SSS (FAQPage şeması) → CTA.
  */
 
-export type Locale = "tr" | "en" | "sq";
+export type Locale = "tr" | "en";
 
 export type ServiceContent = {
   locale: Locale;
@@ -37,9 +37,9 @@ export type ServiceContent = {
   areaServed: string;
 };
 
-const NAV = { tr: trNav, en: enNav, sq: sqNav } as const;
-const FOOTER = { tr: trSections.footer, en: enSections.footer, sq: sqSections.footer } as const;
-const HOME = { tr: "/", en: "/en", sq: "/sq" } as const;
+const NAV = { tr: trNav, en: enNav } as const;
+const FOOTER = { tr: trSections.footer, en: enSections.footer } as const;
+const HOME = { tr: "/", en: "/en" } as const;
 const SITE = "https://woodstonestudio.com";
 
 function Eyebrow({ children }: { children: string }) {
@@ -257,7 +257,6 @@ export function serviceMetadata(c: ServiceContent) {
       languages: {
         tr: `${SITE}${c.alternates.tr}`,
         en: `${SITE}${c.alternates.en}`,
-        sq: `${SITE}${c.alternates.sq}`,
       },
     },
     openGraph: {

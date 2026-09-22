@@ -3,7 +3,6 @@ import type { ServiceContent } from "@/components/service-page";
 const alternates = {
   tr: "/mobil-uygulama",
   en: "/en/mobile-apps",
-  sq: "/sq/aplikacione-mobile",
 } as const;
 
 export const mobileTR: ServiceContent = {
@@ -120,59 +119,3 @@ export const mobileEN: ServiceContent = {
   areaServed: "Worldwide",
 };
 
-export const mobileSQ: ServiceContent = {
-  locale: "sq",
-  slug: alternates.sq,
-  alternates,
-  meta: {
-    title: "Zhvillim Aplikacionesh Mobile në Shqipëri — iOS dhe Android",
-    description:
-      "Studio zhvillimi aplikacionesh mobile që punon me klientë në Shqipëri dhe Kosovë. Aplikacione iOS dhe Android nga një kod i vetëm Flutter, publikimi në App Store dhe Google Play i përfshirë. Konsultë falas.",
-    keywords: [
-      "zhvillim aplikacionesh mobile",
-      "aplikacion mobile Shqipëri",
-      "aplikacion Android iOS Tiranë",
-      "zhvillim aplikacioni Flutter",
-      "krijim aplikacioni mobil",
-      "publikim App Store Google Play",
-      "aplikacion me inteligjencë artificiale",
-    ],
-  },
-  eyebrow: "Aplikacione Mobile",
-  h1: ["Aplikacione mobile,", "nga ideja në dyqan."],
-  lead: "WoodstoneStudio është një studio teknologjie dixhitale që punon me klientë në Shqipëri, Kosovë dhe rajon. Ndërtojmë aplikacione iOS dhe Android nga një kod i vetëm Flutter dhe kujdesemi për gjithçka, nga dizajni deri te publikimi në App Store dhe Google Play. Aplikacionet tona janë live në të dyja dyqanet — procesin e njohim nga përvoja.",
-  ctaPrimary: "Konsultë Falas",
-  ctaSecondary: "Shihni Punët Tona",
-  scopeTitle: ["Çfarë", "bëjmë?"],
-  scopeLead: "Një aplikacion nuk vetëm shkruhet; ai kalon rishikimin e dyqanit, arrin te përdoruesit dhe mbahet gjallë. Të gjithë rrugëtimin e drejtojmë nën një çati.",
-  scope: [
-    { title: "Aplikacione iOS dhe Android", desc: "Një kod i vetëm Flutter, të dyja platformat — një ekip, një buxhet, dy dyqane." },
-    { title: "MVP dhe versioni i parë", desc: "Idenë tuaj e kthejmë shpejt në një version të parë të testueshëm dhe e rrisim me reagimet e përdoruesve." },
-    { title: "Aplikacione me inteligjencë artificiale", desc: "Asistentë bisede, njohje imazhesh, gjenerim përmbajtjeje — i integrojmë veçoritë e AI në aplikacionin tuaj." },
-    { title: "Backend dhe infrastrukturë", desc: "Llogari përdoruesish, bazë të dhënash, njoftime push dhe pagesa (abonime, blerje brenda aplikacionit)." },
-    { title: "Publikim në dyqane", desc: "Dorëzimi në App Store dhe Google Play, procesi i rishikimit, tekstet dhe pamjet e dyqanit — me ju deri në miratim." },
-    { title: "Përditësime dhe mirëmbajtje", desc: "Përditësime versionesh, rregullime gabimesh dhe veçori të reja pas publikimit." },
-  ],
-  processTitle: ["Si", "punojmë?"],
-  process: [
-    { step: "01", title: "Konsultë", desc: "Qartësojmë idenë, përdoruesit e synuar dhe veçoritë me përparësi. Falas." },
-    { step: "02", title: "Dizajn", desc: "Rrjedhat e ekraneve dhe ndërfaqja, të zhvilluara më tej me miratimin tuaj." },
-    { step: "03", title: "Zhvillim", desc: "iOS dhe Android të ndërtuara së bashku në Flutter, me versione testimi që i ndajmë gjatë rrugës." },
-    { step: "04", title: "Publikim dhe mbështetje", desc: "Kujdesemi për dorëzimin dhe rishikimin në dyqane; mirëmbajtja vazhdon pas publikimit." },
-  ],
-  faqTitle: ["Pyetje të", "bëra shpesh."],
-  faq: [
-    { q: "Sa kohë zgjat ndërtimi i një aplikacioni mobil?", a: "Një MVP i thjeshtë zgjat 4–6 javë, një aplikacion i mesëm 2–3 muaj. Në konsultë japim një afat të qartë." },
-    { q: "A do të funksionojë aplikacioni në iOS dhe Android?", a: "Po. Të dyja platformat i ndërtojmë nga një kod i vetëm Flutter, që është shumë më ekonomik se zhvillimi i veçantë." },
-    { q: "A kujdeseni ju për publikimin në App Store dhe Google Play?", a: "Po. Menaxhojmë dorëzimin, tekstet e dyqanit, pamjet dhe procesin e rishikimit. Publikojmë aplikacionet tona, ndaj e njohim mirë." },
-    { q: "A mund t'i shtohet inteligjencë artificiale aplikacionit?", a: "Po. Integrojmë veçori si asistentë bisede, analizë imazhesh dhe përmbajtje të personalizuar." },
-    { q: "Kam vetëm një ide — a mjafton?", a: "Po. Shumë projekte nisin vetëm me një ide; fushëveprimin e përcaktojmë së bashku dhe e sjellim në jetë me një MVP." },
-    { q: "A ofroni mbështetje pas publikimit?", a: "Po. Vazhdojmë me një marrëveshje mirëmbajtjeje për përditësimet e sistemit, rregullimet dhe veçoritë e reja." },
-  ],
-  closingTitle: ["Le të flasim për", "aplikacionin tuaj."],
-  closingLead: "Na tregoni idenë tuaj; në një konsultë falas qartësojmë së bashku fushëveprimin, afatin dhe koston.",
-  closingCta: "Na Kontaktoni",
-  backLabel: "Faqja kryesore",
-  serviceType: "Zhvillim aplikacionesh mobile (iOS dhe Android)",
-  areaServed: "Shqipëri, Kosovë",
-};

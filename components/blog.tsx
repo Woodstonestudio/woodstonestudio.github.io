@@ -2,17 +2,17 @@ import Link from "next/link";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/motion/reveal";
-import { trNav, enNav, sqNav, trSections, enSections, sqSections } from "@/lib/i18n";
+import { trNav, enNav, trSections, enSections } from "@/lib/i18n";
 import { posts, postsForLocale, BLOG_BASE, BLOG_LABELS, type BlogPost } from "@/lib/blog";
 import type { Locale } from "@/components/service-page";
 
-const NAV = { tr: trNav, en: enNav, sq: sqNav } as const;
-const FOOTER = { tr: trSections.footer, en: enSections.footer, sq: sqSections.footer } as const;
-const HOME = { tr: "/", en: "/en", sq: "/sq" } as const;
+const NAV = { tr: trNav, en: enNav } as const;
+const FOOTER = { tr: trSections.footer, en: enSections.footer } as const;
+const HOME = { tr: "/", en: "/en" } as const;
 const SITE = "https://woodstonestudio.com";
 
 function fmtDate(iso: string, locale: Locale) {
-  const map = { tr: "tr-TR", en: "en-GB", sq: "sq-AL" } as const;
+  const map = { tr: "tr-TR", en: "en-GB" } as const;
   return new Date(iso).toLocaleDateString(map[locale], { day: "numeric", month: "long", year: "numeric" });
 }
 
@@ -89,16 +89,15 @@ export function BlogList({ locale }: { locale: Locale }) {
 
 
 const SERVICE_URL: Record<string, Record<Locale, string>> = {
-  web: { tr: "/web-tasarim", en: "/en/web-design", sq: "/sq/dizajn-web" },
-  mobile: { tr: "/mobil-uygulama", en: "/en/mobile-apps", sq: "/sq/aplikacione-mobile" },
-  saas: { tr: "/saas-gelistirme", en: "/en/saas-development", sq: "/sq/zhvillim-saas" },
-  ai: { tr: "/yapay-zeka", en: "/en/ai-solutions", sq: "/sq/inteligjence-artificiale" },
-  social: { tr: "/sosyal-medya", en: "/en/social-media", sq: "/sq/media-sociale" },
+  web: { tr: "/web-tasarim", en: "/en/web-design" },
+  mobile: { tr: "/mobil-uygulama", en: "/en/mobile-apps" },
+  saas: { tr: "/saas-gelistirme", en: "/en/saas-development" },
+  ai: { tr: "/yapay-zeka", en: "/en/ai-solutions" },
+  social: { tr: "/sosyal-medya", en: "/en/social-media" },
 };
 const SERVICE_LABEL: Record<Locale, string> = {
   tr: "İlgili hizmet →",
   en: "Related service →",
-  sq: "Shërbimi përkatës →",
 };
 
 // ── Tekil yazı sayfası ──
@@ -204,7 +203,7 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
 
 export function blogListMetadata(locale: Locale) {
   const L = BLOG_LABELS[locale];
-  const titles = { tr: "Blog", en: "Blog", sq: "Blog" };
+  const titles = { tr: "Blog", en: "Blog" };
   return {
     title: titles[locale],
     description: L.lead,
@@ -213,7 +212,6 @@ export function blogListMetadata(locale: Locale) {
       languages: {
         tr: `${SITE}/blog`,
         en: `${SITE}/en/blog`,
-        sq: `${SITE}/sq/blog`,
       },
     },
     openGraph: { title: titles[locale], description: L.lead, url: `${SITE}${BLOG_BASE[locale]}`, type: "website" },
@@ -224,7 +222,6 @@ export function blogPostMetadata(post: BlogPost, locale: Locale) {
   const langs: Record<string, string> = {};
   if (post.locales.includes("tr")) langs.tr = `${SITE}/blog/${post.slug}`;
   if (post.locales.includes("en")) langs.en = `${SITE}/en/blog/${post.slug}`;
-  if (post.locales.includes("sq")) langs.sq = `${SITE}/sq/blog/${post.slug}`;
   return {
     title: post.title[locale],
     description: post.excerpt[locale],
