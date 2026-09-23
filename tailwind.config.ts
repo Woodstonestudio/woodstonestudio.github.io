@@ -20,11 +20,6 @@ const config: Config = {
         },
         line: "rgba(38,35,30,0.14)",
         "line-soft": "rgba(38,35,30,0.08)",
-        // Product accent — reserved exclusively for Contractory UI surfaces
-        contractory: {
-          DEFAULT: "#8B7CF6",
-          soft: "#A99BF8",
-        },
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],

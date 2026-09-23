@@ -15,9 +15,10 @@ import { trNav, type NavDict } from "@/lib/i18n";
 const LOCALES: { code: string; label: string; href: string }[] = [
   { code: "tr", label: "Türkçe", href: "/" },
   { code: "en", label: "English", href: "/en" },
+  { code: "sq", label: "Shqip", href: "/sq" },
 ];
 
-const HOME_HREF: Record<string, string> = { tr: "/", en: "/en" };
+const HOME_HREF: Record<string, string> = { tr: "/", en: "/en", sq: "/sq" };
 
 /** Bağımsız dil seçici — her örneğin kendi state'i ve ref'i olur. */
 function LangSwitcher({ locale, aria }: { locale: string; aria: string }) {
@@ -121,12 +122,12 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
           className="group flex items-center gap-3 text-[17px] font-medium tracking-tight text-bone"
         >
           <Image
-            src="/brand/monogram.png"
+            src="/brand/logo-badge-v2.png"
             alt=""
-            width={32}
-            height={32}
+            width={48}
+            height={48}
             priority
-            className="rounded-full ring-1 ring-[rgba(239,234,224,0.22)] drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)] transition-transform duration-500 ease-soft group-hover:scale-105"
+            className="h-11 w-11 shrink-0 object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] transition-transform duration-500 ease-soft group-hover:scale-105 sm:h-12 sm:w-12"
           />
           <span className="hidden sm:inline">WoodstoneStudio</span>
         </Link>

@@ -13,11 +13,11 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
         <div className="flex flex-col gap-10 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex items-center gap-4">
             <Image
-              src="/brand/logo-transparent.png"
+              src="/brand/logo-badge-v2.png"
               alt="WoodstoneStudio"
-              width={48}
-              height={48}
-              className="drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+              width={64}
+              height={64}
+              className="h-16 w-16 shrink-0 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
             />
             <div>
               <div className="text-[15px] font-medium tracking-tight text-bone">

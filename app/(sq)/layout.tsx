@@ -10,44 +10,44 @@ import { BackToTop } from "@/components/back-to-top";
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
   title: {
-    default: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
+    default: "WoodstoneStudio — Studio Teknologjie Dixhitale",
     template: "%s — WoodstoneStudio",
   },
   description:
-    "WoodstoneStudio; web siteleri, mobil uygulamalar, yapay zekâ çözümleri, iş süreçleri otomasyonu ve özel yazılım geliştiren bir dijital teknoloji stüdyosudur.",
+    "WoodstoneStudio është një studio teknologjie dixhitale që ndërton faqe interneti, aplikacione mobile, zgjidhje me inteligjencë artificiale, automatizim të proceseve të biznesit dhe softuer të personalizuar.",
   keywords: [
     "WoodstoneStudio",
-    "web tasarım",
-    "kurumsal web sitesi",
-    "mobil uygulama geliştirme",
-    "özel yazılım",
-    "yapay zeka çözümleri",
-    "yapay zeka otomasyonu",
-    "SaaS geliştirme",
-    "İzmir yazılım",
+    "dizajn web",
+    "faqe interneti korporative",
+    "zhvillim aplikacionesh mobile",
+    "softuer i personalizuar",
+    "zgjidhje me inteligjencë artificiale",
+    "automatizim AI",
+    "zhvillim SaaS",
+    "studio softueri",
   ],
   openGraph: {
-    title: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
+    title: "WoodstoneStudio — Studio Teknologjie Dixhitale",
     description:
-      "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
+      "Web, mobile, inteligjencë artificiale dhe softuer i personalizuar — dizajnojmë dhe ndërtojmë produkte dixhitale me përkushtimin e një ekipi produkti.",
     url: "https://woodstonestudio.com",
     siteName: "WoodstoneStudio",
     type: "website",
-    locale: "tr_TR",
+    locale: "sq_AL",
     images: [
       {
         url: "/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
+        alt: "WoodstoneStudio — Studio Teknologjie Dixhitale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
+    title: "WoodstoneStudio — Studio Teknologjie Dixhitale",
     description:
-      "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
+      "Web, mobile, inteligjencë artificiale dhe softuer i personalizuar — dizajnojmë dhe ndërtojmë produkte dixhitale me përkushtimin e një ekipi produkti.",
     images: ["/og-cover.jpg"],
   },
   robots: { index: true, follow: true },
@@ -57,7 +57,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="sq" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       {/* Google Analytics 4 (GA4) — resmi Google tag */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-V7NRECZQ92"
@@ -89,7 +89,7 @@ export default function RootLayout({
               logo: "https://woodstonestudio.com/brand/logo.png",
               image: "https://woodstonestudio.com/og-cover.jpg",
               description:
-                "Web siteleri, mobil uygulamalar, yapay zekâ çözümleri, otomasyon ve özel yazılım geliştiren bir dijital teknoloji stüdyosu.",
+                "Një studio teknologjie dixhitale që ndërton faqe interneti, aplikacione mobile, zgjidhje me inteligjencë artificiale, automatizim dhe softuer të personalizuar.",
               email: "info@woodstonestudio.com",
               foundingLocation: "İzmir, Türkiye",
               address: {
@@ -118,7 +118,7 @@ export default function RootLayout({
               "@type": "WebSite",
               name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
-              inLanguage: "tr-TR",
+              inLanguage: "sq-AL",
               publisher: {
                 "@type": "Organization",
                 name: "WoodstoneStudio",
@@ -133,17 +133,17 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Service",
               serviceType: [
-                "Web tasarım",
-                "Kurumsal web sitesi",
-                "Mobil uygulama geliştirme",
-                "SaaS geliştirme",
-                "MVP geliştirme",
-                "Özel yazılım geliştirme",
-                "Yapay zekâ çözümleri",
-                "AI otomasyonu",
-                "AI ajan geliştirme",
-                "Sosyal medya yönetimi",
-                "İçerik üretimi",
+                "Dizajn web",
+                "Faqe interneti korporative",
+                "Zhvillim aplikacionesh mobile",
+                "Zhvillim SaaS",
+                "Zhvillim MVP",
+                "Zhvillim softueri të personalizuar",
+                "Zgjidhje me inteligjencë artificiale",
+                "Automatizim AI",
+                "Zhvillim agjentësh AI",
+                "Menaxhim i mediave sociale",
+                "Prodhim përmbajtjeje",
               ],
               provider: {
                 "@type": "Organization",
@@ -157,8 +157,8 @@ export default function RootLayout({
         />
         <Spotlight />
         <div className="relative z-10">{children}</div>
-        <WhatsAppButton label="WhatsApp'tan yazın" />
-        <BackToTop label="Yukarı çık" />
+        <WhatsAppButton label="Na shkruani në WhatsApp" />
+        <BackToTop label="Këtheu lart" />
       </body>
     </html>
   );

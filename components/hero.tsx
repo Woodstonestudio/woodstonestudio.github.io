@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
 import { MacBook } from "@/components/mockups/macbook";
-import { ContractoryUI } from "@/components/mockups/contractory";
 import { trHero, type HeroDict } from "@/lib/i18n";
 
 /**
@@ -9,7 +9,7 @@ import { trHero, type HeroDict } from "@/lib/i18n";
  */
 export function Hero({ t = trHero }: { t?: HeroDict }) {
   return (
-    <section className="relative mx-auto flex min-h-svh max-w-6xl items-center overflow-x-clip px-6 pb-28 pt-36 lg:px-8">
+    <section className="relative mx-auto flex min-h-svh max-w-6xl items-center overflow-x-clip px-6 pb-20 pt-28 sm:pb-28 sm:pt-36 lg:px-8">
       <div className="grid w-full items-center gap-20 lg:grid-cols-[0.92fr_1.4fr] lg:gap-12">
         <div>
           <Reveal>
@@ -47,7 +47,7 @@ export function Hero({ t = trHero }: { t?: HeroDict }) {
           <Reveal delay={0.34}>
             <div className="mt-11 flex flex-wrap items-center gap-4">
               <a
-                href="#products"
+                href="#work"
                 className="rounded-full bg-gradient-to-b from-[#3A342B] to-[#26231E] px-7 py-3 text-sm font-medium text-surface shadow-[0_1px_2px_rgba(38,35,30,0.25)] transition-all duration-300 ease-soft hover:-translate-y-px hover:shadow-[0_6px_20px_-6px_rgba(38,35,30,0.35)] active:translate-y-0 active:scale-[0.98]"
               >
                 {t.ctaPrimary}
@@ -64,7 +64,14 @@ export function Hero({ t = trHero }: { t?: HeroDict }) {
 
         <Reveal delay={0.22} y={24} className="hidden md:block">
           <MacBook>
-            <ContractoryUI />
+            <Image
+              src="/work/crossfit-bahcesehir.png"
+              alt="CrossFit Bahçeşehir web sitesi"
+              width={1891}
+              height={858}
+              priority
+              className="h-full w-full object-cover object-left-top"
+            />
           </MacBook>
         </Reveal>
       </div>

@@ -7,11 +7,12 @@ import { Testimonials } from "@/components/testimonials";
 import { IdeaCTA } from "@/components/idea-cta";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { sqNav, sqHero, sqSections } from "@/lib/i18n";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "/",
+    canonical: "/sq",
     languages: {
       tr: "https://woodstonestudio.com/",
       en: "https://woodstonestudio.com/en",
@@ -20,20 +21,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default function HomeSQ() {
   return (
     <>
-      <Nav />
+      <Nav t={sqNav} />
       <main>
-        <Hero />
-        <JoVVo />
-        <Services />
-        <WorkShowcase />
-        <Testimonials />
-        <IdeaCTA />
-        <Contact />
+        <Hero t={sqHero} />
+        <JoVVo t={sqSections.jovvo} />
+        <Services t={sqSections.services} />
+        <WorkShowcase t={sqSections.work} />
+        <Testimonials t={sqSections.testimonials} />
+        <IdeaCTA t={sqSections.idea} />
+        <Contact t={sqSections.contact} />
       </main>
-      <Footer />
+      <Footer t={sqSections.footer} />
     </>
   );
 }

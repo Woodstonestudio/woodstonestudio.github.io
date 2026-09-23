@@ -8,7 +8,6 @@ export const trNav = {
   locale: "tr",
   ariaLabel: "Ana menü",
   links: [
-    { href: "/#products", label: "Ürünler" },
     { href: "/#jovvo", label: "Uygulamalar" },
     { href: "/#services", label: "Hizmetler" },
     { href: "/#work", label: "Çalışmalar" },
@@ -26,7 +25,6 @@ export const enNav = {
   locale: "en",
   ariaLabel: "Main menu",
   links: [
-    { href: "/en#products", label: "Products" },
     { href: "/en#jovvo", label: "Apps" },
     { href: "/en#services", label: "Services" },
     { href: "/en#work", label: "Work" },
@@ -42,8 +40,8 @@ export const enNav = {
 
 export const trHero = {
   eyebrow: "Dijital Teknoloji Stüdyosu",
-  titleLine1: "Dijital fikirleri güçlü",
-  titleLine2: "ürünlere dönüştürüyoruz",
+  titleLine1: "Fikrinizi ürüne,",
+  titleLine2: "işinizi dijitale taşıyoruz",
   strip1: "Tasarım · Yazılım",
   strip2: "Otomasyon",
   lead: "Web siteleri, web ve mobil uygulamalar, yapay zekâ çözümleri, iş süreçleri otomasyonu ve özel yazılım — hepsini bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
@@ -53,8 +51,8 @@ export const trHero = {
 
 export const enHero = {
   eyebrow: "Digital Technology Studio",
-  titleLine1: "We turn digital ideas",
-  titleLine2: "into powerful products",
+  titleLine1: "We turn your idea into a product,",
+  titleLine2: "your business into digital",
   strip1: "Design · Software",
   strip2: "Automation",
   lead: "Websites, web and mobile applications, AI solutions, business process automation and custom software — all designed and built with the discipline of a product team.",
@@ -62,23 +60,38 @@ export const enHero = {
   ctaSecondary: "Get in Touch",
 };
 
+export const sqNav = {
+  locale: "sq",
+  ariaLabel: "Menyra kryesore",
+  links: [
+    { href: "/sq#jovvo", label: "Aplikacione" },
+    { href: "/sq#services", label: "Shërbime" },
+    { href: "/sq#work", label: "Punët" },
+    { href: "/sq/rreth-nesh", label: "Rreth Nesh" },
+    { href: "/sq/pyetje", label: "Pyetje" },
+    { href: "/sq/blog", label: "Blog" },
+    { href: "/sq#contact", label: "Kontakt" },
+  ],
+  switchHref: "/",
+  switchLabel: "SQ",
+  switchAria: "Kalo në shqip",
+};
+
+export const sqHero = {
+  eyebrow: "Studio Teknologjie Dixhitale",
+  titleLine1: "Idenë tuaj e kthejmë në produkt,",
+  titleLine2: "biznesin tuaj në dixhital",
+  strip1: "Dizajn · Softuer",
+  strip2: "Automatizim",
+  lead: "Faqe interneti, aplikacione web dhe mobile, zgjidhje me inteligjencë artificiale, automatizim të proceseve të biznesit dhe softuer të personalizuar — të gjitha të dizajnuara dhe të ndërtuara me përkushtimin e një ekipi produkti.",
+  ctaPrimary: "Shihni Punët Tona",
+  ctaSecondary: "Na Kontaktoni",
+};
+
 export type NavDict = typeof trNav;
 export type HeroDict = typeof trHero;
 
 export const trSections = {
-  productsIntro: {
-    eyebrow: "Ürünler",
-    t1: "Sadece geliştirmiyoruz",
-    t2: "Kendi ürünlerimizi de inşa ediyoruz",
-    lead: "Kendi ürünlerimiz, mühendislik gücümüzü keskinleştirdiğimiz yerdir. Müşteri projelerimize taşıdığımız disiplini önce kendi işlerimizde sınarız.",
-    cards: [
-      { name: "Contractory", tag: "Web3 · Arc", desc: "Akıllı sözleşmeleri tek yüzeyden derleyin, dağıtın ve doğrulayın.", href: "/contractory" },
-      { name: "AlphaOS", tag: "Web3 · Base", desc: "Zincir üstü katkıyı denetlenebilir bir itibara dönüştüren ağ.", href: "/alphaos" },
-      { name: "AuthorAI", tag: "Yapay Zekâ", desc: "Yapay zekânın arka planda kaldığı, odaklı bir yazma aracı.", href: "/authorai" },
-      { name: "JoVVo", tag: "Sağlık & Fitness · iOS", desc: "Cebindeki yapay zekâ fitness ve beslenme koçun; sana özel program ve fotoğrafla öğün analizi.", href: "/#jovvo" },
-    ],
-    cardCta: "İncele",
-  },
   jovvo: {
     eyebrow: "JoVVo · iOS Uygulaması",
     t1: "Cebindeki",
@@ -95,42 +108,6 @@ export const trSections = {
     url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
     caption: "JoVVo ile hedefine giden yol cebinde.",
   },
-  contractory: {
-    t1: "Akıllı sözleşme dağıtımı,",
-    t2: "baştan sona tek yerde",
-    lead: "Derlemeden doğrulamaya, akıllı sözleşmenin tüm yaşam döngüsünü tek bir yüzeyde toplar. Üretimde iş çıkaran blockchain ekipleri için kurulmuş, sade ve güvenilir bir araç.",
-    caps: [
-      { name: "Dağıt", note: "Arc'a ERC-20 · 721 · 1155" },
-      { name: "Doğrula", note: "Gezginde kaynak doğrulaması" },
-      { name: "Yönet", note: "Tek yüzeyden yaşam döngüsü" },
-    ],
-    cta: "Projeyi İncele",
-    caption: "Nº 01 — Dağıtım konsolu · Arc",
-  },
-  alphaos: {
-    t1: "Doğrulanabilir",
-    t2: "dijital itibar",
-    lead: "AlphaOS, zincir üstü katkıyı ölçülebilir bir itibara dönüştürür. Görevler, rozetler ve canlı bir lider tablosu; her operatör bir Basename'e çözümlenir, her puan işleme kadar izlenebilir.",
-    caps: [
-      { name: "Ölç", note: "Etkinlikten itibara" },
-      { name: "Sırala", note: "Canlı operatör lider tablosu" },
-      { name: "Doğrula", note: "Her puan zincir üstünde denetlenebilir" },
-    ],
-    cta: "Projeyi İncele",
-    caption: "Nº 02 — İtibar aracı · Base",
-  },
-  authorai: {
-    t1: "Yapay zekâ arka planda,",
-    t2: "odak sizde",
-    lead: "AuthorAI bir yazma aracıdır, otomatik pilot değil. Yapay zekâ yalnızca siz istediğinizde devreye girer; sayfa sizin, cümleler sizin, son söz her zaman sizde.",
-    caps: [
-      { name: "Yaz", note: "Odaklı, dikkat dağıtmayan sayfa" },
-      { name: "Öner", note: "İstendiğinde kenarda sunulur" },
-      { name: "Biçimlendir", note: "Aradan çekilen yapı" },
-    ],
-    cta: "Projeyi İncele",
-    caption: "Nº 03 — Yazma aracı",
-  },
   services: {
     eyebrow: "Hizmetler",
     detailLabel: "Detaylı bilgi →",
@@ -139,7 +116,7 @@ export const trSections = {
     groups: [
       { title: "Tasarım", href: "/web-tasarim", line: "Modern, kullanıcı odaklı web siteleri ve e-ticaret arayüzleri tasarlıyoruz.", items: ["Premium web siteleri", "Kurumsal web sitesi", "E-ticaret / online mağaza", "UI / UX tasarımı", "Marka kimliği"] },
       { title: "Geliştirme", href: "/saas-gelistirme", href2: "/mobil-uygulama", href2Label: "Mobil uygulama →", line: "Web, mobil ve özel yazılım çözümlerini fikirden yayına geliştiriyoruz.", items: ["SaaS geliştirme", "MVP geliştirme", "Web uygulamaları (React, Next.js)", "Mobil uygulamalar (Flutter, iOS, Android)", "Özel yazılım", "API entegrasyonları"] },
-      { title: "Otomasyon", href: "/yapay-zeka", line: "Yapay zekâ destekli otomasyonlarla iş süreçlerini hızlandırıyoruz.", items: ["Yapay zekâ çözümleri", "AI ajan geliştirme", "AI otomasyonu", "Blockchain & akıllı sözleşme"] },
+      { title: "Otomasyon", href: "/yapay-zeka", line: "Yapay zekâ destekli otomasyonlarla iş süreçlerini hızlandırıyoruz.", items: ["Yapay zekâ çözümleri", "AI ajan geliştirme", "AI otomasyonu"] },
       { title: "Süreklilik", href: undefined as string | undefined, href2: undefined as string | undefined, href2Label: undefined as string | undefined, line: "Yayına aldıktan sonra da geliştirmeye ve destek vermeye devam ediyoruz.", items: ["Teknik danışmanlık", "SEO & performans", "Bakım & destek"] },
       { title: "Sosyal Medya", href: "/sosyal-medya", line: "Sosyal medya hesaplarınızı yönetiyor, içerik üretiyor ve organik büyümeyi destekliyoruz.", items: ["Instagram & profil yönetimi", "İçerik üretimi (Reels, video)", "YouTube kanal yönetimi", "Sayfa düzenleme & optimizasyon", "Organik büyüme & görünürlük"] },
     ],
@@ -185,7 +162,6 @@ export const trSections = {
       { q: "Flutter kullanıyor musunuz?", a: "Evet. Mobil uygulama geliştirmede Flutter kullanıyoruz. Web tarafında ise ağırlıklı olarak React ve Next.js ile çalışıyoruz." },
       { q: "Web sitesi yapıyor musunuz?", a: "Evet. Kurumsal web siteleri ve premium tanıtım siteleri tasarlıyor ve geliştiriyoruz. Hız, erişilebilirlik ve arama motoru uyumluluğunu temel alıyoruz." },
       { q: "Kurumsal yazılım geliştiriyor musunuz?", a: "Evet. İşletmelere özel yazılımlar, iç araçlar ve API entegrasyonları geliştiriyoruz. İhtiyaca göre özelleştirilmiş, ölçeklenebilir çözümler kuruyoruz." },
-      { q: "Blockchain projesi geliştirebilir misiniz?", a: "Evet. Blockchain uygulamaları ve akıllı sözleşme (smart contract) geliştirme konusunda deneyimliyiz; kendi Web3 ürünlerimizi de geliştiriyoruz." },
       { q: "Sosyal medya yönetimi yapıyor musunuz?", a: "Evet. Instagram, YouTube ve diğer platformlarda hesap yönetimi, içerik üretimi, sayfa düzenleme ve organik büyüme hizmetleri sunuyoruz. Odağımız kalıcı, organik görünürlük." },
     ],
   },
@@ -215,7 +191,6 @@ export const trSections = {
     tagline: "Bağımsız Ürün Stüdyosu",
     ariaLabel: "Alt menü",
     links: [
-      { href: "/#products", label: "Ürünler" },
       { href: "/#services", label: "Hizmetler" },
       { href: "/#work", label: "Çalışmalar" },
       { href: "/hakkimizda", label: "Hakkımızda" },
@@ -227,19 +202,6 @@ export const trSections = {
 };
 
 export const enSections: typeof trSections = {
-  productsIntro: {
-    eyebrow: "Products",
-    t1: "We don't just build for clients",
-    t2: "We build our own products too",
-    lead: "Our own products are where we sharpen our engineering. The discipline we bring to client work is tested on our own products first.",
-    cards: [
-      { name: "Contractory", tag: "Web3 · Arc", desc: "Compile, deploy and verify smart contracts from a single surface.", href: "/en/contractory" },
-      { name: "AlphaOS", tag: "Web3 · Base", desc: "A network that turns on-chain contribution into auditable reputation.", href: "/en/alphaos" },
-      { name: "AuthorAI", tag: "AI", desc: "A focused writing tool where the AI stays in the background.", href: "/en/authorai" },
-      { name: "JoVVo", tag: "Health & Fitness · iOS", desc: "Your AI fitness and nutrition coach in your pocket; tailored programs and photo meal analysis.", href: "/en#jovvo" },
-    ],
-    cardCta: "Explore",
-  },
   jovvo: {
     eyebrow: "JoVVo · iOS App",
     t1: "Your AI coach,",
@@ -256,42 +218,6 @@ export const enSections: typeof trSections = {
     url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
     caption: "With JoVVo, the path to your goal is in your pocket.",
   },
-  contractory: {
-    t1: "Smart contract deployment,",
-    t2: "end to end in one place",
-    lead: "From compilation to verification, it brings the entire smart contract lifecycle onto a single surface. A simple, reliable tool built for blockchain teams shipping in production.",
-    caps: [
-      { name: "Deploy", note: "ERC-20 · 721 · 1155 to Arc" },
-      { name: "Verify", note: "Source verification on the explorer" },
-      { name: "Manage", note: "Full lifecycle from one surface" },
-    ],
-    cta: "View Project",
-    caption: "Nº 01 — Deployment console · Arc",
-  },
-  alphaos: {
-    t1: "Verifiable",
-    t2: "digital reputation",
-    lead: "AlphaOS turns on-chain contribution into measurable reputation. Quests, badges and a live leaderboard; every operator resolves to a Basename, every point is traceable to a transaction.",
-    caps: [
-      { name: "Measure", note: "From activity to reputation" },
-      { name: "Rank", note: "Live operator leaderboard" },
-      { name: "Verify", note: "Every point auditable on-chain" },
-    ],
-    cta: "View Project",
-    caption: "Nº 02 — Reputation tool · Base",
-  },
-  authorai: {
-    t1: "AI in the background,",
-    t2: "focus on you",
-    lead: "AuthorAI is a writing tool, not an autopilot. AI steps in only when you ask; the page is yours, the sentences are yours, and the final word is always yours.",
-    caps: [
-      { name: "Write", note: "A focused, distraction-free page" },
-      { name: "Suggest", note: "Offered at the side, on request" },
-      { name: "Format", note: "Structure that stays out of the way" },
-    ],
-    cta: "View Project",
-    caption: "Nº 03 — Writing tool",
-  },
   services: {
     eyebrow: "Services",
     detailLabel: "Learn more →",
@@ -300,7 +226,7 @@ export const enSections: typeof trSections = {
     groups: [
       { title: "Design", href: "/en/web-design", line: "We design modern, user-centred websites and e-commerce storefronts.", items: ["Premium websites", "Corporate websites", "E-commerce / online store", "UI / UX design", "Brand identity"] },
       { title: "Development", href: "/en/saas-development", href2: "/en/mobile-apps", href2Label: "Mobile apps →", line: "We build web, mobile and custom software from idea to launch.", items: ["SaaS development", "MVP development", "Web applications (React, Next.js)", "Mobile apps (Flutter, iOS, Android)", "Custom software", "API integrations"] },
-      { title: "Automation", href: "/en/ai-solutions", line: "We accelerate business processes with AI-powered automation.", items: ["AI solutions", "AI agent development", "AI automation", "Blockchain & smart contracts"] },
+      { title: "Automation", href: "/en/ai-solutions", line: "We accelerate business processes with AI-powered automation.", items: ["AI solutions", "AI agent development", "AI automation"] },
       { title: "Continuity", href: undefined, href2: undefined, href2Label: undefined, line: "We keep improving and supporting your product after launch.", items: ["Technical consulting", "SEO & performance", "Maintenance & support"] },
       { title: "Social Media", href: "/en/social-media", line: "We manage your social media accounts, produce content and support organic growth.", items: ["Instagram & profile management", "Content production (Reels, video)", "YouTube channel management", "Page setup & optimisation", "Organic growth & visibility"] },
     ],
@@ -346,7 +272,6 @@ export const enSections: typeof trSections = {
       { q: "Do you use Flutter?", a: "Yes. We use Flutter for mobile development. On the web we work primarily with React and Next.js." },
       { q: "Do you build websites?", a: "Yes. We design and build corporate and premium marketing websites, with speed, accessibility and search-engine friendliness as fundamentals." },
       { q: "Do you build enterprise software?", a: "Yes. We build custom software, internal tools and API integrations for businesses — tailored, scalable solutions." },
-      { q: "Can you build blockchain projects?", a: "Yes. We are experienced in blockchain applications and smart contract development, and we build our own Web3 products as well." },
       { q: "Do you offer social media management?", a: "Yes. We offer account management, content production, page setup and organic growth across Instagram, YouTube and other platforms. Our focus is lasting, organic visibility." },
     ],
   },
@@ -376,13 +301,122 @@ export const enSections: typeof trSections = {
     tagline: "Independent Product Studio",
     ariaLabel: "Footer menu",
     links: [
-      { href: "/en#products", label: "Products" },
       { href: "/en#services", label: "Services" },
       { href: "/en#work", label: "Work" },
       { href: "/en/about", label: "About" },
       { href: "/en/faq", label: "FAQ" },
       { href: "/en/blog", label: "Blog" },
       { href: "/en#contact", label: "Contact" },
+    ],
+  },
+};
+
+export const sqSections: typeof trSections = {
+  jovvo: {
+    eyebrow: "JoVVo · Aplikacion iOS",
+    t1: "Trajneri yt me AI,",
+    t2: "pikërisht në xhep",
+    lead: "JoVVo është trajneri yt i fitnesit dhe ushqyerjes me inteligjencë artificiale, në xhepin tënd. Trajneri David ndërton programe stërvitjeje sipas synimeve dhe nivelit tënd, analizon vaktet e tua dhe rri me ty gjatë gjithë ditës.",
+    features: [
+      { name: "Programe sipas sportit", note: "Fitness, CrossFit, HYROX, Strength, Run ose Hybrid — një plan javor ose 4-javor sipas nivelit dhe pajisjeve. Shëno një dëmtim dhe David e shmang atë zonë." },
+      { name: "Analizë vakti me foto", note: "Bëj një foto vaktit; kaloritë dhe makrot (proteina, karbohidrate, yndyra) llogariten menjëherë." },
+      { name: "Ndjekje e mençur", note: "Uji, hapat, pesha, seria e stërvitjes dhe synimi ditor i kalorive në një ekran, me kujtesa personale." },
+      { name: "David — trajneri yt 24/7", note: "Ushqyerje, stërvitje, motivim — përgjigjet duke ditur sportin, nivelin dhe synimin tënd." },
+    ],
+    freeNote: "Provo të gjitha veçoritë Premium falas për 3 ditë.",
+    cta: "Shkarko në App Store",
+    url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
+    caption: "Me JoVVo, rruga drejt synimit është në xhep.",
+  },
+  services: {
+    eyebrow: "Shërbime",
+    detailLabel: "Më shumë →",
+    t1: "Pesë disiplina,",
+    t2: "një studio",
+    groups: [
+      { title: "Dizajn", href: "/sq/dizajn-web", line: "Dizajnojmë faqe interneti moderne dhe dyqane online, të përqendruara te përdoruesi.", items: ["Faqe interneti premium", "Faqe interneti korporative", "E-commerce / dyqan online", "Dizajn UI / UX", "Identitet marke"] },
+      { title: "Zhvillim", href: "/sq/zhvillim-saas", href2: "/sq/aplikacione-mobile", href2Label: "Aplikacione mobile →", line: "Ndërtojmë softuer web, mobile dhe të personalizuar nga ideja në publikim.", items: ["Zhvillim SaaS", "Zhvillim MVP", "Aplikacione web (React, Next.js)", "Aplikacione mobile (Flutter, iOS, Android)", "Softuer i personalizuar", "Integrime API"] },
+      { title: "Automatizim", href: "/sq/inteligjence-artificiale", line: "Përshpejtojmë proceset e biznesit me automatizim të fuqizuar nga inteligjenca artificiale.", items: ["Zgjidhje me inteligjencë artificiale", "Zhvillim agjentësh AI", "Automatizim AI"] },
+      { title: "Vazhdimësi", href: undefined, href2: undefined, href2Label: undefined, line: "Vazhdojmë ta përmirësojmë dhe ta mbështesim produktin edhe pas publikimit.", items: ["Konsulencë teknike", "SEO & performancë", "Mirëmbajtje & mbështetje"] },
+      { title: "Media Sociale", href: "/sq/media-sociale", line: "Menaxhojmë llogaritë tuaja në media sociale, prodhojmë përmbajtje dhe mbështesim rritjen organike.", items: ["Menaxhim i Instagram & profilit", "Prodhim përmbajtjeje (Reels, video)", "Menaxhim i kanalit YouTube", "Rregullim & optimizim i faqes", "Rritje organike & dukshmëri"] },
+    ],
+  },
+  work: {
+    locale: "sq",
+    eyebrow: "Punë të Zgjedhura",
+    t1: "Imagjinojeni",
+    t2: "Ne do ta ndërtojmë",
+    kind: "Punë koncepti",
+    works: [
+      { title: "Köz", field: "Restorant · Landing", desc: "Një faqe e vetme për një zgarë moderne — meny e drejtpërdrejtë, rrjedhë rezervimesh dhe një ndërfaqe me temë zjarri." },
+      { title: "Lumen", field: "Klinikë · Landing", desc: "Një faqe e qetë dhe frymëzuese besimi për një klinikë estetike — shërbime, shpjegim i procesit dhe një formular termini." },
+      { title: "Atelier Mona", field: "E-commerce · Modë", desc: "Një përvojë dyqani kinematografike për një butik veshjesh grash — koleksion me rrëshqitje, shportë funksionale dhe një dizajn editorial." },
+      { title: "Zentarado", field: "SaaS · Produkt", desc: "Një mjet menaxhimi projektesh për ekipe të vogla — një faqe e plotë SaaS me ndërfaqe produkti të drejtpërdrejtë, borde vizuale dhe çmime." },
+    ],
+  },
+  idea: {
+    eyebrow: "Nga ideja te produkti",
+    t1: "Keni një ide?",
+    t2: "Ta ndërtojmë së bashku",
+    lead: "Mjafton të keni një ide. Një produkt SaaS, një aplikacion mobil ose një zgjidhje me inteligjencë artificiale — e përcaktojmë së bashku, e nisim me një MVP dhe e rrisim hap pas hapi.",
+    cta: "Na Tregoni Idenë Tuaj",
+    ctaHref: "/sq#contact",
+  },
+  studio: {
+    eyebrow: "Studio",
+    t1: "Teknologjinë e kthejmë",
+    t2: "në avantazhin tuaj",
+    lead: "Woodstone është një studio teknologjie. Dizajnin, softuerin dhe automatizimin i trajtojmë si një mjeshtëri të vetme, sepse problemet e vërteta nuk i njohin këto ndarje. Çdo projekt e mbajmë në standardin e produkteve tona.",
+    signature: "Dizajnuar dhe ndërtuar nga WoodstoneStudio",
+  },
+  faq: {
+    eyebrow: "Pyetje të bëra shpesh",
+    t1: "Pyetjet në",
+    t2: "mendjen tuaj",
+    faqs: [
+      { q: "Kam vetëm një ide — a mund të më ndihmoni?", a: "Po. Shumë nga projektet tona nisin vetëm me një ide. E përcaktojmë së bashku, e qartësojmë fushëveprimin dhe e sjellim në jetë me një MVP." },
+      { q: "A zhvilloni produkte SaaS?", a: "Po. Ndërtojmë produkte SaaS nga ideja në publikim, përfshirë aplikacione web me abonim, me menaxhim përdoruesish, pagesa dhe arkitekturë të shkallëzueshme." },
+      { q: "A mund të ndërtoni një MVP?", a: "Po. Për ta bërë një produkt të testueshëm sa më shpejt, fillimisht ndërtojmë një MVP me veçoritë thelbësore dhe pastaj e rrisim me reagime." },
+      { q: "A zhvilloni aplikacione mobile?", a: "Po. Ndërtojmë aplikacione mobile për iOS dhe Android, duke përdorur Flutter për të publikuar në të dyja platformat nga një kod i vetëm." },
+      { q: "A mund të ndërtoni agjentë AI?", a: "Po. Ndërtojmë automatizime të fuqizuara nga inteligjenca artificiale dhe agjentë AI për detyra specifike, dhe i integrojmë në rrjedhat tuaja ekzistuese të punës." },
+      { q: "A përdorni Flutter?", a: "Po. Përdorim Flutter për zhvillimin mobil. Në web punojmë kryesisht me React dhe Next.js." },
+      { q: "A ndërtoni faqe interneti?", a: "Po. Dizajnojmë dhe ndërtojmë faqe interneti korporative dhe premium, me shpejtësinë, aksesueshmërinë dhe përputhshmërinë me motorët e kërkimit si themel." },
+      { q: "A zhvilloni softuer korporativ?", a: "Po. Ndërtojmë softuer të personalizuar, mjete të brendshme dhe integrime API për bizneset — zgjidhje të përshtatura dhe të shkallëzueshme." },
+      { q: "A ofroni menaxhim të mediave sociale?", a: "Po. Ofrojmë menaxhim llogarish, prodhim përmbajtjeje, rregullim faqesh dhe rritje organike në Instagram, YouTube dhe platforma të tjera. Fokusi ynë është dukshmëria e qëndrueshme dhe organike." },
+    ],
+  },
+  contact: {
+    eyebrow: "Nisni një projekt",
+    t1: "Projektin tuaj të radhës",
+    t2: "ta sjellim në jetë së bashku",
+    lead: "Një faqe interneti, softuer i personalizuar, automatizim i fuqizuar nga AI ose një produkt dixhital i plotë — do të kishim kënaqësinë të dëgjojmë idenë tuaj.",
+    channel: "Na Kontaktoni",
+  },
+  testimonials: {
+    eyebrow: "Referenca",
+    t1: "Puna e fundit",
+    t2: "që publikuam",
+    featuredTag: "Projekt live",
+    featuredTitle: "CrossFit Bahçeşehir",
+    featuredField: "Palestër · Faqe interneti",
+    featuredDesc: "Një faqe promovuese që e dizajnuam dhe ndërtuam nga fillimi në fund për një palestër CrossFit në Bahçeşehir — orari i klasave, detajet e anëtarësisë dhe një rrjedhë e shpejtë kontakti. Sapo e publikuar.",
+    featuredUrl: "https://crossfitbahcesehir.fit",
+    featuredHost: "crossfitbahcesehir.fit",
+    featuredCta: "Vizito Faqen",
+    items: [
+      { name: "Serpil KURD", role: "Pronare palestre", quote: "E sollën në ekran pikërisht palestrën që kishim në mendje; herën e parë që hapëm faqen thamë 'po, kjo jemi ne'. E shpejtë, e pastër dhe krejt e jona — dhe kënaqësi të vërtetë të punosh me ta." },
+    ],
+  },
+  footer: {
+    tagline: "Studio e Pavarur Produktesh",
+    ariaLabel: "Menyra e fundit",
+    links: [
+      { href: "/sq#services", label: "Shërbime" },
+      { href: "/sq#work", label: "Punët" },
+      { href: "/sq/rreth-nesh", label: "Rreth Nesh" },
+      { href: "/sq/pyetje", label: "Pyetje" },
+      { href: "/sq/blog", label: "Blog" },
+      { href: "/sq#contact", label: "Kontakt" },
     ],
   },
 };

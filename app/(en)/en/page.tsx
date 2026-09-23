@@ -1,6 +1,5 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
-import { ProductsIntro } from "@/components/products-intro";
 import { JoVVo } from "@/components/jovvo-section";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
@@ -17,6 +16,7 @@ export const metadata: Metadata = {
     languages: {
       tr: "https://woodstonestudio.com/",
       en: "https://woodstonestudio.com/en",
+      sq: "https://woodstonestudio.com/sq",
     },
   },
 };
@@ -27,7 +27,6 @@ export default function HomeEN() {
       <Nav t={enNav} />
       <main>
         <Hero t={enHero} />
-        <ProductsIntro t={enSections.productsIntro} />
         <JoVVo t={enSections.jovvo} />
         <Services t={enSections.services} />
         <WorkShowcase t={enSections.work} />

@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     "AI solutions",
     "AI automation",
     "SaaS development",
-    "blockchain development",
     "software studio Turkey",
   ],
   openGraph: {
@@ -106,7 +105,7 @@ export default function RootLayout({
               },
               sameAs: [
                 "https://github.com/Woodstonestudio",
-                "https://www.instagram.com/woodstonestudio35",
+                "https://instagram.com/woodstonestudio35",
               ],
             }),
           }}
@@ -143,7 +142,6 @@ export default function RootLayout({
                 "AI solutions",
                 "AI automation",
                 "AI agent development",
-                "Blockchain and smart contract development",
                 "Social media management",
                 "Content production",
               ],
