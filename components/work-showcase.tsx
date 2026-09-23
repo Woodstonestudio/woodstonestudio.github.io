@@ -18,7 +18,7 @@ import { trSections, type SectionsDict } from "@/lib/i18n";
 
 export function WorkShowcase({ t = trSections.work }: { t?: SectionsDict["work"] }) {
   // Dile göre önizleme görseli: TR varsayılan (suffix yok), EN/SQ ayrı görsel
-  const imgSuffix = t.locale === "en" ? "-en" : t.locale === "sq" ? "-sq" : "";
+  const imgSuffix = t.locale === "en" ? "-en" : "";
   return (
     <section id="work" className="relative scroll-mt-16 border-t border-line">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24 lg:px-8 lg:py-32">

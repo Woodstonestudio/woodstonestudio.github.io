@@ -15,10 +15,9 @@ import { trNav, type NavDict } from "@/lib/i18n";
 const LOCALES: { code: string; label: string; href: string }[] = [
   { code: "tr", label: "Türkçe", href: "/" },
   { code: "en", label: "English", href: "/en" },
-  { code: "sq", label: "Shqip", href: "/sq" },
 ];
 
-const HOME_HREF: Record<string, string> = { tr: "/", en: "/en", sq: "/sq" };
+const HOME_HREF: Record<string, string> = { tr: "/", en: "/en" };
 
 /** Bağımsız dil seçici — her örneğin kendi state'i ve ref'i olur. */
 function LangSwitcher({ locale, aria }: { locale: string; aria: string }) {
