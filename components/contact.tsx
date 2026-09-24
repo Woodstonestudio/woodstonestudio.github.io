@@ -55,12 +55,12 @@ export function Contact({
                         ? "noopener noreferrer"
                         : undefined
                     }
-                    className="group inline-flex items-center gap-2.5 rounded-full border border-line px-7 py-3.5 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(239,234,224,0.24)] hover:bg-[rgba(239,234,224,0.04)]"
+                    className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-b from-[#26231E] to-[#3A3630] px-7 py-3.5 text-sm font-medium text-[#F3F0EA] shadow-[0_1px_2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                   >
                     {c.label}
                     <span
                       aria-hidden
-                      className="text-gray-warm transition-all duration-300 ease-soft group-hover:translate-x-0.5 group-hover:text-bone"
+                      className="text-[#F3F0EA]/70 transition-all duration-300 ease-soft group-hover:translate-x-0.5 group-hover:text-[#F3F0EA]"
                     >
                       ↗
                     </span>
