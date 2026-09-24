@@ -28,8 +28,8 @@ export default function HomeEN() {
         <Hero t={enHero} />
         <JoVVo t={enSections.jovvo} />
         <Services t={enSections.services} />
-        <WorkShowcase t={enSections.work} />
         <Testimonials t={enSections.testimonials} />
+        <WorkShowcase t={enSections.work} />
         <IdeaCTA t={enSections.idea} />
         <Contact t={enSections.contact} />
       </main>

@@ -67,8 +67,8 @@ export const trSections = {
   jovvo: {
     eyebrow: "JoVVo · iOS Uygulaması",
     t1: "Cebindeki",
-    t2: "yapay zekâ koçun",
-    lead: "JoVVo, cebindeki yapay zekâ fitness ve beslenme koçun. Koçun David, hedeflerine ve seviyene göre sana özel antrenman programları hazırlar, öğünlerini analiz eder ve gün boyu yanında olur.",
+    t2: "yapay zekâ koçu",
+    lead: "JoVVo, cebindeki yapay zekâ fitness ve beslenme koçu. Koçun David, hedeflerine ve seviyene göre sana özel antrenman programları hazırlar, öğünlerini analiz eder ve gün boyu yanında olur.",
     features: [
       { name: "Branşına özel program", note: "Fitness, CrossFit, HYROX, Strength, Run veya Hybrid — seviyene ve ekipmanına göre haftalık ya da 4 haftalık program. Sakatlığını yaz, David o bölgeyi zorlamaz." },
       { name: "Fotoğrafla öğün analizi", note: "Yemeğinin fotoğrafını çek; kalori ve makrolar (protein, karbonhidrat, yağ) anında hesaplansın." },

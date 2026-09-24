@@ -27,8 +27,8 @@ export default function Home() {
         <Hero />
         <JoVVo />
         <Services />
-        <WorkShowcase />
         <Testimonials />
+        <WorkShowcase />
         <IdeaCTA />
         <Contact />
       </main>

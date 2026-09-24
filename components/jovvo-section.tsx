@@ -8,7 +8,7 @@ import { trSections, type SectionsDict } from "@/lib/i18n";
  * JoVVo'nun neon-mint kimliği yalnızca bu panelde kullanılır.
  */
 const shots = [
-  { src: "/work/jovvo-chat.png", label: "David — yapay zekâ koçun" },
+  { src: "/work/jovvo-chat.png", label: "David — yapay zekâ koçu" },
   { src: "/work/jovvo-meal.png", label: "Fotoğrafla öğün analizi" },
   { src: "/work/jovvo-program.png", label: "Branşına özel program" },
 ];
