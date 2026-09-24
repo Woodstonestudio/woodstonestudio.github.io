@@ -113,7 +113,7 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ease-soft ${
+      className={`vt-nav fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ease-soft ${
         scrolled
           ? "border-b border-line bg-base/70 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
