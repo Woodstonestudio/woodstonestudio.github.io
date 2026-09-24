@@ -176,7 +176,7 @@ export function WorkPage({ locale }: { locale: Locale }) {
                   <p className="max-w-md text-[16px] leading-[1.8] text-gray-warm">{t.closingLead}</p>
                   <Link
                     href={`${HOME[locale]}#contact`}
-                    className="mt-8 inline-block rounded-full border border-line px-7 py-3.5 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(38,35,30,0.24)] hover:bg-[rgba(38,35,30,0.04)]"
+                    className="mt-8 inline-block rounded-full bg-gradient-to-b from-[#26231E] to-[#3A3630] px-7 py-3.5 text-sm font-medium text-[#F3F0EA] shadow-[0_1px_2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                   >
                     {t.closingCta}
                   </Link>

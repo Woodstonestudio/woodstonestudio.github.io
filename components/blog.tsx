@@ -178,7 +178,7 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
           <div className="mt-16 flex flex-wrap items-center gap-5 border-t border-line pt-10">
             <a
               href={`${HOME[locale]}#contact`}
-              className="rounded-full border border-line px-7 py-3.5 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(38,35,30,0.24)] hover:bg-[rgba(38,35,30,0.04)]"
+              className="rounded-full bg-gradient-to-b from-[#26231E] to-[#3A3630] px-7 py-3.5 text-sm font-medium text-[#F3F0EA] shadow-[0_1px_2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
             >
               {locale === "tr" ? "Bize Ulaşın" : locale === "en" ? "Get in Touch" : "Na Kontaktoni"}
             </a>

@@ -56,7 +56,7 @@ export default function NotFound() {
             </Link>
             <Link
               href="/en"
-              className="rounded-full border border-line px-7 py-3 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(38,35,30,0.24)] hover:bg-[rgba(38,35,30,0.04)]"
+              className="rounded-full bg-gradient-to-b from-[#26231E] to-[#3A3630] px-7 py-3 text-sm font-medium text-[#F3F0EA] shadow-[0_1px_2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
             >
               Back to Home
             </Link>

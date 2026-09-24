@@ -54,7 +54,7 @@ export function Hero({ t = trHero }: { t?: HeroDict }) {
               </a>
               <a
                 href="#contact"
-                className="rounded-full border border-line px-7 py-3 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(239,234,224,0.24)] hover:bg-[rgba(239,234,224,0.04)] active:scale-[0.98]"
+                className="rounded-full bg-gradient-to-b from-[#26231E] to-[#3A3630] px-7 py-3 text-sm font-medium text-[#F3F0EA] shadow-[0_1px_2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98] active:scale-[0.98]"
               >
                 {t.ctaSecondary}
               </a>
