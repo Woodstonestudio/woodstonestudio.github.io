@@ -33,7 +33,7 @@ export default function HomeEN() {
         <WorkShowcase t={enSections.work} />
         <IdeaCTA t={enSections.idea} />
         <LatestPosts locale="en" />
-        <Contact t={enSections.contact} />
+        <Contact t={enSections.contact} locale="en" />
       </main>
       <Footer t={enSections.footer} />
     </>

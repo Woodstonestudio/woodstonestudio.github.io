@@ -59,7 +59,69 @@ export const saasTR: ServiceContent = {
   closingCta: "Bize Ulaşın",
   backLabel: "Ana sayfa",
   serviceType: "SaaS ve MVP geliştirme",
-  areaServed: "Türkiye ve yurt dışı",
+  areaServed: "Türkiye, Avrupa ve dünya geneli",
+  guideEyebrow: "SaaS ve MVP rehberi",
+  guide: [
+    {
+      h: "SaaS nedir, klasik yazılımdan farkı ne?",
+      p: [
+        "SaaS (Software as a Service), kullanıcının kurmadan, tarayıcı ya da uygulama üzerinden abonelikle kullandığı yazılımdır. Muhasebe programınızı bilgisayara yüklemek yerine her ay küçük bir ücret ödeyip internetten kullanmak buna örnektir.",
+        "İşletme açısından farkı gelir modelindedir: tek seferlik satış yerine düzenli, tekrar eden gelir. Bu da ürünün hiç bitmediği anlamına gelir. Kullanıcı her ay 'devam edeyim mi?' diye karar verir; bu yüzden SaaS'ta asıl iş yayından sonra başlar.",
+      ],
+    },
+    {
+      h: "Neden önce MVP?",
+      p: [
+        "Çoğu SaaS fikri kâğıt üzerinde kusursuz görünür; gerçek kullanıcıyla karşılaşınca bambaşka ihtiyaçlar ortaya çıkar. Aylarca her özelliği geliştirmek, yanlış varsayımlara bütçe harcamak demektir.",
+        "MVP, fikrin en kritik değerini sunan ilk sürümdür. Amaç az özellikle, iyi çalışan bir ürünü erken yayına almak ve gerçek kullanım verisiyle sonraki adımları belirlemektir. Bunun mantığını 'MVP nedir' yazımızda ayrıntılı anlattık.",
+      ],
+    },
+    {
+      h: "Bir SaaS ürününün teknik temeli",
+      p: [
+        "Arayüz ürünün görünen kısmıdır; bir SaaS'ı ayakta tutan ise altındaki yapıdır. İlk sürümden itibaren şunların doğru kurulması gerekir:",
+      ],
+      ul: [
+        "Kimlik doğrulama: kayıt, giriş, şifre sıfırlama ve güvenli oturum yönetimi",
+        "Çok kiracılı (multi-tenant) yapı: her müşterinin verisi diğerlerinden kesin olarak ayrılmalı",
+        "Abonelik ve ödeme: plan yapısı, deneme süresi, yenileme, iptal ve fatura akışı",
+        "Roller ve yetkiler: ekip içinde kimin neyi görüp değiştirebileceği",
+        "Yedekleme, hata takibi ve izleme: sorun kullanıcıdan önce fark edilmeli",
+      ],
+    },
+    {
+      h: "Abonelik modeli nasıl kurgulanmalı?",
+      p: [
+        "Fiyatlandırma ürünün bir parçasıdır, sonradan eklenecek bir detay değildir. Aylık/yıllık plan, kullanıcı başına ya da kullanım bazlı ücret, ücretsiz deneme veya kısıtlı ücretsiz plan gibi seçenekler, ürünün kime ve nasıl değer ürettiğine göre belirlenir.",
+        "Teknik tarafta bunlar Stripe gibi ödeme altyapılarıyla kurulur. Önemli olan, planlar arası geçişin, deneme süresi bitişinin ve başarısız ödemelerin kullanıcıyı kaybetmeden yönetilmesidir.",
+      ],
+    },
+    {
+      h: "Yayından sonra hangi metriklere bakılır?",
+      p: [
+        "SaaS'ın sağlığını ziyaretçi sayısı değil, kullanıcıların kalıp kalmadığı gösterir. İlk günden takip edilmesi gerekenler:",
+      ],
+      ul: [
+        "Aktivasyon: yeni kullanıcıların ne kadarı ürünün temel değerine ulaşıyor?",
+        "Elde tutma: kullanıcılar haftalar ve aylar sonra hâlâ kullanıyor mu?",
+        "Abonelik iptali (churn): kimler, hangi noktada ve neden ayrılıyor?",
+        "Deneme süresinden ücretliye geçiş oranı",
+      ],
+    },
+    {
+      h: "Neden WoodstoneStudio?",
+      p: [
+        "Kendi SaaS ürünlerimizi geliştiriyor ve yayında tutuyoruz; kimlik doğrulama, çok kiracılı veri yapısı, arka plan işleri ve yapay zekâ entegrasyonu gibi konuları üretimde yaşayarak öğrendik. Sizinle de aynı şekilde çalışıyoruz: önce doğru kapsam, sonra hızlı ve sağlam bir ilk sürüm, ardından veriyle büyüme.",
+      ],
+    },
+  ],
+  relatedTitle: "İlgili hizmetler ve yazılar",
+  related: [
+    { label: "MVP nedir?", href: "/blog/mvp-nedir" },
+    { label: "Dijital ürün geliştirme rehberi", href: "/blog/dijital-urun-gelistirme" },
+    { label: "Yapay zekâ çözümleri", href: "/yapay-zeka" },
+    { label: "Web tasarım", href: "/web-tasarim" },
+  ],
 };
 
 export const saasEN: ServiceContent = {
@@ -117,5 +179,67 @@ export const saasEN: ServiceContent = {
   backLabel: "Home",
   serviceType: "SaaS and MVP development",
   areaServed: "Worldwide",
+  guideEyebrow: "SaaS & MVP guide",
+  guide: [
+    {
+      h: "What is SaaS, and how is it different from traditional software?",
+      p: [
+        "SaaS (Software as a Service) is software people use through a browser or app on a subscription, without installing anything. Paying a small monthly fee to use accounting software online instead of installing it on your computer is a typical example.",
+        "For a business, the difference is the revenue model: recurring income instead of one-off sales. It also means the product is never finished. Every month the user decides whether to keep paying, so in SaaS the real work starts after launch.",
+      ],
+    },
+    {
+      h: "Why start with an MVP?",
+      p: [
+        "Most SaaS ideas look flawless on paper; real users quickly reveal different needs. Spending months building every feature means spending budget on assumptions that may be wrong.",
+        "An MVP is the first release that delivers the idea's most critical value. The goal is to launch a product with few features that work well, early, and let real usage data decide the next steps. We explain the reasoning in our post \"What is an MVP\".",
+      ],
+    },
+    {
+      h: "The technical foundation of a SaaS product",
+      p: [
+        "The interface is the visible part; what keeps a SaaS running is underneath. These need to be right from the first release:",
+      ],
+      ul: [
+        "Authentication: sign-up, login, password reset and secure session handling",
+        "Multi-tenant structure: each customer's data must be strictly separated from everyone else's",
+        "Subscriptions and payments: plans, trials, renewals, cancellations and invoicing",
+        "Roles and permissions: who in a team can see and change what",
+        "Backups, error tracking and monitoring: problems should be caught before users notice them",
+      ],
+    },
+    {
+      h: "How should the subscription model work?",
+      p: [
+        "Pricing is part of the product, not a detail added later. Monthly or annual plans, per-seat or usage-based pricing, a free trial or a limited free tier: the right choice depends on who the product creates value for, and how.",
+        "Technically this is built on payment providers such as Stripe. What matters is handling plan changes, trial expiry and failed payments without losing the customer.",
+      ],
+    },
+    {
+      h: "Which metrics matter after launch?",
+      p: [
+        "A SaaS product's health shows in whether users stay, not in visitor counts. Track these from day one:",
+      ],
+      ul: [
+        "Activation: what share of new users reach the product's core value?",
+        "Retention: are people still using it weeks and months later?",
+        "Churn: who leaves, at what point, and why?",
+        "Trial-to-paid conversion",
+      ],
+    },
+    {
+      h: "Why WoodstoneStudio?",
+      p: [
+        "We build and run our own SaaS products; authentication, multi-tenant data, background jobs and AI integration are things we have learned in production. We work with you the same way: the right scope first, then a fast and solid first release, then growth driven by data.",
+      ],
+    },
+  ],
+  relatedTitle: "Related services and articles",
+  related: [
+    { label: "What is an MVP?", href: "/en/blog/mvp-nedir" },
+    { label: "Digital product development guide", href: "/en/blog/dijital-urun-gelistirme" },
+    { label: "AI solutions", href: "/en/ai-solutions" },
+    { label: "Web design", href: "/en/web-design" },
+  ],
 };
 

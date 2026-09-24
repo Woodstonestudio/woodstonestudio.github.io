@@ -59,7 +59,69 @@ export const aiTR: ServiceContent = {
   closingCta: "Bize Ulaşın",
   backLabel: "Ana sayfa",
   serviceType: "Yapay zekâ çözümleri ve AI otomasyon",
-  areaServed: "Türkiye ve yurt dışı",
+  areaServed: "Türkiye, Avrupa ve dünya geneli",
+  guideEyebrow: "Yapay zekâ rehberi",
+  guide: [
+    {
+      h: "İşletmede yapay zekâ nerede gerçekten işe yarar?",
+      p: [
+        "Yapay zekâ en çok, bugün insanların tekrar tekrar yaptığı ve metin, belge ya da görselle ilgili işlerde değer üretir. Genel kural şu: iş sık tekrarlanıyorsa, belirli bir kalıbı varsa ve hatası tolere edilebilir ya da kontrol edilebilirse, yapay zekâ için iyi bir adaydır.",
+      ],
+      ul: [
+        "Müşteri sorularına ilk yanıt ve doğru kişiye yönlendirme",
+        "Gelen e-posta, form ve taleplerin sınıflandırılması",
+        "Fatura, sözleşme ve belgelerden bilgi çıkarma",
+        "Rapor, özet ve ilk taslak içerik üretimi",
+        "Ürün açıklamaları, çeviriler ve katalog düzenleme",
+      ],
+    },
+    {
+      h: "Chatbot, AI ajanı ve otomasyon arasındaki fark",
+      p: [
+        "Chatbot bir soruya yanıt verir. AI ajanı ise bir hedef için birden fazla adımı kendisi yürütür: veriyi toplar, karar verir, başka bir sisteme yazar. Otomasyon da kuralları önceden belli olan akışları insan müdahalesi olmadan çalıştırır.",
+        "Çoğu işletme için doğru çözüm bunların birleşimidir: kurallı kısımlar klasik otomasyonla, yorum gerektiren kısımlar yapay zekâyla yapılır. Her şeyi yapay zekâya bırakmak hem pahalı hem de gereksiz olabilir.",
+      ],
+    },
+    {
+      h: "Kendi verinizle çalışan asistanlar",
+      p: [
+        "Genel bir sohbet modeli sizin ürünlerinizi, fiyat politikanızı ya da iç prosedürlerinizi bilmez. Asistanın sizin verinizle doğru yanıt vermesi için dokümanlarınız, sık sorulan sorularınız ve ürün bilgileriniz modele güvenli şekilde bağlanır.",
+        "Bunun iyi kurulmuş hali, asistanın yanıtı hangi kaynaktan aldığını gösterebilmesi ve bilmediği konuda uydurmak yerine 'bilmiyorum' deyip bir insana yönlendirebilmesidir.",
+      ],
+    },
+    {
+      h: "Veri gizliliği ve güvenlik",
+      p: [
+        "Yapay zekâ projelerinde ilk sorulması gereken soru, hangi verinin nereye gittiğidir. Kişisel ve hassas veriler için şu kararlar baştan netleşmelidir:",
+      ],
+      ul: [
+        "Hangi veriler modele gönderilecek, hangileri asla gönderilmeyecek",
+        "Verinin nerede saklanacağı ve ne kadar tutulacağı",
+        "Sağlayıcının veriyi model eğitiminde kullanıp kullanmadığı",
+        "KVKK ve GDPR yükümlülüklerinin nasıl karşılanacağı",
+      ],
+    },
+    {
+      h: "Maliyeti ne belirler?",
+      p: [
+        "Bir yapay zekâ çözümünün maliyeti iki parçadan oluşur: bir kerelik geliştirme ve kullanım başına ödenen model ücreti. Model ücreti işlem hacmine, seçilen modele ve her istekte işlenen metin miktarına bağlıdır.",
+        "Bu yüzden pilot aşamasında gerçek veriyle ölçüm yapıyor, aylık kullanım maliyetini tahmin değil hesap olarak paylaşıyoruz. Çoğu zaman her iş için en büyük modele ihtiyaç yoktur; doğru model seçimi maliyeti belirgin şekilde düşürür.",
+      ],
+    },
+    {
+      h: "Küçük başlayın: pilot yaklaşımı",
+      p: [
+        "Tek seferde tüm şirketi dönüştürmeye çalışmak yerine, net ölçülebilir tek bir işle başlamak en sağlıklısıdır. Pilot gerçek veriyle çalışır, sonucu ölçülür, işe yarıyorsa yaygınlaştırılır. Hangi sorun için hangi yaklaşımın uygun olduğunu 'Yapay zekâ uygulamaları' yazımızda ayrıntılı anlattık.",
+      ],
+    },
+  ],
+  relatedTitle: "İlgili hizmetler ve yazılar",
+  related: [
+    { label: "Yapay zekâ uygulamaları: hangi sorun için hangi teknoloji?", href: "/blog/yapay-zeka-uygulamalari" },
+    { label: "Yapay zekâ küçük işletmelere yarar mı?", href: "/blog/yapay-zeka-kucuk-isletme" },
+    { label: "SaaS ve MVP geliştirme", href: "/saas-gelistirme" },
+    { label: "Mobil uygulama", href: "/mobil-uygulama" },
+  ],
 };
 
 export const aiEN: ServiceContent = {
@@ -117,5 +179,67 @@ export const aiEN: ServiceContent = {
   backLabel: "Home",
   serviceType: "AI solutions and automation",
   areaServed: "Worldwide",
+  guideEyebrow: "AI guide",
+  guide: [
+    {
+      h: "Where does AI actually help a business?",
+      p: [
+        "AI creates the most value in work people repeat every day, especially work involving text, documents or images. A useful rule: if a task is frequent, follows a pattern and its errors can be tolerated or reviewed, it is a good candidate for AI.",
+      ],
+      ul: [
+        "First responses to customer questions and routing to the right person",
+        "Classifying incoming emails, forms and requests",
+        "Extracting information from invoices, contracts and documents",
+        "Reports, summaries and first-draft content",
+        "Product descriptions, translations and catalogue clean-up",
+      ],
+    },
+    {
+      h: "Chatbot, AI agent and automation: what's the difference?",
+      p: [
+        "A chatbot answers a question. An AI agent carries out several steps towards a goal on its own: it gathers data, makes a decision and writes to another system. Automation runs flows whose rules are known in advance, without human input.",
+        "For most businesses the right solution combines them: rule-based parts are handled by classic automation, parts that need judgement by AI. Handing everything to AI can be both expensive and unnecessary.",
+      ],
+    },
+    {
+      h: "Assistants that work with your own data",
+      p: [
+        "A general chat model doesn't know your products, pricing policy or internal procedures. To answer correctly, the assistant is securely connected to your documents, FAQs and product data.",
+        "Done well, the assistant can show which source an answer came from, and when it doesn't know, it says so and hands over to a person instead of making something up.",
+      ],
+    },
+    {
+      h: "Data privacy and security",
+      p: [
+        "The first question in any AI project is which data goes where. For personal and sensitive data these decisions must be clear from the start:",
+      ],
+      ul: [
+        "Which data is sent to the model, and which never is",
+        "Where data is stored and for how long",
+        "Whether the provider uses the data to train its models",
+        "How GDPR and local privacy obligations are met",
+      ],
+    },
+    {
+      h: "What drives the cost?",
+      p: [
+        "An AI solution has two cost components: one-off development and the per-use model fee. The model fee depends on volume, the model chosen and how much text each request processes.",
+        "That's why we measure with real data during the pilot and share the monthly usage cost as a calculation, not a guess. Not every task needs the largest model; choosing the right one lowers cost noticeably.",
+      ],
+    },
+    {
+      h: "Start small: the pilot approach",
+      p: [
+        "Rather than trying to transform the whole company at once, it's healthiest to start with one clearly measurable task. The pilot runs on real data, results are measured and, if it works, it is rolled out. We cover which approach fits which problem in our post \"AI Applications: Which Technology for Which Problem?\".",
+      ],
+    },
+  ],
+  relatedTitle: "Related services and articles",
+  related: [
+    { label: "AI applications: which technology for which problem?", href: "/en/blog/yapay-zeka-uygulamalari" },
+    { label: "Does AI actually help small businesses?", href: "/en/blog/yapay-zeka-kucuk-isletme" },
+    { label: "SaaS & MVP development", href: "/en/saas-development" },
+    { label: "Mobile apps", href: "/en/mobile-apps" },
+  ],
 };
 

@@ -56,6 +56,21 @@ function Eyebrow({ children }: { children: string }) {
   );
 }
 
+// Hizmet sayfasından forma gidince hizmet önceden seçili gelsin
+const SERVICE_KEY: Record<string, string> = {
+  "/web-tasarim": "web",
+  "/e-ticaret": "ecommerce",
+  "/mobil-uygulama": "mobile",
+  "/saas-gelistirme": "saas",
+  "/yapay-zeka": "ai",
+  "/seo": "seo",
+  "/sosyal-medya": "social",
+};
+function serviceQuery(c: ServiceContent) {
+  const k = SERVICE_KEY[c.alternates.tr];
+  return k ? `?service=${k}` : "";
+}
+
 export function ServicePage({ c }: { c: ServiceContent }) {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -112,7 +127,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
                 <p className="max-w-lg text-[17px] leading-[1.8] text-gray-warm">{c.lead}</p>
                 <div className="mt-10 flex flex-wrap items-center gap-4">
                   <a
-                    href={`${HOME[c.locale]}#contact`}
+                    href={`${HOME[c.locale]}${serviceQuery(c)}#contact`}
                     className="rounded-full bg-gradient-to-b from-[#26231E] to-[#3A3630] px-7 py-3 text-sm font-medium text-[#F3F0EA] shadow-[0_1px_2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]"
                   >
                     {c.ctaPrimary}
@@ -286,7 +301,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
                   <p className="max-w-md text-[16px] leading-[1.8] text-gray-warm">{c.closingLead}</p>
                   <div className="mt-8 flex flex-wrap items-center gap-5">
                     <a
-                      href={`${HOME[c.locale]}#contact`}
+                      href={`${HOME[c.locale]}${serviceQuery(c)}#contact`}
                       className="rounded-full border border-line px-7 py-3.5 text-sm font-medium text-bone transition-all duration-300 ease-soft hover:border-[rgba(38,35,30,0.24)] hover:bg-[rgba(38,35,30,0.04)]"
                     >
                       {c.closingCta}

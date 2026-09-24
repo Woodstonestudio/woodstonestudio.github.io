@@ -20,8 +20,10 @@ const LOCALES: { code: string; label: string; href: string }[] = [
 const HOME_HREF: Record<string, string> = { tr: "/", en: "/en" };
 
 /** "Teklif Al" — e-posta uygulamasını hazır konu ve şablonla açar. */
-function quoteHref(q: NavDict["quote"]) {
-  return `mailto:info@woodstonestudio.com?subject=${encodeURIComponent(q.subject)}&body=${encodeURIComponent(q.body)}`;
+// "Teklif Al" → ana sayfadaki iletişim formu (talep doğrudan Growth paneline düşer)
+function quoteHref(q: NavDict["quote"], locale: string) {
+  void q;
+  return `${HOME_HREF[locale] ?? "/"}#contact`;
 }
 
 const QUOTE_CLASS =
@@ -155,7 +157,7 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
             <LangSwitcher locale={t.locale} aria={t.switchAria} />
           </li>
           <li className="ml-3">
-            <a href={quoteHref(t.quote)} className={QUOTE_CLASS}>
+            <a href={quoteHref(t.quote, t.locale)} className={QUOTE_CLASS}>
               {t.quote.label}
             </a>
           </li>
@@ -203,7 +205,7 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
             ))}
             <li className="pb-3 pt-4">
               <a
-                href={quoteHref(t.quote)}
+                href={quoteHref(t.quote, t.locale)}
                 onClick={() => setMenuOpen(false)}
                 className={`${QUOTE_CLASS} block w-full py-3 text-center`}
               >

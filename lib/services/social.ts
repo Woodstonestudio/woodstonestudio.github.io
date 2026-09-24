@@ -60,6 +60,66 @@ export const socialTR: ServiceContent = {
   backLabel: "Ana sayfa",
   serviceType: "Sosyal medya yönetimi ve içerik üretimi",
   areaServed: "Türkiye, Avrupa ve dünya geneli",
+  guideEyebrow: "Sosyal medya rehberi",
+  guide: [
+    {
+      h: "Sosyal medya yönetimi tam olarak neyi kapsar?",
+      p: [
+        "Sosyal medya yönetimi yalnızca paylaşım yapmak değildir. Hesabın neyi, kime ve hangi dille anlattığını belirleyen bir strateji; bu stratejiye göre üretilen içerik; yorum ve mesajlarla kurulan ilişki ve sonuçların düzenli ölçülmesi birlikte bu işi oluşturur.",
+        "Standart bir hizmette neyin olup neyin ek iş sayıldığını 'Sosyal medya yönetimi hizmetleri' yazımızda ayrıntılı anlattık.",
+      ],
+    },
+    {
+      h: "Organik büyüme mi, reklam mı?",
+      p: [
+        "Reklam hızlıdır ama bütçe durduğunda etkisi de durur. Organik büyüme yavaştır ama birikir: düzenli ve değerli içerik, hesabın zamanla daha fazla kişiye gösterilmesini sağlar ve bu kitle size gerçekten ilgi duyan insanlardan oluşur.",
+        "Sağlıklı olan, organik temel üzerine gerektiğinde reklam eklemektir. Zayıf bir profile reklamla trafik göndermek, ziyaretçiyi ikna edecek bir şey olmadığı için bütçeyi boşa harcatır.",
+      ],
+    },
+    {
+      h: "İçerik planı nasıl hazırlanır?",
+      p: [
+        "İyi bir içerik planı birkaç ana başlık üzerine kurulur ve her paylaşım bunlardan birine hizmet eder:",
+      ],
+      ul: [
+        "Tanıtım: ne yaptığınızı ve kimin için yaptığınızı gösteren içerikler",
+        "Değer: kitlenin işine yarayan ipuçları, rehberler ve cevaplar",
+        "Güven: müşteri deneyimleri, perde arkası ve süreç görüntüleri",
+        "Dönüşüm: teklif, randevu ya da iletişime yönlendiren net çağrılar",
+      ],
+    },
+    {
+      h: "Reels ve kısa video neden öne çıkıyor?",
+      p: [
+        "Instagram ve YouTube, kısa videoları sizi henüz takip etmeyen kişilere de gösteriyor. Bu da kısa videoyu yeni kitleye ulaşmanın en etkili yollarından biri yapıyor. İyi bir kısa videonun ilk birkaç saniyesi izleyiciyi yakalar, tek bir fikri anlatır ve tek bir aksiyonla biter.",
+        "Önemli olan pahalı prodüksiyon değil, düzen ve netliktir. Telefonla çekilmiş ama iyi kurgulanmış içerik, çoğu zaman ağır prodüksiyondan daha iyi performans gösterir.",
+      ],
+    },
+    {
+      h: "Başarı nasıl ölçülür?",
+      p: [
+        "Takipçi sayısı tek başına yanıltıcıdır. Asıl bakılması gerekenler:",
+      ],
+      ul: [
+        "Erişim ve gösterimler: içerik yeni kişilere ulaşıyor mu?",
+        "Etkileşim: kaydetme, paylaşma ve yorumlar",
+        "Profil ziyaretleri ve link tıklamaları",
+        "Sosyal medyadan gelen mesaj, teklif ve satış talepleri",
+      ],
+    },
+    {
+      h: "Neden WoodstoneStudio?",
+      p: [
+        "Bir yazılım ve tasarım stüdyosu olarak sosyal medyayı web sitenizden ve dijital ürünlerinizden ayrı düşünmüyoruz. Profil, içerik ve web sitesi aynı dili konuştuğunda, sosyal medyadan gelen ilgi gerçek müşteriye dönüşür. Takipçi satın almıyor, bot kullanmıyoruz; büyümeyi düzenli içerik ve gerçek etkileşimle sağlıyoruz.",
+      ],
+    },
+  ],
+  relatedTitle: "İlgili hizmetler ve yazılar",
+  related: [
+    { label: "Sosyal medya yönetimi hizmetleri: ne beklemeli?", href: "/blog/sosyal-medya-yonetimi-hizmetleri" },
+    { label: "Web tasarım", href: "/web-tasarim" },
+    { label: "SEO hizmeti", href: "/seo" },
+  ],
 };
 
 export const socialEN: ServiceContent = {
@@ -117,5 +177,65 @@ export const socialEN: ServiceContent = {
   backLabel: "Home",
   serviceType: "Social media management and content production",
   areaServed: "Worldwide",
+  guideEyebrow: "Social media guide",
+  guide: [
+    {
+      h: "What exactly does social media management cover?",
+      p: [
+        "Social media management is more than posting. It combines a strategy that defines what the account says, to whom and in what voice; content produced for that strategy; relationships built through comments and messages; and regular measurement of results.",
+        "We explain what a standard package includes and what counts as extra in our post on social media management services.",
+      ],
+    },
+    {
+      h: "Organic growth or ads?",
+      p: [
+        "Ads are fast, but their effect stops when the budget stops. Organic growth is slower but compounds: consistent, valuable content gets the account shown to more people over time, and that audience is made of people genuinely interested in you.",
+        "The healthy approach is to add ads on top of an organic foundation when needed. Sending paid traffic to a weak profile wastes budget, because there is nothing there to convince the visitor.",
+      ],
+    },
+    {
+      h: "How to build a content plan",
+      p: [
+        "A good content plan rests on a few pillars, and every post serves one of them:",
+      ],
+      ul: [
+        "Introduction: content that shows what you do and who it's for",
+        "Value: tips, guides and answers that help your audience",
+        "Trust: customer experiences, behind the scenes and process",
+        "Conversion: clear calls to request a quote, book or get in touch",
+      ],
+    },
+    {
+      h: "Why Reels and short video stand out",
+      p: [
+        "Instagram and YouTube show short videos to people who don't follow you yet, which makes short video one of the most effective ways to reach a new audience. A good short video hooks the viewer in the first seconds, makes one point and ends with one action.",
+        "What matters is consistency and clarity, not expensive production. Well-edited content shot on a phone often performs better than heavy production.",
+      ],
+    },
+    {
+      h: "How to measure success",
+      p: [
+        "Follower count alone is misleading. Look at:",
+      ],
+      ul: [
+        "Reach and impressions: is content reaching new people?",
+        "Engagement: saves, shares and comments",
+        "Profile visits and link clicks",
+        "Messages, quote requests and sales that come from social media",
+      ],
+    },
+    {
+      h: "Why WoodstoneStudio?",
+      p: [
+        "As a software and design studio, we don't treat social media separately from your website and digital products. When your profile, content and website speak the same language, interest from social media turns into real customers. We never buy followers or use bots; growth comes from consistent content and genuine engagement.",
+      ],
+    },
+  ],
+  relatedTitle: "Related services and articles",
+  related: [
+    { label: "Social media management services: what to expect", href: "/en/blog/sosyal-medya-yonetimi-hizmetleri" },
+    { label: "Web design", href: "/en/web-design" },
+    { label: "SEO services", href: "/en/seo" },
+  ],
 };
 
