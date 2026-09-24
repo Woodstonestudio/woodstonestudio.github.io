@@ -51,6 +51,11 @@ export const metadata: Metadata = {
     images: ["/og-cover.jpg"],
   },
   robots: { index: true, follow: true },
+  verification: {
+    other: {
+      "msvalidate.01": "6AE471271FBF2DD5F1F7B6A70C3E5C3D",
+    },
+  },
 };
 
 export default function RootLayout({
