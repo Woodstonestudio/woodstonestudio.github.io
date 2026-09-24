@@ -35,6 +35,12 @@ export type ServiceContent = {
   backLabel: string;
   serviceType: string; // Service şeması için
   areaServed: string;
+  /** Uzun rehber içerik (SEO) — süreç ile SSS arasında gösterilir. */
+  guideEyebrow?: string;
+  guide?: { h: string; p: string[]; ul?: string[] }[];
+  /** İlgili hizmet ve yazılara iç linkler. */
+  relatedTitle?: string;
+  related?: { label: string; href: string }[];
 };
 
 const NAV = { tr: trNav, en: enNav } as const;
@@ -112,7 +118,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
                     {c.ctaPrimary}
                   </a>
                   <Link
-                    href={`${HOME[c.locale]}#work`}
+                    href={c.locale === "tr" ? "/calismalar" : "/en/work"}
                     className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone"
                   >
                     {c.ctaSecondary}
@@ -180,6 +186,38 @@ export function ServicePage({ c }: { c: ServiceContent }) {
           </div>
         </section>
 
+        {/* ── Rehber (uzun içerik) ── */}
+        {c.guide && c.guide.length > 0 && (
+          <section className="relative border-t border-line">
+            <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8 lg:py-32">
+              <div className="grid gap-10 lg:grid-cols-[0.3fr_0.7fr] lg:gap-20">
+                <div>
+                  <div className="lg:sticky lg:top-28">
+                    {c.guideEyebrow && <Eyebrow>{c.guideEyebrow}</Eyebrow>}
+                  </div>
+                </div>
+                <article className="max-w-2xl">
+                  {c.guide.map((g, i) => (
+                    <div key={g.h} className={i === 0 ? "" : "mt-14"}>
+                      <h2 className="text-[26px] font-light leading-snug tracking-tight text-bone sm:text-[30px]">{g.h}</h2>
+                      {g.p.map((para, j) => (
+                        <p key={j} className="mt-5 text-[16px] leading-[1.85] text-gray-warm">{para}</p>
+                      ))}
+                      {g.ul && (
+                        <ul className="mt-5 space-y-3 border-l border-line pl-5">
+                          {g.ul.map((li) => (
+                            <li key={li} className="text-[15.5px] leading-[1.8] text-gray-warm">{li}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </article>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* ── SSS ── */}
         <section className="relative border-t border-line">
           <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8 lg:py-32">
@@ -209,6 +247,28 @@ export function ServicePage({ c }: { c: ServiceContent }) {
             </div>
           </div>
         </section>
+
+        {/* ── İlgili ── */}
+        {c.related && c.related.length > 0 && (
+          <section className="relative border-t border-line">
+            <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+              {c.relatedTitle && <Eyebrow>{c.relatedTitle}</Eyebrow>}
+              <ul className="mt-6 flex flex-wrap gap-3">
+                {c.related.map((r) => (
+                  <li key={r.href}>
+                    <Link
+                      href={r.href}
+                      className="group inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm text-bone transition-all duration-300 ease-soft hover:border-[rgba(38,35,30,0.24)] hover:bg-[rgba(38,35,30,0.04)]"
+                    >
+                      {r.label}
+                      <span aria-hidden className="text-gray-warm transition-transform duration-300 group-hover:translate-x-0.5">→</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         {/* ── Kapanış CTA ── */}
         <section className="relative border-t border-line">

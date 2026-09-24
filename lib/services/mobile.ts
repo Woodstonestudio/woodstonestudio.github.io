@@ -60,6 +60,87 @@ export const mobileTR: ServiceContent = {
   backLabel: "Ana sayfa",
   serviceType: "Mobil uygulama geliştirme (iOS ve Android)",
   areaServed: "İzmir, Türkiye",
+  guideEyebrow: "Mobil uygulama rehberi",
+  guide: [
+    {
+      h: "Mobil uygulama mı, mobil uyumlu web sitesi mi?",
+      p: [
+        "Her iş için uygulama gerekmez. Müşterileriniz sizi ara sıra ziyaret ediyorsa, mobil uyumlu hızlı bir web sitesi çoğu zaman yeterlidir. Uygulama ise kullanıcının düzenli olarak geri döndüğü durumlarda anlam kazanır: takip, alışkanlık, sadakat, bildirim ve cihaz özelliklerine (kamera, konum, sağlık verileri) erişim gerektiğinde.",
+        "Ön görüşmede bu soruyu dürüstçe birlikte cevaplıyoruz. İhtiyacınız bir web sitesiyse, uygulama satmaya çalışmayız.",
+      ],
+    },
+    {
+      h: "Native mi, çapraz platform mu?",
+      p: [
+        "iOS ve Android için ayrı ayrı (native) uygulama yazmak iki ayrı kod tabanı, iki ekip ve neredeyse iki kat bütçe demektir. Flutter gibi çapraz platform teknolojilerle ise tek kod tabanından iki mağazaya da yayın yapılır.",
+        "İş uygulamalarının, içerik ve takip uygulamalarının ve MVP'lerin büyük çoğunluğu için çapraz platform doğru tercihtir: daha hızlı geliştirilir, daha kolay güncellenir ve kullanıcı farkı hissetmez. Çok ağır grafik veya platforma özel donanım gerektiren nadir durumlarda native geliştirmeyi öneriyoruz.",
+      ],
+    },
+    {
+      h: "Fikirden mağazaya: uygulama geliştirme süreci",
+      p: ["Bir uygulama projesi genellikle şu aşamalardan geçer:"],
+      ul: [
+        "Keşif: Hedef kullanıcı, çözülen problem ve ilk sürümde olması gereken özellikler netleşir.",
+        "Tasarım: Ekran akışları ve arayüz tasarlanır; tıklanabilir bir prototiple onaylanır.",
+        "Geliştirme: Uygulama ve arka uç (backend) birlikte geliştirilir; test sürümleri düzenli olarak sizinle paylaşılır.",
+        "Test: Farklı cihaz ve ekran boyutlarında test edilir; TestFlight ve Google Play iç test kanalları kullanılır.",
+        "Mağaza yayını: Mağaza metinleri, ekran görüntüleri, gizlilik politikası ve inceleme süreci yönetilir.",
+        "Yayın sonrası: Kullanıcı geri bildirimleri, hata düzeltmeleri ve yeni özelliklerle uygulama büyütülür.",
+      ],
+    },
+    {
+      h: "MVP ile başlamak neden akıllıca?",
+      p: [
+        "MVP (minimum uygulanabilir ürün), fikrinizin çekirdeğini içeren ve gerçek kullanıcılarla test edilebilen ilk sürümdür. Tüm özellikleri baştan geliştirmek yerine önce en değerli kısmı yayına almak hem bütçeyi korur hem de hangi özelliklerin gerçekten istendiğini gösterir.",
+        "Kendi uygulamalarımızı da bu şekilde geliştiriyoruz: önce çalışan en küçük sürüm, sonra kullanıcı verisiyle büyüme.",
+      ],
+    },
+    {
+      h: "App Store ve Google Play yayını: işin görünmeyen kısmı",
+      p: [
+        "Kod bittiğinde iş bitmez. Apple ve Google'ın inceleme kuralları, gizlilik beyanları, hesap silme zorunluluğu, abonelik kuralları ve mağaza görselleri ciddi bir hazırlık ister. Apple'ın incelemesi özellikle titizdir ve reddedilen başvurular haftalar kaybettirebilir.",
+        "Kendi uygulamalarımızı App Store ve Google Play'de yayınladık; ret gerekçelerini, düzeltme yollarını ve mağaza politikalarını yaşayarak öğrendik. Bu tecrübeyi projenize doğrudan aktarıyoruz.",
+      ],
+    },
+    {
+      h: "Yapay zekâ destekli uygulamalar",
+      p: [
+        "Yapay zekâ artık mobil uygulamaların sıradan bir parçası: sohbet asistanları, fotoğraftan analiz, kişiselleştirilmiş öneriler, metin ve görsel üretimi. Örneğin JoVVo'da kullanıcının yemek fotoğrafından kalori ve makro hesaplayan ve kişisel antrenman programı hazırlayan bir yapay zekâ koçu bulunuyor.",
+        "AI özelliklerini güvenli bir sunucu katmanı üzerinden entegre ediyoruz; API anahtarları uygulamanın içinde tutulmaz, maliyetler kontrol altında kalır.",
+      ],
+    },
+    {
+      h: "Uygulamadan gelir modeli: abonelik, uygulama içi satın alma, reklam",
+      p: ["Uygulamanızın nasıl para kazanacağı baştan planlanmalıdır. En yaygın modeller:"],
+      ul: [
+        "Abonelik: Aylık veya yıllık premium üyelik; ücretsiz deneme süresiyle birlikte.",
+        "Uygulama içi satın alma: Tek seferlik özellik ya da içerik satışı.",
+        "Reklam: AdMob gibi ağlarla ücretsiz uygulamalarda gelir.",
+        "Hibrit: Ücretsiz sürümde reklam, premium sürümde reklamsız deneyim.",
+      ],
+    },
+    {
+      h: "Yayın sonrası: bakım, güncelleme ve büyüme",
+      p: [
+        "iOS ve Android her yıl yeni sürümler çıkarır, mağazalar yeni kurallar getirir. Güncel tutulmayan uygulamalar zamanla hata vermeye başlar ya da mağazada görünürlüğünü kaybeder. Yayından sonra sürüm güncellemeleri, hata düzeltmeleri, performans takibi ve yeni özellik geliştirme için sizinle çalışmaya devam ediyoruz.",
+      ],
+    },
+    {
+      h: "Neden WoodstoneStudio?",
+      p: [
+        "Biz yalnızca müşteri uygulaması geliştirmiyoruz; kendi uygulamalarımızı da tasarlıyor, geliştiriyor, yayınlıyor ve büyütüyoruz. Bir uygulamanın fikirden mağazaya ve sonrasına kadar geçtiği her aşamayı kendi ürünlerimizde yaşadık.",
+        "Ücretsiz ön görüşmede fikrinizi dinliyor, gerçekçi bir MVP kapsamı ve yazılı bir maliyet çıkarıyoruz.",
+      ],
+    },
+  ],
+  relatedTitle: "İlgili hizmetler ve yazılar",
+  related: [
+    { label: "Mobil uygulama ne kadar tutar?", href: "/blog/mobil-uygulama-maliyeti" },
+    { label: "MVP nedir?", href: "/blog/mvp-nedir" },
+    { label: "SaaS geliştirme", href: "/saas-gelistirme" },
+    { label: "Yapay zekâ çözümleri", href: "/yapay-zeka" },
+    { label: "Çalışmalarımız", href: "/calismalar" },
+  ],
 };
 
 export const mobileEN: ServiceContent = {
@@ -117,5 +198,86 @@ export const mobileEN: ServiceContent = {
   backLabel: "Home",
   serviceType: "Mobile app development (iOS and Android)",
   areaServed: "Worldwide",
+  guideEyebrow: "Mobile app guide",
+  guide: [
+    {
+      h: "Mobile app or mobile-friendly website?",
+      p: [
+        "Not every business needs an app. If customers visit you occasionally, a fast mobile-friendly website is often enough. An app makes sense when users come back regularly: tracking, habits, loyalty, notifications, or when you need device features such as the camera, location or health data.",
+        "We answer this question honestly with you in the consultation. If what you need is a website, we won't try to sell you an app.",
+      ],
+    },
+    {
+      h: "Native or cross-platform?",
+      p: [
+        "Writing separate native apps for iOS and Android means two codebases, two teams and almost twice the budget. With cross-platform technology such as Flutter, one codebase ships to both stores.",
+        "For most business apps, content and tracking apps and MVPs, cross-platform is the right choice: faster to build, easier to update, and users can't tell the difference. We recommend native development only in rare cases that need very heavy graphics or platform-specific hardware.",
+      ],
+    },
+    {
+      h: "From idea to app store: the development process",
+      p: ["An app project usually goes through these stages:"],
+      ul: [
+        "Discovery: the target user, the problem being solved and the must-have features of the first version are defined.",
+        "Design: screen flows and the interface are designed and approved through a clickable prototype.",
+        "Development: the app and its backend are built together, with regular test builds shared with you.",
+        "Testing: tested across devices and screen sizes using TestFlight and Google Play internal testing.",
+        "Store launch: store copy, screenshots, privacy policy and the review process are handled.",
+        "After launch: the app grows through user feedback, bug fixes and new features.",
+      ],
+    },
+    {
+      h: "Why starting with an MVP is smart",
+      p: [
+        "An MVP (minimum viable product) is the first version that contains the core of your idea and can be tested with real users. Shipping the most valuable part first instead of building every feature upfront protects your budget and shows which features people actually want.",
+        "We build our own apps the same way: first the smallest version that works, then growth driven by user data.",
+      ],
+    },
+    {
+      h: "App Store and Google Play publishing: the invisible part of the job",
+      p: [
+        "The work isn't done when the code is. Apple's and Google's review rules, privacy disclosures, account-deletion requirements, subscription rules and store assets all take real preparation. Apple's review is especially strict, and a rejected submission can cost weeks.",
+        "We have published our own apps on the App Store and Google Play, and learned rejection reasons, fixes and store policies first-hand. We bring that experience straight into your project.",
+      ],
+    },
+    {
+      h: "AI-powered apps",
+      p: [
+        "AI is now an ordinary part of mobile apps: chat assistants, photo analysis, personalised recommendations, text and image generation. JoVVo, for example, has an AI coach that estimates calories and macros from a meal photo and builds personal training programs.",
+        "We integrate AI features through a secure server layer, so API keys never live inside the app and costs stay under control.",
+      ],
+    },
+    {
+      h: "Monetisation: subscriptions, in-app purchases, ads",
+      p: ["How your app will make money should be planned from the start. The most common models:"],
+      ul: [
+        "Subscriptions: monthly or yearly premium membership, usually with a free trial.",
+        "In-app purchases: one-off feature or content sales.",
+        "Ads: revenue from free apps through networks such as AdMob.",
+        "Hybrid: ads in the free tier, an ad-free premium experience.",
+      ],
+    },
+    {
+      h: "After launch: maintenance, updates and growth",
+      p: [
+        "iOS and Android release new versions every year and the stores keep adding rules. Apps that aren't kept up to date start to break or lose visibility in the store. After launch we keep working with you on version updates, bug fixes, performance monitoring and new features.",
+      ],
+    },
+    {
+      h: "Why WoodstoneStudio?",
+      p: [
+        "We don't only build client apps; we design, build, publish and grow our own. We have been through every stage an app goes through, from idea to the store and beyond, with our own products.",
+        "In a free consultation we listen to your idea and put together a realistic MVP scope and a written cost estimate.",
+      ],
+    },
+  ],
+  relatedTitle: "Related services and articles",
+  related: [
+    { label: "How much does an app cost?", href: "/en/blog/mobil-uygulama-maliyeti" },
+    { label: "What is an MVP?", href: "/en/blog/mvp-nedir" },
+    { label: "SaaS development", href: "/en/saas-development" },
+    { label: "AI solutions", href: "/en/ai-solutions" },
+    { label: "Our work", href: "/en/work" },
+  ],
 };
 

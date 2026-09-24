@@ -1,3 +1,4 @@
+import { LatestPosts } from "@/components/latest-posts";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { JoVVo } from "@/components/jovvo-section";
@@ -30,6 +31,7 @@ export default function Home() {
         <Testimonials />
         <WorkShowcase />
         <IdeaCTA />
+        <LatestPosts locale="tr" />
         <Contact />
       </main>
       <Footer />

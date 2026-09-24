@@ -28,9 +28,7 @@ export function Services({ t = trSections.services }: { t?: SectionsDict["servic
           </div>
           <Reveal delay={0.16}>
             <p className="max-w-md text-[17px] leading-[1.8] text-gray-warm lg:pt-4">
-              Dijital ürünleri fikirden yayına kadar tasarlıyor, geliştiriyor
-              ve otomatikleştiriyoruz. Çoğu iş bu disiplinlerin birkaçına aynı
-              anda dokunur; hepsini tek çatı altında tutmamızın sebebi de bu.
+              {t.lead}
             </p>
           </Reveal>
         </div>

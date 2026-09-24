@@ -39,9 +39,7 @@ export function WorkShowcase({ t = trSections.work }: { t?: SectionsDict["work"]
           </div>
           <Reveal delay={0.16}>
             <p className="max-w-md text-[17px] leading-[1.8] text-gray-warm lg:pt-4">
-              Aşağıdaki çalışmalar, farklı sektörler için hazırladığımız örnek
-              ve konsept projeler. Bir işin bizde nasıl göründüğünü anlatmak
-              yerine, doğrudan gösteriyoruz.
+              {t.lead}
             </p>
           </Reveal>
         </div>

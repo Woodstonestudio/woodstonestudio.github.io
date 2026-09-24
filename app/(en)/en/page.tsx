@@ -1,3 +1,4 @@
+import { LatestPosts } from "@/components/latest-posts";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { JoVVo } from "@/components/jovvo-section";
@@ -31,6 +32,7 @@ export default function HomeEN() {
         <Testimonials t={enSections.testimonials} />
         <WorkShowcase t={enSections.work} />
         <IdeaCTA t={enSections.idea} />
+        <LatestPosts locale="en" />
         <Contact t={enSections.contact} />
       </main>
       <Footer t={enSections.footer} />

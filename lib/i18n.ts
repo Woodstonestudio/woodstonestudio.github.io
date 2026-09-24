@@ -10,7 +10,7 @@ export const trNav = {
   links: [
     { href: "/#jovvo", label: "Uygulamalar" },
     { href: "/#services", label: "Hizmetler" },
-    { href: "/#work", label: "Çalışmalar" },
+    { href: "/calismalar", label: "Çalışmalar" },
     { href: "/hakkimizda", label: "Hakkımızda" },
     { href: "/sss", label: "SSS" },
     { href: "/blog", label: "Blog" },
@@ -19,6 +19,11 @@ export const trNav = {
   switchHref: "/en",
   switchLabel: "EN",
   switchAria: "Switch to English",
+  quote: {
+    label: "Teklif Al",
+    subject: "Teklif talebi",
+    body: "Merhaba WoodstoneStudio,\n\nİhtiyacım olan hizmet (web sitesi / mobil uygulama / e-ticaret / SEO / diğer):\n\nKısaca proje:\n\nTahmini bütçe:\n\nİstenen teslim tarihi:\n\nAd Soyad / Firma:\n",
+  },
 };
 
 export const enNav = {
@@ -27,7 +32,7 @@ export const enNav = {
   links: [
     { href: "/en#jovvo", label: "Apps" },
     { href: "/en#services", label: "Services" },
-    { href: "/en#work", label: "Work" },
+    { href: "/en/work", label: "Work" },
     { href: "/en/about", label: "About" },
     { href: "/en/faq", label: "FAQ" },
     { href: "/en/blog", label: "Blog" },
@@ -36,6 +41,11 @@ export const enNav = {
   switchHref: "/",
   switchLabel: "TR",
   switchAria: "Türkçe'ye geç",
+  quote: {
+    label: "Get a Quote",
+    subject: "Quote request",
+    body: "Hello WoodstoneStudio,\n\nService I need (website / mobile app / e-commerce / SEO / other):\n\nProject in brief:\n\nEstimated budget:\n\nDesired delivery date:\n\nName / Company:\n",
+  },
 };
 
 export const trHero = {
@@ -85,11 +95,12 @@ export const trSections = {
     detailLabel: "Detaylı bilgi →",
     t1: "Beş disiplin,",
     t2: "tek stüdyo",
+    lead: "Dijital ürünleri fikirden yayına kadar tasarlıyor, geliştiriyor ve otomatikleştiriyoruz. Çoğu iş bu disiplinlerin birkaçına aynı anda dokunur; hepsini tek çatı altında tutmamızın sebebi de bu.",
     groups: [
-      { title: "Tasarım", href: "/web-tasarim", line: "Modern, kullanıcı odaklı web siteleri ve e-ticaret arayüzleri tasarlıyoruz.", items: ["Premium web siteleri", "Kurumsal web sitesi", "E-ticaret / online mağaza", "UI / UX tasarımı", "Marka kimliği"] },
+      { title: "Tasarım", href: "/web-tasarim", href2: "/e-ticaret", href2Label: "E-ticaret →", line: "Modern, kullanıcı odaklı web siteleri ve e-ticaret arayüzleri tasarlıyoruz.", items: ["Premium web siteleri", "Kurumsal web sitesi", "E-ticaret / online mağaza", "UI / UX tasarımı", "Marka kimliği"] },
       { title: "Geliştirme", href: "/saas-gelistirme", href2: "/mobil-uygulama", href2Label: "Mobil uygulama →", line: "Web, mobil ve özel yazılım çözümlerini fikirden yayına geliştiriyoruz.", items: ["SaaS geliştirme", "MVP geliştirme", "Web uygulamaları (React, Next.js)", "Mobil uygulamalar (Flutter, iOS, Android)", "Özel yazılım", "API entegrasyonları"] },
       { title: "Otomasyon", href: "/yapay-zeka", line: "Yapay zekâ destekli otomasyonlarla iş süreçlerini hızlandırıyoruz.", items: ["Yapay zekâ çözümleri", "AI ajan geliştirme", "AI otomasyonu"] },
-      { title: "Süreklilik", href: undefined as string | undefined, href2: undefined as string | undefined, href2Label: undefined as string | undefined, line: "Yayına aldıktan sonra da geliştirmeye ve destek vermeye devam ediyoruz.", items: ["Teknik danışmanlık", "SEO & performans", "Bakım & destek"] },
+      { title: "Süreklilik", href: "/seo" as string | undefined, href2: undefined as string | undefined, href2Label: undefined as string | undefined, line: "Yayına aldıktan sonra da geliştirmeye ve destek vermeye devam ediyoruz.", items: ["Teknik danışmanlık", "SEO & performans", "Bakım & destek"] },
       { title: "Sosyal Medya", href: "/sosyal-medya", line: "Sosyal medya hesaplarınızı yönetiyor, içerik üretiyor ve organik büyümeyi destekliyoruz.", items: ["Instagram & profil yönetimi", "İçerik üretimi (Reels, video)", "YouTube kanal yönetimi", "Sayfa düzenleme & optimizasyon", "Organik büyüme & görünürlük"] },
     ],
   },
@@ -99,6 +110,7 @@ export const trSections = {
     t1: "Hayal edin",
     t2: "Biz inşa edelim",
     kind: "Konsept çalışma",
+    lead: "Aşağıdaki çalışmalar, farklı sektörler için hazırladığımız örnek ve konsept projeler. Bir işin bizde nasıl göründüğünü anlatmak yerine, doğrudan gösteriyoruz.",
     works: [
       { title: "Köz", field: "Restoran · Landing", desc: "Modern bir ocakbaşı için tek sayfalık tanıtım sitesi — canlı menü, rezervasyon akışı ve ateş temalı bir arayüz." },
       { title: "Lumen", field: "Klinik · Landing", desc: "Bir estetik ve güzellik kliniği için ferah, güven veren bir tanıtım sitesi — hizmetler, süreç anlatımı ve randevu formu." },
@@ -164,7 +176,7 @@ export const trSections = {
     ariaLabel: "Alt menü",
     links: [
       { href: "/#services", label: "Hizmetler" },
-      { href: "/#work", label: "Çalışmalar" },
+      { href: "/calismalar", label: "Çalışmalar" },
       { href: "/hakkimizda", label: "Hakkımızda" },
       { href: "/sss", label: "SSS" },
       { href: "/blog", label: "Blog" },
@@ -195,11 +207,12 @@ export const enSections: typeof trSections = {
     detailLabel: "Learn more →",
     t1: "Five disciplines,",
     t2: "one studio",
+    lead: "We design, build and automate digital products from idea to launch. Most projects touch several of these disciplines at once — which is exactly why we keep them all under one roof.",
     groups: [
-      { title: "Design", href: "/en/web-design", line: "We design modern, user-centred websites and e-commerce storefronts.", items: ["Premium websites", "Corporate websites", "E-commerce / online store", "UI / UX design", "Brand identity"] },
+      { title: "Design", href: "/en/web-design", href2: "/en/ecommerce", href2Label: "E-commerce →", line: "We design modern, user-centred websites and e-commerce storefronts.", items: ["Premium websites", "Corporate websites", "E-commerce / online store", "UI / UX design", "Brand identity"] },
       { title: "Development", href: "/en/saas-development", href2: "/en/mobile-apps", href2Label: "Mobile apps →", line: "We build web, mobile and custom software from idea to launch.", items: ["SaaS development", "MVP development", "Web applications (React, Next.js)", "Mobile apps (Flutter, iOS, Android)", "Custom software", "API integrations"] },
       { title: "Automation", href: "/en/ai-solutions", line: "We accelerate business processes with AI-powered automation.", items: ["AI solutions", "AI agent development", "AI automation"] },
-      { title: "Continuity", href: undefined, href2: undefined, href2Label: undefined, line: "We keep improving and supporting your product after launch.", items: ["Technical consulting", "SEO & performance", "Maintenance & support"] },
+      { title: "Continuity", href: "/en/seo", href2: undefined, href2Label: undefined, line: "We keep improving and supporting your product after launch.", items: ["Technical consulting", "SEO & performance", "Maintenance & support"] },
       { title: "Social Media", href: "/en/social-media", line: "We manage your social media accounts, produce content and support organic growth.", items: ["Instagram & profile management", "Content production (Reels, video)", "YouTube channel management", "Page setup & optimisation", "Organic growth & visibility"] },
     ],
   },
@@ -209,6 +222,7 @@ export const enSections: typeof trSections = {
     t1: "Imagine it",
     t2: "We will build it",
     kind: "Concept work",
+    lead: "The projects below are sample and concept work we built for different industries. Rather than describe how a project looks with us, we show it.",
     works: [
       { title: "Köz", field: "Restaurant · Landing", desc: "A one-page site for a modern grill house — live menu, reservation flow and a fire-themed interface." },
       { title: "Lumen", field: "Clinic · Landing", desc: "A calm, trust-building site for an aesthetic clinic — services, process walkthrough and an appointment form." },
@@ -274,7 +288,7 @@ export const enSections: typeof trSections = {
     ariaLabel: "Footer menu",
     links: [
       { href: "/en#services", label: "Services" },
-      { href: "/en#work", label: "Work" },
+      { href: "/en/work", label: "Work" },
       { href: "/en/about", label: "About" },
       { href: "/en/faq", label: "FAQ" },
       { href: "/en/blog", label: "Blog" },

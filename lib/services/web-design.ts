@@ -60,6 +60,101 @@ export const webDesignTR: ServiceContent = {
   backLabel: "Ana sayfa",
   serviceType: "Web tasarım ve kurumsal web sitesi geliştirme",
   areaServed: "İzmir, Türkiye",
+  guideEyebrow: "Web tasarım rehberi",
+  guide: [
+    {
+      h: "Kurumsal web sitesi neden hâlâ en önemli dijital varlığınız?",
+      p: [
+        "Sosyal medya hesapları, pazar yerleri ve harita kayıtları önemlidir; ama hepsi başkasının platformudur. Kuralları değişebilir, erişiminiz daralabilir, hesabınız bir gün kapanabilir. Kurumsal web siteniz ise tamamen size aittir. Müşteriniz sizi Google'da aradığında, bir teklifi değerlendirirken ya da sizi bir rakiple karşılaştırırken baktığı ilk yer çoğunlukla sitenizdir.",
+        "İyi bir kurumsal site üç işi aynı anda yapar: ne yaptığınızı birkaç saniyede anlatır, güven verir ve ziyaretçiyi bir sonraki adıma (arama, mesaj, teklif talebi) yönlendirir. Bu üçünden biri eksikse site güzel görünse bile iş getirmez.",
+      ],
+    },
+    {
+      h: "Hazır şablon mu, özel tasarım mı?",
+      p: [
+        "Hazır temalar hızlı ve ucuzdur; fakat binlerce site aynı iskeleti kullanır, gereksiz kodlarla yavaşlar ve markanıza tam oturmaz. Özel tasarımda ise her sayfa sizin içeriğinize, hedef kitlenize ve satış sürecinize göre kurgulanır.",
+        "WoodstoneStudio'da hazır tema kullanmıyoruz. Arayüzü sıfırdan tasarlıyor, Next.js ve React ile kodluyoruz. Sonuç: yalnızca ihtiyacınız olan kodu içeren, hızlı açılan ve rakiplerinizden ayrışan bir site.",
+      ],
+    },
+    {
+      h: "İyi bir web sitesinde olması gerekenler",
+      p: ["Her proje farklıdır; ancak başarılı sitelerin neredeyse hepsinde şu temel unsurlar bulunur:"],
+      ul: [
+        "Net bir ana mesaj: Ziyaretçi ilk ekranda ne yaptığınızı ve kime hizmet verdiğinizi anlamalı.",
+        "Hizmet sayfaları: Her hizmet için ayrı, detaylı bir sayfa hem müşteriye bilgi verir hem de Google'da o hizmetle ilgili aramalarda görünmenizi sağlar.",
+        "Güven unsurları: Referanslar, müşteri yorumları, gerçek proje örnekleri ve şeffaf iletişim bilgileri.",
+        "Kolay iletişim: WhatsApp, e-posta ve teklif butonu her sayfadan tek dokunuşla erişilebilir olmalı.",
+        "Mobil uyum: Ziyaretçilerin büyük çoğunluğu telefondan gelir; site önce mobil için tasarlanmalı.",
+        "Hız: Birkaç saniyede açılmayan bir site, ziyaretçisinin önemli bir kısmını ilk ekranda kaybeder.",
+      ],
+    },
+    {
+      h: "SEO uyumlu web tasarım: Google'da görünmek baştan planlanır",
+      p: [
+        "Arama motoru optimizasyonu (SEO), site yayına girdikten sonra eklenen bir süs değildir; altyapının parçasıdır. Doğru başlık hiyerarşisi, anlamlı sayfa başlıkları ve açıklamalar, temiz URL yapısı, site haritası, yapılandırılmış veri (schema) ve hızlı yükleme; hepsi tasarım ve geliştirme sırasında kurulur.",
+        "Teslim ettiğimiz her sitede teknik SEO standarttır: sayfa başlıkları ve açıklamaları, Open Graph görselleri, otomatik site haritası, robots.txt, yapılandırılmış veri, Google Search Console ve Bing Webmaster Tools kurulumu. Aynı altyapıyı kendi sitemizde de kullanıyoruz.",
+      ],
+    },
+    {
+      h: "Hız ve performans neden bu kadar önemli?",
+      p: [
+        "Google, sayfa hızını ve kullanıcı deneyimini (Core Web Vitals) sıralama sinyali olarak kullanır. Daha da önemlisi, yavaş bir site müşteri kaybettirir: ziyaretçi beklemez, geri dönüp bir sonraki sonuca tıklar.",
+        "Sitelerimizi statik olarak üretilen sayfalar, optimize edilmiş görseller ve minimum JavaScript ile kuruyoruz. Bu yaklaşım hem hızlı açılır hem de sunucu maliyetini düşük tutar; birçok sitede barındırma maliyeti neredeyse sıfıra iner.",
+      ],
+    },
+    {
+      h: "Güvenlik ve bakım",
+      p: [
+        "Eklenti tabanlı sistemlerde en sık görülen sorun, güncellenmeyen eklentilerden kaynaklanan güvenlik açıklarıdır. Statik altyapıda saldırı yüzeyi çok daha küçüktür: veritabanı ya da yönetim paneli açığı olmadığı için risk azalır.",
+        "Yayından sonra da yanınızdayız. İçerik güncellemeleri, yeni sayfalar, küçük tasarım değişiklikleri ve teknik kontroller için bakım desteği sunuyoruz.",
+      ],
+    },
+    {
+      h: "Çok dilli web sitesi",
+      p: [
+        "Yurt dışına satış yapıyor ya da yabancı müşterilere hizmet veriyorsanız, sitenizin İngilizce (ve gerekirse başka dillerde) sürümü ciddi bir fark yaratır. Doğru kurulmuş çok dilli bir sitede her dilin kendi adresi olur (örneğin /en), arama motorlarına hreflang etiketleriyle dil ilişkisi bildirilir ve her dil ayrı ayrı Google'da sıralanabilir.",
+        "Kendi sitemiz de Türkçe ve İngilizce olarak bu yapıyla çalışıyor. Çevirileri makine çevirisi olarak bırakmıyor, her dili o dilin okuruna göre düzenliyoruz.",
+      ],
+    },
+    {
+      h: "Kullandığımız teknolojiler",
+      p: ["Modern, hızlı ve uzun ömürlü bir altyapı için şu teknolojilerle çalışıyoruz:"],
+      ul: [
+        "Next.js ve React: Hızlı, SEO dostu ve ölçeklenebilir web arayüzleri.",
+        "Tailwind CSS: Tutarlı, hafif ve kolay güncellenen tasarım sistemi.",
+        "TypeScript: Daha az hata, daha kolay bakım.",
+        "Vercel, GitHub Pages ve Cloudflare: Hızlı ve güvenilir barındırma.",
+        "Google Analytics 4, Search Console ve Bing Webmaster Tools: Ölçüm ve arama motoru takibi.",
+      ],
+    },
+    {
+      h: "Web sitesi yaptırırken nelere dikkat etmelisiniz?",
+      p: ["Teklif alırken aşağıdaki soruların cevabını mutlaka netleştirin:"],
+      ul: [
+        "Tasarım özel mi, hazır tema mı?",
+        "Alan adı, barındırma ve e-posta kimin adına kayıtlı olacak? (Her zaman sizin adınıza olmalı.)",
+        "Teknik SEO ve hız optimizasyonu fiyata dahil mi?",
+        "Metin ve görselleri kim hazırlayacak?",
+        "Yayından sonra değişiklik ve bakım nasıl ücretlendiriliyor?",
+        "Kaynak kodu ve tüm erişimler size teslim edilecek mi?",
+      ],
+    },
+    {
+      h: "Neden WoodstoneStudio?",
+      p: [
+        "Bağımsız bir ürün stüdyosuyuz. Projenizle doğrudan, işi yapan kişi ilgilenir; aracı katmanlar ve kaybolan mesajlar yoktur. Web sitelerinin yanında mobil uygulamalar ve yapay zekâ çözümleri de geliştirdiğimiz için sitenizi yalnızca bir vitrin olarak değil, büyüyebilecek bir dijital ürün olarak kurgularız.",
+        "Ücretsiz ön görüşmede ihtiyacınızı dinliyor, kapsamı ve maliyeti yazılı olarak netleştiriyoruz. Gizli kalem yok, teslimde tüm erişimler sizde.",
+      ],
+    },
+  ],
+  relatedTitle: "İlgili hizmetler ve yazılar",
+  related: [
+    { label: "E-ticaret sitesi", href: "/e-ticaret" },
+    { label: "SEO hizmeti", href: "/seo" },
+    { label: "Mobil uygulama", href: "/mobil-uygulama" },
+    { label: "Web sitesi ne kadar tutar?", href: "/blog/web-sitesi-maliyeti" },
+    { label: "İzmir web tasarım fiyatları", href: "/blog/izmir-web-tasarim-fiyatlari" },
+  ],
 };
 
 export const webDesignEN: ServiceContent = {
@@ -117,5 +212,99 @@ export const webDesignEN: ServiceContent = {
   backLabel: "Home",
   serviceType: "Web design and corporate website development",
   areaServed: "Worldwide",
+  guideEyebrow: "Web design guide",
+  guide: [
+    {
+      h: "Why a website is still your most important digital asset",
+      p: [
+        "Social media profiles, marketplaces and map listings matter, but they all belong to someone else. The rules can change, your reach can shrink and an account can be closed overnight. Your website is the one channel you fully own. When a prospect searches for you, weighs a quote or compares you with a competitor, your site is usually the first place they look.",
+        "A good company website does three things at once: it explains what you do within seconds, it builds trust, and it moves the visitor to the next step — a message, a call or a quote request. If one of these is missing, the site may look nice but it won't bring in business.",
+      ],
+    },
+    {
+      h: "Template or custom design?",
+      p: [
+        "Templates are quick and cheap, but thousands of sites share the same skeleton, they slow down under unused code and they never quite fit your brand. With a custom design, every page is built around your content, your audience and your sales process.",
+        "At WoodstoneStudio we don't use off-the-shelf themes. We design the interface from scratch and build it with Next.js and React. The result is a site that contains only the code you need, loads fast and stands apart from your competitors.",
+      ],
+    },
+    {
+      h: "What a good website needs",
+      p: ["Every project is different, but almost every successful site has these foundations:"],
+      ul: [
+        "A clear headline: visitors should understand what you do and who you serve on the first screen.",
+        "Service pages: a dedicated, detailed page per service informs customers and helps you rank for searches about that service.",
+        "Trust signals: references, client reviews, real project examples and transparent contact details.",
+        "Easy contact: WhatsApp, email and a quote button reachable with one tap from every page.",
+        "Mobile-first layout: most visitors arrive on a phone, so the site should be designed for mobile first.",
+        "Speed: a site that doesn't load within a few seconds loses a large share of its visitors on the first screen.",
+      ],
+    },
+    {
+      h: "SEO-ready web design: visibility on Google is planned from day one",
+      p: [
+        "Search engine optimisation is not a coat of paint added after launch; it is part of the foundation. A correct heading hierarchy, meaningful page titles and descriptions, clean URLs, a sitemap, structured data and fast loading are all set up during design and development.",
+        "Technical SEO is standard on every site we deliver: titles and descriptions, Open Graph images, an automatic sitemap, robots.txt, structured data, plus Google Search Console and Bing Webmaster Tools setup. We use the same foundation on our own site.",
+      ],
+    },
+    {
+      h: "Why speed and performance matter so much",
+      p: [
+        "Google uses page speed and user experience (Core Web Vitals) as ranking signals. More importantly, a slow site loses customers: visitors don't wait, they go back and click the next result.",
+        "We build sites with statically generated pages, optimised images and minimal JavaScript. That approach loads fast and keeps hosting costs low — on many sites hosting becomes close to free.",
+      ],
+    },
+    {
+      h: "Security and maintenance",
+      p: [
+        "The most common problem with plugin-based systems is security holes from plugins that never get updated. A static foundation has a much smaller attack surface: with no exposed database or admin panel, the risk drops considerably.",
+        "We stay with you after launch, with maintenance for content updates, new pages, small design changes and technical checks.",
+      ],
+    },
+    {
+      h: "Multilingual websites",
+      p: [
+        "If you sell abroad or serve international clients, an English version of your site (and other languages where needed) makes a real difference. In a properly built multilingual site each language has its own URL (for example /en), search engines are told about the language relationship through hreflang tags, and each language can rank on Google on its own.",
+        "Our own site runs on exactly this structure in Turkish and English. We don't leave translations as machine output; each language is written for its own reader.",
+      ],
+    },
+    {
+      h: "The technology we use",
+      p: ["For a modern, fast and long-lasting foundation we work with:"],
+      ul: [
+        "Next.js and React: fast, SEO-friendly and scalable web interfaces.",
+        "Tailwind CSS: a consistent, lightweight design system that is easy to update.",
+        "TypeScript: fewer bugs and easier maintenance.",
+        "Vercel, GitHub Pages and Cloudflare: fast and reliable hosting.",
+        "Google Analytics 4, Search Console and Bing Webmaster Tools: measurement and search tracking.",
+      ],
+    },
+    {
+      h: "What to check before hiring a web designer",
+      p: ["When you collect quotes, make sure you get clear answers to these questions:"],
+      ul: [
+        "Is the design custom or a ready-made theme?",
+        "Whose name will the domain, hosting and email be registered under? (It should always be yours.)",
+        "Are technical SEO and speed optimisation included in the price?",
+        "Who will write the copy and provide the images?",
+        "How are changes and maintenance priced after launch?",
+        "Will the source code and all access be handed over to you?",
+      ],
+    },
+    {
+      h: "Why WoodstoneStudio?",
+      p: [
+        "We are an independent product studio. The person who builds your project is the person you talk to — no account-manager layers, no lost messages. Because we also build mobile apps and AI solutions, we plan your site not just as a shop window but as a digital product that can grow.",
+        "In a free consultation we listen to what you need and put the scope and cost in writing. No hidden items, and all access is yours at handover.",
+      ],
+    },
+  ],
+  relatedTitle: "Related services and articles",
+  related: [
+    { label: "E-commerce websites", href: "/en/ecommerce" },
+    { label: "SEO services", href: "/en/seo" },
+    { label: "Mobile apps", href: "/en/mobile-apps" },
+    { label: "How much does a website cost?", href: "/en/blog/web-sitesi-maliyeti" },
+  ],
 };
 

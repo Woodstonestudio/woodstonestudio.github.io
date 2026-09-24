@@ -1,6 +1,4 @@
 import type { Locale } from "@/components/service-page";
-// Growth panelinin otomatik yayınladığı yazılar (GitHub API ile bu JSON'a eklenir).
-import generatedPosts from "./blog-posts.json";
 
 export type BlogPost = {
   slug: string; // dil-bağımsız kısa kimlik (URL'de dile göre önek eklenir)
@@ -48,8 +46,7 @@ export const BLOG_LABELS: Record<Locale, { eyebrow: string; title: [string, stri
 // YAZILAR
 // ─────────────────────────────────────────────────────────────
 
-// Elle yazılmış yazılar
-const handwrittenPosts: BlogPost[] = [
+export const posts: BlogPost[] = [
   {
     slug: "web-sitesi-tasarimi",
     relatedService: "web",
@@ -332,7 +329,7 @@ const handwrittenPosts: BlogPost[] = [
           "Bakım ve güncellemeler: iOS ve Android her yıl yeni sürüm çıkarır; mağazalar da yeni kurallar getirir. Uygulamanın güncel kalması için yıllık olarak ilk geliştirme maliyetinin kabaca %15–20'si kadar bir bakım bütçesi ayırmak yaygın bir yaklaşımdır.",
         ] },
         { type: "h2", text: "Kendi uygulamalarımızdan öğrendiklerimiz" },
-        { type: "p", text: "Falcı Hatun, NEXORA ve JoVVo gibi kendi uygulamalarımızı mağazalara çıkarırken en çok zamanı kod yazmak değil, çevresindeki işler aldı: mağaza incelemeleri, gizlilik politikaları, ekran görüntüleri, reklam ve ödeme entegrasyonları, farklı cihazlarda test. Bir teklifte bu kalemlerin olup olmadığını mutlaka sorun; \"uygulama bitti\" ile \"uygulama mağazada\" arasında ciddi bir fark vardır." },
+        { type: "p", text: "JoVVo gibi kendi uygulamalarımızı mağazalara çıkarırken en çok zamanı kod yazmak değil, çevresindeki işler aldı: mağaza incelemeleri, gizlilik politikaları, ekran görüntüleri, reklam ve ödeme entegrasyonları, farklı cihazlarda test. Bir teklifte bu kalemlerin olup olmadığını mutlaka sorun; \"uygulama bitti\" ile \"uygulama mağazada\" arasında ciddi bir fark vardır." },
         { type: "h2", text: "Bütçeyi küçültmenin gerçekçi yolları" },
         { type: "ul", items: [
           "MVP ile başlayın: Tüm fikri değil, işe yarayan en küçük sürümü yapın. Gerçek kullanıcı geri bildirimiyle büyütmek hem daha ucuz hem daha doğrudur.",
@@ -370,7 +367,7 @@ const handwrittenPosts: BlogPost[] = [
           "Maintenance and updates: iOS and Android release new versions every year, and the stores keep adding new rules. A common approach is to set aside roughly 15–20% of the initial build cost per year for maintenance.",
         ] },
         { type: "h2", text: "What we learned from our own apps" },
-        { type: "p", text: "When we shipped our own apps, such as Falcı Hatun, NEXORA and JoVVo, most of the time didn't go into writing code but into everything around it: store reviews, privacy policies, screenshots, ad and payment integrations, testing on different devices. Always ask whether a quote covers these items. There is a big difference between \"the app is done\" and \"the app is in the store\"." },
+        { type: "p", text: "When we shipped our own apps, such as JoVVo, most of the time didn't go into writing code but into everything around it: store reviews, privacy policies, screenshots, ad and payment integrations, testing on different devices. Always ask whether a quote covers these items. There is a big difference between \"the app is done\" and \"the app is in the store\"." },
         { type: "h2", text: "Realistic ways to keep the budget small" },
         { type: "ul", items: [
           "Start with an MVP: Build the smallest version that works, not the whole idea. Growing it with real user feedback is both cheaper and smarter.",
@@ -748,14 +745,6 @@ const handwrittenPosts: BlogPost[] = [
   },
 
 ];
-
-// Tüm yazılar: Growth'un yayınladıkları + elle yazılanlar (aynı slug varsa Growth'unki geçerli), yeni → eski
-export const posts: BlogPost[] = [
-  ...(generatedPosts as unknown as BlogPost[]),
-  ...handwrittenPosts.filter(
-    (h) => !(generatedPosts as unknown as BlogPost[]).some((g) => g.slug === h.slug),
-  ),
-].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 
 export function findPost(slug: string) {
   return posts.find((p) => p.slug === slug);

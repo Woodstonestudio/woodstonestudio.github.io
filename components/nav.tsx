@@ -19,6 +19,14 @@ const LOCALES: { code: string; label: string; href: string }[] = [
 
 const HOME_HREF: Record<string, string> = { tr: "/", en: "/en" };
 
+/** "Teklif Al" — e-posta uygulamasını hazır konu ve şablonla açar. */
+function quoteHref(q: NavDict["quote"]) {
+  return `mailto:info@woodstonestudio.com?subject=${encodeURIComponent(q.subject)}&body=${encodeURIComponent(q.body)}`;
+}
+
+const QUOTE_CLASS =
+  "rounded-full bg-gradient-to-b from-[#26231E] to-[#3A3630] px-5 py-2 text-sm font-medium text-[#F3F0EA] shadow-[0_1px_2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]";
+
 /** Bağımsız dil seçici — her örneğin kendi state'i ve ref'i olur. */
 function LangSwitcher({ locale, aria }: { locale: string; aria: string }) {
   const [open, setOpen] = useState(false);
@@ -137,7 +145,7 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-full px-3.5 py-2 text-sm text-gray-warm transition-colors duration-300 hover:text-bone sm:px-4"
+                className="rounded-full px-2.5 py-2 text-sm text-gray-warm transition-colors duration-300 hover:text-bone xl:px-4"
               >
                 {l.label}
               </a>
@@ -145,6 +153,11 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
           ))}
           <li className="ml-2">
             <LangSwitcher locale={t.locale} aria={t.switchAria} />
+          </li>
+          <li className="ml-3">
+            <a href={quoteHref(t.quote)} className={QUOTE_CLASS}>
+              {t.quote.label}
+            </a>
           </li>
         </ul>
 
@@ -188,6 +201,15 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
                 </a>
               </li>
             ))}
+            <li className="pb-3 pt-4">
+              <a
+                href={quoteHref(t.quote)}
+                onClick={() => setMenuOpen(false)}
+                className={`${QUOTE_CLASS} block w-full py-3 text-center`}
+              >
+                {t.quote.label}
+              </a>
+            </li>
           </ul>
         </div>
       )}
