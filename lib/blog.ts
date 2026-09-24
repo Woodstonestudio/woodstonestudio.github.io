@@ -1,4 +1,6 @@
 import type { Locale } from "@/components/service-page";
+// Growth panelinin otomatik yayınladığı yazılar (GitHub API ile bu JSON'a eklenir).
+import generatedPosts from "./blog-posts.json";
 
 export type BlogPost = {
   slug: string; // dil-bağımsız kısa kimlik (URL'de dile göre önek eklenir)
@@ -46,7 +48,8 @@ export const BLOG_LABELS: Record<Locale, { eyebrow: string; title: [string, stri
 // YAZILAR
 // ─────────────────────────────────────────────────────────────
 
-export const posts: BlogPost[] = [
+// Elle yazılmış yazılar
+const handwrittenPosts: BlogPost[] = [
   {
     slug: "web-sitesi-tasarimi",
     relatedService: "web",
@@ -745,6 +748,14 @@ export const posts: BlogPost[] = [
   },
 
 ];
+
+// Tüm yazılar: Growth'un yayınladıkları + elle yazılanlar (aynı slug varsa Growth'unki geçerli), yeni → eski
+export const posts: BlogPost[] = [
+  ...(generatedPosts as unknown as BlogPost[]),
+  ...handwrittenPosts.filter(
+    (h) => !(generatedPosts as unknown as BlogPost[]).some((g) => g.slug === h.slug),
+  ),
+].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 
 export function findPost(slug: string) {
   return posts.find((p) => p.slug === slug);
