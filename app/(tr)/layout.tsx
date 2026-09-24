@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "yapay zeka çözümleri",
     "yapay zeka otomasyonu",
     "SaaS geliştirme",
-    "İzmir yazılım",
+    "yazılım stüdyosu",
   ],
   openGraph: {
     title: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",

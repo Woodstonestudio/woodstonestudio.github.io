@@ -33,18 +33,18 @@ export const aboutTR: AboutContent = {
   meta: {
     title: "Hakkımızda",
     description:
-      "WoodstoneStudio, İzmir merkezli bağımsız bir dijital teknoloji stüdyosudur. Web, mobil, yapay zekâ ve özel yazılım geliştiriyor; kendi ürünlerimizi de yayınlıyoruz. Kim olduğumuzu ve nasıl çalıştığımızı okuyun.",
+      "WoodstoneStudio, Türkiye, Avrupa ve dünyanın her yerinden müşterilerle uzaktan çalışan bağımsız bir dijital teknoloji stüdyosudur. Web, mobil, yapay zekâ ve özel yazılım geliştiriyor; kendi ürünlerimizi de yayınlıyoruz. Kim olduğumuzu ve nasıl çalıştığımızı okuyun.",
     keywords: [
       "WoodstoneStudio hakkında",
-      "İzmir yazılım stüdyosu",
+      "bağımsız yazılım stüdyosu",
       "dijital teknoloji stüdyosu",
       "bağımsız yazılım ekibi",
-      "İzmir web ve mobil geliştirme",
+      "web ve mobil uygulama geliştirme",
     ],
   },
   eyebrow: "Hakkımızda",
   h1: ["Fikirlerinizi", "ürünlere dönüştürüyoruz."],
-  lead: "WoodstoneStudio, İzmir merkezli bağımsız bir dijital teknoloji stüdyosudur. Web siteleri, mobil uygulamalar, yapay zekâ çözümleri ve özel yazılım geliştiriyoruz — hem müşterilerimiz için hem de kendimiz için.",
+  lead: "WoodstoneStudio, uzaktan çalışan bağımsız bir dijital teknoloji stüdyosudur. Web siteleri, mobil uygulamalar, yapay zekâ çözümleri ve özel yazılım geliştiriyoruz — hem müşterilerimiz için hem de kendimiz için.",
   storyTitle: ["Neye", "inanıyoruz?"],
   story: [
     "Woodstone bir ajanstan çok bir stüdyo gibi çalışır. Tasarım, yazılım ve otomasyonu ayrı departmanlar olarak değil, tek bir zanaat olarak ele alıyoruz; çünkü gerçek problemler bu ayrımları tanımaz.",
@@ -79,7 +79,7 @@ export const aboutEN: AboutContent = {
   meta: {
     title: "About",
     description:
-      "WoodstoneStudio is an independent digital technology studio based in İzmir, Turkey. We build web, mobile, AI and custom software, and publish our own products too. Read who we are and how we work.",
+      "WoodstoneStudio is an independent digital technology studio working remotely with clients in Turkey, Europe and worldwide. We build web, mobile, AI and custom software, and publish our own products too. Read who we are and how we work.",
     keywords: [
       "about WoodstoneStudio",
       "digital technology studio",
@@ -90,7 +90,7 @@ export const aboutEN: AboutContent = {
   },
   eyebrow: "About",
   h1: ["We turn your ideas", "into products."],
-  lead: "WoodstoneStudio is an independent digital technology studio based in İzmir, Turkey. We build websites, mobile apps, AI solutions and custom software — both for our clients and for ourselves.",
+  lead: "WoodstoneStudio is an independent digital technology remote-first studio. We build websites, mobile apps, AI solutions and custom software — both for our clients and for ourselves.",
   storyTitle: ["What we", "believe."],
   story: [
     "Woodstone works more like a studio than an agency. We treat design, software and automation as one craft rather than separate departments, because real problems don't respect those boundaries.",

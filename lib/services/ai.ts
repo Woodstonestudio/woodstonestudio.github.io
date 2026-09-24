@@ -12,7 +12,7 @@ export const aiTR: ServiceContent = {
   meta: {
     title: "Yapay Zekâ Çözümleri ve AI Otomasyon — İşletmeler İçin",
     description:
-      "İşletmeler için yapay zekâ çözümleri: AI ajanları, sohbet asistanları, iş süreçleri otomasyonu ve mevcut yazılımlara AI entegrasyonu. İzmir merkezli, Türkiye geneli ve yurt dışı.",
+      "İşletmeler için yapay zekâ çözümleri: AI ajanları, sohbet asistanları, iş süreçleri otomasyonu ve mevcut yazılımlara AI entegrasyonu. Türkiye geneli ve yurt dışı, uzaktan.",
     keywords: [
       "yapay zeka çözümleri",
       "AI otomasyon",
@@ -20,7 +20,7 @@ export const aiTR: ServiceContent = {
       "yapay zeka entegrasyonu",
       "chatbot geliştirme",
       "iş süreçleri otomasyonu",
-      "yapay zeka yazılım İzmir",
+      "yapay zeka yazılım firması",
     ],
   },
   eyebrow: "Yapay Zekâ",
@@ -69,7 +69,7 @@ export const aiEN: ServiceContent = {
   meta: {
     title: "AI Solutions & Automation for Businesses",
     description:
-      "AI solutions for businesses: AI agents, chat assistants, business process automation and AI integration into existing software. Studio based in İzmir, Turkey, working worldwide.",
+      "AI solutions for businesses: AI agents, chat assistants, business process automation and AI integration into existing software. Remote-first studio working worldwide.",
     keywords: [
       "AI solutions for business",
       "AI automation",

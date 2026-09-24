@@ -10,12 +10,12 @@ export const socialTR: ServiceContent = {
   slug: alternates.tr,
   alternates,
   meta: {
-    title: "İzmir Sosyal Medya Yönetimi — Instagram ve YouTube",
+    title: "Sosyal Medya Yönetimi — Instagram ve YouTube",
     description:
-      "İzmir merkezli sosyal medya yönetimi: Instagram ve YouTube hesap yönetimi, içerik üretimi (Reels, video), profil düzenleme ve organik büyüme. Kalıcı görünürlük için düzenli, planlı içerik.",
+      "Sosyal medya yönetimi: Instagram ve YouTube hesap yönetimi, içerik üretimi (Reels, video), profil düzenleme ve organik büyüme. Kalıcı görünürlük için düzenli, planlı içerik.",
     keywords: [
-      "İzmir sosyal medya yönetimi",
-      "sosyal medya ajansı İzmir",
+      "sosyal medya yönetimi hizmeti",
+      "sosyal medya ajansı",
       "Instagram hesap yönetimi",
       "YouTube kanal yönetimi",
       "içerik üretimi Reels",
@@ -23,9 +23,9 @@ export const socialTR: ServiceContent = {
       "sosyal medya danışmanlığı",
     ],
   },
-  eyebrow: "Sosyal Medya · İzmir",
+  eyebrow: "Sosyal Medya · Instagram & YouTube",
   h1: ["Sosyal medya yönetimi:", "düzenli içerik, kalıcı görünürlük."],
-  lead: "WoodstoneStudio, İzmir merkezli bir dijital teknoloji stüdyosudur. Instagram ve YouTube hesaplarınızı yönetiyor, markanıza uygun içerik üretiyor ve organik büyümeyi destekliyoruz. Odağımız kısa vadeli rakamlar değil; markanızı doğru kitleye ulaştıran, kalıcı bir sosyal medya varlığı.",
+  lead: "WoodstoneStudio, uzaktan çalışan bir dijital teknoloji stüdyosudur. Instagram ve YouTube hesaplarınızı yönetiyor, markanıza uygun içerik üretiyor ve organik büyümeyi destekliyoruz. Odağımız kısa vadeli rakamlar değil; markanızı doğru kitleye ulaştıran, kalıcı bir sosyal medya varlığı.",
   ctaPrimary: "Ücretsiz Profil Değerlendirmesi",
   ctaSecondary: "Çalışmaları Görün",
   scopeTitle: ["Neler", "yapıyoruz?"],
@@ -59,7 +59,7 @@ export const socialTR: ServiceContent = {
   closingCta: "Bize Ulaşın",
   backLabel: "Ana sayfa",
   serviceType: "Sosyal medya yönetimi ve içerik üretimi",
-  areaServed: "İzmir, Türkiye",
+  areaServed: "Türkiye, Avrupa ve dünya geneli",
 };
 
 export const socialEN: ServiceContent = {
@@ -69,7 +69,7 @@ export const socialEN: ServiceContent = {
   meta: {
     title: "Social Media Management — Instagram & YouTube",
     description:
-      "Social media management from İzmir, Turkey: Instagram and YouTube account management, content production (Reels, video), profile optimisation and organic growth. Consistent content for lasting visibility.",
+      "Social media management: Instagram and YouTube account management, content production (Reels, video), profile optimisation and organic growth. Consistent content for lasting visibility.",
     keywords: [
       "social media management",
       "Instagram account management",
@@ -82,7 +82,7 @@ export const socialEN: ServiceContent = {
   },
   eyebrow: "Social Media",
   h1: ["Social media management:", "consistent content, lasting visibility."],
-  lead: "WoodstoneStudio is a digital technology studio based in İzmir, Turkey. We manage your Instagram and YouTube accounts, produce content in your brand's voice and support organic growth. Our focus is not short-term numbers but a lasting social presence that reaches the right audience.",
+  lead: "WoodstoneStudio is a remote-first digital technology studio. We manage your Instagram and YouTube accounts, produce content in your brand's voice and support organic growth. Our focus is not short-term numbers but a lasting social presence that reaches the right audience.",
   ctaPrimary: "Free Profile Review",
   ctaSecondary: "See Our Work",
   scopeTitle: ["What we", "do."],

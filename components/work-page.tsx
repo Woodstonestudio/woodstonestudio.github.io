@@ -200,6 +200,6 @@ export function workMetadata(locale: Locale) {
       canonical: WORK_PATH[locale],
       languages: { tr: `${SITE}${WORK_PATH.tr}`, en: `${SITE}${WORK_PATH.en}` },
     },
-    openGraph: { title: t.meta.title, description: t.meta.description, url: `${SITE}${WORK_PATH[locale]}`, type: "website" },
+    openGraph: { title: t.meta.title, description: t.meta.description, url: `${SITE}${WORK_PATH[locale]}`, type: "website", images: ["/og-cover.jpg"] },
   };
 }

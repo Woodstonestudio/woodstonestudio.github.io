@@ -323,7 +323,7 @@ export function serviceMetadata(c: ServiceContent) {
       title: c.meta.title,
       description: c.meta.description,
       url: `${SITE}${c.slug}`,
-      type: "website",
+      type: "website", images: ["/og-cover.jpg"],
     },
   };
 }

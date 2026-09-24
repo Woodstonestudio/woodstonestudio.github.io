@@ -10,12 +10,12 @@ export const mobileTR: ServiceContent = {
   slug: alternates.tr,
   alternates,
   meta: {
-    title: "İzmir Mobil Uygulama Geliştirme — iOS ve Android",
+    title: "Mobil Uygulama Geliştirme — iOS ve Android",
     description:
-      "İzmir merkezli mobil uygulama geliştirme stüdyosu. Flutter ile tek kod tabanından iOS ve Android uygulamalar; App Store ve Google Play yayını dahil. Ücretsiz ön görüşme.",
+      "Mobil uygulama geliştirme stüdyosu. Flutter ile tek kod tabanından iOS ve Android uygulamalar; App Store ve Google Play yayını dahil. Ücretsiz ön görüşme.",
     keywords: [
-      "İzmir mobil uygulama",
-      "mobil uygulama geliştirme İzmir",
+      "mobil uygulama yaptırmak",
+      "mobil uygulama geliştirme firması",
       "mobil uygulama yaptırmak",
       "Flutter uygulama geliştirme",
       "iOS Android uygulama",
@@ -23,9 +23,9 @@ export const mobileTR: ServiceContent = {
       "uygulama geliştirme firması",
     ],
   },
-  eyebrow: "Mobil Uygulama · İzmir",
+  eyebrow: "Mobil Uygulama · iOS & Android",
   h1: ["Mobil uygulama:", "fikirden mağazaya."],
-  lead: "WoodstoneStudio, İzmir merkezli bir dijital teknoloji stüdyosudur. Flutter ile tek kod tabanından iOS ve Android uygulamalar geliştiriyor; tasarımdan App Store ve Google Play yayınına kadar tüm süreci üstleniyoruz. Kendi uygulamalarımız mağazalarda yayında — süreci yaşayarak biliyoruz.",
+  lead: "WoodstoneStudio, Türkiye ve yurt dışındaki müşterilerle uzaktan çalışan bir dijital teknoloji stüdyosudur. Flutter ile tek kod tabanından iOS ve Android uygulamalar geliştiriyor; tasarımdan App Store ve Google Play yayınına kadar tüm süreci üstleniyoruz. Kendi uygulamalarımız mağazalarda yayında — süreci yaşayarak biliyoruz.",
   ctaPrimary: "Ücretsiz Ön Görüşme",
   ctaSecondary: "Çalışmaları Görün",
   scopeTitle: ["Neler", "yapıyoruz?"],
@@ -59,7 +59,7 @@ export const mobileTR: ServiceContent = {
   closingCta: "Bize Ulaşın",
   backLabel: "Ana sayfa",
   serviceType: "Mobil uygulama geliştirme (iOS ve Android)",
-  areaServed: "İzmir, Türkiye",
+  areaServed: "Türkiye, Avrupa ve dünya geneli",
   guideEyebrow: "Mobil uygulama rehberi",
   guide: [
     {
@@ -150,7 +150,7 @@ export const mobileEN: ServiceContent = {
   meta: {
     title: "Mobile App Development — iOS & Android with Flutter",
     description:
-      "Mobile app development studio based in İzmir, Turkey. iOS and Android apps from a single Flutter codebase, App Store and Google Play publishing included. Free consultation.",
+      "Remote-first mobile app development studio. iOS and Android apps from a single Flutter codebase, App Store and Google Play publishing included. Free consultation.",
     keywords: [
       "mobile app development",
       "Flutter app development",
@@ -163,7 +163,7 @@ export const mobileEN: ServiceContent = {
   },
   eyebrow: "Mobile Apps",
   h1: ["Mobile apps,", "from idea to the store."],
-  lead: "WoodstoneStudio is a digital technology studio based in İzmir, Turkey. We build iOS and Android apps from a single Flutter codebase and handle everything from design to App Store and Google Play release. Our own apps are live in both stores — we know the process first-hand.",
+  lead: "WoodstoneStudio is a remote-first digital technology studio working with clients worldwide. We build iOS and Android apps from a single Flutter codebase and handle everything from design to App Store and Google Play release. Our own apps are live in both stores — we know the process first-hand.",
   ctaPrimary: "Free Consultation",
   ctaSecondary: "See Our Work",
   scopeTitle: ["What we", "do."],

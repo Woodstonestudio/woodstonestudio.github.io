@@ -214,7 +214,7 @@ export function blogListMetadata(locale: Locale) {
         en: `${SITE}/en/blog`,
       },
     },
-    openGraph: { title: titles[locale], description: L.lead, url: `${SITE}${BLOG_BASE[locale]}`, type: "website" },
+    openGraph: { title: titles[locale], description: L.lead, url: `${SITE}${BLOG_BASE[locale]}`, type: "website", images: ["/og-cover.jpg"] },
   };
 }
 
@@ -233,7 +233,7 @@ export function blogPostMetadata(post: BlogPost, locale: Locale) {
       title: post.title[locale],
       description: post.excerpt[locale],
       url: `${SITE}${BLOG_BASE[locale]}/${post.slug}`,
-      type: "article",
+      type: "article", images: ["/og-cover.jpg"],
     },
   };
 }
