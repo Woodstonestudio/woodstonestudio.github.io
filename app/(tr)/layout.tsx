@@ -96,12 +96,7 @@ export default function RootLayout({
               description:
                 "Web siteleri, mobil uygulamalar, yapay zekâ çözümleri, otomasyon ve özel yazılım geliştiren bir dijital teknoloji stüdyosu.",
               email: "info@woodstonestudio.com",
-              foundingLocation: "İzmir, Türkiye",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "İzmir",
-                addressCountry: "TR",
-              },
+              telephone: "+905438520257",
               contactPoint: {
                 "@type": "ContactPoint",
                 email: "info@woodstonestudio.com",
@@ -109,8 +104,10 @@ export default function RootLayout({
                 availableLanguage: ["Turkish", "English"],
               },
               sameAs: [
+                "https://www.linkedin.com/in/woodstone-studio-5263a343a/",
                 "https://github.com/Woodstonestudio",
-                "https://instagram.com/woodstonestudio35",
+                "https://github.com/izmiradami",
+                "https://www.instagram.com/woodstonestudio35",
               ],
             }),
           }}
@@ -155,7 +152,7 @@ export default function RootLayout({
                 name: "WoodstoneStudio",
                 url: "https://woodstonestudio.com",
               },
-              areaServed: { "@type": "Country", name: "Türkiye" },
+              areaServed: "Worldwide",
               availableLanguage: ["Turkish", "English"],
             }),
           }}
