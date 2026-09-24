@@ -1,1 +1,314 @@
-[]
+[
+  {
+    "slug": "kurumsal-web-tasarim",
+    "relatedService": "web",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-09-24",
+    "readMin": 4,
+    "category": {
+      "tr": "Web",
+      "en": "Web"
+    },
+    "title": {
+      "tr": "Kurumsal Web Tasarımında 5 Kritik Karar ve Neden Şablon Yetmez",
+      "en": "5 Critical Decisions in Enterprise Web Design and Why Templates Fall Short"
+    },
+    "excerpt": {
+      "tr": "Kurumsal web sitesi hazırlarken içerik mimarisinden entegrasyonlara kadar vermeniz gereken beş kritik karar ve her birinin kullanıcı deneyimine, bütçeye etkisi.",
+      "en": "Five critical decisions in enterprise web design—from content architecture to integrations—and how each impacts user experience and budget."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "p",
+          "text": "Bir B2B yazılım şirketi hazır bir tema satın aldı ve iki hafta içinde siteyi yayına aldı. Üç ay sonra sorun yaşamaya başladı: teknik dokümantasyon için yer yok, müşteri başvuruları CRM'e aktarılamıyor, mobilde form kullanılamaz halde. Site yeniden yapılana kadar ekip manuel Excel'le çalıştı."
+        },
+        {
+          "type": "p",
+          "text": "Kurumsal web tasarımı, görsel şablon seçmekten çok daha karmaşık bir iştir. Site sadece tanıtım yapan bir vitrin değil; satış sürecinizin bir parçası, müşteri destek kanalı, hatta veri toplama aracı olabilir. Aşağıda, kurumsal bir site planlarken karşınıza çıkacak beş kritik karar noktasını ve her birinin neleri etkilediğini bulacaksınız."
+        },
+        {
+          "type": "h2",
+          "text": "İçerik mimarisi: kim, ne için geliyor?"
+        },
+        {
+          "type": "p",
+          "text": "Kurumsal bir sitede en az üç farklı ziyaretçi profili vardır: potansiyel müşteri, mevcut müşteri ve iş ortağı. Her biri farklı bir bilgi arar."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Potansiyel müşteri: referanslar, çözüm detayları, fiyat ipuçları",
+            "Mevcut müşteri: destek dokümanı, faturalandırma, iletişim",
+            "İş ortağı: API dokümantasyonu, bayi portalı, teknik şartnameler"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Çoğu hazır tema, tüm bu kesimleri tek bir navigasyon menüsüne sığdırmaya çalışır. Sonuç: karmaşık menüler, derin sayfa hiyerarşileri ve kullanıcının üç tıklamada kaybolması."
+        },
+        {
+          "type": "p",
+          "text": "İçerik mimarisini kurarken şu soruları yanıtlayın: Hangi kullanıcı hangi sayfaya direkt erişmeli? Hangi içerik üye girişi gerektirecek? Mobilde menü kısaldığında hangi bölüm kalacak? Bu kararlar, site navigasyonundan hosting çözümüne kadar her şeyi etkiler."
+        },
+        {
+          "type": "h2",
+          "text": "Entegrasyonlar: CRM, ERP, otomasyon"
+        },
+        {
+          "type": "p",
+          "text": "Kurumsal sitelerde form dolduran bir ziyaretçinin bilgisi otomatik olarak CRM'e düşmeli, satış ekibine e-posta gitmeli, bazen aynı anda pazarlama otomasyonu başlamalıdır. Bu tür entegrasyonlar şablon dünyasında çoğunlukla imkansızdır."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Bir danışmanlık firması, siteden gelen talepleri Salesforce'a aktarmak istiyor; API bağlantısı kurulması gerekir",
+            "Bir üretici, bayi portalı üzerinden sipariş alıyor; siparişler SAP'ye düşmeli ve stok bilgisi senkron kalmalı",
+            "Bir SaaS şirketi, ücretsiz deneme formunu dolduranlara otomatik hesap açıyor ve iki haftalık e-posta dizisi başlatıyor"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu senaryoların hepsi için özel backend geliştirmesi şarttır. Tasarım sürecine başlamadan önce hangi sistemlerle konuşması gerektiğini listeleyin; bu, teknoloji seçimini doğrudan belirler."
+        },
+        {
+          "type": "h2",
+          "text": "Çok dilli yapı mı, ayrı siteler mi?"
+        },
+        {
+          "type": "p",
+          "text": "Uluslararası müşterilere hitap ediyorsanız, içeriği nasıl çevireceğiniz önemli bir karardır. İki temel senaryo vardır:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Tek site, çoklu dil: içerik yönetimi kolay, SEO kontrolü tek merkezden",
+            "Bölgesel siteler: her ülke için ayrı hosting, ayrı SEO stratejisi; yerel ekipler bağımsız içerik üretir"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "İlk seçenek küçük ekipler için pratiktir ama şu soruları getirir: Çeviri servisleri nasıl entegre olacak? Görseller ve ürün adları bölgeye göre değişecek mi? Fiyatlandırma para birimine göre mi görünecek?"
+        },
+        {
+          "type": "p",
+          "text": "İkinci seçenekte ise SEO bağımsız yürür, yerel domain otoritesi kazanırsınız ama içerik senkronizasyonu kaybolur. Hangi rotayı seçtiğiniz, CMS ve hosting mimarisini baştan belirler."
+        },
+        {
+          "type": "h2",
+          "text": "Performans ve güvenlik: sertifika, CDN, yedekleme"
+        },
+        {
+          "type": "p",
+          "text": "Kurumsal siteler genelde trafik patlamalarına dayanıklı olmalı, kişisel veri topluyor ve yasal uyumluluk gereksinimlerini karşılamalıdır. Bu, üç teknik önlemi zorunlu kılar:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "SSL sertifikası: HTTPS artık opsiyonel değil; özellikle ödeme veya form topluyorsanız wildcard veya EV sertifikası şart",
+            "CDN: görseller ve statik dosyaları dünyanın dört bir yanındaki sunuculardan servis ederek yükleme süresini kısaltır",
+            "Düzenli yedekleme: veritabanı ve dosya sisteminin günlük yedeği, hosting firması tarafından otomatik alınmalı"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Ayrıca, sitede kullanıcı girişi varsa iki faktörlü doğrulama ve rol bazlı yetkilendirme sistemi kurmak gerekir. Bunlar genelde hazır temalarda yoktur; özel geliştirme ister."
+        },
+        {
+          "type": "h2",
+          "text": "Ölçeklenebilirlik: bugünkü mü, yarınki mi?"
+        },
+        {
+          "type": "p",
+          "text": "Kurumsal bir site için en büyük yanılgı, şu anda ihtiyacımız olan üzerine tasarlamaktır. Altı ay sonra yeni bir ürün grubu, bir yıl sonra kullanıcı portalı, iki yıl sonra e-ticaret modülü ekleyebilirsiniz."
+        },
+        {
+          "type": "p",
+          "text": "Ölçeklenebilir bir mimari kurmak şu sorulara net yanıt verir: Yeni sayfa şablonları kolay eklenebilir mi? Veritabanı yapısı yeni modülleri destekler mi? Frontend kütüphanesi modern mi, güncellenebilir mi?"
+        },
+        {
+          "type": "p",
+          "text": "Örneğin, WordPress kullanıyorsanız eklenti eklemek kolaydır ama çok sayıda eklenti performansı düşürür. Headless CMS kullanıyorsanız frontend'i dilediğiniz teknolojiye taşıyabilirsiniz ama başlangıç geliştirme süresi uzar."
+        },
+        {
+          "type": "p",
+          "text": "Bu, bütçe ile vizyon arasındaki dengeyi kurar: şu an para harcamadan iki yıl sonra tamamen yeniden mi yazacaksınız, yoksa şimdi biraz fazla yatırım yapıp uzun vadede mi tasarruf edeceksiniz?"
+        },
+        {
+          "type": "h2",
+          "text": "Ajansla çalışmadan önce hazır olmanız gereken liste"
+        },
+        {
+          "type": "p",
+          "text": "Kurumsal web tasarımı için teklif almadan önce şunları netleştirin:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Hangi sistemlerle entegrasyon gerekli?",
+            "Kaç dil, kaç bölge, içerik kim yönetecek?",
+            "Kullanıcı rolleri var mı?",
+            "Sitenin hangi bölümü sık güncellenecek?",
+            "Mobil trafiğiniz ne kadar?",
+            "Mevcut bir site varsa, hangi sayfalar SEO'da sıralanmış?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu sorular, ajansın size özel bir yapı kurmasını sağlar. Daha fazla soru için \"Web Sitesi Tasarımı: Teklif Almadan Önce Sorulması Gereken 8 Soru\" yazımıza göz atabilirsiniz."
+        },
+        {
+          "type": "p",
+          "text": "Kurumsal bir site, vitrin değil bir yazılımdır. İlk adımı atmadan önce hem bugünkü hem yarınki ihtiyaçlarınızı haritalamanız, gereksiz yeniden yazımları ve bütçe aşımlarını engelleyecektir. Eğer projenizi değerlendirmek isterseniz, size ücretsiz bir ön analiz sunabiliriz."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "text": "A B2B software company bought a ready-made theme and launched their site within two weeks. Three months later, problems began: no space for technical documentation, customer inquiries couldn't flow into the CRM, and forms were unusable on mobile. Until the site was rebuilt, the team worked manually with Excel."
+        },
+        {
+          "type": "p",
+          "text": "Enterprise web design is far more complex than picking a visual template. Your site isn't just a showcase; it can be part of your sales process, a customer support channel, or even a data collection tool. Below, you'll find five critical decision points you'll face when planning an enterprise site and how each one affects everything else."
+        },
+        {
+          "type": "h2",
+          "text": "Content architecture: who's coming, and what for?"
+        },
+        {
+          "type": "p",
+          "text": "An enterprise site has at least three distinct visitor profiles: potential customers, existing customers, and partners. Each is looking for different information."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Potential customers: case studies, solution details, pricing hints",
+            "Existing customers: support documentation, billing, contact",
+            "Partners: API documentation, reseller portal, technical specifications"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Most ready-made themes try to cram all these audiences into a single navigation menu. The result: cluttered menus, deep page hierarchies, and users getting lost after three clicks."
+        },
+        {
+          "type": "p",
+          "text": "When building your content architecture, answer these questions: Which user should have direct access to which page? Which content will require login? When the menu shrinks on mobile, which section stays? These decisions affect everything from site navigation to hosting solutions."
+        },
+        {
+          "type": "h2",
+          "text": "Integrations: CRM, ERP, automation"
+        },
+        {
+          "type": "p",
+          "text": "On enterprise sites, when a visitor fills out a form, their information should automatically flow into your CRM, trigger an email to the sales team, and sometimes launch a marketing automation sequence. These kinds of integrations are often impossible in the template world."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "A consulting firm wants to push leads from their site into Salesforce; this requires API integration",
+            "A manufacturer takes orders through a reseller portal; orders must sync with SAP and inventory must stay current",
+            "A SaaS company automatically creates accounts for free trial signups and launches a two-week email sequence"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "All of these scenarios require custom backend development. Before starting the design process, list which systems your site needs to talk to; this directly determines your technology choices."
+        },
+        {
+          "type": "h2",
+          "text": "Multi-language structure or separate sites?"
+        },
+        {
+          "type": "p",
+          "text": "If you're serving international customers, how you handle content translation is a critical decision. There are two main scenarios:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Single site, multiple languages: content management is easy, SEO control is centralized",
+            "Regional sites: separate hosting and SEO strategy for each country; local teams produce independent content"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The first option is practical for small teams but raises questions: How will translation services integrate? Will images and product names change by region? Will pricing display in local currency?"
+        },
+        {
+          "type": "p",
+          "text": "With the second option, SEO runs independently and you build local domain authority, but content synchronization becomes difficult. Which route you choose determines your CMS and hosting architecture from the start."
+        },
+        {
+          "type": "h2",
+          "text": "Performance and security: certificates, CDN, backups"
+        },
+        {
+          "type": "p",
+          "text": "Enterprise sites typically need to withstand traffic spikes, collect personal data, and comply with GDPR and local privacy rules. This makes three technical measures essential:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "SSL certificate: HTTPS is no longer optional; if you're collecting payments or forms, wildcard or EV certificates are necessary",
+            "CDN: serves images and static files from servers around the world, reducing load times",
+            "Regular backups: daily backups of your database and file system should be automated by your hosting provider"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Additionally, if your site has user logins, you need two-factor authentication and role-based permission systems. These are rarely included in ready-made themes and require custom development."
+        },
+        {
+          "type": "h2",
+          "text": "Scalability: today's needs or tomorrow's?"
+        },
+        {
+          "type": "p",
+          "text": "The biggest mistake in enterprise site planning is designing only for what you need right now. Six months from now you might add a new product line, a year from now a user portal, two years from now an e-commerce module."
+        },
+        {
+          "type": "p",
+          "text": "A scalable architecture clearly answers these questions: Can new page templates be added easily? Does the database structure support new modules? Is the frontend library modern and updatable?"
+        },
+        {
+          "type": "p",
+          "text": "For example, with WordPress, adding plugins is easy but too many plugins hurt performance. With a headless CMS like Strapi or Contentful, you can migrate your frontend to any technology, but initial development takes longer."
+        },
+        {
+          "type": "p",
+          "text": "This is where you balance budget and vision: will you spend nothing now and rewrite everything in two years, or invest a bit more now and save in the long run?"
+        },
+        {
+          "type": "h2",
+          "text": "Your checklist before working with an agency"
+        },
+        {
+          "type": "p",
+          "text": "Before requesting proposals for enterprise web design, clarify these points:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Which systems need integration?",
+            "How many languages, how many regions, who manages content?",
+            "Are there user roles?",
+            "Which sections of the site will be updated frequently?",
+            "What percentage of your traffic is mobile?",
+            "If you have an existing site, which pages rank in search?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "These questions help the agency build a structure tailored to your needs. For more questions to ask, see our article on getting proposals for web design."
+        },
+        {
+          "type": "p",
+          "text": "An enterprise site isn't a storefront; it's software. Mapping both your current and future needs before taking the first step will prevent unnecessary rewrites and budget overruns. If you'd like to evaluate your project, we'd be happy to provide a free preliminary analysis."
+        }
+      ]
+    }
+  }
+]
