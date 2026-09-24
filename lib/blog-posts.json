@@ -1,5 +1,249 @@
 [
   {
+    "slug": "custom-web-application-development",
+    "relatedService": "web",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-09-24",
+    "readMin": 5,
+    "category": {
+      "tr": "Web",
+      "en": "Web"
+    },
+    "title": {
+      "tr": "Custom Web Application Development: Hazır Yazılım Yetmediğinde",
+      "en": "Custom Web Application Development: When Off-the-Shelf Fails"
+    },
+    "excerpt": {
+      "tr": "SaaS araçları ve Excel tabloları iş sürecinize yetmediğinde, özel web uygulaması geliştirmek standart yazılımın çözemediği sorunları nasıl çözer ve ne zaman mantıklıdır?",
+      "en": "When SaaS tools and spreadsheets can't fit your workflow, custom web application development solves what standard software can't—and when it's actually worth building."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "p",
+          "text": "Ekibiniz üç farklı SaaS aboneliği, iki Excel tablosu ve her yeni eleman geldiğinde ya da ayrıldığında bozulan bir iş akışıyla uğraşıyor. Hazır platformlara baktınız ama hiçbiri işinizin gerçekte nasıl yürüdüğüne uymuyor. İşte özel web uygulaması geliştirmenin 'olsa iyi olur' kategorisinden 'buna şimdi ihtiyacımız var' kategorisine geçtiği an budur."
+        },
+        {
+          "type": "p",
+          "text": "Özel web uygulaması, sizin süreciniz, verileriniz ve kullanıcılarınız için özel olarak geliştirilmiş bir yazılımdır. Paket SaaS ürünlerinden ya da WordPress eklentilerinden farklı olarak, sizi başka birinin iş yapış tasavvuruna zorlamaz. Tarayıcıda çalışır, mevcut sistemlerinize bağlanır ve tam olarak ihtiyacınız olanı yapar — ne eksik ne fazla."
+        },
+        {
+          "type": "h2",
+          "text": "Standart Yazılım Ne Zaman Yetmez Olur"
+        },
+        {
+          "type": "p",
+          "text": "Çoğu işletme hazır araçlarla başlar. Görevler için Trello, veri için Airtable, bunları bağlamak için Zapier. Bu, yetmediği ana kadar işe yarar. Kırılma noktaları öngörülebilir: iş akışınızda aracın desteklemediği adımlar var, asla kullanmayacağınız özelliklere para ödüyorsunuz ya da sistemler birbiriyle konuşmadığı için verileri elle kopyalıyorsunuz."
+        },
+        {
+          "type": "p",
+          "text": "Özel geliştirme, geçici çözümlerin maliyeti — personel zamanı, hatalar, kaçırılan fırsatlar — özelleştirilmiş bir şey yapmanın maliyetini aştığında mantıklı hale gelir. Yaygın tetikleyiciler arasında eski sistemlerle entegrasyon ihtiyacı, altyapınızdan çıkamayacak hassas veriler ya da hiçbir satıcının asla yapmayacağı kadar spesifik bir süreci otomatikleştirme yer alır."
+        },
+        {
+          "type": "p",
+          "text": "Sorununuz 'bir web sitesine ihtiyacımız var' ya da 'online randevu almak istiyoruz' ise özel web uygulaması gereğinden fazladır. Bunlar için mevcut platformlar ya da hafif özelleştirmeler işi görür. Özel geliştirme, tak-çalıştır cevabı olmayan problemler içindir."
+        },
+        {
+          "type": "h2",
+          "text": "Ne Tür Uygulamalar Geliştirilir"
+        },
+        {
+          "type": "p",
+          "text": "İç araçlar bu alanda baskın. Depolardaki stoğu takip eden ve satın almayı otomatik güncelleyen envanter sistemleri. Sizi Salesforce'un modeline zorlamak yerine tam satış aşamalarınıza uyan CRM platformları. ERP'nizden, e-ticaret platformunuzdan ve destek biletlerinizden veriyi tek bir görünümde toplayan panolar."
+        },
+        {
+          "type": "p",
+          "text": "Müşteri tarafındaki uygulamalar diğer yarıyı oluşturur. Bir lojistik firması müşterilerin gönderi durumunu gerçek zamanlı kontrol ettiği bir portal yapar. Bir sağlık kuruluşu doğrudan kayıt veritabanına beslenen bir hasta kabul sistemi oluşturur. Bir e-öğrenme platformu standart öğrenme yönetim sistemlerinin kaldıramadığı dallanma yollarına sahip bir kurs oluşturucu tasarlar."
+        },
+        {
+          "type": "p",
+          "text": "Düzen aynı: spesifik bir ihtiyaç, yüksek tekrar ve küçük iyileştirmelerin yüzlerce ya da binlerce kullanımda çarpan etkisi yarattığı bir süreç."
+        },
+        {
+          "type": "h2",
+          "text": "Süreç Nasıl İşler"
+        },
+        {
+          "type": "p",
+          "text": "Özel web uygulaması geliştirme, şu anda ne olduğunu ve ne olması gerektiğini haritalamakla başlar. Geliştirme ekibiyle iş akışınızı anlatarak, darboğazları belirleyerek ve 'bitmiş' in ne anlama geldiğini netleştirerek zaman harcarsınız. Bu keşif aşaması çoğu zaman neye ihtiyacınız olduğunu sandığınız şeyin aslında asıl sorun olmadığını ortaya çıkarır."
+        },
+        {
+          "type": "p",
+          "text": "Sırada tasarım gelir — sadece nasıl göründüğü değil, kullanıcıların içinde nasıl hareket ettiği. Tel çerçeveler, kullanıcı akışları ve prototipler, herhangi bir kod yazılmadan mantığı test etmenizi sağlar. Bu adımı atlamak pahalıya mal olur; tıklanabilir prototipte yapısal bir hatayı yakalamak saatler alır, bitmiş kodda yakalamak haftalar."
+        },
+        {
+          "type": "p",
+          "text": "Geliştirme aşamalı ilerler. Tipik yaklaşım önce minimum uygulanabilir bir sürüm yapmaktır — yalnızca temel özellikler, gerçek kullanıcılarla test edilmiş. Neyin işe yaradığını, neyin kafa karıştırdığını ve neleri belirtmeyi unuttuğunuzu öğrenirsiniz. Sonra tahminler yerine gerçek kullanıma dayanarak özellikler ekleyerek iterasyon yaparsınız."
+        },
+        {
+          "type": "p",
+          "text": "Teknoloji seçimleri uygulamanın ne yapması gerektiğine bağlıdır. Veri ağırlıklı bir iç araç ön yüzde React, arka uçta Python veya Node.js ve veritabanı için PostgreSQL kullanabilir. Ölçeklenmesi gereken bir müşteri portalı yük dengeleme ve CDN dağıtımıyla bulut altyapısında çalışabilir. Bu kararlar size görünmez olmalı; önemli olan uygulamanın hızlı, güvenilir ve sürdürülebilir olmasıdır."
+        },
+        {
+          "type": "h2",
+          "text": "Yaygın Tuzaklar"
+        },
+        {
+          "type": "p",
+          "text": "En büyük hata aynı anda çok fazla şey yapmaktır. Her özelliği, her uç durumu, her gelecek olasılığı hayal edersiniz ve proje şişer. Kapsam genişlemesi gerçektir. Temel sorunu çözen en küçük sürümle başlayın, sonra genişletin. Aşamalı yaklaşım bütçeleri gerçekçi tutar ve erken yön değiştirmenizi sağlar."
+        },
+        {
+          "type": "p",
+          "text": "Bir diğer tuzak entegrasyon işini hafife almaktır. Yeni uygulamanızı mevcut sistemlere — muhasebe yazılımınız, CRM'iniz, ödeme işlemciniz — bağlamak çoğu zaman uygulamanın kendisini yapmaktan daha uzun sürer. API'ler mevcut olmayabilir, veri formatları eşleşmeyebilir ve kimlik doğrulama baş ağrısı olabilir. Bunun için zaman ayırın."
+        },
+        {
+          "type": "p",
+          "text": "Bakım seçenek değildir. Yazılım bozulur. Güvenlik yamaları, tarayıcı güncellemeleri ve üçüncü taraf API'lerindeki değişiklikler uygulamanızın sürekli ilgiye ihtiyacı olacağı anlamına gelir. Bunu baştan planlayın — ya dahili bir geliştiriciyle ya da uygulamayı yapan ekiple bir destek anlaşmasıyla."
+        },
+        {
+          "type": "h2",
+          "text": "Yaptırdığınız Şeyin Sahibi Kimdir"
+        },
+        {
+          "type": "p",
+          "text": "Sözleşmenizde aksi belirtilmedikçe, kaynak kodun ve tüm fikri mülkiyetin sahibi siz olmalısınız. Bu, geliştiricileri değiştirmek ya da bakımı içselleştirmek istediğinizde önemlidir. Bazı ajanslar sahipliği elinde tutar ve lisans ücreti alır; baştan biliyorsanız sorun değil ama esnekliğinizi kısıtlar."
+        },
+        {
+          "type": "p",
+          "text": "Barındırma ve veri kontrolü ayrı sorulardır. Uygulamanız kendi sunucularınızda, kontrol ettiğiniz bulut altyapısında ya da geliştiricinin altyapısında çalışabilir. Seçim maliyeti, kontrolü ve bir şeyler bozulduğunda kimin sorumlu olduğunu etkiler. Çoğu işletme sahip olduğu bulut barındırmayı tercih eder, geliştirme ekibi dağıtım ve izlemeyi üstlenir."
+        },
+        {
+          "type": "h2",
+          "text": "Ne Zaman Yapmak, Ne Zaman Beklemek Gerekir"
+        },
+        {
+          "type": "p",
+          "text": "Süreciniz hâlâ her hafta değişiyorsa, özel bir uygulama sürekli yeniden yazılacaktır. Önce stabilize edin. Sorun ara sıra beş kişiyi etkiliyorsa, yatırım getirisi yok. Ama bir iş akışı günlük onlarca personele dokunuyorsa ve mevcut araçlar size saatler süren manuel iş ya da sık hatalar maliyetindeyse, matematik hızla değişir."
+        },
+        {
+          "type": "p",
+          "text": "Özel web uygulaması geliştirme kısayol değildir. SaaS'ın devam eden maliyetini ve sınırlamalarını, amaca özel yazılımın ön maliyeti ve kontrolüyle değiştirir. Doğru problem için, doğru ölçekte, gider olmaktan çıkar ve altyapı haline gelir."
+        },
+        {
+          "type": "p",
+          "text": "Yapmanızın mantıklı olup olmadığını değerlendirmek için önce şu anda ne yaptığınızı, bunun zaman ve para olarak ne kadara mal olduğunu ve süreç otomatikleştirilse ya da düzene sokulsa ne değişeceğini belgeleyin. Bu netlik size özel geliştirmenin doğru hamle olup olmadığını — ya da henüz o noktada olmadığınızı — söyler."
+        },
+        {
+          "type": "p",
+          "text": "Mevcut sürecinizin darboğazlarını konuşmak ve özel bir uygulamanın sizin için uygun olup olmadığını değerlendirmek isterseniz, ücretsiz bir ön görüşme için bizimle iletişime geçebilirsiniz."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "text": "Your team is juggling three SaaS subscriptions, two spreadsheets, and a workflow that breaks every time someone joins or leaves. You've looked at off-the-shelf platforms but none fit the way your business actually operates. That's the moment custom web application development moves from nice to have to necessary."
+        },
+        {
+          "type": "p",
+          "text": "A custom web application is software built specifically for your process, your data, and your users. Unlike packaged SaaS products or content management plugins, it doesn't force you into someone else's idea of how work should happen. It lives in a browser, connects to your existing systems, and does exactly what you need — nothing more, nothing less."
+        },
+        {
+          "type": "h2",
+          "text": "When Standard Software Stops Working"
+        },
+        {
+          "type": "p",
+          "text": "Most businesses start with ready-made tools. Task boards, cloud spreadsheets, automation connectors. That works until it doesn't. The breaking points are predictable: your workflow has steps the tool doesn't support, you're paying for features you'll never use, or you're manually copying data between systems because they don't talk to each other."
+        },
+        {
+          "type": "p",
+          "text": "Custom development makes sense when the cost of workarounds — staff time, errors, missed opportunities — exceeds the cost of building something tailored. Common triggers include needing to integrate with legacy systems, handling sensitive data that can't leave your infrastructure, or automating a process so specific that no vendor will ever build it."
+        },
+        {
+          "type": "p",
+          "text": "If your problem is we need a website or we want online booking, a custom web app is overkill. For those, existing platforms or light customization will do the job. Custom development is for the problems that don't have a plug-and-play answer."
+        },
+        {
+          "type": "h2",
+          "text": "What Gets Built: Common Use Cases"
+        },
+        {
+          "type": "p",
+          "text": "Internal tools dominate this space. Inventory systems that track stock across warehouses and update purchasing automatically. CRM platforms that match your exact sales stages instead of forcing you into a generic model. Dashboards that pull data from your ERP, your e-commerce platform, and your support tickets into one view."
+        },
+        {
+          "type": "p",
+          "text": "Customer-facing applications are the other half. A logistics company builds a portal where clients check shipment status in real time. A healthcare provider creates a patient intake system that feeds directly into their records database. An e-learning platform designs a course builder with branching paths that standard learning management systems can't handle."
+        },
+        {
+          "type": "p",
+          "text": "The pattern is the same: a specific need, high repetition, and a process where small improvements multiply across hundreds or thousands of uses."
+        },
+        {
+          "type": "h2",
+          "text": "How the Process Actually Works"
+        },
+        {
+          "type": "p",
+          "text": "Custom web application development starts with mapping what currently happens and what should happen. You'll spend time with the development team explaining your workflow, identifying bottlenecks, and clarifying what done looks like. This discovery phase often reveals that what you thought you needed isn't actually the root problem."
+        },
+        {
+          "type": "p",
+          "text": "Next comes design — not just how it looks, but how users move through it. Wireframes, user flows, and prototypes let you test the logic before any code gets written. Skipping this step is expensive; catching a structural flaw in a clickable prototype takes hours, catching it in finished code takes weeks."
+        },
+        {
+          "type": "p",
+          "text": "Development happens in stages. A typical approach is to build a minimum viable version first — core features only, tested with real users. You learn what works, what confuses people, and what you forgot to specify. Then you iterate, adding features based on actual usage instead of guesses."
+        },
+        {
+          "type": "p",
+          "text": "Technology choices depend on what the app needs to do. A data-heavy internal tool might use React on the front end with a Python or Node.js backend and PostgreSQL for the database. A customer portal that needs to scale might run on cloud infrastructure with load balancing and content delivery networks. These decisions should be invisible to you; what matters is that the app is fast, reliable, and maintainable."
+        },
+        {
+          "type": "h2",
+          "text": "Avoiding the Common Traps"
+        },
+        {
+          "type": "p",
+          "text": "The biggest mistake is building too much at once. You imagine every feature, every edge case, every future possibility, and the project balloons. Scope creep is real. Start with the smallest version that solves the core problem, then expand. A phased approach keeps budgets realistic and lets you course-correct early."
+        },
+        {
+          "type": "p",
+          "text": "Another trap is underestimating integration work. Connecting your new app to existing systems — your accounting software, your CRM, your payment processor — often takes longer than building the app itself. APIs may not exist, data formats may not match, and authentication can be a headache. Budget time for this."
+        },
+        {
+          "type": "p",
+          "text": "Maintenance is not optional. Software degrades. Security patches, browser updates, and changes to third-party APIs mean your app will need ongoing attention. Plan for it from the start — either with an in-house developer or a support agreement with the team that built it."
+        },
+        {
+          "type": "h2",
+          "text": "Who Owns What You Build"
+        },
+        {
+          "type": "p",
+          "text": "Unless your contract says otherwise, you should own the source code and all intellectual property. This matters if you ever want to switch developers or bring maintenance in-house. Some agencies retain ownership and charge licensing fees; that's fine if you know it upfront, but it limits your flexibility."
+        },
+        {
+          "type": "p",
+          "text": "Hosting and data control are separate questions. Your app can run on your own servers, on cloud infrastructure you control, or on the developer's infrastructure. The choice affects cost, control, and who's responsible when something breaks. Most businesses prefer cloud hosting they own, with the development team handling deployment and monitoring."
+        },
+        {
+          "type": "h2",
+          "text": "When to Build vs. When to Wait"
+        },
+        {
+          "type": "p",
+          "text": "If your process is still changing weekly, a custom app will be rewritten constantly. Stabilize first. If the problem affects a handful of people occasionally, the return on investment isn't there. But if a workflow touches dozens of staff daily, and current tools cost you hours of manual work or frequent errors, the math shifts quickly."
+        },
+        {
+          "type": "p",
+          "text": "Custom web application development is not a shortcut. It trades the ongoing cost and limitations of SaaS for the upfront cost and control of purpose-built software. For the right problem, at the right scale, it stops being an expense and becomes infrastructure."
+        },
+        {
+          "type": "p",
+          "text": "If you're evaluating whether to build, start by documenting what you do now, what it costs in time and money, and what would change if the process were automated or streamlined. That clarity will tell you if custom development is the move — or if you're not quite there yet."
+        },
+        {
+          "type": "p",
+          "text": "If you'd like to discuss your current workflow's bottlenecks and evaluate whether a custom application makes sense for your business, reach out for a free initial consultation."
+        }
+      ]
+    }
+  },
+  {
     "slug": "kurumsal-web-tasarim",
     "relatedService": "web",
     "locales": [
