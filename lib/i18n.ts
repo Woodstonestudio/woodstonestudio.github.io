@@ -95,6 +95,18 @@ export const trSections = {
   services: {
     eyebrow: "Hizmetler",
     detailLabel: "Detaylı bilgi →",
+    pricing: {
+      title: "Başlangıç fiyatları",
+      items: [
+        { name: "Web sitesi", desc: "İşinize göre kurgulanmış, amaca özel siteler", from: "15.000 ₺'den başlar", href: "/web-tasarim" },
+        { name: "E-ticaret", desc: "Büyümeye hazır, ölçeklenebilir online mağazalar", from: "50.000 ₺'den başlar", href: "/e-ticaret" },
+        { name: "Mobil uygulama", desc: "Fikirden mağazaya, yayına hazır mobil ürünler", from: "150.000 ₺'den başlar", href: "/mobil-uygulama" },
+        { name: "SaaS & MVP", desc: "Konseptten MVP'ye ürün tasarımı ve geliştirme", from: "200.000 ₺'den başlar", href: "/saas-gelistirme" },
+      ],
+      note: "Her proje hedeflerinize, özelliklerine ve gereksinimlerinize göre ayrı kapsamlanır.",
+      calcLabel: "Tahmini fiyat hesaplayın →",
+      calcHref: "/fiyat-hesaplama",
+    },
     t1: "Beş disiplin,",
     t2: "tek stüdyo",
     lead: "Dijital ürünleri fikirden yayına kadar tasarlıyor, geliştiriyor ve otomatikleştiriyoruz. Çoğu iş bu disiplinlerin birkaçına aynı anda dokunur; hepsini tek çatı altında tutmamızın sebebi de bu.",
@@ -188,6 +200,7 @@ export const trSections = {
       { href: "/otel-pansiyon-web-sitesi", label: "Oteller" },
       { href: "/randevu-sistemi", label: "Salonlar" },
       { href: "/site-analizi", label: "Site analizi" },
+      { href: "/fiyat-hesaplama", label: "Fiyat hesaplama" },
       { href: "/blog", label: "Blog" },
       { href: "/#contact", label: "İletişim" },
     ],
@@ -214,6 +227,18 @@ export const enSections: typeof trSections = {
   services: {
     eyebrow: "Services",
     detailLabel: "Learn more →",
+    pricing: {
+      title: "Starting prices",
+      items: [
+        { name: "Websites", desc: "Purpose-built websites designed around your business", from: "Starting from €500", href: "/en/web-design" },
+        { name: "E-commerce", desc: "Scalable online stores built for growth", from: "Starting from €1,000", href: "/en/ecommerce" },
+        { name: "Mobile apps", desc: "From idea to launch-ready mobile products", from: "Starting from €3,000", href: "/en/mobile-apps" },
+        { name: "SaaS & MVP", desc: "Product design and development from concept to MVP", from: "Starting from €4,000", href: "/en/saas-development" },
+      ],
+      note: "Every project is scoped individually based on your goals, features and requirements.",
+      calcLabel: "Estimate your project →",
+      calcHref: "/en/pricing-calculator",
+    },
     t1: "Five disciplines,",
     t2: "one studio",
     lead: "We design, build and automate digital products from idea to launch. Most projects touch several of these disciplines at once — which is exactly why we keep them all under one roof.",
@@ -307,6 +332,7 @@ export const enSections: typeof trSections = {
       { href: "/en/hotel-website-design", label: "Hotels" },
       { href: "/en/online-booking", label: "Salons" },
       { href: "/en/site-audit", label: "Site audit" },
+      { href: "/en/pricing-calculator", label: "Pricing" },
       { href: "/en/blog", label: "Blog" },
       { href: "/en#contact", label: "Contact" },
     ],

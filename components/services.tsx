@@ -89,6 +89,31 @@ export function Services({ t = trSections.services }: { t?: SectionsDict["servic
             </Reveal>
           ))}
         </div>
+
+        {/* Başlangıç fiyatları — bütçe beklentisini baştan netleştirir */}
+        <Reveal>
+          <div className="mt-20 border-t border-line pt-12 lg:mt-28 lg:pt-16">
+            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">{t.pricing.title}</p>
+            <div className="mt-8 grid gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+              {t.pricing.items.map((p) => (
+                <a key={p.name} href={p.href} className="group bg-base p-6 transition-colors hover:bg-surface/60 lg:p-8">
+                  <h3 className="text-xl font-light tracking-tight text-bone">{p.name}</h3>
+                  <p className="mt-2 min-h-[3.2em] text-[14px] leading-[1.6] text-gray-warm">{p.desc}</p>
+                  <p className="mt-5 font-mono text-[13px] tracking-tight text-bone">{p.from}</p>
+                </a>
+              ))}
+            </div>
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+              <p className="text-[14px] leading-[1.6] text-gray-warm">{t.pricing.note}</p>
+              <a
+                href={t.pricing.calcHref}
+                className="font-mono text-[11px] uppercase tracking-[0.14em] text-bone-dim transition-colors hover:text-bone"
+              >
+                {t.pricing.calcLabel}
+              </a>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
