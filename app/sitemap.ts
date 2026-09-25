@@ -18,6 +18,7 @@ const PAGES: [string, string, number][] = [
   ["/seo", "/en/seo", 0.9],
   ["/randevu-sistemi", "/en/online-booking", 0.9],
   ["/dis-klinigi-web-sitesi", "/en/dental-clinic-website", 0.9],
+  ["/otel-pansiyon-web-sitesi", "/en/hotel-website-design", 0.9],
   ["/calismalar", "/en/work", 0.8],
   ["/hakkimizda", "/en/about", 0.7],
   ["/sss", "/en/faq", 0.7],
