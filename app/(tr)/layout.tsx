@@ -84,7 +84,7 @@ export default function RootLayout({
               description:
                 "Web siteleri, mobil uygulamalar, yapay zekâ çözümleri, otomasyon ve özel yazılım geliştiren bir dijital teknoloji stüdyosu.",
               email: "info@woodstonestudio.com",
-              telephone: "+355696018457",
+              telephone: "+905331932068",
               contactPoint: {
                 "@type": "ContactPoint",
                 email: "info@woodstonestudio.com",

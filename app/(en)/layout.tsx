@@ -79,7 +79,7 @@ export default function RootLayout({
               description:
                 "A digital technology studio building websites, mobile applications, AI solutions, automation and custom software.",
               email: "info@woodstonestudio.com",
-              telephone: "+355696018457",
+              telephone: "+905331932068",
               contactPoint: {
                 "@type": "ContactPoint",
                 email: "info@woodstonestudio.com",
