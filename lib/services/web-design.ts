@@ -149,6 +149,8 @@ export const webDesignTR: ServiceContent = {
   ],
   relatedTitle: "İlgili hizmetler ve yazılar",
   related: [
+    { label: "Diş kliniği web sitesi", href: "/dis-klinigi-web-sitesi" },
+    { label: "Salonlar için randevu paketi", href: "/randevu-sistemi" },
     { label: "E-ticaret sitesi", href: "/e-ticaret" },
     { label: "SEO hizmeti", href: "/seo" },
     { label: "Mobil uygulama", href: "/mobil-uygulama" },
@@ -301,6 +303,8 @@ export const webDesignEN: ServiceContent = {
   ],
   relatedTitle: "Related services and articles",
   related: [
+    { label: "Dental clinic websites", href: "/en/dental-clinic-website" },
+    { label: "Booking package for salons", href: "/en/online-booking" },
     { label: "E-commerce websites", href: "/en/ecommerce" },
     { label: "SEO services", href: "/en/seo" },
     { label: "Mobile apps", href: "/en/mobile-apps" },

@@ -22,6 +22,8 @@ export type ServiceContent = {
   lead: string;
   ctaPrimary: string;
   ctaSecondary: string;
+  /** İkincil CTA hedefi (varsayılan: çalışmalar sayfası) */
+  ctaSecondaryHref?: string;
   scopeTitle: [string, string];
   scopeLead: string;
   scope: { title: string; desc: string }[];
@@ -66,6 +68,7 @@ const SERVICE_KEY: Record<string, string> = {
   "/seo": "seo",
   "/sosyal-medya": "social",
   "/randevu-sistemi": "booking",
+  "/dis-klinigi-web-sitesi": "web",
 };
 function serviceQuery(c: ServiceContent) {
   const k = SERVICE_KEY[c.alternates.tr];
@@ -134,7 +137,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
                     {c.ctaPrimary}
                   </a>
                   <Link
-                    href={c.locale === "tr" ? "/calismalar" : "/en/work"}
+                    href={c.ctaSecondaryHref ?? (c.locale === "tr" ? "/calismalar" : "/en/work")}
                     className="group inline-flex items-center gap-2.5 text-sm font-medium text-bone"
                   >
                     {c.ctaSecondary}
