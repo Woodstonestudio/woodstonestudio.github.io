@@ -15,7 +15,7 @@ export function Contact({
   const channels = [
     { label: t.channel, href: "mailto:info@woodstonestudio.com" },
     { label: "Instagram", href: "https://www.instagram.com/woodstonestudio35" },
-    { label: "WhatsApp", href: "https://wa.me/905438520257" },
+    { label: "WhatsApp", href: "https://wa.me/355696018457" },
   ];
 
   return (

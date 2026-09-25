@@ -5,7 +5,7 @@
 export function WhatsAppButton({ label = "WhatsApp'tan yazın" }: { label?: string }) {
   return (
     <a
-      href="https://wa.me/905438520257"
+      href="https://wa.me/355696018457"
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}

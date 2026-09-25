@@ -198,7 +198,7 @@ export function LeadForm({ locale = "tr" }: { locale?: Locale }) {
             <>
               <a className="underline" href="mailto:info@woodstonestudio.com">info@woodstonestudio.com</a>
               {" · "}
-              <a className="underline" href="https://wa.me/905438520257" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a className="underline" href="https://wa.me/355696018457" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </>
           )}
         </p>
