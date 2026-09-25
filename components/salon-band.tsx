@@ -9,7 +9,7 @@ const T = {
   tr: {
     eyebrow: "Kuaför · Berber · Güzellik salonu · Spa",
     t1: "Web sitesi değil,",
-    t2: "dolu bir randevu defteri.",
+    t2: "dolu bir randevu defteri",
     lead: "Salonlar için online randevu, Google Haritalar'da görünürlük ve yorum toplamayı tek pakette kuruyoruz. Müşteriniz sizi bulur, 7/24 randevu alır; telefon sizi işten koparmaz.",
     points: ["7/24 online randevu", "Google İşletme Profili", "Yorum toplama", "Instagram & WhatsApp bağlantısı"],
     cta: "Paketi İnceleyin",
@@ -18,7 +18,7 @@ const T = {
   en: {
     eyebrow: "Hair salons · Barbers · Beauty · Spa",
     t1: "Not a website —",
-    t2: "a full appointment book.",
+    t2: "a full appointment book",
     lead: "For salons we set up online booking, Google Maps visibility and review collection in one package. Clients find you, book 24/7, and the phone stops pulling you away from work.",
     points: ["24/7 online booking", "Google Business Profile", "Review collection", "Instagram & WhatsApp links"],
     cta: "See the Package",

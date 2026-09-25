@@ -43,7 +43,7 @@ export const aboutTR: AboutContent = {
     ],
   },
   eyebrow: "Hakkımızda",
-  h1: ["Fikirlerinizi", "ürünlere dönüştürüyoruz."],
+  h1: ["Fikirlerinizi", "ürünlere dönüştürüyoruz"],
   lead: "WoodstoneStudio, uzaktan çalışan bağımsız bir dijital teknoloji stüdyosudur. Web siteleri, mobil uygulamalar, yapay zekâ çözümleri ve özel yazılım geliştiriyoruz — hem müşterilerimiz için hem de kendimiz için.",
   storyTitle: ["Neye", "inanıyoruz?"],
   story: [
@@ -89,7 +89,7 @@ export const aboutEN: AboutContent = {
     ],
   },
   eyebrow: "About",
-  h1: ["We turn your ideas", "into products."],
+  h1: ["We turn your ideas", "into products"],
   lead: "WoodstoneStudio is an independent digital technology remote-first studio. We build websites, mobile apps, AI solutions and custom software — both for our clients and for ourselves.",
   storyTitle: ["What we", "believe."],
   story: [
