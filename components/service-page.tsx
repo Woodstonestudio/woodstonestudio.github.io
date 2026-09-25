@@ -65,6 +65,7 @@ const SERVICE_KEY: Record<string, string> = {
   "/yapay-zeka": "ai",
   "/seo": "seo",
   "/sosyal-medya": "social",
+  "/randevu-sistemi": "booking",
 };
 function serviceQuery(c: ServiceContent) {
   const k = SERVICE_KEY[c.alternates.tr];

@@ -1,3 +1,4 @@
+import { SalonBand } from "@/components/salon-band";
 import { LatestPosts } from "@/components/latest-posts";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
@@ -29,6 +30,7 @@ export default function HomeEN() {
         <Hero t={enHero} />
         <JoVVo t={enSections.jovvo} />
         <Services t={enSections.services} />
+        <SalonBand locale="en" />
         <Testimonials t={enSections.testimonials} />
         <WorkShowcase t={enSections.work} />
         <IdeaCTA t={enSections.idea} />

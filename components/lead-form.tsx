@@ -21,6 +21,7 @@ const SERVICES: { key: string; tr: string; en: string }[] = [
   { key: "ai", tr: "Yapay zekâ / otomasyon", en: "AI / automation" },
   { key: "seo", tr: "SEO", en: "SEO" },
   { key: "social", tr: "Sosyal medya", en: "Social media" },
+  { key: "booking", tr: "Online randevu + Google (salonlar)", en: "Online booking + Google (salons)" },
   { key: "other", tr: "Diğer", en: "Other" },
 ];
 

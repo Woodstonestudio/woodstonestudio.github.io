@@ -16,6 +16,7 @@ const PAGES: [string, string, number][] = [
   ["/sosyal-medya", "/en/social-media", 0.9],
   ["/e-ticaret", "/en/ecommerce", 0.9],
   ["/seo", "/en/seo", 0.9],
+  ["/randevu-sistemi", "/en/online-booking", 0.9],
   ["/calismalar", "/en/work", 0.8],
   ["/hakkimizda", "/en/about", 0.7],
   ["/sss", "/en/faq", 0.7],

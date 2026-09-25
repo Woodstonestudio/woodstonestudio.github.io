@@ -1,3 +1,4 @@
+import { SalonBand } from "@/components/salon-band";
 import { LatestPosts } from "@/components/latest-posts";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
@@ -28,6 +29,7 @@ export default function Home() {
         <Hero />
         <JoVVo />
         <Services />
+        <SalonBand locale="tr" />
         <Testimonials />
         <WorkShowcase />
         <IdeaCTA />

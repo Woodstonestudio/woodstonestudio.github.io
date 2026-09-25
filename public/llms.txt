@@ -16,6 +16,7 @@
 - **Web design & corporate websites** — kurumsal web siteleri, tanıtım siteleri. TR: /web-tasarim · EN: /en/web-design
 - **E-commerce websites & online stores** — e-ticaret sitesi, online mağaza, ödeme entegrasyonu. TR: /e-ticaret · EN: /en/ecommerce
 - **SEO services** — teknik SEO, içerik, yerel SEO, yapay zekâ aramalarında görünürlük. TR: /seo · EN: /en/seo
+- **Online booking + Google visibility for salons** — kuaför, berber, güzellik salonu ve spa'lar için online randevu, Google İşletme Profili ve yorum toplama paketi. TR: /randevu-sistemi · EN: /en/online-booking
 - **Mobile app development (iOS & Android, Flutter)** — mobil uygulama geliştirme ve mağaza yayını. TR: /mobil-uygulama · EN: /en/mobile-apps
 - **SaaS & MVP development** — SaaS ürünleri ve MVP. TR: /saas-gelistirme · EN: /en/saas-development
 - **AI solutions & automation** — yapay zekâ çözümleri, AI ajanları, otomasyon. TR: /yapay-zeka · EN: /en/ai-solutions
