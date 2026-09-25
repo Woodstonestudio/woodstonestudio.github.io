@@ -52,6 +52,7 @@ const T = {
     cta: "Bunları bizim düzeltmemizi ister misiniz?",
     ctaBtn: "Teklif isteyin",
     again: "Başka bir site analiz et",
+    emailed: "Raporun bir kopyası e-postanıza gönderildi.",
     note: "Bu analiz sitenizin ana sayfasına otomatik bakar; tasarım, içerik kalitesi ve sıralama gibi konular için görüşmede detaylı rapor çıkarırız.",
   },
   en: {
@@ -76,6 +77,7 @@ const T = {
     cta: "Want us to fix these for you?",
     ctaBtn: "Request a quote",
     again: "Audit another site",
+    emailed: "A copy of the report has been sent to your email.",
     note: "This audit looks at your homepage automatically; for design, content quality and rankings we prepare a detailed report in a call.",
   },
 } as const;
@@ -103,6 +105,7 @@ export function SiteAudit({ locale = "tr" }: { locale?: Locale }) {
   const openedAt = useRef<number>(Date.now());
   const [state, setState] = useState<"idle" | "running" | "done" | "err" | "limited" | "invalid">("idle");
   const [result, setResult] = useState<AuditResult | null>(null);
+  const [emailed, setEmailed] = useState(false);
   const contactHref = locale === "tr" ? "/?service=web#contact" : "/en?service=web#contact";
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -129,9 +132,10 @@ export function SiteAudit({ locale = "tr" }: { locale?: Locale }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      const data = (await r.json().catch(() => null)) as { ok?: boolean; result?: AuditResult; error?: string } | null;
+      const data = (await r.json().catch(() => null)) as { ok?: boolean; result?: AuditResult; emailed?: boolean; error?: string } | null;
       if (r.ok && data?.ok && data.result) {
         setResult(data.result);
+        setEmailed(Boolean(data.emailed));
         setState("done");
         return;
       }
@@ -246,7 +250,10 @@ export function SiteAudit({ locale = "tr" }: { locale?: Locale }) {
             {t.again}
           </button>
         </div>
-        <p className="mt-4 text-[13px] leading-[1.6] text-gray-warm">{t.note}</p>
+        <p className="mt-4 text-[13px] leading-[1.6] text-gray-warm">
+          {emailed ? `${t.emailed} ` : ""}
+          {t.note}
+        </p>
       </div>
     );
   }
