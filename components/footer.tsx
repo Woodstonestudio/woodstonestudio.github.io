@@ -4,6 +4,7 @@ import Image from "next/image";
  * Footer — tam marka imzasının göründüğü tek yer.
  */
 import { trSections, type SectionsDict } from "@/lib/i18n";
+import { CookieSettingsButton } from "@/components/cookie-consent";
 
 export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }) {
   const year = new Date().getFullYear();
@@ -38,10 +39,19 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
           </nav>
         </div>
 
-        <div className="mt-12 border-t border-line pt-8">
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-warm">
             © {year} WoodstoneStudio
           </p>
+          <div className="flex flex-wrap items-center gap-6">
+            <a
+              href={t.privacyHref}
+              className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-warm transition-colors hover:text-bone"
+            >
+              {t.privacyLabel}
+            </a>
+            <CookieSettingsButton label={t.cookieLabel} />
+          </div>
         </div>
       </div>
     </footer>

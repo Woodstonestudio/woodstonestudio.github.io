@@ -20,6 +20,7 @@ const PAGES: [string, string, number][] = [
   ["/hakkimizda", "/en/about", 0.7],
   ["/sss", "/en/faq", 0.7],
   ["/blog", "/en/blog", 0.8],
+  ["/gizlilik", "/en/privacy", 0.3],
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

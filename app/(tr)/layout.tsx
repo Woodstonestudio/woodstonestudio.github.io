@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "../globals.css";
 import { Spotlight } from "@/components/fx/spotlight";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { BackToTop } from "@/components/back-to-top";
+import { CookieConsent } from "@/components/cookie-consent";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
@@ -63,19 +63,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="tr" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      {/* Google Analytics 4 (GA4) — resmi Google tag */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-V7NRECZQ92"
-        strategy="afterInteractive"
-      />
-      <Script id="ga4-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-V7NRECZQ92');
-        `}
-      </Script>
+      {/* GA4 yalnızca çerez onayından sonra yüklenir: components/cookie-consent.tsx */}
       <body className="font-sans bg-base text-bone antialiased">
         {/* Ambient background layers */}
         <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
@@ -161,6 +149,7 @@ export default function RootLayout({
         <div className="relative z-10">{children}</div>
         <WhatsAppButton label="WhatsApp'tan yazın" />
         <BackToTop label="Yukarı çık" />
+        <CookieConsent locale="tr" />
       </body>
     </html>
   );

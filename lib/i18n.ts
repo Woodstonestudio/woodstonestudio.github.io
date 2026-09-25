@@ -174,6 +174,9 @@ export const trSections = {
   footer: {
     tagline: "Bağımsız Ürün Stüdyosu",
     ariaLabel: "Alt menü",
+    privacyHref: "/gizlilik",
+    privacyLabel: "Gizlilik ve Çerezler",
+    cookieLabel: "Çerez ayarları",
     links: [
       { href: "/#services", label: "Hizmetler" },
       { href: "/calismalar", label: "Çalışmalar" },
@@ -286,6 +289,9 @@ export const enSections: typeof trSections = {
   footer: {
     tagline: "Independent Product Studio",
     ariaLabel: "Footer menu",
+    privacyHref: "/en/privacy",
+    privacyLabel: "Privacy & Cookies",
+    cookieLabel: "Cookie settings",
     links: [
       { href: "/en#services", label: "Services" },
       { href: "/en/work", label: "Work" },

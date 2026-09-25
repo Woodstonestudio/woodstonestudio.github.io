@@ -36,7 +36,10 @@ const T = {
     choose: "Seçin",
     message: "Kısaca projeniz",
     messagePh: "Ne yapmak istiyorsunuz? Varsa örnek siteler, hedef tarih ve bütçe aralığı.",
-    consent: "Talebime dönüş yapılması için bilgilerimin işlenmesini kabul ediyorum.",
+    consentPre: "",
+    consentLink: "Aydınlatma Metni",
+    consentHref: "/gizlilik",
+    consent: "'ni okudum; talebime dönüş yapılması için bilgilerimin işlenmesini ve bu amaçla yurt dışındaki hizmet sağlayıcılara aktarılmasını kabul ediyorum.",
     send: "Gönder",
     sending: "Gönderiliyor…",
     ok: "Teşekkürler! Talebiniz bize ulaştı, en kısa sürede dönüş yapacağız.",
@@ -55,7 +58,10 @@ const T = {
     choose: "Select",
     message: "Your project in brief",
     messagePh: "What would you like to build? Example sites, target date and budget range if you have them.",
-    consent: "I agree to my details being processed so you can respond to my request.",
+    consentPre: "I have read the ",
+    consentLink: "Privacy Notice",
+    consentHref: "/en/privacy",
+    consent: " and agree to my details being processed, including by service providers abroad, so you can respond to my request.",
     send: "Send",
     sending: "Sending…",
     ok: "Thank you! We've received your request and will get back to you shortly.",
@@ -176,7 +182,13 @@ export function LeadForm({ locale = "tr" }: { locale?: Locale }) {
 
       <label className="mt-4 flex items-start gap-3 text-[13px] leading-[1.6] text-gray-warm">
         <input name="consent" type="checkbox" required className="mt-1 h-4 w-4 accent-[#26231E]" />
-        <span>{t.consent}</span>
+        <span>
+          {t.consentPre}
+          <a href={t.consentHref} target="_blank" rel="noopener" className="text-bone underline underline-offset-2">
+            {t.consentLink}
+          </a>
+          {t.consent}
+        </span>
       </label>
 
       {(state === "err" || state === "limited" || state === "invalid") && (
