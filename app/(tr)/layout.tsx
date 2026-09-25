@@ -91,6 +91,16 @@ export default function RootLayout({
                 contactType: "customer support",
                 availableLanguage: ["Turkish", "English"],
               },
+              // Müşteri yorumu — yapılandırılmış veri (site içindeki gerçek referans;
+              // puan verilmediği için reviewRating YOK, uydurma yıldız yok).
+              review: {
+                "@type": "Review",
+                author: { "@type": "Person", name: "Serpil Kurd" },
+                datePublished: "2026-09-20",
+                inLanguage: "tr-TR",
+                reviewBody: "Aklımızdaki salonu tam olarak ekrana taşıdılar; siteyi ilk açtığımızda 'İşte biz buyuz' dedik. Hızlı, sade ve tam bize benziyor. Çalışmak da gerçekten keyifliydi.",
+                itemReviewed: { "@type": "Organization", name: "WoodstoneStudio" },
+              },
               sameAs: [
                 "https://www.linkedin.com/in/woodstone-studio-5263a343a/",
                 "https://github.com/Woodstonestudio",

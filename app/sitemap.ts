@@ -20,6 +20,7 @@ const PAGES: [string, string, number][] = [
   ["/calismalar", "/en/work", 0.8],
   ["/hakkimizda", "/en/about", 0.7],
   ["/sss", "/en/faq", 0.7],
+  ["/site-analizi", "/en/site-audit", 0.9],
   ["/blog", "/en/blog", 0.8],
   ["/gizlilik", "/en/privacy", 0.3],
 ];

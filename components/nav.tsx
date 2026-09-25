@@ -147,7 +147,7 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-full px-2.5 py-2 text-sm text-gray-warm transition-colors duration-300 hover:text-bone xl:px-4"
+                className="whitespace-nowrap rounded-full px-2 py-2 text-sm text-gray-warm transition-colors duration-300 hover:text-bone xl:px-3"
               >
                 {l.label}
               </a>
