@@ -22,7 +22,7 @@ const C = {
     faqs: [
       { q: "Neden aralık, neden net fiyat değil?", a: "Aynı 'kurumsal site' bir firmada 6 sayfa ve hazır metinken başka bir firmada 20 sayfa, üç dil ve sıfırdan içerik olabilir. Aralık gerçekçi bir başlangıç noktasıdır; kapsam netleşince tek bir rakamla yazılı teklif veririz." },
       { q: "Fiyata neler dahil?", a: "Tasarım, geliştirme, mobil uyum, teknik SEO, alan adı ve barındırma kurulumu, yayına alma ve yayından sonra 30 gün düzeltme desteği. Alan adı ve barındırma ücretleri (yıllık, sağlayıcıya ödenir) hariçtir." },
-      { q: "Ödeme nasıl?", a: "Genellikle %40 başlangıçta, %60 yayında. Büyük projelerde aşamalı ödeme planı yapıyoruz." },
+      { q: "Ödeme nasıl?", a: "%50 başlangıçta, %50 yayında. Büyük projelerde aşamalı ödeme planı yapıyoruz." },
       { q: "Aylık bakım ne kapsıyor?", a: "Güncellemeler, küçük içerik değişiklikleri, yedekleme, güvenlik ve hız takibi, öncelikli destek. Zorunlu değildir; isteyen müşteriler için ayrı bir aylık plandır." },
     ],
   },
@@ -36,7 +36,7 @@ const C = {
     faqs: [
       { q: "Why a range and not a fixed price?", a: "The same 'corporate website' can be 6 pages with ready copy for one company and 20 pages, three languages and content from scratch for another. The range is a realistic starting point; once the scope is clear we send a written quote with a single figure." },
       { q: "What's included?", a: "Design, development, mobile-friendliness, technical SEO, domain and hosting setup, launch, and 30 days of post-launch fixes. Domain and hosting fees (yearly, paid to the provider) are excluded." },
-      { q: "How is payment structured?", a: "Usually 40% upfront and 60% at launch. For larger projects we set up milestone payments." },
+      { q: "How is payment structured?", a: "50% upfront and 50% at launch. For larger projects we set up milestone payments." },
       { q: "What does monthly care cover?", a: "Updates, small content changes, backups, security and speed monitoring, priority support. Optional — a separate monthly plan for clients who want it." },
     ],
   },
