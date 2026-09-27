@@ -102,7 +102,7 @@ export default function RootLayout({
                 itemReviewed: { "@type": "Organization", name: "WoodstoneStudio" },
               },
               sameAs: [
-                "https://www.linkedin.com/in/woodstone-studio-5263a343a/",
+                "https://www.linkedin.com/company/woodstonestudio/",
                 "https://github.com/Woodstonestudio",
                 "https://github.com/izmiradami",
                 "https://www.instagram.com/woodstonestudio35",
