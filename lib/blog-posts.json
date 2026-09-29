@@ -1,5 +1,383 @@
 [
   {
+    "slug": "web-tasarimi-hizmetleri",
+    "relatedService": "web",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-09-29",
+    "readMin": 6,
+    "category": {
+      "tr": "Web",
+      "en": "Web"
+    },
+    "title": {
+      "tr": "Web Tasarımı Hizmetleri: Teklif Almadan Önce Yanıtlamanız Gereken 8 Soru",
+      "en": "Web Design Services: 8 Questions to Answer Before Requesting Quotes"
+    },
+    "excerpt": {
+      "tr": "Web tasarımı hizmeti alırken neye dikkat etmeli, teklifler arasında nasıl seçim yapmalı? İşbirliğini doğru başlatmanın kontrol listesi.",
+      "en": "What to consider when hiring web design services and how to choose between proposals? A checklist for starting collaboration the right way."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "p",
+          "text": "Üç ajansa aynı projeyi anlattınız, biri düşük, biri yüksek bütçe verdi, diğeri ise 'proje bazlı fiyatlandırma' dedi. Hangisi doğru teklifi sunuyor? Eğer sadece rakama bakıyorsanız, büyük ihtimalle yanlış kararı verme yolundasınız."
+        },
+        {
+          "type": "p",
+          "text": "Web tasarımı hizmeti almak artık basit bir 'site yaptırma' işi değil. İşin içine kullanıcı deneyimi, içerik stratejisi, teknik altyapı, bakım ve sürekli güncelleme dahil. Bir ajans sizi anlamaya çalışıyorsa, ilk görüşmede çok soru soracaktır. Sadece 'nasıl bir site istiyorsunuz?' diye sormuyorsa, kendiniz sormanız gereken sorular var."
+        },
+        {
+          "type": "h2",
+          "text": "Projeyi başlatmadan önce netleştirin: hedef ve beklenti"
+        },
+        {
+          "type": "p",
+          "text": "Çoğu proje burada takılıyor: siz 'kurumsal bir site' istiyorsunuz, ajans 'landing page' anlıyor. Ya da siz 'online satış' diyorsunuz, karşı taraf bunu basit bir katalog sitesi olarak çiziyor. İlk adım, ne istediğinizi kelimelere dökmek değil — ne sorunu çözmeye çalıştığınızı ortaya koymak."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Satış mı yapacaksınız, yoksa sadece tanıtım mı?",
+            "Ziyaretçi kaydolacak, sipariş verecek ya da form dolduracak mı?",
+            "Site mevcut bir sisteme (CRM, stok yazılımı, ödeme sağlayıcı) bağlanacak mı?",
+            "Tek dil mi, çok dil mi?",
+            "Sitenin ömrü ne kadar? Altı ay sonra yenilenmesi mi gerekecek, yoksa yıllarca kullanılacak mı?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu soruların cevapları, teknik mimariyi ve bütçeyi doğrudan etkiler. Ajansın size sunduğu 'paket' içinde bunların hepsi karşılanmıyorsa, ileride ek maliyet çıkacaktır."
+        },
+        {
+          "type": "h2",
+          "text": "Tasarım süreci nasıl işleyecek?"
+        },
+        {
+          "type": "p",
+          "text": "Bir ajans size 'tasarım sürecimiz üç aşamadan oluşur' diyorsa, bu aşamaların içinde ne olduğunu sorun. Çünkü 'tasarım' kelimesi herkes için farklı anlama geliyor."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Keşif aşaması: hedef kitle analizi, rakip inceleme, içerik haritası çıkarma. Bazı ajanslar bunu hiç yapmaz, doğrudan Figma'ya atlar.",
+            "Wireframe/iskelet tasarım: sayfa yapısının çizilmesi. Butonun nerede olacağı, menünün nasıl açılacağı burada belirlenir — renk ve görsel değil.",
+            "Görsel tasarım: renk paleti, tipografi, görseller. Birçok işletme sadece bunu 'tasarım' sanır, oysa asıl işin temeli bir önceki adımdır.",
+            "Prototip/etkileşim: gerçek site gibi tıklanabilir bir model. Bunu görmeden kodlamaya geçilirse, sonradan çok şey değişir ve bütçe kaçar."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Her aşamada kaç revizyon hakkınız var? Revizyon 'istediğim gibi olmadı, baştan yap' anlamına mı geliyor, yoksa 'bu butonu biraz daha sağa al' şeklinde mi sınırlı? Sözleşmede açıkça yazmalı."
+        },
+        {
+          "type": "h2",
+          "text": "İçerik kimin sorumluluğunda?"
+        },
+        {
+          "type": "p",
+          "text": "En büyük gecikme nedeni burada gizli: tasarım tamamlandı, ama metinler yok. Fotoğraflar eksik. Ajans bekliyor, siz yazamıyorsunuz, proje duruyor."
+        },
+        {
+          "type": "p",
+          "text": "Ajans içerik üretimi de yapıyor mu? Yapıyorsa hangi seviyede: SEO'ya uygun metin yazımı, fotoğraf çekimi, ürün görseli retuşu? Bunların hepsi ek maliyet yaratabilir. Eğer sizden bekleniyorsa, hangi formatta teslim etmelisiniz? Word dosyası mı, Excel mi, Google Doküman mı? Görseller için boyut ve format standartları var mı?"
+        },
+        {
+          "type": "p",
+          "text": "\"Dijital Ürün Geliştirme: Fikirden Lansmana 7 Adımlık Yol Haritası\" yazımızda da değindiğimiz gibi, içerik hazırlığı en çok zaman alan adımlardan biridir. Bunu baştan planlamak, projenin zamanında bitmesi için kritiktir."
+        },
+        {
+          "type": "h2",
+          "text": "Teknik altyapı: hazır tema mı, sıfırdan kod mu?"
+        },
+        {
+          "type": "p",
+          "text": "Bu soruya aldığınız cevap hem fiyatı hem de sitenin geleceğini belirler."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Hazır tema + özelleştirme: WordPress, Webflow gibi platformlarda binlerce hazır tema var. Hızlıdır, başlangıç maliyeti düşüktür, ama derin özelleştirme sınırlıdır.",
+            "Yarı-hazır framework: Tailwind, Bootstrap gibi teknik bir alt yapıyla, daha esnek ama yine de belirli kalıplar içinde.",
+            "Tamamen özel geliştirme: sıfırdan yazılmış kod. Tam kontrol, ama zaman ve maliyet yüksektir."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Sadece başlangıç fiyatına bakmayın. Altı ay sonra yeni bir özellik eklemek istediğinizde ne olacak? Başka bir ajansa götürebilecek misiniz, yoksa ilk ajansa bağımlı mı kalacaksınız? Kodun sahipliği size mi geçecek? Ayrıca: hosting, domain, SSL, e-posta hesapları, yedekleme — bunlar paketin içinde mi, yoksa ayrı mı alıyorsunuz? Yıllık maliyetleri sorun."
+        },
+        {
+          "type": "h2",
+          "text": "Mobil uyum ve performans"
+        },
+        {
+          "type": "p",
+          "text": "Mobil uyum artık 'iyi olur' kategorisinde değil, 'olmak zorunda' kategorisinde. Ama teklifte 'responsive tasarım' yazması yetmez."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Tasarım sadece küçülüyor mu, yoksa mobilde farklı bir düzen mi kullanılıyor?",
+            "Sayfa açılma hızı test edilecek mi? Lighthouse, PageSpeed gibi araçlarla ölçüm yapılıyor mu?",
+            "Performans optimizasyonu (görsel sıkıştırma, lazy loading, cache) dahil mi?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Mobil trafikte yavaş açılan bir site, masaüstünde ne kadar güzel görünürse görünsün işe yaramaz. Bunu test etmeden teslim almayın."
+        },
+        {
+          "type": "h2",
+          "text": "Teslim sonrası: bakım, güncelleme, destek"
+        },
+        {
+          "type": "p",
+          "text": "Site yayına alındı, ajans projeyi kapattı. Bir ay sonra bir bağlantı çalışmıyor, ya da yeni bir sayfa eklemek istiyorsunuz. Kime, nasıl ulaşacaksınız?"
+        },
+        {
+          "type": "p",
+          "text": "Bazı ajanslar 'garanti süresi' verir: ilk dönem içinde oluşan teknik sorunları ücretsiz düzeltir. Bazıları aylık bakım paketi sunar. Bazıları ise her işlem için saatlik ücret ister."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Garanti kapsamı nedir? 'Hata' ile 'yeni istek' arasındaki sınır nerede?",
+            "Acil müdahale süresi ne kadar?",
+            "Güvenlik güncellemeleri (WordPress, eklentiler) kimin sorumluluğunda?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "\"Web sitesi yaptırmak ne kadar tutar? Fiyatı belirleyen 6 etken\" yazımızda da değindiğimiz gibi, teslim sonrası maliyetler başlangıç bütçesine dahil edilmezse, uzun vadede sürpriz giderler oluşur."
+        },
+        {
+          "type": "h2",
+          "text": "SEO ve analitik: site yayında ama kimse görmüyor"
+        },
+        {
+          "type": "p",
+          "text": "Tasarım ne kadar güzel olursa olsun, Google'da görünmüyorsa trafiğiniz olmaz. SEO (arama motoru optimizasyonu) bir uzmanlık alanıdır ve çoğu tasarım ajansı bunu kapsam dışı bırakır."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Teknik SEO (başlıklar, meta açıklamalar, URL yapısı, site haritası) dahil mi?",
+            "Google Analytics, Google Search Console kurulumu yapılacak mı?",
+            "Sayfa hızı, mobil uyum, erişilebilirlik testleri yapılıyor mu?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bunlar yapılmadan yayına alınan bir site, görünür olmak için aylarca ek çaba gerektirir. İlk günden doğru kurulum çok önemlidir."
+        },
+        {
+          "type": "h2",
+          "text": "Referanslar ve gerçek proje örnekleri"
+        },
+        {
+          "type": "p",
+          "text": "'Portföyümüze bakın' demek kolay. Ama o projelerde ajansın rolü neydi? Sadece görsel tasarım mı yaptı, yoksa stratejiden kodlamaya kadar her şey mi onlara aitti?"
+        },
+        {
+          "type": "p",
+          "text": "Referans isterken şunları sorun: Bu projenin kapsamı neydi? Ne kadar sürdü? Müşteri hâlâ sizinle çalışıyor mu? Neden devam ediyor ya da etmiyor? Projede karşılaşılan en büyük zorluk neydi, nasıl çözüldü?"
+        },
+        {
+          "type": "p",
+          "text": "İyi bir ajans, geçmiş projelerden dersler çıkarmıştır ve size benzer bir durumda ne yapacağını bilir. Eğer hep aynı sektörde çalışmışsa, sizin alanınızı anlama süresi kısa olur. Ama hiç deneyimi yoksa, öğrenme maliyeti size yansıyabilir."
+        },
+        {
+          "type": "p",
+          "text": "Doğru sorular sormak, doğru partneri bulmak kadar önemli. Çünkü web tasarımı hizmeti bir alışveriş değil, bir işbirliğidir. İşbirliği iyi kurulursa, ortaya çıkan ürün hem sizin hem de kullanıcılarınızın ihtiyacını karşılar."
+        },
+        {
+          "type": "p",
+          "text": "Projenizi planlamaya başlamadan önce bu soruların cevaplarını netleştirmek isterseniz, size ücretsiz bir ön değerlendirme sunabiliriz. Hangi yolun sizin için en uygun olduğunu birlikte konuşalım."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "text": "You pitched the same project to three agencies. One quoted a low budget, another quoted high, and the third said 'we price per project.' Which one is giving you the right proposal? If you're only looking at the numbers, you're likely heading toward the wrong decision."
+        },
+        {
+          "type": "p",
+          "text": "Hiring web design services is no longer a simple matter of 'getting a website built.' It now involves user experience, content strategy, technical infrastructure, maintenance, and continuous updates. If an agency is genuinely trying to understand you, they'll ask plenty of questions in the first meeting. If they're only asking 'what kind of site do you want?', there are questions you need to ask yourself."
+        },
+        {
+          "type": "h2",
+          "text": "Clarify before you start: goals and expectations"
+        },
+        {
+          "type": "p",
+          "text": "Most projects stumble here: you want a 'corporate site,' but the agency hears 'landing page.' Or you say 'online sales,' and they interpret it as a simple catalog site. The first step isn't to put what you want into words — it's to define what problem you're trying to solve."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Are you selling, or just promoting?",
+            "Will visitors register, place orders, or fill out forms?",
+            "Will the site connect to existing systems (CRM, inventory software, payment provider)?",
+            "Single language or multilingual?",
+            "What's the site's lifespan? Will it need renewal in six months, or will it be used for years?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The answers to these questions directly affect the technical architecture and budget. If the agency's 'package' doesn't cover all of this, additional costs will emerge later."
+        },
+        {
+          "type": "h2",
+          "text": "How will the design process work?"
+        },
+        {
+          "type": "p",
+          "text": "If an agency tells you 'our design process has three phases,' ask what's inside each phase. Because 'design' means different things to different people."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Discovery phase: target audience analysis, competitor research, content mapping. Some agencies skip this entirely and jump straight into Figma.",
+            "Wireframe/skeleton design: mapping out page structure. Where the button goes, how the menu opens — this is decided here, not color or visuals.",
+            "Visual design: color palette, typography, imagery. Many businesses think this is the only 'design,' but the foundation is in the previous step.",
+            "Prototype/interaction: a clickable model that works like the real site. If coding starts without this, many things will change later and the budget will balloon."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "How many revision rounds do you get at each stage? Does 'revision' mean 'it didn't turn out the way I wanted, start over,' or is it limited to 'move this button a bit to the right'? This should be clear in the contract."
+        },
+        {
+          "type": "h2",
+          "text": "Who is responsible for content?"
+        },
+        {
+          "type": "p",
+          "text": "The biggest source of delays hides here: the design is done, but there's no text. Photos are missing. The agency is waiting, you can't write, and the project stalls."
+        },
+        {
+          "type": "p",
+          "text": "Does the agency also produce content? If so, at what level: SEO-friendly copywriting, photography, product image retouching? All of these can create additional costs. If they're expecting it from you, in what format should you deliver? Word files, Excel, Google Docs? Are there size and format standards for images?"
+        },
+        {
+          "type": "p",
+          "text": "As we discussed in our article \"Digital Product Development: The 7-Step Roadmap from Idea to Launch,\" content preparation is one of the most time-consuming steps. Planning this from the start is critical for finishing the project on time."
+        },
+        {
+          "type": "h2",
+          "text": "Technical infrastructure: ready-made theme or custom code?"
+        },
+        {
+          "type": "p",
+          "text": "The answer to this question determines both price and the site's future."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Ready-made theme + customization: platforms like WordPress and Webflow have thousands of ready themes. Fast, low initial cost, but deep customization is limited.",
+            "Semi-ready framework: using a technical foundation like Tailwind or Bootstrap, more flexible but still within certain templates.",
+            "Fully custom development: code written from scratch. Full control, but time and cost are high."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Don't just look at the starting price. What happens when you want to add a new feature six months later? Will you be able to take it to another agency, or will you be locked in with the first one? Will code ownership transfer to you? Also: hosting, domain, SSL, email accounts, backups — are these included in the package or purchased separately? Ask about annual costs."
+        },
+        {
+          "type": "h2",
+          "text": "Mobile compatibility and performance"
+        },
+        {
+          "type": "p",
+          "text": "Mobile compatibility is no longer in the 'nice to have' category, it's 'must have.' But having 'responsive design' written in the proposal isn't enough."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Does the design just shrink, or does it use a different layout on mobile?",
+            "Will page load speed be tested? Are measurements done with tools like Lighthouse or PageSpeed?",
+            "Is performance optimization (image compression, lazy loading, caching) included?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "A site that loads slowly on mobile is useless no matter how beautiful it looks on desktop. Don't accept delivery without testing this."
+        },
+        {
+          "type": "h2",
+          "text": "Post-delivery: maintenance, updates, support"
+        },
+        {
+          "type": "p",
+          "text": "The site went live, the agency closed the project. A month later, a link isn't working, or you want to add a new page. Who do you contact, and how?"
+        },
+        {
+          "type": "p",
+          "text": "Some agencies offer a 'warranty period': they fix technical issues that arise in the first period for free. Some offer monthly maintenance packages. Others charge hourly for every task."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "What does the warranty cover? Where's the line between 'bug' and 'new request'?",
+            "What's the emergency response time?",
+            "Who's responsible for security updates (WordPress, plugins)?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "As we mentioned in our article \"How Much Does a Website Cost? 6 Factors That Determine Price,\" if post-delivery costs aren't included in the initial budget, surprise expenses will emerge in the long run."
+        },
+        {
+          "type": "h2",
+          "text": "SEO and analytics: the site is live but nobody sees it"
+        },
+        {
+          "type": "p",
+          "text": "No matter how beautiful the design, if it doesn't appear on Google, you won't have traffic. SEO (search engine optimization) is a specialized field, and most design agencies exclude it from scope."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Is technical SEO (titles, meta descriptions, URL structure, sitemap) included?",
+            "Will Google Analytics and Google Search Console be set up?",
+            "Are page speed, mobile compatibility, and accessibility tests performed?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "A site launched without these will require months of additional effort to become visible. Proper setup from day one is crucial."
+        },
+        {
+          "type": "h2",
+          "text": "References and real project examples"
+        },
+        {
+          "type": "p",
+          "text": "It's easy to say 'look at our portfolio.' But what was the agency's role in those projects? Did they just do visual design, or were they responsible for everything from strategy to coding?"
+        },
+        {
+          "type": "p",
+          "text": "When asking for references, ask: What was the scope of this project? How long did it take? Is the client still working with you? Why or why not? What was the biggest challenge in the project, and how was it solved?"
+        },
+        {
+          "type": "p",
+          "text": "A good agency has learned lessons from past projects and knows what to do in situations similar to yours. If they've always worked in the same industry, they'll understand your field quickly. But if they have no experience, the learning cost might pass to you."
+        },
+        {
+          "type": "p",
+          "text": "Asking the right questions is as important as finding the right partner. Because web design services aren't a transaction — they're a collaboration. When collaboration is built well, the resulting product serves both your needs and those of your users."
+        },
+        {
+          "type": "p",
+          "text": "If you'd like to clarify the answers to these questions before you start planning your project, we can offer you a free preliminary assessment. Let's discuss which path is best suited for you."
+        }
+      ]
+    }
+  },
+  {
     "slug": "mobil-uygulama-gelistirme",
     "relatedService": "mobile",
     "locales": [
