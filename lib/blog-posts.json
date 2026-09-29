@@ -486,11 +486,11 @@
         },
         {
           "type": "p",
-          "text": "Google Play daha esnek ama yine de kural ve politika kontrolleri var. APK/AAB dosyanız, store listing (başlık, açıklama, ekran görüntüleri, video), privacy policy URL'i ve içerik rating gerekli. Google otomatik tarama yapıyor; ciddi politika ihlali yoksa genellikle birkaç saat içinde yayına alınırsınız."
+          "text": "Google Play daha esnek ama yine de kural ve politika kontrolleri var. APK/AAB dosyanız, store listing (başlık, açıklama, ekran görüntüleri, video), privacy policy URL'i ve içerik rating gerekli. İnceleme birkaç saatten birkaç güne kadar sürebilir. Ayrıca 2023'ten sonra açılan kişisel geliştirici hesaplarında, yayına çıkmadan önce en az 12 test kullanıcısıyla 14 gün kesintisiz kapalı test yapmak zorunludur; bu süreyi takvime baştan ekleyin."
         },
         {
           "type": "p",
-          "text": "Her iki platformda da güncelleme stratejisi önemli: major sürüm, minor update (hata düzeltmeleri), hotfix (kritik sorunlar için hızlı patch). Kullanıcıların uygulamayı güncellemesini sağlamak, eski sürümleri desteklemeyi ne kadar sürdüreceğinize karar vermek de planlama gerektirir."
+          "text": "Her iki platformda da güncelleme stratejisi önemli: major sürüm (büyük değişiklikler), minor update (hata düzeltmeleri), hotfix (kritik sorunlar için hızlı patch). Kullanıcıların uygulamayı güncellemesini sağlamak, eski sürümleri desteklemeyi ne kadar sürdüreceğinize karar vermek de planlama gerektirir."
         },
         {
           "type": "h2",
@@ -614,7 +614,7 @@
         },
         {
           "type": "p",
-          "text": "Google Play is more flexible but still has rules and policy checks. You need your APK/AAB file, store listing (title, description, screenshots, video), privacy policy URL, and content rating. Google does automated scanning; if there's no serious policy violation, you're typically live within a few hours."
+          "text": "Google Play is more flexible but still has rules and policy checks. You need your APK/AAB file, store listing (title, description, screenshots, video), privacy policy URL, and content rating. Review can take anywhere from a few hours to several days. Also, personal developer accounts created after late 2023 must run a closed test with at least 12 testers for 14 consecutive days before they can publish to production — plan that time in from the start."
         },
         {
           "type": "p",
