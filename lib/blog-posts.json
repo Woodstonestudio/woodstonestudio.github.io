@@ -1,5 +1,285 @@
 [
   {
+    "slug": "mobil-uygulama-gelistirme",
+    "relatedService": "mobile",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-09-29",
+    "readMin": 6,
+    "category": {
+      "tr": "Mobil",
+      "en": "Mobile"
+    },
+    "title": {
+      "tr": "Mobil Uygulama Geliştirme: İlk Karardan Yayına Kadar",
+      "en": "Mobile App Development: From First Decision to Launch"
+    },
+    "excerpt": {
+      "tr": "Mobil uygulama geliştirme sürecinde platform seçiminden mimari kararlarına, test stratejilerinden yayın hazırlıklarına kadar bilmeniz gerekenler.",
+      "en": "Everything you need to know about mobile app development: from platform choice and architecture decisions to testing strategies and launch preparation."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "h2",
+          "text": "Platform seçimi: iOS, Android ya da her ikisi?"
+        },
+        {
+          "type": "p",
+          "text": "Bir mobil uygulama fikriniz var ama iOS mu Android mi diye takıldıysanız yalnız değilsiniz. İlk teknik karar çoğu projenin bütçesini baştan belirler."
+        },
+        {
+          "type": "p",
+          "text": "iOS ile başlamak genellikle daha az cihaz çeşitliliği demektir: sınırlı sayıda ekran boyutu, işletim sistemi versiyonu ve donanım kombinasyonu. Kod test etmek ve hata yakalamak daha öngörülebilir. Android tarafında onlarca üretici, binlerce farklı ekran çözünürlüğü ve yüzlerce eski OS versiyonu var — bu da test ve optimizasyon süresini uzatır."
+        },
+        {
+          "type": "p",
+          "text": "Her iki platformu birden hedeflemek isterseniz üç yol var: native geliştirme (iOS için Swift/SwiftUI, Android için Kotlin/Java — iki ayrı kod tabanı), cross-platform framework'ler (Flutter, React Native gibi — tek kod tabanı), ya da hibrit yaklaşım (web teknolojileri üzerine native wrapper). Native en performanslı ve esnek olanı; cross-platform daha hızlı başlangıç sunar ama karmaşık UI gereksinimlerinde ya da platform-spesifik özelliklerde (kamera, Bluetooth, NFC) limitler çıkabilir."
+        },
+        {
+          "type": "p",
+          "text": "Karar verirken hedef kitlenizin hangi platformu kullandığına, bütçenizin ne kadarını geliştirmeye ne kadarını teste ayıracağınıza ve uygulamanın hangi donanım özelliklerine (GPS, push notification, ödeme entegrasyonu) ihtiyaç duyduğuna bakın."
+        },
+        {
+          "type": "h2",
+          "text": "Mimari kararlar: backend, API ve veri akışı"
+        },
+        {
+          "type": "p",
+          "text": "Mobil uygulama sadece kullanıcının elindeki ekran değil. Arkada bir backend sistemi, veritabanı, API katmanı ve muhtemelen üçüncü parti servislerle entegrasyon var."
+        },
+        {
+          "type": "p",
+          "text": "RESTful API mi GraphQL mi kullanacağınız, veri güncellemelerini push notification ile mi WebSocket ile mi yapacağınız, offline modu destekleyip desteklemeyeceğiniz — bunlar ilk hafta karar almanız gereken teknik seçimler. Offline-first mimari seçerseniz (yani kullanıcı internetsiz de uygulamayı kullanabiliyor), veri senkronizasyonu, çakışma yönetimi ve lokal depolama stratejisi gerekir. Cihazda SQLite mi kullanacaksınız, Realm mi, yoksa key-value store mu? Her birinin performans, boyut ve karmaşıklık açısından farklı etkileri var."
+        },
+        {
+          "type": "p",
+          "text": "API tasarımında en sık yapılan hata, backend'i web uygulaması mantığıyla kurup mobil ihtiyaçlarını göz ardı etmek. Mobilde internet bağlantısı kesilir, kullanıcı uygulamayı kapatır, arka plana alır — her adımda durum kaybolabilir. Bu yüzden state management kütüphaneleri (Redux, Bloc, Provider gibi) ve retry/queue mekanizmaları gerekir."
+        },
+        {
+          "type": "h2",
+          "text": "Kullanıcı arayüzü: tasarım sistemi ve platform kuralları"
+        },
+        {
+          "type": "p",
+          "text": "iOS ve Android'in kendine özgü tasarım dili var: Human Interface Guidelines (iOS) ve Material Design (Android). Platform kurallarına uymak kullanıcı deneyimini iyileştirir çünkü insanlar kendi işletim sistemlerinin davranışlarına alışık."
+        },
+        {
+          "type": "p",
+          "text": "Örneğin iOS'te geri dönmek için üstteki back butonu ya da swipe hareketi kullanılır; Android'de sistem çubuğundaki back tuşu var. Navigation yapıları farklı: iOS'te tab bar altta, Android'te çoğunlukla bottom navigation ya da drawer menu. Bu farkları göz ardı edip tek bir tasarım her yere uygulamaya çalışırsanız her iki platformda da yabancı hissettiren bir uygulama çıkar."
+        },
+        {
+          "type": "p",
+          "text": "Tasarım sistemi kurmak — renk paleti, tipografi, button stilleri, spacing kuralları — geliştirme hızını artırır. Figma ya da Sketch'te component library oluşturup geliştiriciye net spec vermek, sürekli ileri geri yazışmaları önler. Tasarım token'ları kullanarak renk kodlarını, font boyutlarını ve spacing değerlerini hem tasarım hem kod tarafında senkronize tutabilirsiniz."
+        },
+        {
+          "type": "h2",
+          "text": "Test stratejisi: unit, integration ve kullanıcı testi"
+        },
+        {
+          "type": "p",
+          "text": "Mobil uygulama test etmek, web'den daha zahmetli. Farklı ekran boyutları, OS versiyonları, internet hızları, pil durumu, memory kullanımı — hepsi sonucu etkiler."
+        },
+        {
+          "type": "p",
+          "text": "Unit testler (her fonksiyonun bağımsız doğruluğu), integration testler (modüllerin birlikte çalışması) ve UI testleri (kullanıcı akışlarının simülasyonu) üç temel katman. XCTest (iOS), Espresso/JUnit (Android), ya da cross-platform araçlarla (Detox, Appium) otomatik testler yazabilirsiniz. Ama gerçek cihazlarda manuel test de şart — emülatör her zaman gerçeği yansıtmaz."
+        },
+        {
+          "type": "p",
+          "text": "Beta test için TestFlight (iOS) ve Google Play Console (Android) internal test kanalları var. Küçük bir kullanıcı grubuna erken erişim verip crash report, kullanım istatistikleri ve geri bildirim toplamak, App Store'a göndermeden önce kritik hataları yakalamayı sağlar."
+        },
+        {
+          "type": "p",
+          "text": "Performans testi de unutulmamalı: uygulama açılış süresi, ekran geçişleri, API yanıt süreleri, memory leak kontrolü. Profiler araçları (Xcode Instruments, Android Profiler) bu metrikleri ölçmenize yardımcı olur."
+        },
+        {
+          "type": "h2",
+          "text": "App Store ve Google Play: yayın süreci"
+        },
+        {
+          "type": "p",
+          "text": "Uygulamanız hazır, ama mağazalara göndermeden önce birkaç adım daha var."
+        },
+        {
+          "type": "p",
+          "text": "iOS tarafında Apple Developer hesabı açmanız, sertifika ve provisioning profile oluşturmanız gerekir. App Store'a gönderdiğinizde Apple insan reviewerlar uygulamanızı test eder — UI tutarlılığından içerik politikalarına, güvenlik standartlarından kullanıcı verisi kullanımına kadar her şeye bakarlar. Reddetme gerekçeleri çok katı olabilir: eksik privacy policy, belirsiz permission açıklamaları ya da yararsız bulunan bir özellik bile red sebebi."
+        },
+        {
+          "type": "p",
+          "text": "Google Play daha esnek ama yine de kural ve politika kontrolleri var. APK/AAB dosyanız, store listing (başlık, açıklama, ekran görüntüleri, video), privacy policy URL'i ve içerik rating gerekli. Google otomatik tarama yapıyor; ciddi politika ihlali yoksa genellikle birkaç saat içinde yayına alınırsınız."
+        },
+        {
+          "type": "p",
+          "text": "Her iki platformda da güncelleme stratejisi önemli: major sürüm, minor update (hata düzeltmeleri), hotfix (kritik sorunlar için hızlı patch). Kullanıcıların uygulamayı güncellemesini sağlamak, eski sürümleri desteklemeyi ne kadar sürdüreceğinize karar vermek de planlama gerektirir."
+        },
+        {
+          "type": "h2",
+          "text": "Analytics, monitoring ve sürekli geliştirme"
+        },
+        {
+          "type": "p",
+          "text": "Yayına aldıktan sonra iş bitmez. Kullanıcılar uygulamayı nasıl kullanıyor, hangi ekranda takılıyor, nerede çıkıyor — bunları izlemek için analytics kurulumu şart."
+        },
+        {
+          "type": "p",
+          "text": "Firebase Analytics, Mixpanel, Amplitude gibi araçlar event tracking ve kullanıcı segmentasyonu sağlar. Crash reporting (Crashlytics, Sentry) ile hangi hatalarda uygulama çöküyor, hangi satırda sorun var öğrenebilirsiniz. Remote config ile backend'den uygulama ayarlarını değiştirebilir, A/B testleri yapabilirsiniz — kullanıcıya uygulama güncellemesi yükletmeden."
+        },
+        {
+          "type": "p",
+          "text": "Dijital Ürün Geliştirme: Fikirden Lansmana 7 Adımlık Yol Haritası yazımızda anlattığımız gibi, yayın sadece bir kilometre taşı; asıl iterasyon ve öğrenme döngüsü orada başlar. Kullanıcı geri bildirimleri, kullanım verileri ve pazar değişiklikleri ışığında ürünü sürekli geliştirmek, başarılı mobil uygulamaların ortak özelliği."
+        },
+        {
+          "type": "h2",
+          "text": "Sık yapılan hatalar"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Her şeyi ilk versiyona sığdırmaya çalışmak: Özellik listesi uzadıkça proje süresi ve maliyeti katlanır. MVP nedir ve neden fikrinizi önce küçük başlatmalısınız? yazımızda anlattığımız gibi, çekirdek değeri test edip sonra genişletmek daha mantıklı.",
+            "Performansı son aşamaya bırakmak: Ağır animasyonlar, optimize edilmemiş görseller, gereksiz API çağrıları — bunlar baştan kurgulanmazsa sonradan düzeltmek çok zor. Her sprint'te performance benchmark yapın.",
+            "Platform farklılıklarını görmezden gelmek: Aynı tasarımı her yere uygula mantığı kullanıcı deneyimini zayıflatır. iOS ve Android'in kendine özgü beklentileri var; tasarım ve etkileşimde bunları göz önünde bulundurun.",
+            "Güvenlik ve veri koruma politikalarını atlamak: GDPR, yerel gizlilik düzenlemeleri ve diğer yasal gereksinimler mobil uygulamalara da uygulanır. Kullanıcı verilerini nasıl topladığınız, sakladığınız ve işlediğiniz açık olmalı — hem hukuki sorun yaşamamak hem de store onayı almak için.",
+            "Test etmeden yayınlamak: Benim telefonumda çalışıyor yetmez. Farklı cihazlar, OS versiyonları, internet koşulları — hepsinde test edilmeli."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Mobil uygulama geliştirme, doğru planlama ve teknik kararlarla yönetilebilir bir süreç. Platform seçiminden backend mimarisine, tasarım kurallarından test stratejisine kadar her adımda bilinçli kararlar almak, hem geliştirme süresini kısaltır hem de kullanıcı memnuniyetini artırır. Projeniz için teknik mimari, platform seçimi veya geliştirme süreci konusunda sorularınız varsa, ücretsiz bir ön değerlendirme görüşmesi yapabiliriz."
+        }
+      ],
+      "en": [
+        {
+          "type": "h2",
+          "text": "Platform choice: iOS, Android, or both?"
+        },
+        {
+          "type": "p",
+          "text": "If you have a mobile app idea but are stuck deciding between iOS and Android, you're not alone. This first technical decision often determines your project's budget from the start."
+        },
+        {
+          "type": "p",
+          "text": "Starting with iOS typically means less device fragmentation: a limited number of screen sizes, OS versions, and hardware combinations. Testing code and catching bugs is more predictable. On the Android side, there are dozens of manufacturers, thousands of different screen resolutions, and hundreds of legacy OS versions — which extends testing and optimization time."
+        },
+        {
+          "type": "p",
+          "text": "If you want to target both platforms, you have three paths: native development (Swift/SwiftUI for iOS, Kotlin/Java for Android — two separate codebases), cross-platform frameworks (Flutter, React Native — single codebase), or a hybrid approach (web technologies wrapped in a native shell). Native is the most performant and flexible; cross-platform offers faster time-to-market but can hit limits with complex UI requirements or platform-specific features (camera, Bluetooth, NFC)."
+        },
+        {
+          "type": "p",
+          "text": "Base your decision on which platform your target audience uses, how you'll split your budget between development and testing, and what hardware features your app needs (GPS, push notifications, payment integration)."
+        },
+        {
+          "type": "h2",
+          "text": "Architecture decisions: backend, API, and data flow"
+        },
+        {
+          "type": "p",
+          "text": "A mobile app isn't just the screen in the user's hand. Behind it sits a backend system, database, API layer, and likely third-party service integrations."
+        },
+        {
+          "type": "p",
+          "text": "Whether you'll use RESTful API or GraphQL, how you'll handle data updates (push notifications vs. WebSocket), whether you'll support offline mode — these are technical choices you need to make in the first week. If you choose an offline-first architecture (meaning users can use the app without internet), you'll need data synchronization, conflict resolution, and a local storage strategy. Will you use SQLite on the device, Realm, or a key-value store? Each has different implications for performance, size, and complexity."
+        },
+        {
+          "type": "p",
+          "text": "The most common mistake in API design is building the backend with web app logic and ignoring mobile needs. On mobile, internet connections drop, users close the app, send it to the background — state can be lost at any step. That's why you need state management libraries (Redux, Bloc, Provider) and retry/queue mechanisms."
+        },
+        {
+          "type": "h2",
+          "text": "User interface: design system and platform conventions"
+        },
+        {
+          "type": "p",
+          "text": "iOS and Android have their own design languages: Human Interface Guidelines (iOS) and Material Design (Android). Following platform conventions improves user experience because people are accustomed to how their operating system behaves."
+        },
+        {
+          "type": "p",
+          "text": "For example, on iOS you go back using the top-left back button or a swipe gesture; on Android there's a back button in the system bar. Navigation structures differ: iOS has a tab bar at the bottom, Android typically uses bottom navigation or a drawer menu. If you ignore these differences and try to apply one design everywhere, you end up with an app that feels foreign on both platforms."
+        },
+        {
+          "type": "p",
+          "text": "Building a design system — color palette, typography, button styles, spacing rules — speeds up development. Creating a component library in Figma or Sketch and giving developers clear specs prevents endless back-and-forth. Using design tokens, you can keep color codes, font sizes, and spacing values synchronized between design and code."
+        },
+        {
+          "type": "h2",
+          "text": "Testing strategy: unit, integration, and user testing"
+        },
+        {
+          "type": "p",
+          "text": "Testing a mobile app is more demanding than web. Different screen sizes, OS versions, internet speeds, battery states, memory usage — all affect the outcome."
+        },
+        {
+          "type": "p",
+          "text": "Unit tests (independent correctness of each function), integration tests (modules working together), and UI tests (simulating user flows) are the three core layers. You can write automated tests with XCTest (iOS), Espresso/JUnit (Android), or cross-platform tools (Detox, Appium). But manual testing on real devices is essential — emulators don't always reflect reality."
+        },
+        {
+          "type": "p",
+          "text": "For beta testing, TestFlight (iOS) and Google Play Console (Android) have internal test channels. Giving early access to a small user group and collecting crash reports, usage stats, and feedback helps catch critical bugs before submitting to the App Store."
+        },
+        {
+          "type": "p",
+          "text": "Don't forget performance testing: app launch time, screen transitions, API response times, memory leak checks. Profiler tools (Xcode Instruments, Android Profiler) help you measure these metrics."
+        },
+        {
+          "type": "h2",
+          "text": "App Store and Google Play: the release process"
+        },
+        {
+          "type": "p",
+          "text": "Your app is ready, but there are a few more steps before submitting to the stores."
+        },
+        {
+          "type": "p",
+          "text": "On iOS, you need to open an Apple Developer account and create certificates and provisioning profiles. When you submit to the App Store, Apple's human reviewers test your app — they check everything from UI consistency to content policies, security standards to user data handling. Rejection reasons can be strict: a missing privacy policy, unclear permission descriptions, or a feature deemed not useful can all be grounds for rejection."
+        },
+        {
+          "type": "p",
+          "text": "Google Play is more flexible but still has rules and policy checks. You need your APK/AAB file, store listing (title, description, screenshots, video), privacy policy URL, and content rating. Google does automated scanning; if there's no serious policy violation, you're typically live within a few hours."
+        },
+        {
+          "type": "p",
+          "text": "Update strategy matters on both platforms: major releases, minor updates (bug fixes), hotfixes (quick patches for critical issues). You also need to decide how to encourage users to update and how long you'll support older versions."
+        },
+        {
+          "type": "h2",
+          "text": "Analytics, monitoring, and continuous improvement"
+        },
+        {
+          "type": "p",
+          "text": "The work doesn't end at launch. You need to understand how users interact with your app, where they get stuck, where they drop off — and that requires analytics setup."
+        },
+        {
+          "type": "p",
+          "text": "Tools like Firebase Analytics, Mixpanel, and Amplitude provide event tracking and user segmentation. Crash reporting (Crashlytics, Sentry) shows you which errors cause crashes and at which line. Remote config lets you change app settings from the backend and run A/B tests — without forcing users to download an update."
+        },
+        {
+          "type": "p",
+          "text": "As we explained in our Digital Product Development: A 7-Step Roadmap from Idea to Launch article, launch is just one milestone; the real iteration and learning loop starts there. Continuously improving the product based on user feedback, usage data, and market changes is what successful mobile apps have in common."
+        },
+        {
+          "type": "h2",
+          "text": "Common mistakes"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Trying to cram everything into the first version: As the feature list grows, project time and cost multiply. As we explained in our MVP article, testing core value first and expanding later makes more sense.",
+            "Leaving performance to the last phase: Heavy animations, unoptimized images, unnecessary API calls — if these aren't designed in from the start, fixing them later is very difficult. Run performance benchmarks in every sprint.",
+            "Ignoring platform differences: The apply-one-design-everywhere mindset weakens user experience. iOS and Android have their own expectations; consider them in design and interaction.",
+            "Skipping security and privacy policies: GDPR, local privacy regulations, and other legal requirements apply to mobile apps too. How you collect, store, and process user data must be transparent — both to avoid legal issues and to get store approval.",
+            "Launching without testing: It works on my phone isn't enough. Test across different devices, OS versions, and network conditions."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Mobile app development is a manageable process with the right planning and technical decisions. Making informed choices at every step — from platform selection to backend architecture, design rules to testing strategy — shortens development time and improves user satisfaction. If you have questions about technical architecture, platform choice, or the development process for your project, we'd be happy to offer a free initial consultation."
+        }
+      ]
+    }
+  },
+  {
     "slug": "custom-web-application-development",
     "relatedService": "web",
     "locales": [
