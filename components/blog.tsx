@@ -145,6 +145,7 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
     headline: post.title[locale],
     description: post.excerpt[locale],
     datePublished: post.date,
+    dateModified: post.updated ?? post.date,
     inLanguage: locale,
     author: { "@type": "Organization", name: "WoodstoneStudio", url: SITE },
     publisher: {

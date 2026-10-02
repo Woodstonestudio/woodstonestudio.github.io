@@ -7,6 +7,8 @@ export type BlogPost = {
   locales: Locale[]; // bu yazının yayınlandığı diller (pazar hedefli içerik için)
   relatedService?: string; // ilgili hizmet slug-kökü: "web" | "mobile" | "saas" | "ai" | "social"
   date: string; // ISO
+  /** Son anlamlı güncelleme (ISO) — yapay zekâ aramaları tazeliğe bakar; yoksa date kullanılır */
+  updated?: string;
   readMin: number;
   category: Record<Locale, string>;
   title: Record<Locale, string>;
@@ -50,6 +52,78 @@ export const BLOG_LABELS: Record<Locale, { eyebrow: string; title: [string, stri
 
 // Elle yazılmış yazılar
 const handwrittenPosts: BlogPost[] = [
+  {
+    slug: "salon-online-randevu-sistemleri",
+    relatedService: "web",
+    locales: ["tr", "en"],
+    date: "2026-10-02",
+    readMin: 6,
+    category: { tr: "Randevu", en: "Booking" },
+    title: {
+      tr: "Salonlar İçin Online Randevu Sistemleri (2026): Fresha, Booksy, Cal.com ve Kendi Siteniz",
+      en: "Online Booking for Salons (2026): Fresha, Booksy, Cal.com or Your Own Website",
+    },
+    excerpt: {
+      tr: "Kuaför ve güzellik salonları için online randevu seçeneklerinin dürüst karşılaştırması: aylık ücret, yeni müşteri komisyonu, müşteri verisi kimde kalıyor ve hangi salona hangisi uygun.",
+      en: "An honest comparison of online booking options for hair and beauty salons: monthly fees, new-client commissions, who owns the client data, and which option fits which salon.",
+    },
+    body: {
+      tr: [
+        { type: "p", text: "Kısa cevap: tek kişi çalışıyorsanız ve yeni başlıyorsanız ücretsiz ya da düşük ücretli bir randevu aracı yeterlidir. Üç ve daha fazla çalışanınız, yerleşik bir müşteri kitleniz varsa ve randevuların çoğu Instagram ya da telefondan geliyorsa, komisyonsuz çalışan kendi web siteniz ve randevu sayfanız uzun vadede daha ucuza gelir. Aşağıda seçenekleri aylık ücret, komisyon ve müşteri verisinin kimde kaldığı açısından karşılaştırdık." },
+        { type: "h2", text: "Seçenek 1: Randevu pazaryerleri (Fresha, Booksy)" },
+        { type: "p", text: "Bu uygulamalar hem randevu yazılımı hem de müşterilerin salon aradığı bir pazar yeri. En büyük avantajları, kurulumun hızlı olması ve uygulamayı kullanan yeni müşterilerin sizi bulabilmesi. Karşılığında iki tür ücret ödersiniz: aylık abonelik ve pazar yerinden gelen yeni müşteri başına komisyon." },
+        { type: "ul", items: [
+          "Fresha: ekip planı çalışan başına aylık yaklaşık 14,95 $; pazar yerinden gelen yeni müşteride yüzde 20 komisyon (en az 6 $). Kaynak: [Pabau, Fresha fiyatları 2026](https://pabau.com/blog/fresha-pricing/)",
+          "Booksy: aylık 29,99 $'dan başlayan abonelik; uygulamadan gelen yeni müşterinin ilk randevusunda genellikle yüzde 30 komisyon. Kaynak: [Slotcut, Booksy fiyatları 2026](https://slotcut.com/blog/booksy-pricing-2026-what-you-actually-pay)",
+          "Kart ile ödeme alırsanız her iki platformda da ayrıca işlem ücreti vardır.",
+        ] },
+        { type: "p", text: "Bu rakamlar ABD fiyatlarıdır; Türkiye'de fiyat ve oranlar farklı olabilir, güncel tutarı platformun kendi sitesinden kontrol edin. Dikkat edilmesi gereken nokta şu: müşteri sizi pazar yerinde bulduğunda, aynı uygulamada yan yana listelenen rakiplerinizi de görür. Müşteri listesi ve iletişim geçmişi de büyük ölçüde platformun içinde kalır." },
+        { type: "h2", text: "Seçenek 2: Genel randevu araçları (Cal.com ve benzerleri)" },
+        { type: "p", text: "Cal.com gibi araçlar salona özel değildir ama tek çalışan için iyi iş görür. Cal.com'un ücretsiz planı tek kullanıcı, sınırsız randevu türü ve web sitesine gömülebilen randevu kutusu sunuyor; birden fazla çalışan için ekip planı kullanıcı başına aylık 15 $. Kaynak: [Zeeg, Cal.com fiyatları 2026](https://zeeg.me/en/blog/post/cal-com-pricing). Kuaför ya da makyaj sanatçısı olarak tek başınıza çalışıyorsanız en masrafsız başlangıç budur." },
+        { type: "h2", text: "Seçenek 3: Kendi web siteniz ve randevu sayfanız" },
+        { type: "p", text: "Bu seçenekte randevu sayfası kendi alan adınızda çalışır: müşteri yalnızca sizin hizmetlerinizi, fiyatlarınızı ve boş saatlerinizi görür. Pazar yeri komisyonu yoktur, müşteri listesi sizindir ve site Google'da kendi adınızla çıkar. Maliyet yapısı farklıdır: bir kerelik kurulum ücreti ve hosting, güncelleme ve desteği kapsayan aylık bakım." },
+        { type: "p", text: "Örnek bir hesap yapalım: pazar yerinden ayda 20 yeni müşteri gelen ve ortalama hizmet bedeli 800 TL olan bir salon, yüzde 20 komisyonla yalnızca komisyona ayda 3.200 TL öder; buna çalışan başına abonelik eklenir. Müşterileriniz sizi zaten Instagram'dan ya da tavsiyeyle buluyorsa, bu komisyonu sizi bulmuş müşteri için ödüyorsunuz demektir." },
+        { type: "h2", text: "Hangisi hangi salona uygun" },
+        { type: "ul", items: [
+          "Tek başına çalışıyor ve yeni başlıyorsanız: Cal.com'un ücretsiz planı ya da Fresha'nın tek kişilik planı.",
+          "Yeni müşteri bulmak ilk önceliğinizse ve komisyonu kabul ediyorsanız: Fresha ya da Booksy gibi bir pazar yeri.",
+          "Üç ve daha fazla çalışanınız, düzenli müşterileriniz ve güçlü bir Instagram hesabınız varsa: komisyonsuz kendi siteniz ve randevu sayfanız.",
+          "Hangisini seçerseniz seçin: randevu bağlantınızı Google İşletme Profilinize ekleyin. Google bu bağlantı için ücret almaz. Kaynak: [SimplerBook](https://www.simplerbook.com/blog/google-business-profile-booking/)",
+        ] },
+        { type: "h2", text: "Karar vermeden önce sorulacak 4 soru" },
+        { type: "ul", items: [
+          "Randevularımın çoğu nereden geliyor: Instagram, telefon, tavsiye ya da uygulama?",
+          "Ayda kaç yeni müşteri bir pazar yerinden geliyor ve bunun komisyonu ne tutuyor?",
+          "Müşteri listemi ve iletişim geçmişimi platformdan çıkarabiliyor muyum?",
+          "Google'da salonumun adını aratan biri randevu sayfama doğrudan ulaşabiliyor mu?",
+        ] },
+        { type: "p", text: "WoodstoneStudio olarak salonlar için komisyonsuz, Google'da kendi adınızla çıkan web sitesi ve online randevu sayfası kuruyoruz; ayrıntılar [online randevu sistemi sayfamızda](/randevu-sistemi). Kendi projenizin tahmini maliyetini [fiyat hesaplama sayfamızdan](/fiyat-hesaplama) görebilirsiniz." },
+      ],
+      en: [
+        { type: "p", text: "Short answer: if you work alone and are just starting out, a free or low-cost booking tool is enough. If you have three or more staff, an established client base and most bookings already come from Instagram or phone, a commission-free booking page on your own website usually costs less over time. Below we compare the options by monthly fee, commission and who keeps the client data." },
+        { type: "h2", text: "Option 1: Booking marketplaces (Fresha, Booksy)" },
+        { type: "p", text: "These apps are both booking software and a marketplace where clients search for salons. Setup is fast and new clients can discover you. In return you pay a monthly subscription and a commission on new clients who find you through the marketplace." },
+        { type: "ul", items: [
+          "Fresha: team plan about $14.95 per team member per month; 20% fee on new marketplace clients ($6 minimum). Source: [Pabau, Fresha pricing 2026](https://pabau.com/blog/fresha-pricing/)",
+          "Booksy: subscription from $29.99 per month; typically a 30% commission on a new client's first booking from the app. Source: [Slotcut, Booksy pricing 2026](https://slotcut.com/blog/booksy-pricing-2026-what-you-actually-pay)",
+          "Card payments add processing fees on both platforms.",
+        ] },
+        { type: "p", text: "These are US prices; rates differ by country, so check the platform's own site. Keep in mind that clients who find you on a marketplace also see competitors listed next to you, and much of your client list and history lives inside the platform." },
+        { type: "h2", text: "Option 2: General scheduling tools (Cal.com and similar)" },
+        { type: "p", text: "Tools like Cal.com are not salon-specific but work well for a single professional. Cal.com's free plan covers one user, unlimited event types and an embeddable booking widget; team plans cost $15 per user per month. Source: [Zeeg, Cal.com pricing 2026](https://zeeg.me/en/blog/post/cal-com-pricing)." },
+        { type: "h2", text: "Option 3: Your own website and booking page" },
+        { type: "p", text: "Here the booking page runs on your own domain: clients only see your services, prices and free slots. There is no marketplace commission, the client list is yours, and the site appears on Google under your own name. You pay a one-off setup fee and a monthly care plan for hosting, updates and support." },
+        { type: "h2", text: "Which option fits which salon" },
+        { type: "ul", items: [
+          "Solo and just starting: Cal.com's free plan or Fresha's individual plan.",
+          "New-client discovery is the priority and the commission is acceptable: a marketplace such as Fresha or Booksy.",
+          "Three or more staff, regular clients and a strong Instagram: your own commission-free website and booking page.",
+          "Whatever you choose: add your booking link to your Google Business Profile. Google does not charge for it. Source: [SimplerBook](https://www.simplerbook.com/blog/google-business-profile-booking/)",
+        ] },
+        { type: "p", text: "At WoodstoneStudio we build commission-free salon websites with online booking that appear on Google under your own name; see our [online booking page](/en/online-booking) or estimate your project with the [pricing calculator](/en/pricing-calculator)." },
+      ],
+    },
+  },
   {
     slug: "web-sitesi-tasarimi",
     relatedService: "web",
