@@ -37,6 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: BASE + en, changeFrequency: "monthly", priority, alternates: { languages } });
   }
 
+  // Yalnızca Türkçe şehir sayfaları
+  for (const tr of ["/izmir-web-tasarim"]) {
+    entries.push({ url: BASE + tr, lastModified: "2026-10-02", changeFrequency: "monthly", priority: 0.9 });
+  }
+
   // Blog yazıları: yalnızca yayınlandıkları dillerde listelenir
   for (const p of posts) {
     const hasTr = p.locales.includes("tr");

@@ -149,6 +149,7 @@ export const webDesignTR: ServiceContent = {
   ],
   relatedTitle: "İlgili hizmetler ve yazılar",
   related: [
+    { label: "İzmir web tasarım", href: "/izmir-web-tasarim" },
     { label: "Diş kliniği web sitesi", href: "/dis-klinigi-web-sitesi" },
     { label: "Otel ve pansiyon web sitesi", href: "/otel-pansiyon-web-sitesi" },
     { label: "Salonlar için randevu paketi", href: "/randevu-sistemi" },

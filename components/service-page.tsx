@@ -65,6 +65,7 @@ const PRICE_FROM: Record<string, ProjectKey> = {
   "/saas-gelistirme": "saas",
   "/randevu-sistemi": "booking",
   "/dis-klinigi-web-sitesi": "booking",
+  "/izmir-web-tasarim": "landing",
 };
 const CURRENCY = { tr: "TRY", en: "EUR" } as const;
 const CALC = { tr: "/fiyat-hesaplama", en: "/en/pricing-calculator" } as const;
@@ -108,6 +109,7 @@ const SERVICE_KEY: Record<string, string> = {
   "/randevu-sistemi": "booking",
   "/dis-klinigi-web-sitesi": "web",
   "/otel-pansiyon-web-sitesi": "web",
+  "/izmir-web-tasarim": "web",
 };
 function serviceQuery(c: ServiceContent) {
   const k = SERVICE_KEY[c.alternates.tr];
@@ -405,10 +407,15 @@ export function serviceMetadata(c: ServiceContent) {
     keywords: c.meta.keywords,
     alternates: {
       canonical: c.slug,
-      languages: {
-        tr: `${SITE}${c.alternates.tr}`,
-        en: `${SITE}${c.alternates.en}`,
-      },
+      // Tek dilli sayfalarda (alternates.en boş) hreflang üretme
+      ...(c.alternates.en
+        ? {
+            languages: {
+              tr: `${SITE}${c.alternates.tr}`,
+              en: `${SITE}${c.alternates.en}`,
+            },
+          }
+        : {}),
     },
     openGraph: {
       title: c.meta.title,

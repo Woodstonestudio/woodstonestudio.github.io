@@ -73,6 +73,7 @@ export function buildLlmsTxt(): string {
   L.push("");
   L.push("## Services", "");
   for (const s of SERVICES) L.push(`- [${s.name}](${BASE}${s.en}): ${s.detail} Turkish page: [${s.tr}](${BASE}${s.tr})`);
+  L.push(`- [Web design in Izmir, Turkey (Turkish page)](${BASE}/izmir-web-tasarim): websites, e-commerce, online booking and SEO for businesses in Izmir, with published starting prices.`);
   L.push("");
   L.push("## Tools and key pages", "");
   for (const t of TOOLS) L.push(`- [${t.name}](${BASE}${t.en}) · [Türkçe](${BASE}${t.tr})`);

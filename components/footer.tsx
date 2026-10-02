@@ -30,7 +30,7 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
             </div>
           </div>
 
-          <nav aria-label={t.ariaLabel} className="flex gap-8">
+          <nav aria-label={t.ariaLabel} className="flex flex-wrap gap-x-8 gap-y-3 sm:justify-end">
             {t.links.map((l) => (
               <a key={l.href} href={l.href} className="text-sm text-gray-warm transition-colors hover:text-bone">
                 {l.label}

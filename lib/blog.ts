@@ -752,6 +752,7 @@ const handwrittenPosts: BlogPost[] = [
     relatedService: "web",
     locales: ["tr"],
     date: "2026-09-07",
+    updated: "2026-10-02",
     readMin: 5,
     category: { tr: "Web", en: "" },
     title: {
@@ -781,7 +782,7 @@ const handwrittenPosts: BlogPost[] = [
         { type: "p", text: "Site yayına girince iş bitmez. Güncelleme, küçük değişiklik ve teknik destek için bir anlaşma olup olmadığını baştan sorun. Ucuz tekliflerin çoğu burada eksik kalır." },
         { type: "h2", text: "İzmir için gerçekçi bir bakış" },
         { type: "p", text: "Kaba bir rehber: sade ama profesyonel bir kurumsal site birkaç yüz eurodan (ya da TL karşılığından) başlar; özel tasarımlı, çok sayfalı veya çok dilli, SEO'lu bir site daha yukarıdadır; e-ticaret ve özel işlevler fiyatı daha da artırır. Doğru soru \"en ucuz hangisi?\" değil, \"bana gerçekten ne lazım ve teklif bunu net anlatıyor mu?\" olmalı." },
-        { type: "p", text: "İzmir merkezliyiz ama Türkiye'nin her yerinden müşteriyle çalışıyoruz. Bir web sitesi düşünüyorsanız, ücretsiz ön görüşmede kapsamı ve maliyeti birlikte netleştirebiliriz — gizli kalem olmadan." },
+        { type: "p", text: "İzmir'deki işletmelerle ve Türkiye'nin her yerinden müşteriyle uzaktan çalışıyoruz. Güncel başlangıç fiyatlarımızı ve İzmir'e özgü ihtiyaçları [İzmir web tasarım](/izmir-web-tasarim) sayfasında, kendi projenizin tahmini maliyetini [fiyat hesaplama](/fiyat-hesaplama) aracında görebilirsiniz. Ücretsiz ön görüşmede kapsamı ve maliyeti birlikte netleştirebiliriz; gizli kalem olmadan." },
       ],
     },
   },

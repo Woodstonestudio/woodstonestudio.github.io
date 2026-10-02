@@ -200,6 +200,7 @@ export const trSections = {
       { href: "/otel-pansiyon-web-sitesi", label: "Oteller" },
       { href: "/randevu-sistemi", label: "Salonlar" },
       { href: "/site-analizi", label: "Site analizi" },
+      { href: "/izmir-web-tasarim", label: "İzmir web tasarım" },
       { href: "/fiyat-hesaplama", label: "Fiyat hesaplama" },
       { href: "/blog", label: "Blog" },
       { href: "/#contact", label: "İletişim" },
