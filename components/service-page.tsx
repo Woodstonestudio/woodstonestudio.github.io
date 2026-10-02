@@ -3,6 +3,7 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/motion/reveal";
 import { trNav, enNav, trSections, enSections } from "@/lib/i18n";
+import { BASE, type ProjectKey } from "@/lib/pricing";
 
 /**
  * Hizmet sayfası şablonu — SEO odaklı, üç dilli.
@@ -35,6 +36,8 @@ export type ServiceContent = {
   closingLead: string;
   closingCta: string;
   backLabel: string;
+  /** İçeriğin son güncellendiği tarih (ISO). Yoksa SERVICES_UPDATED kullanılır. */
+  updated?: string;
   serviceType: string; // Service şeması için
   areaServed: string;
   /** Uzun rehber içerik (SEO) — süreç ile SSS arasında gösterilir. */
@@ -49,6 +52,41 @@ const NAV = { tr: trNav, en: enNav } as const;
 const FOOTER = { tr: trSections.footer, en: enSections.footer } as const;
 const HOME = { tr: "/", en: "/en" } as const;
 const SITE = "https://woodstonestudio.com";
+
+/**
+ * Hizmet sayfalarında gösterilen başlangıç fiyatı — tek kaynak lib/pricing.ts.
+ * Fiyatı orada değiştirirsen hizmet sayfaları ve yapılandırılmış veri de güncellenir.
+ * Fiyatı belirlenmemiş hizmetler (AI, SEO, sosyal medya, otel) burada yok; o sayfalarda fiyat satırı çıkmaz.
+ */
+const PRICE_FROM: Record<string, ProjectKey> = {
+  "/web-tasarim": "landing",
+  "/e-ticaret": "ecommerce",
+  "/mobil-uygulama": "mobile",
+  "/saas-gelistirme": "saas",
+  "/randevu-sistemi": "booking",
+  "/dis-klinigi-web-sitesi": "booking",
+};
+const CURRENCY = { tr: "TRY", en: "EUR" } as const;
+const CALC = { tr: "/fiyat-hesaplama", en: "/en/pricing-calculator" } as const;
+/** Hizmet sayfalarının son içerik güncellemesi; sayfa bazında ServiceContent.updated ile ezilebilir. */
+const SERVICES_UPDATED = "2026-10-02";
+
+function priceFrom(c: ServiceContent) {
+  const key = PRICE_FROM[c.alternates.tr];
+  if (!key) return null;
+  const min = BASE[c.locale][key].min;
+  const label =
+    c.locale === "tr"
+      ? `${min.toLocaleString("tr-TR")} ₺'den başlar`
+      : `Starting from €${min.toLocaleString("en-GB")}`;
+  return { min, label };
+}
+
+function fmtUpdated(iso: string, locale: "tr" | "en") {
+  const d = new Date(iso + "T12:00:00Z");
+  const txt = d.toLocaleDateString(locale === "tr" ? "tr-TR" : "en-GB", { day: "numeric", month: "long", year: "numeric" });
+  return locale === "tr" ? `Son güncelleme: ${txt}` : `Last updated: ${txt}`;
+}
 
 function Eyebrow({ children }: { children: string }) {
   return (
@@ -86,6 +124,16 @@ export function ServicePage({ c }: { c: ServiceContent }) {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
+  const price = priceFrom(c);
+  const updated = c.updated ?? SERVICES_UPDATED;
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: c.meta.title,
+    url: `${SITE}${c.slug}`,
+    inLanguage: c.locale === "tr" ? "tr-TR" : "en",
+    dateModified: updated,
+  };
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -95,6 +143,16 @@ export function ServicePage({ c }: { c: ServiceContent }) {
     url: `${SITE}${c.slug}`,
     areaServed: c.areaServed,
     provider: { "@type": "Organization", name: "WoodstoneStudio", url: SITE },
+    ...(price
+      ? {
+          offers: {
+            "@type": "AggregateOffer",
+            lowPrice: price.min,
+            priceCurrency: CURRENCY[c.locale],
+            url: `${SITE}${CALC[c.locale]}`,
+          },
+        }
+      : {}),
   };
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -108,6 +166,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Nav t={NAV[c.locale]} />
@@ -147,6 +206,15 @@ export function ServicePage({ c }: { c: ServiceContent }) {
                     </span>
                   </Link>
                 </div>
+                {price && (
+                  <p className="mt-7 flex flex-wrap items-baseline gap-x-3 gap-y-1 font-mono text-[12px] tracking-[0.06em] text-bone-dim">
+                    <span className="text-bone">{price.label}</span>
+                    <span aria-hidden className="text-gray-warm">·</span>
+                    <Link href={CALC[c.locale]} className="text-gray-warm underline-offset-4 transition-colors hover:text-bone hover:underline">
+                      {c.locale === "tr" ? "Tahmini fiyat hesaplayın →" : "Estimate your price →"}
+                    </Link>
+                  </p>
+                )}
               </div>
             </Reveal>
           </div>
@@ -314,6 +382,9 @@ export function ServicePage({ c }: { c: ServiceContent }) {
                     <Link href={HOME[c.locale]} className="text-sm text-gray-warm transition-colors hover:text-bone">
                       ← {c.backLabel}
                     </Link>
+                    <time dateTime={updated} className="w-full font-mono text-[11px] tracking-[0.08em] text-gray-warm">
+                      {fmtUpdated(updated, c.locale)}
+                    </time>
                   </div>
                 </div>
               </Reveal>
