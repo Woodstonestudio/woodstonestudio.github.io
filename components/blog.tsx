@@ -1,3 +1,4 @@
+import type React from "react";
 import Link from "next/link";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
@@ -5,6 +6,39 @@ import { Reveal } from "@/components/motion/reveal";
 import { trNav, enNav, trSections, enSections } from "@/lib/i18n";
 import { posts, postsForLocale, BLOG_BASE, BLOG_LABELS, type BlogPost } from "@/lib/blog";
 import type { Locale } from "@/components/service-page";
+
+/**
+ * Blog metnindeki [metin](adres) iç linklerini gerçek linke çevirir (Growth yalnızca izinli
+ * iç adreslere link yazar). Sitenin kendi adresi göreli yola indirilir; dış adres yeni sekmede açılır.
+ */
+function InlineText({ text }: { text: string }) {
+  const parts: React.ReactNode[] = [];
+  const re = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let k = 0;
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    const label = m[1]!;
+    const raw = m[2]!;
+    const internal = raw.startsWith("/") || /^https?:\/\/(www\.)?woodstonestudio\.com/i.test(raw);
+    const href = internal ? raw.replace(/^https?:\/\/(www\.)?woodstonestudio\.com/i, "") || "/" : raw;
+    parts.push(
+      internal ? (
+        <Link key={k++} href={href} className="text-bone underline decoration-line underline-offset-4 hover:decoration-bone">
+          {label}
+        </Link>
+      ) : (
+        <a key={k++} href={href} target="_blank" rel="noopener" className="text-bone underline decoration-line underline-offset-4 hover:decoration-bone">
+          {label}
+        </a>
+      ),
+    );
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return <>{parts}</>;
+}
 
 const NAV = { tr: trNav, en: enNav } as const;
 const FOOTER = { tr: trSections.footer, en: enSections.footer } as const;
@@ -160,7 +194,9 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
                       {block.items.map((it) => (
                         <li key={it} className="flex gap-3 text-[16.5px] leading-[1.75] text-gray-warm">
                           <span aria-hidden className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-gray-warm" />
-                          {it}
+                          <span>
+                            <InlineText text={it} />
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -169,7 +205,9 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
               }
               return (
                 <Reveal key={i}>
-                  <p className="text-[16.5px] leading-[1.85] text-gray-warm">{block.text}</p>
+                  <p className="text-[16.5px] leading-[1.85] text-gray-warm">
+                    <InlineText text={block.text} />
+                  </p>
                 </Reveal>
               );
             })}

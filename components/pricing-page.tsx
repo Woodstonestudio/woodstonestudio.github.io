@@ -13,10 +13,10 @@ const PATH = { tr: "/fiyat-hesaplama", en: "/en/pricing-calculator" } as const;
 
 const C = {
   tr: {
-    eyebrow: "Fiyat hesaplayıcı",
+    eyebrow: "Web sitesi ve mobil uygulama fiyat hesaplama",
     t1: "Projeniz",
     t2: "ne kadar tutar?",
-    lead: "Birkaç seçimle tahmini fiyat aralığını ve süreyi anında görün. Kayıt yok; yazılı teklif isterseniz seçimleriniz bize gelir.",
+    lead: "Web sitesi, e-ticaret ya da mobil uygulama: birkaç seçimle tahmini fiyat aralığını ve süreyi anında görün. Kayıt yok; yazılı teklif isterseniz seçimleriniz bize gelir.",
     back: "Ana sayfa",
     faqTitle: "Fiyatlar hakkında",
     faqs: [
@@ -27,7 +27,7 @@ const C = {
     ],
   },
   en: {
-    eyebrow: "Pricing calculator",
+    eyebrow: "Website and app cost calculator",
     t1: "What will",
     t2: "your project cost?",
     lead: "A few choices show you an estimated price range and timeline instantly. No sign-up; if you request a written quote, your selections come with it.",
@@ -98,12 +98,12 @@ export function PricingPage({ locale }: { locale: Locale }) {
 export function pricingMetadata(locale: Locale) {
   const l = locale === "en" ? "en" : "tr";
   const titles = {
-    tr: "Web Sitesi Fiyat Hesaplama — Tahmini Fiyat ve Süre | WoodstoneStudio",
-    en: "Website Pricing Calculator — Estimated Cost and Timeline | WoodstoneStudio",
+    tr: "Web Sitesi ve Mobil Uygulama Fiyat Hesaplama | WoodstoneStudio",
+    en: "Website and App Cost Calculator — Estimated Price | WoodstoneStudio",
   } as const;
   const descs = {
-    tr: "Web sitesi, e-ticaret, mobil uygulama ve SaaS projeleri için tahmini fiyat aralığını ve süreyi birkaç seçimle görün. Yazılı teklif için seçimlerinizi gönderin.",
-    en: "See an estimated price range and timeline for websites, e-commerce, mobile apps and SaaS projects with a few choices. Send your selections for a written quote.",
+    tr: "Web sitesi fiyatları ve mobil uygulama yapma maliyeti: kurumsal site, e-ticaret, mobil uygulama ve SaaS için tahmini fiyat aralığını ve süreyi birkaç seçimle hesaplayın.",
+    en: "Website and mobile app development cost: estimate the price range and timeline for corporate sites, e-commerce, mobile apps and SaaS with a few choices.",
   } as const;
   return {
     title: titles[l],

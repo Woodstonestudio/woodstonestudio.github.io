@@ -16,7 +16,8 @@ export const mobileTR: ServiceContent = {
     keywords: [
       "mobil uygulama yaptırmak",
       "mobil uygulama geliştirme firması",
-      "mobil uygulama yaptırmak",
+      "mobil uygulama yapan firmalar",
+      "mobil uygulama yapma maliyeti",
       "Flutter uygulama geliştirme",
       "iOS Android uygulama",
       "App Store Google Play yayınlama",
