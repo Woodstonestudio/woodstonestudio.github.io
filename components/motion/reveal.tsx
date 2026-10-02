@@ -1,14 +1,18 @@
 "use client";
 
-import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 /**
- * The one motion primitive used across the site: a soft
- * fade + rise + un-blur. One vocabulary, applied everywhere,
- * keeps the scroll experience coherent.
+ * Sitenin tek hareket öğesi: yumuşak fade + yükselme + blur açılması.
+ *
+ * Neden framer-motion değil: framer, sunucu HTML'ine `style="opacity:0"`
+ * yazıyordu. JS çalıştırmayan tarayıcılar ve yapay zekâ botları (GPTBot,
+ * PerplexityBot…) bu metni GİZLİ görüyor; geo audit bunu "hidden text /
+ * prompt injection riski" olarak işaretliyordu (49 öğe).
+ *
+ * Şimdi: HTML'de içerik her zaman görünür. Gizleme yalnızca CSS'te ve
+ * yalnızca <html class="js"> varken yapılır (layout'taki küçük betik ekler).
+ * Botlar ve JS'siz ziyaretçiler metni doğrudan görür.
  */
 export function Reveal({
   children,
@@ -23,32 +27,43 @@ export function Reveal({
   className?: string;
   once?: boolean;
 }) {
-  const reduced = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
 
-  const variants: Variants = reduced
-    ? {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { duration: 0.3 } },
-      }
-    : {
-        hidden: { opacity: 0, y, filter: "blur(5px)" },
-        visible: {
-          opacity: 1,
-          y: 0,
-          filter: "blur(0px)",
-          transition: { duration: 0.9, delay, ease: EASE },
-        },
-      };
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            setInView(true);
+            if (once) io.disconnect();
+          } else if (!once) {
+            setInView(false);
+          }
+        }
+      },
+      { rootMargin: "0px 0px -12% 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [once]);
+
+  const style = { "--ry": `${y}px`, "--rd": `${delay}s` } as CSSProperties;
 
   return (
-    <motion.div
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once, margin: "-12% 0px" }}
-      variants={variants}
+    <div
+      ref={ref}
+      data-reveal=""
+      style={style}
+      className={[className, inView ? "is-in" : ""].filter(Boolean).join(" ") || undefined}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

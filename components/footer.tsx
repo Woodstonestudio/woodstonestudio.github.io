@@ -50,6 +50,15 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
             >
               {t.privacyLabel}
             </a>
+            {t.privacyHref === "/gizlilik" && (
+              <a
+                href="/en/about"
+                hrefLang="en"
+                className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-warm transition-colors hover:text-bone"
+              >
+                About us (English)
+              </a>
+            )}
             <CookieSettingsButton label={t.cookieLabel} />
           </div>
         </div>

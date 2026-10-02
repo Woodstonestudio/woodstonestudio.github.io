@@ -1,0 +1,13 @@
+# ai.txt — WoodstoneStudio
+# AI crawlers and assistants are welcome to read, index and cite this site.
+
+User-Agent: *
+Allow: /
+
+Site: https://woodstonestudio.com
+Contact: info@woodstonestudio.com
+LLMs: https://woodstonestudio.com/llms.txt
+Summary: https://woodstonestudio.com/ai/summary.json
+FAQ: https://woodstonestudio.com/ai/faq.json
+Services: https://woodstonestudio.com/ai/service.json
+Sitemap: https://woodstonestudio.com/sitemap.xml

@@ -6,6 +6,13 @@ import { Spotlight } from "@/components/fx/spotlight";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { BackToTop } from "@/components/back-to-top";
 import { CookieConsent } from "@/components/cookie-consent";
+import { posts } from "@/lib/blog";
+
+// Sitenin son güncellenme tarihi = en yeni blog yazısı (dateModified sinyali)
+const SITE_UPDATED = posts
+  .map((p) => p.updated ?? p.date)
+  .sort()
+  .pop();
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
@@ -62,7 +69,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="tr" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Reveal animasyonu yalnızca JS varken içerik saklar; botlar metni görünür alır */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        <link rel="alternate" type="application/rss+xml" title="WoodstoneStudio Blog" href="/feed.xml" />
+      </head>
       {/* GA4 yalnızca çerez onayından sonra yüklenir: components/cookie-consent.tsx */}
       <body className="font-sans bg-base text-bone antialiased">
         {/* Ambient background layers */}
@@ -119,6 +131,7 @@ export default function RootLayout({
               name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               inLanguage: "tr-TR",
+              ...(SITE_UPDATED ? { dateModified: SITE_UPDATED } : {}),
               publisher: {
                 "@type": "Organization",
                 name: "WoodstoneStudio",

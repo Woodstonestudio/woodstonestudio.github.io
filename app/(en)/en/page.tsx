@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/testimonials";
 import { IdeaCTA } from "@/components/idea-cta";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { FAQ } from "@/components/faq";
 import { enNav, enHero, enSections } from "@/lib/i18n";
 import type { Metadata } from "next";
 
@@ -35,6 +36,7 @@ export default function HomeEN() {
         <WorkShowcase t={enSections.work} />
         <IdeaCTA t={enSections.idea} />
         <LatestPosts locale="en" />
+        <FAQ t={enSections.faq} />
         <Contact t={enSections.contact} locale="en" />
       </main>
       <Footer t={enSections.footer} />

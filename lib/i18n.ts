@@ -56,7 +56,7 @@ export const trHero = {
   titleLine2: "işinizi dijitale taşıyoruz",
   strip1: "Tasarım · Yazılım",
   strip2: "Otomasyon",
-  lead: "Web siteleri, web ve mobil uygulamalar, yapay zekâ çözümleri, iş süreçleri otomasyonu ve özel yazılım — hepsini bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
+  lead: "WoodstoneStudio; web siteleri, web ve mobil uygulamalar, yapay zekâ çözümleri, iş süreçleri otomasyonu ve özel yazılım geliştiren bağımsız bir dijital teknoloji stüdyosudur. Hepsini bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
   ctaPrimary: "Çalışmalarımızı Görün",
   ctaSecondary: "Bize Ulaşın",
 };
@@ -67,7 +67,7 @@ export const enHero = {
   titleLine2: "your business into digital",
   strip1: "Design · Software",
   strip2: "Automation",
-  lead: "Websites, web and mobile applications, AI solutions, business process automation and custom software — all designed and built with the discipline of a product team.",
+  lead: "WoodstoneStudio is an independent digital technology studio that builds websites, web and mobile applications, AI solutions, business process automation and custom software — all designed and built with the discipline of a product team.",
   ctaPrimary: "See Our Work",
   ctaSecondary: "Get in Touch",
 };

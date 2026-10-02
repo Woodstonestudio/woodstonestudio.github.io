@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/testimonials";
 import { IdeaCTA } from "@/components/idea-cta";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { FAQ } from "@/components/faq";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function Home() {
         <WorkShowcase />
         <IdeaCTA />
         <LatestPosts locale="tr" />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
