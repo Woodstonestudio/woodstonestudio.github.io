@@ -135,7 +135,20 @@ const SERVICE_LABEL: Record<Locale, string> = {
 };
 
 // ── Tekil yazı sayfası ──
+const SHORT_LABEL: Record<Locale, string> = { tr: "Kısa cevap", en: "Short answer" };
+const SHORT_PREFIX = /^(Kısa cevap|Short answer):\s*/i;
+
+/** Yazının doğrudan cevabı: answer alanı, yoksa "Kısa cevap:" ile başlayan ilk paragraf. */
+function shortAnswer(post: BlogPost, locale: Locale) {
+  const body = post.body[locale] ?? [];
+  const first = body[0];
+  const firstIsShort = first?.type === "p" && SHORT_PREFIX.test(first.text);
+  const text = post.answer?.[locale] ?? (firstIsShort ? first.text.replace(SHORT_PREFIX, "") : undefined);
+  return { text, body: firstIsShort ? body.slice(1) : body };
+}
+
 export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale }) {
+  const short = shortAnswer(post, locale);
   const L = BLOG_LABELS[locale];
   const base = BLOG_BASE[locale];
 
@@ -144,6 +157,7 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
     "@type": "Article",
     headline: post.title[locale],
     description: post.excerpt[locale],
+    ...(short.text ? { abstract: short.text } : {}),
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
     inLanguage: locale,
@@ -177,8 +191,17 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
             </h1>
           </Reveal>
 
+          {short.text && (
+            <Reveal delay={0.12}>
+              <aside className="mt-10 rounded-2xl border border-line bg-[rgba(246,239,228,0.45)] p-6 sm:p-7" aria-label={SHORT_LABEL[locale]}>
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-bone-dim">{SHORT_LABEL[locale]}</p>
+                <p className="mt-3 text-[17px] leading-[1.75] text-bone">{short.text}</p>
+              </aside>
+            </Reveal>
+          )}
+
           <div className="mt-12 space-y-6">
-            {post.body[locale].map((block, i) => {
+            {short.body.map((block, i) => {
               if (block.type === "h2") {
                 return (
                   <Reveal key={i}>

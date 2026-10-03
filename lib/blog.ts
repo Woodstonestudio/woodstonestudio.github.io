@@ -13,6 +13,9 @@ export type BlogPost = {
   category: Record<Locale, string>;
   title: Record<Locale, string>;
   excerpt: Record<Locale, string>;
+  /** Sorunun 2–3 cümlelik doğrudan cevabı (AEO). Yazının başında "Kısa cevap" kutusu olarak görünür.
+   *  Yoksa gövdenin ilk paragrafı "Kısa cevap:" / "Short answer:" ile başlıyorsa o kullanılır. */
+  answer?: Partial<Record<Locale, string>>;
   // gövde: paragraf ve alt başlıklardan oluşan bloklar
   body: Record<Locale, Block[]>;
 };
@@ -139,6 +142,10 @@ const handwrittenPosts: BlogPost[] = [
       tr: "Aynı proje için üç ajanstan üç çok farklı fiyat mı aldınız? Web sitesi tasarımı hizmeti alırken teklifleri doğru karşılaştırmak ve işbirliğini sağlam başlatmak için sormanız gereken 8 soru.",
       en: "Got three wildly different quotes for the same project? Here are 8 questions to ask so you can compare website design proposals properly and start the collaboration on solid ground.",
     },
+    answer: {
+      tr: "Teklifleri yalnızca fiyata göre karşılaştırmayın; üç farklı teklif çoğu zaman üç farklı işi fiyatlar. Önce sitenin çözeceği sorunu, tasarım sürecini, içeriği kimin hazırlayacağını, SEO'nun dahil olup olmadığını ve yayın sonrası bakımı netleştirin; sonra aynı kapsam üzerinden fiyat isteyin.",
+      en: "Don't compare quotes on price alone; three different quotes usually price three different jobs. First pin down the problem the site must solve, the design process, who writes the content, whether SEO is included and what happens after launch, then ask for prices on that same scope.",
+    },
     body: {
       tr: [
         { type: "p", text: "Aynı projeyi üç ajansa anlattınız. Biri makul bir fiyat verdi, biri onun üç katını istedi, üçüncüsü \"proje bazlı fiyatlandırıyoruz\" dedi. Hangisi doğru teklif? Sadece rakama bakıyorsanız büyük ihtimalle yanlış karar vermek üzeresiniz, çünkü üç teklif muhtemelen üç farklı işi fiyatlıyor. Teklifleri gerçekten karşılaştırabilmek için önce şu 8 soruyu netleştirin." },
@@ -213,6 +220,10 @@ const handwrittenPosts: BlogPost[] = [
       tr: "Chatbot, görüntü tanıma, öneri motoru, tahmin modeli... Yapay zekâ uygulamaları arasında kaybolmak kolay. İşinizdeki soruna göre doğru teknolojiyi seçmenin sade bir haritası.",
       en: "Chatbots, image recognition, recommendation engines, forecasting... It's easy to get lost among AI applications. A plain map for picking the right technology based on the problem you actually have.",
     },
+    answer: {
+      tr: "Doğru yapay zekâ teknolojisi, çözmek istediğiniz soruna göre seçilir. Metinle çalışıyorsanız (müşteri soruları, belgeler) dil modelleri; görsellerle çalışıyorsanız görüntü tanıma; ürün önerisi için öneri sistemleri; satış ya da talep tahmini için tahmin modelleri kullanılır. Çoğu küçük işletme için ilk ve en hızlı kazanç, sık sorulan soruları yanıtlayan bir asistandır.",
+      en: "The right AI technology depends on the problem you want to solve. Text work (customer questions, documents) calls for language models; images call for computer vision; product suggestions call for recommendation systems; sales or demand forecasting calls for prediction models. For most small businesses the first and quickest win is an assistant that answers frequently asked questions.",
+    },
     body: {
       tr: [
         { type: "p", text: "Destek ekibiniz aynı soruları her gün tekrar tekrar mı yanıtlıyor? Kataloğunuzda binlerce ürün var ama müşteriler aradığını bulamıyor mu? Elinizdeki satış verilerinden bir sonraki ayı tahmin etmeye mi çalışıyorsunuz? Bunların hepsi yapay zekâyla çözülebilir; ama \"yapay zekâ\" o kadar geniş bir kavram ki nereden başlayacağınızı bilmek zor. Bu yazıda yapay zekâ uygulamalarını teknolojiye göre değil, çözdükleri soruna göre sıralıyoruz." },
@@ -286,6 +297,10 @@ const handwrittenPosts: BlogPost[] = [
     excerpt: {
       tr: "Bir uygulama, SaaS ya da web platformu fikriniz mi var? Fikri doğrulamaktan lansman sonrasına kadar dijital ürün geliştirmenin adımlarını, sık yapılan hataları ve takip edilmesi gereken metrikleri sade bir dille anlattık.",
       en: "Have an idea for an app, SaaS or web platform? From validating the idea to growing after launch, here are the steps of digital product development, the most common mistakes and the metrics worth tracking.",
+    },
+    answer: {
+      tr: "Dijital ürün geliştirme yedi adımda ilerler: problemi doğrulama, kapsamı belirleyip MVP çıkarma, tasarım, geliştirme, test, lansman ve lansman sonrası veriye göre büyütme. En pahalı hata, problemi doğrulamadan geliştirmeye başlamaktır.",
+      en: "Digital product development runs in seven steps: validate the problem, define the scope and MVP, design, build, test, launch, and grow the product with real usage data after launch. The most expensive mistake is starting to build before the problem is validated.",
     },
     body: {
       tr: [
@@ -378,6 +393,10 @@ const handwrittenPosts: BlogPost[] = [
     excerpt: {
       tr: "Bir mobil uygulamanın maliyetini ne belirler? Karmaşıklık seviyelerine göre kabaca bütçe aralıkları, yayın sonrası gizli giderler ve bütçenizi küçültmenin gerçekçi yolları.",
       en: "What drives the cost of a mobile app? Rough budget ranges by complexity, the hidden costs after launch, and realistic ways to keep your budget small.",
+    },
+    answer: {
+      tr: "Bir mobil uygulamanın maliyeti ekran ve özellik sayısına, platforma, sunucu ihtiyacına ve entegrasyonlara göre değişir. WoodstoneStudio'da mobil uygulama projeleri 150.000 ₺'den başlar; Flutter gibi çapraz platform teknolojiler tek kod tabanıyla iOS ve Android'e çıkarak maliyeti düşürür. Mağaza hesapları, sunucu ve bakım gibi yayın sonrası giderleri de bütçeye ekleyin.",
+      en: "The cost of a mobile app depends on the number of screens and features, the platforms, backend needs and integrations. At WoodstoneStudio mobile app projects start from €3,000; cross-platform tools like Flutter cut the cost by shipping to iOS and Android from one codebase. Add post-launch costs such as store accounts, servers and maintenance to your budget.",
     },
     body: {
       tr: [
@@ -472,6 +491,10 @@ const handwrittenPosts: BlogPost[] = [
     excerpt: {
       tr: "\"Sosyal medya yönetimi\" tam olarak neyi kapsar? Standart pakette ne var, ne ekstra sayılır — doğru teklif almak ve gerçekçi hedef koymak için bilmeniz gerekenler.",
       en: "What does \"social media management\" actually cover? What is in a standard package and what counts as extra — what you need to know to get the right quote and set realistic goals.",
+    },
+    answer: {
+      tr: "Sosyal medya yönetimi genellikle beş işi kapsar: içerik üretimi, yayın planlaması, yorum ve mesajlara yanıt (topluluk yönetimi), performans takibi ve aylık raporlama. Fiyatı en çok aylık paylaşım sayısı ve içerik üretiminin (çekim, tasarım) dahil olup olmadığı belirler; teklif alırken bunları yazılı olarak netleştirin.",
+      en: "Social media management usually covers five jobs: content production, scheduling, replying to comments and messages (community management), performance tracking and monthly reporting. The price is driven mostly by the number of posts per month and whether content production (shooting, design) is included; get these in writing when you ask for a quote.",
     },
     body: {
       tr: [
@@ -619,6 +642,10 @@ const handwrittenPosts: BlogPost[] = [
       tr: "Web sitesi fiyatları neden bu kadar değişken? Bir teklifin arkasındaki gerçek etkenleri ve bütçenizi nasıl doğru planlayacağınızı açıklıyoruz.",
       en: "Why do website prices vary so much? We explain the real factors behind a quote and how to plan your budget correctly.",
     },
+    answer: {
+      tr: "Web sitesi fiyatını sayfa sayısı, hazır tema ya da özel tasarım tercihi, özel işlevler (e-ticaret, çok dil, randevu), içeriği kimin hazırlayacağı, SEO ve yayın sonrası bakım belirler. WoodstoneStudio'da tanıtım siteleri 15.000 ₺'den, kurumsal siteler 30.000 ₺'den, e-ticaret siteleri 50.000 ₺'den başlar.",
+      en: "A website's price is set by the number of pages, template versus custom design, special features (e-commerce, multiple languages, booking), who provides the content, SEO and post-launch maintenance. At WoodstoneStudio websites start from €500 and e-commerce stores from €1,000.",
+    },
     body: {
       tr: [
         { type: "p", text: "\"Web sitesi ne kadar?\" sorusunun tek bir cevabı yoktur — tıpkı \"ev ne kadar?\" sorusu gibi. Fiyat, ne istediğinize göre değişir. Ama bu belirsizlik, bir teklifi değerlendirirken sizi kaybetmemeli. Fiyatı belirleyen etkenleri bilirseniz, hem doğru bütçe ayırır hem de aldığınız teklifin adil olup olmadığını anlarsınız." },
@@ -675,6 +702,10 @@ const handwrittenPosts: BlogPost[] = [
       tr: "Bir ürünü aylarca geliştirip sonra \"acaba tutar mı?\" demek yerine, MVP ile erken çıkıp gerçek kullanıcıdan öğrenmek neden daha akıllıca?",
       en: "Instead of building for months and then asking \"will it work?\", why is launching early with an MVP and learning from real users smarter?",
     },
+    answer: {
+      tr: "MVP (minimum uygulanabilir ürün), fikrinizin yalnızca en temel değerini sunan ve gerçek kullanıcılarla test edilebilen ilk sürümdür. Her özelliği baştan geliştirmek yerine MVP ile başlamak bütçeyi korur, daha hızlı yayına çıkarır ve kullanıcıların gerçekte neyi istediğini gösterir.",
+      en: "An MVP (minimum viable product) is the first version of your idea that delivers only its core value and can be tested with real users. Starting with an MVP instead of building every feature upfront protects your budget, gets you to launch faster and shows what users actually want.",
+    },
     body: {
       tr: [
         { type: "p", text: "Yeni bir ürün fikriniz var ve heyecanlısınız. En doğal istek, aklınızdaki her özelliği baştan koyup \"mükemmel\" versiyonu piyasaya sürmek. Ama deneyimli ürün ekiplerinin çoğu bunu yapmaz — MVP ile başlarlar. İşte nedeni." },
@@ -718,6 +749,10 @@ const handwrittenPosts: BlogPost[] = [
     excerpt: {
       tr: "Yapay zekâ sadece büyük şirketler için değil. Küçük bir işletmenin bugün AI'dan somut olarak nasıl fayda sağlayabileceğini örneklerle anlatıyoruz.",
       en: "AI isn't just for big companies. With concrete examples, we explain how a small business can benefit from AI today.",
+    },
+    answer: {
+      tr: "Evet, doğru yerde kullanıldığında işe yarar. Küçük işletmeler için en pratik kullanımlar: sık sorulan soruları web sitesinde ya da WhatsApp'ta otomatik yanıtlamak, ürün ve sosyal medya metinlerinin taslağını hızlı çıkarmak ve fatura, form gibi belgelerden veriyi otomatik ayıklamak.",
+      en: "Yes, when it is used in the right place. The most practical uses for small businesses are answering frequently asked questions automatically on the website or WhatsApp, drafting product and social media copy quickly, and pulling data out of documents such as invoices and forms automatically.",
     },
     body: {
       tr: [
@@ -763,6 +798,9 @@ const handwrittenPosts: BlogPost[] = [
       tr: "İzmir'de web sitesi yaptırmak isteyenlerin en çok merak ettiği soru: fiyat. Bir teklifin arkasındaki gerçek etkenleri ve doğru bütçeyi nasıl planlayacağınızı anlatıyoruz.",
       en: "",
     },
+    answer: {
+      tr: "İzmir'de web tasarım fiyatları kapsam, sayfa sayısı, hazır tema ya da özel tasarım tercihi, özel işlevler ve SEO'nun dahil olup olmamasına göre değişir. WoodstoneStudio'da tanıtım siteleri 15.000 ₺'den, kurumsal siteler 30.000 ₺'den başlar; kesin fiyat kapsam netleşince yazılı olarak verilir.",
+    },
     body: {
       en: [],
       tr: [
@@ -800,6 +838,9 @@ const handwrittenPosts: BlogPost[] = [
     excerpt: {
       tr: "Dijital dönüşüm büyük şirketlere özel bir şey değil. Küçük ve orta ölçekli bir işletmenin bugün somut olarak atabileceği adımları, karmaşaya boğulmadan anlatıyoruz.",
       en: "",
+    },
+    answer: {
+      tr: "KOBİ'ler için dijital dönüşüm en çok zaman kaybettiğiniz yerden başlar. İlk ve en etkili adım genellikle görünürlüktür: profesyonel bir web sitesi ve eksiksiz bir Google İşletme Profili. Ardından randevu, teklif ve müşteri takibi gibi elle yürüyen süreçler adım adım otomatikleştirilir.",
     },
     body: {
       en: [],

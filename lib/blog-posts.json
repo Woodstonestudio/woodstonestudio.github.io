@@ -375,6 +375,10 @@
           "text": "If you'd like to clarify the answers to these questions before you start planning your project, we can offer you a free preliminary assessment. Let's discuss which path is best suited for you."
         }
       ]
+    },
+    "answer": {
+      "tr": "Web tasarımı hizmeti alırken önce hedefinizi ve sitenin çözeceği sorunu netleştirin; sonra ajansa tasarım sürecini, içerik sorumluluğunu, teknik altyapıyı, SEO'yu, revizyon hakkını ve yayın sonrası bakımı sorun. Aynı kapsamla alınan teklifler ancak o zaman karşılaştırılabilir olur.",
+      "en": "Before hiring a web design service, clarify your goal and the problem the site must solve; then ask the agency about the design process, who owns the content, the technical stack, SEO, revision rounds and post-launch maintenance. Only quotes based on the same scope can be compared fairly."
     }
   },
   {
@@ -655,6 +659,10 @@
           "text": "Mobile app development is a manageable process with the right planning and technical decisions. Making informed choices at every step — from platform selection to backend architecture, design rules to testing strategy — shortens development time and improves user satisfaction. If you have questions about technical architecture, platform choice, or the development process for your project, we'd be happy to offer a free initial consultation."
         }
       ]
+    },
+    "answer": {
+      "tr": "Mobil uygulama geliştirmede ilk karar platformdur: yalnızca iOS, yalnızca Android ya da ikisi birden. İki platform için Flutter veya React Native gibi çapraz platform çözümler tek kod tabanıyla maliyeti düşürür; native geliştirme en yüksek performansı verir ama iki ayrı kod tabanı gerektirir. Ardından MVP kapsamı, tasarım, geliştirme, test ve mağaza yayını gelir.",
+      "en": "The first decision in mobile app development is the platform: iOS only, Android only or both. For both, cross-platform tools such as Flutter or React Native cut cost with one codebase; native development gives the best performance but needs two separate codebases. Then come the MVP scope, design, build, testing and store release."
     }
   },
   {
@@ -899,6 +907,10 @@
           "text": "If you'd like to discuss your current workflow's bottlenecks and evaluate whether a custom application makes sense for your business, reach out for a free initial consultation."
         }
       ]
+    },
+    "answer": {
+      "tr": "Özel web uygulaması, hazır yazılımlar iş akışınıza uymadığında, birden çok aboneliği ve Excel tablosunu elle birbirine bağlamak zorunda kaldığınızda ya da süreçleriniz büyüdükçe bozulduğunda doğru seçimdir. Sizin sürecinize göre geliştirilir, tarayıcıda çalışır ve mevcut sistemlerinize bağlanır.",
+      "en": "A custom web application is the right choice when off-the-shelf software doesn't fit your workflow, when you are stitching several subscriptions and spreadsheets together by hand, or when your processes break as you grow. It is built around your process, runs in the browser and connects to your existing systems."
     }
   },
   {
@@ -1211,6 +1223,10 @@
           "text": "An enterprise site isn't a storefront; it's software. Mapping both your current and future needs before taking the first step will prevent unnecessary rewrites and budget overruns. If you'd like to evaluate your project, we'd be happy to provide a free preliminary analysis."
         }
       ]
+    },
+    "answer": {
+      "tr": "Kurumsal web tasarımında beş kritik karar vardır: farklı ziyaretçilere göre içerik mimarisi, CRM/ERP entegrasyonları, çok dilli yapı, performans ve güvenlik (sertifika, CDN, yedekleme) ve ölçeklenebilirlik. Hazır şablonlar bu ihtiyaçların çoğunu karşılamaz; site büyüdükçe yeniden yapım maliyeti doğar.",
+      "en": "Enterprise web design comes down to five critical decisions: content architecture for different visitor types, CRM/ERP integrations, a multilingual setup, performance and security (certificates, CDN, backups) and scalability. Templates rarely cover these needs, and rebuilding later costs more as the site grows."
     }
   }
 ]
