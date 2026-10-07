@@ -1,5 +1,439 @@
 [
   {
+    "slug": "web-sitesi-yillik-ucretleri",
+    "relatedService": "web",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-10-07",
+    "readMin": 6,
+    "category": {
+      "tr": "Web",
+      "en": "Web"
+    },
+    "title": {
+      "tr": "Web Sitesi Yıllık Ücretleri: Hangi Kalemler Devam Eder?",
+      "en": "Annual Website Costs: What Do You Keep Paying For?"
+    },
+    "excerpt": {
+      "tr": "Web sitesi yıllık ücretleri: domain, hosting, SSL, bakım ve lisans maliyetleri her yıl tekrar eder. Devam eden ve tek seferlik kalemleri ayırt edin.",
+      "en": "Annual website costs: domain, hosting, SSL, maintenance, and license fees recur every year. Understand the difference between recurring and one-time expenses."
+    },
+    "answer": {
+      "tr": "Web sitesi her yıl domain, hosting ve varsa bakım ile lisans ücretleri ödenmelidir. Tasarım ve geliştirme bir kerelik maliyettir. Hosting ve bakım masrafları site trafiği ve teknik gereksinim artışına bağlı olarak yıllar içinde değişebilir. WoodstoneStudio'da aylık bakım ve destek fiyatları 2.500 ₺'den başlar.",
+      "en": "Every year you pay for domain renewal, hosting, and any maintenance or licenses you need. Design and development are one-time costs. Hosting and maintenance fees can grow over time as traffic and technical requirements increase. At WoodstoneStudio, monthly care & support starts from €50."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "p",
+          "text": "Siteniz yayında ama ilk yıl sonunda e-posta geliyor: domain yenileme, hosting faturası, bakım sözleşmesi. Hangileri her yıl ödenecek, hangisi sadece başlangıçta? Çoğu işletme bu ayrımı bilmeden bütçe yapar ve sonra sürpriz masraflarla karşılaşır."
+        },
+        {
+          "type": "p",
+          "text": "Bir web sitesinin ömür boyu maliyeti iki ana kalemden oluşur: başlangıç yatırımı (tasarım ve geliştirme) ile devam eden yıllık giderler. Bu yazıda yıllık tekrar eden kalemleri, neyin belirlediğini ve hangi senaryoda ne kadar esnekliğiniz olduğunu bulacaksınız."
+        },
+        {
+          "type": "h2",
+          "text": "Domain adı yenileme"
+        },
+        {
+          "type": "p",
+          "text": "Domain, sitenizin internetteki adresidir (.com, .com.tr, .net gibi). İlk kayıt tek seferlik ama her yıl yenilenmek zorundadır — yenilemeyi unutursanız domain serbest kalır ve başkası kaydedebilir."
+        },
+        {
+          "type": "ul",
+          "items": [
+            ".com domain: yıllık yenileme maliyeti kayıt firmasına göre değişir (Namecheap, GoDaddy, Cloudflare).",
+            ".com.tr domain: TRABİS üzerinden yetkili kayıt firmalarından yıllık yenilenir; fiyat firmaya göre değişir.",
+            "Birden fazla uzantı aldıysanız (.com, .com.tr, .net), her biri ayrı yenilenir."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Domain yenileme genellikle otomatik ödemeyle ayarlanır; kredi kartı bilgisi güncel olmadığında domain kaybı riski doğar."
+        },
+        {
+          "type": "h2",
+          "text": "Hosting (sunucu) ücreti"
+        },
+        {
+          "type": "p",
+          "text": "Hosting, sitenizin dosyalarının (kod, görsel, veritabanı) depolandığı sunucu hizmetidir. Yıllık ya da aylık ödenebilir; yıllık ödeme genellikle daha ucuzdur."
+        },
+        {
+          "type": "p",
+          "text": "Hosting maliyetini belirleyen ana etkenler:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Trafik hacmi: aylık ziyaretçi sayısı arttıkça bant genişliği ve sunucu kapasitesi büyür.",
+            "Depolama: çok sayıda yüksek çözünürlüklü görsel, video ya da dosya varsa depolama ihtiyacı artar.",
+            "Performans ve hız: paylaşımlı sunucu (shared hosting) en ekonomik seçenektir; yüksek trafikli ya da e-ticaret siteleri için VPS veya bulut sunucu daha uygun olabilir.",
+            "Yedekleme ve güvenlik: otomatik yedekleme, firewall ve DDoS koruması gibi ek özellikler fiyatı yükseltir."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Statik bir tanıtım sitesi ile binlerce üründe stok senkronizasyonu yapan bir e-ticaret sitesinin hosting ihtiyacı tamamen farklıdır. İlki için yıllık maliyet düşükken, ikincisi aylık olarak izlenmesi gereken bir kalemdir."
+        },
+        {
+          "type": "h2",
+          "text": "SSL sertifikası"
+        },
+        {
+          "type": "p",
+          "text": "SSL, sitenizin tarayıcıda kilit simgesiyle güvenli görünmesini sağlar (https). Aynı zamanda Google sıralamalarında faktördür — SSL olmadan siteniz ziyaretçiye \"güvenli değil\" uyarısıyla açılır."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Ücretsiz SSL: Let's Encrypt gibi otoritelerden alınan sertifikalar her üç ayda otomatik yenilenir. Çoğu hosting sağlayıcısı ücretsiz SSL sunar.",
+            "Ücretli SSL: ödeme alan sitelerde de standart (ücretsiz) SSL yeterlidir; ödeme sayfası genelde ödeme kuruluşunda çalışır ve EV SSL zorunlu değildir."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Çoğu kurumsal site için ücretsiz SSL yeterlidir. Ücretli sertifika, hassas veri işleyen sistemlerde tercih edilebilir."
+        },
+        {
+          "type": "h2",
+          "text": "Bakım ve güncelleme hizmeti"
+        },
+        {
+          "type": "p",
+          "text": "Site yayınlandıktan sonra içerik güncellemeleri, güvenlik yamaları, eklenti güncellemeleri ve yedeklemeler düzenli yapılmalıdır. Bu işleri kimin yapacağı ilk sözleşmede netleştirilmelidir."
+        },
+        {
+          "type": "p",
+          "text": "Bakım hizmeti genellikle aylık ya da yıllık paket olarak sunulur ve şunları kapsar:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "İçerik güncellemeleri: metin, görsel, ürün eklemek/çıkarmak.",
+            "Yazılım güncellemeleri: WordPress, eklentiler, tema güncellemeleri.",
+            "Güvenlik taraması ve yedekleme: saldırı denemelerine karşı izleme, haftalık ya da günlük yedek alma.",
+            "Hata giderme: bozulan bir özelliği, kırık bir linki düzeltmek.",
+            "Performans izleme: yavaşlama, yüklenme süresi sorunlarını tespit etme."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bazı ajanslar bakım paketi sunmazken, bazıları paketi zorunlu kılar. WoodstoneStudio'da aylık bakım ve destek 2.500 ₺'den başlar; bu tutar içerik yoğunluğuna ve teknik gereksinimlere göre değişir."
+        },
+        {
+          "type": "p",
+          "text": "Bakım almadan kendiniz yönetmeyi tercih ederseniz, WordPress paneline erişim ve temel bilgi yeterlidir. Ancak güvenlik yamalarını es geçmek, siteyi kötü amaçlı yazılımlara (malware) açık bırakır."
+        },
+        {
+          "type": "h2",
+          "text": "Eklenti ve üçüncü taraf hizmet lisansları"
+        },
+        {
+          "type": "p",
+          "text": "Sitenizde kullanılan bazı araçlar yıllık lisans gerektirebilir:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Premium WordPress eklentileri: form oluşturucular, SEO araçları, yedekleme eklentileri.",
+            "E-ticaret eklentileri: WooCommerce için ödeme gateway entegrasyonları, stok yönetimi araçları.",
+            "Pazarlama araçları: e-posta bülteni (Mailchimp, SendGrid), analitik platformlar, chatbot hizmetleri.",
+            "CDN (içerik dağıtım ağı): sitenizi dünya genelinde hızlandırmak için Cloudflare, BunnyCDN gibi hizmetler."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Her eklentinin lisans modeli farklıdır — bazıları ömür boyu güncelleme verir, bazıları yıllık yenileme ister. Eklentisiz modern altyapıyla (örneğin Next.js) kurulan sitelerde eklenti lisansı ve eklenti güncelleme maliyeti olmaz. Proje başında hangi araçların yıllık maliyet getireceğini sormak, bütçe planlaması için kritiktir."
+        },
+        {
+          "type": "h2",
+          "text": "Pazarlama ve SEO hizmetleri (isteğe bağlı)"
+        },
+        {
+          "type": "p",
+          "text": "Site yayınlandıktan sonra trafiği artırmak için sürekli çaba gerekir. Bunlar zorunlu değildir, ama organik büyüme hedefliyorsanız bütçeye dahil edilmelidir:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "SEO danışmanlığı: anahtar kelime araştırması, içerik stratejisi, teknik optimizasyon.",
+            "İçerik üretimi: blog yazıları, ürün açıklamaları, açılış sayfası metinleri.",
+            "Google Ads / Meta Ads yönetimi: reklam bütçesi ayrıdır ama ajans yönetim ücreti alır.",
+            "Sosyal medya yönetimi: sitenizle entegre kampanyalar."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu hizmetler genellikle aylık retainer (aylık sabit ücret) ya da proje bazlı faturalanır; yıllık toplam, yalnızca hosting ve domain yenilemesinden çok daha yüksek olabilir."
+        },
+        {
+          "type": "h2",
+          "text": "Bir kerelik mi, yıllık mı? Bütçe kontrol listesi"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Domain yenileme: yıllık. Kaçırılırsa domain serbest kalır, site kapanır.",
+            "Hosting: aylık veya yıllık. Kaçırılırsa site kapanır, veriler kaybolabilir.",
+            "SSL sertifikası: yıllık (ücretsiz ise otomatik). Kaçırılırsa site \"güvenli değil\" uyarısı gösterir.",
+            "Bakım ve güncelleme: aylık veya yıllık (isteğe bağlı). Kaçırılırsa güvenlik açıkları birikir, hata çözülmez.",
+            "Eklenti lisansları: yıllık (eklentiye göre). Kaçırılırsa güncelleme kesilir, destek alınamazsınız.",
+            "Pazarlama ve SEO: aylık (isteğe bağlı). Kaçırılırsa organik trafik büyümez, reklam durursa trafik kesilir."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Yıllık toplam maliyetinizi hesaplamak için domain, hosting, SSL ve kullandığınız eklentilerin lisans ücretlerini toplayın. Bakım hizmeti alacaksanız aylık tutarı on iki ile çarpın. Pazarlama bütçesi tamamen hedeflerinize bağlıdır ve teknik gereksinimlerden ayrı değerlendirilmelidir."
+        },
+        {
+          "type": "h2",
+          "text": "Yıllık maliyeti düşürmenin yolları"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Yıllık ödeme yapın: çoğu hosting sağlayıcısı yıllık ödemede indirim yapar.",
+            "Gereksiz eklentilerden vazgeçin: kullanmadığınız premium araçların lisansını yenilemeyin.",
+            "Ücretsiz alternatifleri değerlendirin: düşük trafikli siteler için ücretsiz SSL, ücretsiz CDN, açık kaynak eklentiler yeterli olabilir.",
+            "Bakım işlerini kendiniz yapın: temel WordPress bilgisi varsa rutin güncellemeleri kendi yapabilir, yalnızca acil teknik destek için proje bazlı hizmet alabilirsiniz.",
+            "Trafiği izleyin: gereksiz yüksek hosting paketi almayın; trafik artışı olduğunda yükseltmek her zaman mümkündür."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Sık sorulan sorular"
+        },
+        {
+          "type": "p",
+          "text": "Domain yenilemesini unutursam ne olur? Domain otomatik yenileme kapalıysa ve son tarihi geçerseniz, alan adı \"redemption\" (kurtarma) dönemine girer; bu dönemde yüksek ücretle kurtarabilirsiniz. Tamamen serbest kalırsa başkası satın alabilir."
+        },
+        {
+          "type": "p",
+          "text": "Hosting değiştirince yıllık ücret sıfırlanır mı? Yeni sağlayıcı kendi fiyatlandırmasını uygular. Taşıma işlemi sırasında kesinti olmaması için DNS ayarlarının doğru yapılması gerekir."
+        },
+        {
+          "type": "p",
+          "text": "Bakım sözleşmesi olmadan site güvenli olur mu? Hayır. WordPress ve eklentiler sürekli güvenlik güncellemesi yayınlar; bunları uygulamayan siteler bot saldırılarına ve zararlı yazılımlara açıktır. Kendiniz takip edebilirsiniz ama düzenli olmalısınız."
+        },
+        {
+          "type": "p",
+          "text": "E-ticaret sitesinin yıllık maliyeti kurumsal siteden farklı mı? Evet. E-ticaret siteleri daha yüksek hosting kapasitesi, ödeme entegrasyonu lisansları, stok senkronizasyonu ve daha sık içerik güncellemesi gerektirir; bu da yıllık toplam maliyeti artırır."
+        },
+        {
+          "type": "p",
+          "text": "Şu an hangi kalemlerin devam ettiğini ya da sizin için hangi altyapının daha uygun olduğunu anlamak için ücretsiz ön değerlendirme yapabiliriz — mevcut sitenizin teknik altyapısını ve bütçe hedeflerinizi kısa bir görüşmede gözden geçirebiliriz."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "text": "Your site is live, but at the end of the first year emails arrive: domain renewal, hosting invoice, maintenance contract. Which ones are annual and which were one-time? Most businesses budget without understanding this difference and face surprise expenses later."
+        },
+        {
+          "type": "p",
+          "text": "The lifetime cost of a website is split into two main categories: initial investment (design and development) and recurring annual expenses. In this article you'll find the recurring line items, what determines them, and how much flexibility you have in each scenario."
+        },
+        {
+          "type": "h2",
+          "text": "Domain name renewal"
+        },
+        {
+          "type": "p",
+          "text": "The domain is your website's address on the internet (.com, .co.uk, .net, etc.). Initial registration is one-time but must be renewed every year — if you forget to renew it, the domain becomes available and someone else can register it."
+        },
+        {
+          "type": "ul",
+          "items": [
+            ".com domain: annual renewal cost varies by registrar (Namecheap, GoDaddy, Cloudflare).",
+            "Country-code domains (.co.uk, .de, etc.): renewed annually through local registrars; prices vary by provider.",
+            "If you own multiple extensions (.com, .co.uk, .net), each renews separately."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Domain renewal is usually set to auto-pay; if your credit card details are outdated you risk losing the domain."
+        },
+        {
+          "type": "h2",
+          "text": "Hosting (server) fee"
+        },
+        {
+          "type": "p",
+          "text": "Hosting is the service that stores your site's files (code, images, database). It can be paid monthly or annually; annual payment is usually cheaper."
+        },
+        {
+          "type": "p",
+          "text": "Factors that determine hosting cost:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Traffic volume: as monthly visitors grow, bandwidth and server capacity must grow.",
+            "Storage: many high-resolution images, videos, or files increase storage needs.",
+            "Performance and speed: shared hosting is the cheapest option; high-traffic or e-commerce sites may need VPS or cloud hosting.",
+            "Backup and security: features like automatic backups, firewalls, and DDoS protection raise the price."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "A static landing page and an e-commerce site syncing thousands of SKUs have completely different hosting needs. The first has low annual cost; the second is a line item to monitor monthly."
+        },
+        {
+          "type": "h2",
+          "text": "SSL certificate"
+        },
+        {
+          "type": "p",
+          "text": "SSL makes your site display a padlock in the browser (https). It's also a factor in Google rankings — without SSL your site shows a \"not secure\" warning to visitors."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Free SSL: certificates from authorities like Let's Encrypt auto-renew every three months. Most hosting providers include free SSL.",
+            "Paid SSL: standard (free) SSL is sufficient even for sites accepting payments; the payment page usually runs on the payment provider's servers and EV SSL is not mandatory."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "For most corporate sites free SSL is enough. Paid certificates can be chosen for systems processing sensitive data."
+        },
+        {
+          "type": "h2",
+          "text": "Maintenance and update service"
+        },
+        {
+          "type": "p",
+          "text": "After launch, content updates, security patches, plugin updates, and backups must be done regularly. Who will do this work should be clear in the initial contract."
+        },
+        {
+          "type": "p",
+          "text": "Maintenance service is usually sold as a monthly or annual package and covers:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Content updates: adding or removing text, images, products.",
+            "Software updates: WordPress, plugins, theme updates.",
+            "Security scanning and backup: monitoring for attack attempts, weekly or daily backups.",
+            "Bug fixes: fixing a broken feature or link.",
+            "Performance monitoring: detecting slowdowns or load time issues."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Some agencies don't offer maintenance packages; others make it mandatory. At WoodstoneStudio monthly maintenance and support starts at €50; the amount varies with content volume and technical requirements."
+        },
+        {
+          "type": "p",
+          "text": "If you choose to manage it yourself without a maintenance contract, access to the WordPress dashboard and basic knowledge are enough. But ignoring security patches leaves your site open to bots and malware."
+        },
+        {
+          "type": "h2",
+          "text": "Plugin and third-party service licenses"
+        },
+        {
+          "type": "p",
+          "text": "Some tools used on your site may require annual licenses:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Premium WordPress plugins: form builders, SEO tools, backup plugins.",
+            "E-commerce plugins: payment gateway integrations for WooCommerce, inventory management tools.",
+            "Marketing tools: email newsletters (Mailchimp, SendGrid), analytics platforms, chatbot services.",
+            "CDN (content delivery network): services like Cloudflare or BunnyCDN that speed up your site globally."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Each plugin has a different license model — some offer lifetime updates, others require annual renewal. Sites built with plugin-free modern stacks (for example Next.js) have no plugin license or plugin update costs. Asking at the start of a project which tools will incur annual costs is critical for budget planning."
+        },
+        {
+          "type": "h2",
+          "text": "Marketing and SEO services (optional)"
+        },
+        {
+          "type": "p",
+          "text": "After launch, continuous effort is needed to grow traffic. These are not mandatory, but if you aim for organic growth they should be in the budget:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "SEO consulting: keyword research, content strategy, technical optimization.",
+            "Content production: blog posts, product descriptions, landing page copy.",
+            "Google Ads / Meta Ads management: ad spend is separate but the agency charges a management fee.",
+            "Social media management: campaigns integrated with your site."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "These services are usually billed as monthly retainers or project-based; the annual total can be much higher than hosting and domain renewal alone."
+        },
+        {
+          "type": "h2",
+          "text": "One-time or annual? Budget checklist"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Domain renewal: annual. If skipped, domain becomes available and site goes down.",
+            "Hosting: monthly or annual. If skipped, site goes down and data may be lost.",
+            "SSL certificate: annual (automatic if free). If skipped, site shows \"not secure\" warning.",
+            "Maintenance and updates: monthly or annual (optional). If skipped, security holes accumulate and bugs stay unfixed.",
+            "Plugin licenses: annual (varies by plugin). If skipped, updates stop and you lose support.",
+            "Marketing and SEO: monthly (optional). If skipped, organic traffic does not grow and if ads stop, traffic drops."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "To calculate your total annual cost, add up domain, hosting, SSL, and any plugin licenses you use. If you take a maintenance service, multiply the monthly rate by twelve. Marketing budget depends entirely on your goals and should be evaluated separately from technical requirements."
+        },
+        {
+          "type": "h2",
+          "text": "Ways to reduce annual cost"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Pay annually: most hosting providers discount annual payments.",
+            "Drop unnecessary plugins: don't renew licenses for premium tools you don't use.",
+            "Evaluate free alternatives: for low-traffic sites, free SSL, free CDN, and open-source plugins can be enough.",
+            "Do maintenance yourself: if you have basic WordPress knowledge you can do routine updates yourself and only buy project-based help for urgent technical issues.",
+            "Monitor traffic: don't buy an unnecessarily high hosting plan; you can always upgrade when traffic grows."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Frequently asked questions"
+        },
+        {
+          "type": "p",
+          "text": "What happens if I forget to renew my domain? If auto-renewal is off and the deadline passes, the domain enters a \"redemption\" period during which you can recover it for a high fee. If it becomes completely available, someone else can buy it."
+        },
+        {
+          "type": "p",
+          "text": "Does switching hosting reset the annual fee? The new provider applies its own pricing. To avoid downtime during the move, DNS settings must be configured correctly."
+        },
+        {
+          "type": "p",
+          "text": "Is a site safe without a maintenance contract? No. WordPress and plugins constantly release security updates; sites that don't apply them are open to bot attacks and malware. You can manage it yourself but you must stay consistent."
+        },
+        {
+          "type": "p",
+          "text": "Does an e-commerce site cost more annually than a corporate site? Yes. E-commerce sites need higher hosting capacity, payment integration licenses, inventory sync, and more frequent content updates; this raises total annual cost."
+        },
+        {
+          "type": "p",
+          "text": "To understand which line items apply to you now or which infrastructure is more suitable for your needs, we can offer a free initial consultation — we can review your current site's technical stack and budget goals in a short conversation."
+        }
+      ]
+    }
+  },
+  {
     "slug": "web-tasarimi-hizmetleri",
     "relatedService": "web",
     "locales": [
