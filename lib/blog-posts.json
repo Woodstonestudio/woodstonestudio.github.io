@@ -1,5 +1,637 @@
 [
   {
+    "slug": "web-sitesi-fiyatlari-2026",
+    "relatedService": "web",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-10-11",
+    "readMin": 6,
+    "category": {
+      "tr": "Web",
+      "en": "Web"
+    },
+    "title": {
+      "tr": "Web Sitesi Fiyatları 2026: Türlere Göre Fiyatlar ve Fiyatı Belirleyenler",
+      "en": "Website Costs 2026: Pricing by Type and What Determines the Price"
+    },
+    "excerpt": {
+      "tr": "Web sitesi fiyatları 2026'da birkaç bin liradan yüz binlere kadar değişiyor. Tanıtım sitesinden e-ticarete her türün farklı gereksinimleri var. Fiyatı site türü, sayfa sayısı ve entegrasyonlar belirliyor.",
+      "en": "Website costs in 2026 range from a few thousand to hundreds of thousands. From landing pages to e-commerce, each type has different requirements. Price is determined by site type, page count and integrations."
+    },
+    "answer": {
+      "tr": "Web sitesi fiyatını sitenin türü, sayfa sayısı, özel tasarım ve entegrasyonlar belirler. Tek sayfalık bir tanıtım sitesi ile tam donanımlı bir e-ticaret platformu arasındaki fark çok büyüktür. WoodstoneStudio'da başlangıç fiyatları tanıtım siteleri için 15.000 ₺'den, e-ticaret için 50.000 ₺'den, mobil uygulama için 150.000 ₺'den başlar.",
+      "en": "Website price is determined by the type of site, number of pages, custom design and integrations. The difference between a single-page landing site and a full-featured e-commerce platform is significant. At WoodstoneStudio, starting prices begin at €500 for landing pages, €1,000 for e-commerce, and €3,000 for mobile apps."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "p",
+          "text": "Web sitesi fiyatını sitenin türü, sayfa sayısı, özel tasarım ve entegrasyonlar belirler. Tek sayfalık bir tanıtım sitesi ile tam donanımlı bir e-ticaret platformu arasındaki fark çok büyüktür. Piyasada fiyatlar birkaç bin liradan yüz binlere kadar değişir ve bu farkı projenin kapsamı belirler."
+        },
+        {
+          "type": "p",
+          "text": "Bu yazıda web sitesi türlerine göre fiyat aralıklarını ve her kalemi hangi unsurların belirlediğini bulacaksınız."
+        },
+        {
+          "type": "h2",
+          "text": "Tek sayfalık tanıtım sitesi"
+        },
+        {
+          "type": "p",
+          "text": "Tek ürün ya da hizmet sunan, yalnızca bilgi veren, form ya da iletişim butonuyla biten bir sayfa. Landing page, kampanya sitesi veya etkinlik duyurusu bu kategoriye girer."
+        },
+        {
+          "type": "p",
+          "text": "Fiyatı belirleyen unsurlar:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Özel tasarım mı, hazır şablon üzerinden mi uyarlanıyor",
+            "Animasyon, video ya da etkileşimli içerik var mı",
+            "Mobil duyarlılık detayı ve performans optimizasyonu seviyesi",
+            "İçerik (metin, görsel) hazırlığını kim yapıyor"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu tür siteler basit görünse de gerçekte dönüşüm odaklı olduğu için dikkatli kurgu gerektirir. Bir form yerleşiminin değişmesi, tıklama oranını artırabilir. WoodstoneStudio'da başlangıç fiyatı: 15.000–25.000 ₺"
+        },
+        {
+          "type": "h2",
+          "text": "Kurumsal web sitesi"
+        },
+        {
+          "type": "p",
+          "text": "Hakkımızda, hizmetler, referanslar, blog, iletişim gibi klasik bölümlerden oluşan çok sayfalı site. Çoğu işletme bu kategoriye girer."
+        },
+        {
+          "type": "p",
+          "text": "Fiyatı belirleyen unsurlar:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Sayfa sayısı",
+            "İçerik yönetim sistemi (CMS) özelleştirme düzeyi",
+            "Dil sayısı (çok dilli siteler teknik yapıyı değiştirir)",
+            "Blog, haberler gibi dinamik bölümlerin olup olmadığı",
+            "Entegrasyonlar: CRM bağlantısı, form gönderimlerinin doğrudan pazarlama aracına aktarımı",
+            "SEO altyapısı: meta yapısı, hız optimizasyonu, arama motoru dizin yapılandırması"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bir kurumsal sitenin içerik sırasını ve bölümlerini planlamak, teknik kodlamadan daha uzun sürebilir. Ziyaretçinin hangi sırayla bilgi alacağı, sitenin iş hedefini karşılamasını doğrudan etkiler. WoodstoneStudio'da başlangıç fiyatı: 30.000–50.000 ₺"
+        },
+        {
+          "type": "h2",
+          "text": "Salon ve klinik sitesi + online randevu"
+        },
+        {
+          "type": "p",
+          "text": "Randevu almayı, müsaitlik kontrolünü ve bazen ödeme sürecini içeren siteler. Kuaför, estetik, sağlık, danışmanlık gibi sektörler bu gruba girer."
+        },
+        {
+          "type": "p",
+          "text": "Fiyatı belirleyen unsurlar:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Randevu sisteminin tamamen özel mi, hazır bir servisle mi entegre edildiği",
+            "Personel bazlı takvim yönetimi",
+            "SMS ya da e-posta hatırlatıcıları",
+            "Online ödeme entegrasyonu",
+            "Müşteri paneli (geçmiş randevular, tekrar rezervasyon)"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Hazır bir randevu platformu kullanırsanız başlangıç maliyeti düşer ama aylık abonelik ödersiniz. Tamamen kendi sitenize kurulu bir sistem ise başlangıç yatırımı daha yüksek, aylık maliyet düşük olur. WoodstoneStudio'da başlangıç fiyatı: 20.000–35.000 ₺"
+        },
+        {
+          "type": "h2",
+          "text": "E-ticaret sitesi"
+        },
+        {
+          "type": "p",
+          "text": "Ürün kataloğu, sepet, ödeme altyapısı, kargo entegrasyonu ve sipariş yönetimi içeren tam donanımlı mağaza."
+        },
+        {
+          "type": "p",
+          "text": "Fiyatı belirleyen unsurlar:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Ürün sayısı ve varyant yapısı (beden, renk, stok birimleri)",
+            "Ödeme sağlayıcısı entegrasyonu (3D Secure, sanal POS, taksit yapısı)",
+            "Kargo firması API'leri ve otomatik kargo kodu gönderimi",
+            "Stok ve fatura yazılımı bağlantısı",
+            "Kampanya, kupon, indirim mekanizmaları",
+            "Kullanıcı hesabı özellikleri: sipariş geçmişi, favori listesi, adres kaydetme",
+            "Çok satıcılı (marketplace) yapı mı, tek marka mı"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "E-ticaret sitesi teknik bir yazılımdır. Her entegrasyon, arka plandaki stok-fatura sistemine bağlıdır. Hazır e-ticaret platformları kullanırsanız kurulum hızlı ama her ay platform ücreti artı satış komisyonu ödersiniz. Özel yazılım uzun vadede daha uygun maliyetli olabilir, ancak başlangıç yatırımı yüksektir. WoodstoneStudio'da başlangıç fiyatı: 50.000–100.000 ₺"
+        },
+        {
+          "type": "h2",
+          "text": "Mobil uygulama"
+        },
+        {
+          "type": "p",
+          "text": "İlk kullanılabilir sürüm (MVP) — temel özellikler çalışır durumda, iOS ve Android'de yayınlanır."
+        },
+        {
+          "type": "p",
+          "text": "Fiyatı belirleyen unsurlar:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Platform: sadece iOS, sadece Android ya da her ikisi birden",
+            "Kullanıcı girişi, profil yönetimi gibi temel işlevler",
+            "API bağlantısı (kendi sunucunuzdan veri çekmesi)",
+            "Bildirim altyapısı (push notification)",
+            "Harita, konum, kamera gibi donanım erişimleri"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Mobil uygulama, web sitesinden yapısal olarak farklıdır. Her sürüm mağaza onayına tabi, güncelleme dağıtımı kontrol dışınızdadır. Flutter gibi çapraz platform teknolojileriyle tek kod tabanından hem iOS hem de Android sürümü çıkarılabilir, ancak her platformun kendine özgü gereksinimleri vardır. WoodstoneStudio'da başlangıç fiyatı: 150.000 ₺'den başlar"
+        },
+        {
+          "type": "h2",
+          "text": "SaaS ve web uygulaması"
+        },
+        {
+          "type": "p",
+          "text": "Kullanıcıların veri girdiği, kaydettiği, düzenlediği sistemler. Proje yönetimi, CRM, rezervasyon platformu, eğitim portalı gibi örnekler."
+        },
+        {
+          "type": "p",
+          "text": "Fiyatı belirleyen unsurlar:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Kullanıcı rolleri ve yetkilendirme yapısı",
+            "Veritabanı karmaşıklığı (kaç tablo, nasıl ilişkiler)",
+            "Gerçek zamanlı etkileşimler (canlı bildirim, sohbet)",
+            "Raporlama ve analitik ekranlar",
+            "Ödeme entegrasyonu (abonelik, otomatik faturalama)",
+            "API sunumu (diğer sistemlerin bağlanabilmesi)"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu tür uygulamalar yazılım projesidir. Web sitesi gibi sayfa bazlı değil, işlev bazlı planlanır. Özellik listesi kısa görünse bile her özelliğin arkasındaki iş mantığı kodu karmaşıklaştırır. WoodstoneStudio'da başlangıç fiyatı: 200.000 ₺'den başlar"
+        },
+        {
+          "type": "h2",
+          "text": "Aylık bakım ve destek"
+        },
+        {
+          "type": "p",
+          "text": "Site yayına girdikten sonra güncelleme, güvenlik yamaları, içerik değişiklikleri ve teknik destek."
+        },
+        {
+          "type": "p",
+          "text": "Fiyatı belirleyen unsurlar:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Sunucu izleme ve yedekleme sıklığı",
+            "İçerik değişikliği hacmi (aylık kaç sayfa/haber eklenir)",
+            "Güvenlik taraması ve plugin güncellemeleri",
+            "Performans optimizasyonu (hız izleme, cache yönetimi)",
+            "Hata giderme ve teknik destek süresi"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bakım paketi almadan sitenizi bırakırsanız, zaman içinde açıklar birikir. Bir güvenlik güncellemesini kaçırmak, sitenin kötü amaçlı yazılıma yakalanmasına neden olabilir. WoodstoneStudio'da başlangıç fiyatı: 2.500–6.000 ₺"
+        },
+        {
+          "type": "h2",
+          "text": "Teklif alırken nelere dikkat etmeli"
+        },
+        {
+          "type": "p",
+          "text": "Fiyat karşılaştırması yaparken sadece toplam rakama bakmayın. İki teklif arasındaki fark, aşağıdakilerden kaynaklanabilir:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Tasarım: Hazır şablon mu, sıfırdan özel tasarım mı?",
+            "İçerik: Görseller ve metinleri siz mi sağlıyorsunuz, stüdyo mu üretiyor?",
+            "SEO altyapısı: Teknik SEO (site hızı, meta yapısı) dahil mi?",
+            "Revizyon hakkı: Tasarım aşamasında kaç tur değişiklik yapabilirsiniz?",
+            "Eğitim: İçerik yönetimi için size eğitim veriliyor mu?",
+            "Sonrası destek: İlk ay içinde hata düzeltme garanti kapsamında mı?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bir teklif kâğıdında bunlar açıkça yazılmıyorsa, sormadan imzalamayın. Kendi projeniz için daha kesin bir aralık görmek isterseniz [fiyat hesaplama sayfamızdan](https://woodstonestudio.com/fiyat-hesaplama) projenizi değerlendirebilirsiniz."
+        },
+        {
+          "type": "h2",
+          "text": "Neden bazı siteler çok ucuz"
+        },
+        {
+          "type": "p",
+          "text": "Eğer bir teklif ortalamanın çok altındaysa, genellikle şu unsurlardan biri eksiktir:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Hazır şablon kullanılıyor: Tasarım size özel değil, binlerce sitede aynı görünüm var.",
+            "İçerik dahil değil: Siz tüm görselleri, metinleri ve videoları hazırlıyorsunuz.",
+            "Teknik altyapı zayıf: Site yavaş yükleniyor, mobilde bozuk görünüyor, güvenlik güncellemeleri yok.",
+            "Destek yok: Yayından sonra bir hata çıktığında yalnız kalıyorsunuz.",
+            "Gizli ücretler: Domain, hosting ve bakım gibi kalemler teklif aşamasında yazılmıyor, sonradan ayrıca faturalanıyor."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu kalemlerin ayrı faturalanması sorun değildir; sorun, bunların baştan açıkça belirtilmemesidir. Ucuz teklif kötü iş anlamına gelmez, ama neyin dahil olup olmadığını bilmeden karar vermeyin."
+        },
+        {
+          "type": "h2",
+          "text": "Projenizi başlatmadan önce yapmanız gerekenler"
+        },
+        {
+          "type": "p",
+          "text": "Fiyat teklifi istemeden önce şu soruları yanıtlayın:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Sitenin temel amacı nedir? (Bilgi vermek, satış yapmak, randevu almak, üyelik oluşturmak)",
+            "Kaç sayfa ve bölüm gerekiyor?",
+            "Hangi entegrasyonlar şart? (CRM, ödeme, kargo, üçüncü parti servisler)",
+            "İçerik hazır mı, yoksa stüdyo üretecek mi?",
+            "Bütçe ve zaman çerçeveniz ne?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu soruları net yanıtladığınızda, aldığınız teklifler karşılaştırılabilir hale gelir."
+        },
+        {
+          "type": "h2",
+          "text": "Sık sorulan sorular"
+        },
+        {
+          "type": "p",
+          "text": "Web sitesi fiyatları neden bu kadar farklı?"
+        },
+        {
+          "type": "p",
+          "text": "Site türü, sayfa sayısı, özel tasarım, entegrasyonlar ve içerik hazırlığı fiyatı doğrudan etkiler. Hazır şablon ile özel yazılım arasında büyük fark olabilir."
+        },
+        {
+          "type": "p",
+          "text": "Ödeme nasıl yapılır?"
+        },
+        {
+          "type": "p",
+          "text": "Çoğu stüdyo projenin yarısını başlangıçta, yarısını yayın anında alır. Bazı durumlarda ara kilometre ödemeleri de olabilir. WoodstoneStudio'da ödeme %50 başlangıçta, %50 yayında yapılır."
+        },
+        {
+          "type": "p",
+          "text": "Yayından sonra ek ücret var mı?"
+        },
+        {
+          "type": "p",
+          "text": "Domain, hosting ve bakım yıllık devam eden kalemlerdir. Bunlar genellikle başlangıç fiyatına dahil değildir."
+        },
+        {
+          "type": "p",
+          "text": "Teklif almak için ne kadar bilgi vermem gerekir?"
+        },
+        {
+          "type": "p",
+          "text": "Sitenin amacı, sayfa sayısı, hangi özelliklerin olacağı ve içerik sorumluluğu netleşmeden sağlıklı teklif alınamaz. Detaylı brief, daha doğru fiyat getirir."
+        },
+        {
+          "type": "p",
+          "text": "Projenizi planlarken tüm bu unsurları düşünmek zaman alabilir. Ücretsiz bir ön değerlendirme için bize ulaşabilir, hangi unsurların sizin durumunuzda öncelikli olduğunu birlikte belirleyebiliriz."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "text": "Website price is determined by the type of site, number of pages, custom design and integrations. The difference between a single-page landing site and a full-featured e-commerce platform is significant. In the market, prices range from a few thousand to hundreds of thousands, and the scope of the project determines this difference."
+        },
+        {
+          "type": "p",
+          "text": "In this article you will find pricing ranges by website type and the factors that determine each line item."
+        },
+        {
+          "type": "h2",
+          "text": "Single-page landing site"
+        },
+        {
+          "type": "p",
+          "text": "A single page offering one product or service, providing information only, ending with a form or contact button. Landing pages, campaign sites or event announcements fall into this category."
+        },
+        {
+          "type": "p",
+          "text": "Factors that determine price:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Custom design or adapted from a ready-made template",
+            "Whether there is animation, video or interactive content",
+            "Mobile responsiveness detail and performance optimization level",
+            "Who prepares the content (text, visuals)"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Although these sites look simple, they actually require careful design because they are conversion-focused. A change in form placement can increase click-through rates. At WoodstoneStudio, starting price: €500–800"
+        },
+        {
+          "type": "h2",
+          "text": "Corporate website"
+        },
+        {
+          "type": "p",
+          "text": "A multi-page site consisting of classic sections such as About, Services, References, Blog, Contact. Most businesses fall into this category."
+        },
+        {
+          "type": "p",
+          "text": "Factors that determine price:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Number of pages",
+            "Content management system (CMS) customization level",
+            "Number of languages (multilingual sites change the technical structure)",
+            "Whether there are dynamic sections such as blog, news",
+            "Integrations: CRM connection, direct transfer of form submissions to marketing tool",
+            "SEO infrastructure: meta structure, speed optimization, search engine index configuration"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Planning the content sequence and sections of a corporate site can take longer than technical coding. The order in which the visitor receives information directly affects the site's ability to meet business objectives. At WoodstoneStudio, starting price: €700–1,200"
+        },
+        {
+          "type": "h2",
+          "text": "Salon and clinic website with online booking"
+        },
+        {
+          "type": "p",
+          "text": "Sites that include booking, availability checking and sometimes payment process. Sectors such as hairdressing, aesthetics, health, consulting fall into this group."
+        },
+        {
+          "type": "p",
+          "text": "Factors that determine price:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Whether the booking system is completely custom or integrated with a ready-made service",
+            "Staff-based calendar management",
+            "SMS or email reminders",
+            "Online payment integration",
+            "Customer panel (past bookings, re-booking)"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "If you use a ready-made booking platform, the initial cost is lower but you pay a monthly subscription. If it is a system completely built into your own site, the initial investment is higher and the monthly cost is lower. At WoodstoneStudio, starting price: €400–700"
+        },
+        {
+          "type": "h2",
+          "text": "E-commerce website"
+        },
+        {
+          "type": "p",
+          "text": "A fully equipped store with product catalog, cart, payment infrastructure, shipping integration and order management."
+        },
+        {
+          "type": "p",
+          "text": "Factors that determine price:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Number of products and variant structure (size, color, stock units)",
+            "Payment provider integration (3D Secure, virtual POS, installment structure)",
+            "Shipping company APIs and automatic shipping code sending",
+            "Stock and invoicing software connection",
+            "Campaign, coupon, discount mechanisms",
+            "User account features: order history, favorites list, address saving",
+            "Multi-vendor (marketplace) structure or single brand"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "An e-commerce site is technical software. Every integration depends on the stock-invoice system in the background. If you use ready-made e-commerce platforms, setup is fast but you pay monthly platform fees plus sales commission. Custom software can be more cost-effective in the long run, but the initial investment is high. At WoodstoneStudio, starting price: €1,000–2,000"
+        },
+        {
+          "type": "h2",
+          "text": "Mobile application"
+        },
+        {
+          "type": "p",
+          "text": "First usable version (MVP) — basic features working, published on iOS and Android."
+        },
+        {
+          "type": "p",
+          "text": "Factors that determine price:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Platform: iOS only, Android only or both",
+            "Basic functions such as user login, profile management",
+            "API connection (pulling data from your own server)",
+            "Notification infrastructure (push notification)",
+            "Hardware access such as map, location, camera"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "A mobile application is structurally different from a website. Each version is subject to store approval, update distribution is out of your control. With cross-platform technologies like Flutter, both iOS and Android versions can be produced from a single code base, but each platform has its own specific requirements. At WoodstoneStudio, starting price: from €3,000"
+        },
+        {
+          "type": "h2",
+          "text": "SaaS and web application"
+        },
+        {
+          "type": "p",
+          "text": "Systems where users enter, save and edit data. Examples include project management, CRM, booking platforms, education portals."
+        },
+        {
+          "type": "p",
+          "text": "Factors that determine price:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "User roles and authorization structure",
+            "Database complexity (how many tables, what relationships)",
+            "Real-time interactions (live notifications, chat)",
+            "Reporting and analytics screens",
+            "Payment integration (subscription, automatic invoicing)",
+            "API provision (other systems can connect)"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "These types of applications are software projects. They are planned based on functions, not pages like websites. Even if the feature list looks short, the business logic behind each feature complicates the code. At WoodstoneStudio, starting price: from €4,000"
+        },
+        {
+          "type": "h2",
+          "text": "Monthly maintenance and support"
+        },
+        {
+          "type": "p",
+          "text": "Updates, security patches, content changes and technical support after the site goes live."
+        },
+        {
+          "type": "p",
+          "text": "Factors that determine price:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Server monitoring and backup frequency",
+            "Content change volume (how many pages/news added monthly)",
+            "Security scanning and plugin updates",
+            "Performance optimization (speed monitoring, cache management)",
+            "Bug fixing and technical support time"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "If you leave your site without a maintenance package, vulnerabilities will accumulate over time. Missing a security update can cause your site to catch malware. At WoodstoneStudio, starting price: €50–120"
+        },
+        {
+          "type": "h2",
+          "text": "What to pay attention to when getting a quote"
+        },
+        {
+          "type": "p",
+          "text": "When comparing prices, don't just look at the total figure. The difference between two quotes can come from the following:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Design: Ready-made template or custom design from scratch?",
+            "Content: Are you providing images and texts, or is the studio producing them?",
+            "SEO infrastructure: Is technical SEO (site speed, meta structure) included?",
+            "Revision rights: How many rounds of changes can you make during the design phase?",
+            "Training: Are you provided with training for content management?",
+            "Post-launch support: Is bug fixing within the first month covered by warranty?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "If these are not clearly stated in a quote, do not sign without asking. If you want to see a more precise range for your own project, you can evaluate your project from our [pricing calculator](https://woodstonestudio.com/en/pricing-calculator)."
+        },
+        {
+          "type": "h2",
+          "text": "Why some sites are very cheap"
+        },
+        {
+          "type": "p",
+          "text": "If a quote is well below average, usually one of the following is missing:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "A ready-made template is used: The design is not custom to you, thousands of sites have the same look.",
+            "Content not included: You prepare all images, texts and videos.",
+            "Weak technical infrastructure: Site loads slowly, looks broken on mobile, no security updates.",
+            "No support: You are left alone when an error occurs after launch.",
+            "Hidden fees: Items such as domain, hosting and maintenance are not stated in the quote phase, invoiced separately later."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Billing these items separately is not a problem; the problem is that they are not clearly stated upfront. A cheap quote does not mean bad work, but do not make a decision without knowing what is and is not included."
+        },
+        {
+          "type": "h2",
+          "text": "What you need to do before starting your project"
+        },
+        {
+          "type": "p",
+          "text": "Before asking for a price quote, answer these questions:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "What is the main purpose of the site? (Providing information, making sales, taking bookings, creating membership)",
+            "How many pages and sections are needed?",
+            "Which integrations are essential? (CRM, payment, shipping, third-party services)",
+            "Is the content ready, or will the studio produce it?",
+            "What is your budget and time frame?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Once you answer these questions clearly, the quotes you receive become comparable."
+        },
+        {
+          "type": "h2",
+          "text": "Frequently asked questions"
+        },
+        {
+          "type": "p",
+          "text": "Why are website prices so different?"
+        },
+        {
+          "type": "p",
+          "text": "Site type, number of pages, custom design, integrations and content preparation directly affect the price. There can be a big difference between a ready-made template and custom software."
+        },
+        {
+          "type": "p",
+          "text": "How is payment made?"
+        },
+        {
+          "type": "p",
+          "text": "Most studios take half of the project at the beginning and half at launch. In some cases there may also be intermediate milestone payments. At WoodstoneStudio, payment is 50% upfront, 50% at launch."
+        },
+        {
+          "type": "p",
+          "text": "Are there additional fees after launch?"
+        },
+        {
+          "type": "p",
+          "text": "Domain, hosting and maintenance are annual ongoing items. These are usually not included in the initial price."
+        },
+        {
+          "type": "p",
+          "text": "How much information do I need to provide to get a quote?"
+        },
+        {
+          "type": "p",
+          "text": "A healthy quote cannot be obtained without clarifying the purpose of the site, the number of pages, what features it will have and content responsibility. A detailed brief brings a more accurate price."
+        },
+        {
+          "type": "p",
+          "text": "Thinking through all these factors when planning your project can take time. You can contact us for a free initial assessment and we can determine together which factors are priorities in your situation."
+        }
+      ]
+    }
+  },
+  {
     "slug": "web-sitesi-yillik-ucretleri",
     "relatedService": "web",
     "locales": [
