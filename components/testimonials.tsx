@@ -95,7 +95,7 @@ export function Testimonials({ t = trSections.testimonials }: { t?: SectionsDict
                 </a>
                 <div>
                   <div aria-hidden className="text-sm tracking-[0.2em] text-bone">★★★★★</div>
-                  <blockquote className="mt-4 text-[15px] leading-[1.7] text-bone/90 sm:text-base">“{it.quote}”</blockquote>
+                  <blockquote className="mt-4 text-[15px] leading-[1.7] text-bone/90 sm:text-[16px]">“{it.quote}”</blockquote>
                   <figcaption className="mt-6 flex flex-wrap items-end justify-between gap-4 border-t border-line pt-4">
                     <div>
                       <div className="text-sm font-medium text-bone">{it.name}</div>
