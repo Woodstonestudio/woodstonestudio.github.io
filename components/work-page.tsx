@@ -57,39 +57,47 @@ export function WorkPage({ locale }: { locale: Locale }) {
             <Reveal>
               <Eyebrow>{t.clientEyebrow}</Eyebrow>
             </Reveal>
-            <Reveal delay={0.08} y={24}>
-              <a
-                href={t.client.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group mt-10 grid gap-8 overflow-hidden rounded-2xl border border-line bg-[rgba(246,239,228,0.02)] p-7 transition-all duration-500 ease-soft hover:border-[rgba(38,35,30,0.2)] sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-12"
-              >
-                <div className="overflow-hidden rounded-xl border border-line">
-                  <Image
-                    src={t.client.img}
-                    alt={`${t.client.title} — ${t.client.field}`}
-                    width={1891}
-                    height={858}
-                    className="h-full w-full object-cover transition-transform duration-700 ease-soft group-hover:scale-[1.02]"
-                  />
-                </div>
-                <div>
-                  <div className="flex flex-wrap items-baseline gap-3">
-                    <h2 className="text-3xl font-light tracking-tight text-bone">{t.client.title}</h2>
-                    <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-gray-warm">{t.client.field}</span>
-                  </div>
-                  <p className="mt-4 text-[15.5px] leading-[1.8] text-gray-warm">{t.client.desc}</p>
-                  <blockquote className="mt-6 border-l border-line pl-5 text-[15px] italic leading-[1.8] text-bone">
-                    “{t.client.quote}”
-                    <footer className="mt-3 font-mono text-[11px] not-italic uppercase tracking-[0.14em] text-gray-warm">{t.client.author}</footer>
-                  </blockquote>
-                  <span className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-bone">
-                    {t.client.cta} · {t.client.host}
-                    <span aria-hidden className="text-gray-warm transition-transform duration-300 group-hover:translate-x-0.5">↗</span>
-                  </span>
-                </div>
-              </a>
-            </Reveal>
+            <div className="mt-10 space-y-8">
+              {t.clients.map((cl, i) => (
+                <Reveal key={cl.url} delay={0.08 + i * 0.06} y={24}>
+                  <a
+                    href={cl.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group grid gap-8 overflow-hidden rounded-2xl border border-line bg-[rgba(246,239,228,0.02)] p-7 transition-all duration-500 ease-soft hover:border-[rgba(38,35,30,0.2)] sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-12"
+                  >
+                    <div className="overflow-hidden rounded-xl border border-line">
+                      <Image
+                        src={cl.img}
+                        alt={`${cl.title} — ${cl.field}`}
+                        width={cl.imgW}
+                        height={cl.imgH}
+                        className="h-full w-full object-cover transition-transform duration-700 ease-soft group-hover:scale-[1.02]"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex flex-wrap items-baseline gap-3">
+                        <h2 className="text-3xl font-light tracking-tight text-bone">{cl.title}</h2>
+                        <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-gray-warm">{cl.field}</span>
+                      </div>
+                      <p className="mt-4 text-[15.5px] leading-[1.8] text-gray-warm">{cl.desc}</p>
+                      {cl.quote && (
+                        <blockquote className="mt-6 border-l border-line pl-5 text-[15px] italic leading-[1.8] text-bone">
+                          “{cl.quote}”
+                          {cl.author && (
+                            <footer className="mt-3 font-mono text-[11px] not-italic uppercase tracking-[0.14em] text-gray-warm">{cl.author}</footer>
+                          )}
+                        </blockquote>
+                      )}
+                      <span className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-bone">
+                        {cl.cta} · {cl.host}
+                        <span aria-hidden className="text-gray-warm transition-transform duration-300 group-hover:translate-x-0.5">↗</span>
+                      </span>
+                    </div>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </section>
 

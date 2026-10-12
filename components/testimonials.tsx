@@ -52,10 +52,10 @@ export function Testimonials({ t = trSections.testimonials }: { t?: SectionsDict
               </div>
               <div className="relative aspect-[16/10] overflow-hidden bg-base">
                 <Image
-                  src="/work/crossfit-bahcesehir.png"
+                  src={t.featuredImg}
                   alt={`${t.featuredTitle} — ${t.featuredTag}`}
-                  width={1891}
-                  height={858}
+                  width={1600}
+                  height={1000}
                   className="h-full w-full object-cover object-top transition-transform duration-700 ease-soft group-hover:scale-[1.03]"
                 />
               </div>

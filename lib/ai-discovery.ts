@@ -79,6 +79,7 @@ export function buildLlmsTxt(): string {
   for (const t of TOOLS) L.push(`- [${t.name}](${BASE}${t.en}) · [Türkçe](${BASE}${t.tr})`);
   L.push("");
   L.push("## Work", "");
+  L.push("- [İzmir Classic Cars](https://izmirclassiccars.com): website designed and built for İzmir's classic car community (events, gallery, garage, restoration, partnerships, press)");
   L.push("- [CrossFit Bahçeşehir](https://crossfitbahcesehir.fit): website designed and built for a CrossFit gym in Istanbul");
   L.push("- [JoVVo](https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr): the studio's own AI fitness and nutrition coach app for iOS");
   L.push("");
