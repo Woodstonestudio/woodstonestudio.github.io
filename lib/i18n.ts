@@ -182,8 +182,9 @@ export const trSections = {
     featuredHost: "izmirclassiccars.com",
     featuredCta: "Siteyi Ziyaret Et",
     featuredImg: "/work/izmir-classic-cars.jpg",
+    reviewsLabel: "Müşterimiz ne diyor",
     items: [
-      { name: "Serpil KURD", role: "CrossFit Bahçeşehir · Salon Sahibi", quote: "Aklımızdaki salonu tam olarak ekrana taşıdılar; siteyi ilk açtığımızda 'İşte biz buyuz' dedik. Hızlı, sade ve tam bize benziyor. Çalışmak da gerçekten keyifliydi." },
+      { name: "Serpil KURD", role: "CrossFit Bahçeşehir · Salon Sahibi", project: "CrossFit Bahçeşehir", url: "https://crossfitbahcesehir.fit", host: "crossfitbahcesehir.fit", img: "/work/crossfit-bahcesehir.png", imgW: 1891, imgH: 858, cta: "Siteyi gör", quote: "Aklımızdaki salonu tam olarak ekrana taşıdılar; siteyi ilk açtığımızda 'İşte biz buyuz' dedik. Hızlı, sade ve tam bize benziyor. Çalışmak da gerçekten keyifliydi." },
     ],
   },
   footer: {
@@ -316,8 +317,9 @@ export const enSections: typeof trSections = {
     featuredHost: "izmirclassiccars.com",
     featuredCta: "Visit the Site",
     featuredImg: "/work/izmir-classic-cars.jpg",
+    reviewsLabel: "What our client says",
     items: [
-      { name: "Serpil KURD", role: "CrossFit Bahçeşehir · Gym Owner", quote: "They put exactly the gym we had in our heads onto the screen; the first time we opened the site we said 'yes, this is us.' Fast, clean and truly ours — and a real joy to work with." },
+      { name: "Serpil KURD", role: "CrossFit Bahçeşehir · Gym Owner", project: "CrossFit Bahçeşehir", url: "https://crossfitbahcesehir.fit", host: "crossfitbahcesehir.fit", img: "/work/crossfit-bahcesehir.png", imgW: 1891, imgH: 858, cta: "See the site", quote: "They put exactly the gym we had in our heads onto the screen; the first time we opened the site we said 'yes, this is us.' Fast, clean and truly ours — and a real joy to work with." },
     ],
   },
   footer: {
