@@ -31,6 +31,9 @@ jobs:
       - name: Build (static export)
         run: npm run build
 
+      - name: Eski adresler için yönlendirme sayfaları
+        run: node scripts/legacy-redirects.mjs
+
       - name: IndexNow — değişen sayfaları belirle
         run: node scripts/indexnow.mjs prepare
 
