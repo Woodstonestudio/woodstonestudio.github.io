@@ -16,7 +16,7 @@ const C = {
     eyebrow: "Ücretsiz site analizi",
     t1: "Siteniz müşteri",
     t2: "kaybettiriyor mu?",
-    lead: "Adresinizi yazın; 20 saniyede HTTPS, mobil uyum, hız, temel SEO, iletişim formu ve altyapı kontrolü yapıp puanınızı ve düzeltme listenizi gösterelim. Kayıt yok, ücret yok.",
+    lead: "Adresinizi yazın; 20 saniyede HTTPS, mobil uyum, hız, temel SEO, iletişim formu, altyapı ve Google ile yapay zekâ botlarının sitenize erişimini kontrol edip puanınızı ve düzeltme listenizi gösterelim. Kayıt yok, ücret yok.",
     bullets: [
       "Google'ın sıralamada kullandığı temel sinyaller",
       "Telefondan gelen ziyaretçinin gördüğü sorunlar",
@@ -25,7 +25,7 @@ const C = {
     back: "Ana sayfa",
     faqTitle: "Sık sorulanlar",
     faqs: [
-      { q: "Ne kontrol ediliyor?", a: "Ana sayfanız otomatik olarak açılır: HTTPS, mobil uyum (viewport), yükleme süresi, başlık / açıklama / H1, iletişim formu varlığı ve altyapının güncelliği. Tasarım ve içerik kalitesi otomatik ölçülemez; onları görüşmede elle inceleriz." },
+      { q: "Ne kontrol ediliyor?", a: "Ana sayfanız otomatik olarak açılır: HTTPS, mobil uyum (viewport), yükleme süresi, başlık / açıklama / H1, iletişim formu varlığı ve altyapının güncelliği. Ayrıca robots.txt kuralları, Googlebot, Bingbot, ChatGPT ve Perplexity botlarıyla canlı erişim testi (Cloudflare gibi güvenlik katmanlarının botları engelleyip engellemediği), noindex, yapısal veri, site haritası, canonical ve paylaşım önizlemesi. Tasarım ve içerik kalitesi otomatik ölçülemez; onları görüşmede elle inceleriz." },
       { q: "E-postamı neden istiyorsunuz?", a: "Sonucu size de gönderebilmek ve isterseniz düzeltme teklifi yapabilmek için. Liste satmıyoruz, bülten göndermiyoruz." },
       { q: "Puan düşükse ne yapmalıyım?", a: "Listedeki 'nasıl düzelir' adımlarını kendi ekibinizle uygulayabilirsiniz. İsterseniz teklif isteyin; çoğu sorun birkaç günde, mobil uyumsuzluk gibi yapısal sorunlar ise yeniden tasarımla çözülür." },
     ],
@@ -34,7 +34,7 @@ const C = {
     eyebrow: "Free site audit",
     t1: "Is your website",
     t2: "losing customers?",
-    lead: "Enter your address; in 20 seconds we check HTTPS, mobile-friendliness, speed, basic SEO, contact form and stack, then show your score and fix list. No sign-up, no cost.",
+    lead: "Enter your address; in 20 seconds we check HTTPS, mobile-friendliness, speed, basic SEO, contact form, stack and whether Google and AI bots can reach your site, then show your score and fix list. No sign-up, no cost.",
     bullets: [
       "The basic signals Google uses for ranking",
       "The problems visitors on phones actually see",
@@ -43,7 +43,7 @@ const C = {
     back: "Home",
     faqTitle: "Frequently asked",
     faqs: [
-      { q: "What is checked?", a: "Your homepage is opened automatically: HTTPS, mobile-friendliness (viewport), load time, title / description / H1, presence of a contact form and how current the stack is. Design and content quality can't be measured automatically; we review those manually in a call." },
+      { q: "What is checked?", a: "Your homepage is opened automatically: HTTPS, mobile-friendliness (viewport), load time, title / description / H1, presence of a contact form and how current the stack is. Plus robots.txt rules, a live access test with Googlebot, Bingbot, ChatGPT and Perplexity bots (whether a security layer such as Cloudflare blocks them), noindex, structured data, sitemap, canonical and share preview. Design and content quality can't be measured automatically; we review those manually in a call." },
       { q: "Why do you ask for my email?", a: "So we can send you the result and, if you want, a quote to fix the issues. We don't sell lists or send newsletters." },
       { q: "My score is low — what now?", a: "You can apply the 'how to fix' steps with your own team. Or request a quote: most issues take a few days; structural ones like mobile-friendliness are solved with a redesign." },
     ],
@@ -122,8 +122,8 @@ export function auditMetadata(locale: Locale) {
     en: "Free Website Audit — Check Your Site in 20 Seconds | WoodstoneStudio",
   } as const;
   const descs = {
-    tr: "Web sitenizi ücretsiz analiz edin: HTTPS, mobil uyum, hız, SEO temelleri, iletişim formu ve altyapı kontrolü. Puanınızı ve düzeltme listenizi anında görün.",
-    en: "Audit your website for free: HTTPS, mobile-friendliness, speed, SEO basics, contact form and stack. See your score and fix list instantly.",
+    tr: "Web sitenizi ücretsiz analiz edin: HTTPS, mobil uyum, hız, SEO temelleri, iletişim formu ve Google / yapay zekâ botlarının erişimi. Puanınızı ve düzeltme listenizi anında görün.",
+    en: "Audit your website for free: HTTPS, mobile-friendliness, speed, SEO basics, contact form and Google / AI bot access. See your score and fix list instantly.",
   } as const;
   return {
     title: titles[l],

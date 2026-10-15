@@ -19,6 +19,7 @@ interface AuditItem {
   detail?: string;
   why?: string;
   fix?: string;
+  group?: "ai";
 }
 interface AuditResult {
   url: string;
@@ -53,6 +54,8 @@ const T = {
     ctaBtn: "Teklif isteyin",
     again: "Başka bir site analiz et",
     emailed: "Raporun bir kopyası e-postanıza gönderildi.",
+    aiTitle: "Google ve yapay zekâ erişimi",
+    aiLead: "Google, Bing, ChatGPT, Claude ve Perplexity sitenizi okuyabiliyor mu? Botların kimliğiyle canlı test edildi.",
     note: "Bu analiz sitenizin ana sayfasına otomatik bakar; tasarım, içerik kalitesi ve sıralama gibi konular için görüşmede detaylı rapor çıkarırız.",
   },
   en: {
@@ -78,6 +81,8 @@ const T = {
     ctaBtn: "Request a quote",
     again: "Audit another site",
     emailed: "A copy of the report has been sent to your email.",
+    aiTitle: "Google and AI access",
+    aiLead: "Can Google, Bing, ChatGPT, Claude and Perplexity read your site? Tested live with each bot's identity.",
     note: "This audit looks at your homepage automatically; for design, content quality and rankings we prepare a detailed report in a call.",
   },
 } as const;
@@ -146,8 +151,12 @@ export function SiteAudit({ locale = "tr" }: { locale?: Locale }) {
   }
 
   if (state === "done" && result) {
-    const issues = result.items.filter((i) => i.severity !== "good");
-    const goods = result.items.filter((i) => i.severity === "good");
+    const core = result.items.filter((i) => i.group !== "ai");
+    const ai = result.items.filter((i) => i.group === "ai");
+    const issues = core.filter((i) => i.severity !== "good");
+    const goods = core.filter((i) => i.severity === "good");
+    const aiIssues = ai.filter((i) => i.severity !== "good");
+    const aiGoods = ai.filter((i) => i.severity === "good");
     const color = scoreColor(result.health);
     const r = 44;
     const c = 2 * Math.PI * r;
@@ -230,6 +239,46 @@ export function SiteAudit({ locale = "tr" }: { locale?: Locale }) {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+
+        {ai.length > 0 && (
+          <div className="mt-10 border-t border-line pt-8">
+            <h3 className="text-[13px] font-medium uppercase tracking-[0.2em] text-bone-dim">{t.aiTitle}</h3>
+            <p className="mt-2 text-[14px] leading-[1.7] text-gray-warm">{t.aiLead}</p>
+            {aiIssues.length > 0 && (
+              <ul className="mt-4 space-y-3">
+                {aiIssues.map((i) => (
+                  <li key={i.code} className={`rounded-2xl border ${SEV[i.severity].ring} p-4`}>
+                    <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[16px] text-bone">
+                      <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${SEV[i.severity].dot}`} />
+                      {i.label}
+                      {i.detail && <span className="text-[13px] text-gray-warm">· {i.detail}</span>}
+                    </div>
+                    {i.why && (
+                      <p className="mt-2 text-[14px] leading-[1.7] text-gray-warm">
+                        <span className="text-bone-dim">{t.why}:</span> {i.why}
+                      </p>
+                    )}
+                    {i.fix && (
+                      <p className="mt-1 text-[14px] leading-[1.7] text-gray-warm">
+                        <span className="text-bone-dim">{t.fix}:</span> {i.fix}
+                      </p>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {aiGoods.length > 0 && (
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {aiGoods.map((i) => (
+                  <li key={i.code} className="inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5 text-[13px] text-gray-warm">
+                    <span className="h-2 w-2 rounded-full bg-[#4E7D4A]" />
+                    {i.label}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         )}
 
