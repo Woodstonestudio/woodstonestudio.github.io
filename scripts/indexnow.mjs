@@ -1,4 +1,5 @@
-// IndexNow: yalnızca içeriği değişen sayfaları Bing, Yandex vb. motorlara bildirir.
+// IndexNow + sitemap lastmod: içeriği değişen sayfaları Bing, Yandex vb. motorlara bildirir
+// ve sitemap.xml'deki <lastmod> değerini sayfanın gerçek içerik değişim tarihi yapar.
 //
 //   node scripts/indexnow.mjs prepare   → build sonrası (deploy'dan ÖNCE)
 //   node scripts/indexnow.mjs submit    → deploy SONRASI
@@ -49,16 +50,33 @@ function contentHash(html) {
   return createHash("sha256").update(text).digest("hex").slice(0, 16);
 }
 
-async function prepare() {
-  const sitemap = readFileSync(join(OUT, "sitemap.xml"), "utf8");
-  const inSitemap = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim()));
+function today() {
+  // Europe/Istanbul tarihi (YYYY-MM-DD)
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Istanbul" }).format(new Date());
+}
 
-  const state = {};
-  for (const f of walk(OUT)) {
-    const url = fileToUrl(f);
-    if (inSitemap.has(url)) state[url] = contentHash(readFileSync(f, "utf8"));
+// Sitemap'teki her <url> için <lastmod>'u gerçek içerik değişim tarihiyle yazar
+function writeLastmod(sitemap, state) {
+  return sitemap.replace(/<url>([\s\S]*?)<\/url>/g, (block, inner) => {
+    const loc = (inner.match(/<loc>([^<]+)<\/loc>/) || [])[1]?.trim();
+    const d = loc && state[loc]?.d;
+    if (!d) return block;
+    const cleaned = inner.replace(/\s*<lastmod>[^<]*<\/lastmod>/g, "");
+    return "<url>" + cleaned.replace(/(<loc>[^<]+<\/loc>)/, `$1\n<lastmod>${d}</lastmod>`) + "</url>";
+  });
+}
+
+async function prepare() {
+  const sitemapPath = join(OUT, "sitemap.xml");
+  const sitemap = readFileSync(sitemapPath, "utf8");
+  const inSitemap = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim()));
+  // Next'in yazdığı tarih (ör. blog yayın tarihi): ilk kayıtta geçmişi korumak için
+  const nextDate = {};
+  for (const m of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+    const loc = (m[1].match(/<loc>([^<]+)<\/loc>/) || [])[1]?.trim();
+    const lm = (m[1].match(/<lastmod>([^<]+)<\/lastmod>/) || [])[1];
+    if (loc && lm) nextDate[loc] = lm.slice(0, 10);
   }
-  writeFileSync(join(OUT, STATE_FILE), JSON.stringify(state));
 
   let prev = null;
   try {
@@ -66,8 +84,27 @@ async function prepare() {
     if (res.ok) prev = await res.json();
   } catch {}
 
-  // İlk çalıştırmada (canlıda state yok) tüm sitemap gönderilir
-  const changed = Object.keys(state).filter((u) => !prev || prev[u] !== state[u]);
+  // state: { url: { h: içerik hash'i, d: içeriğin son değiştiği gün } }
+  // Eski biçim { url: hash } da okunur (geçiş: tarih bilinmiyorsa bugün)
+  const now = today();
+  const state = {};
+  const changed = [];
+  for (const f of walk(OUT)) {
+    const url = fileToUrl(f);
+    if (!inSitemap.has(url)) continue;
+    const h = contentHash(readFileSync(f, "utf8"));
+    const p = prev?.[url];
+    const ph = typeof p === "string" ? p : p?.h;
+    const pd = typeof p === "object" && p ? p.d : null;
+    if (ph === h) state[url] = { h, d: pd || now };
+    else {
+      state[url] = { h, d: p ? now : nextDate[url] || now };
+      changed.push(url);
+    }
+  }
+  writeFileSync(join(OUT, STATE_FILE), JSON.stringify(state));
+  writeFileSync(sitemapPath, writeLastmod(sitemap, state));
+
   writeFileSync(URLS_FILE, changed.join("\n"));
   console.log(`IndexNow: ${Object.keys(state).length} sayfa, ${changed.length} değişmiş${prev ? "" : " (ilk çalıştırma)"}`);
   for (const u of changed.slice(0, 50)) console.log("  " + u);
