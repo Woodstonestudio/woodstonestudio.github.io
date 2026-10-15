@@ -31,6 +31,16 @@ jobs:
       - name: Build (static export)
         run: npm run build
 
+      - name: IndexNow — değişen sayfaları belirle
+        run: node scripts/indexnow.mjs prepare
+
+      - name: IndexNow listesini sakla
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-urls
+          path: indexnow-urls.txt
+          retention-days: 1
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -46,3 +56,20 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@v4
+        with:
+          name: indexnow-urls
+      - name: IndexNow — Bing/Yandex'e bildir
+        run: node scripts/indexnow.mjs submit
