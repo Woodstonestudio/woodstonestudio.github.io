@@ -118,8 +118,8 @@ export function AuditPage({ locale }: { locale: Locale }) {
 export function auditMetadata(locale: Locale) {
   const l = locale === "en" ? "en" : "tr";
   const titles = {
-    tr: "Ücretsiz Site Analizi — 20 Saniyede Web Sitesi Kontrolü | WoodstoneStudio",
-    en: "Free Website Audit — Check Your Site in 20 Seconds | WoodstoneStudio",
+    tr: "Ücretsiz Site Analizi — 20 Saniyede Web Sitesi Kontrolü",
+    en: "Free Website Audit — Check Your Site in 20 Seconds",
   } as const;
   const descs = {
     tr: "Web sitenizi ücretsiz analiz edin: HTTPS, mobil uyum, hız, SEO temelleri, iletişim formu ve Google / yapay zekâ botlarının erişimi. Puanınızı ve düzeltme listenizi anında görün.",

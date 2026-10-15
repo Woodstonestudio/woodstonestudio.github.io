@@ -98,8 +98,8 @@ export function PricingPage({ locale }: { locale: Locale }) {
 export function pricingMetadata(locale: Locale) {
   const l = locale === "en" ? "en" : "tr";
   const titles = {
-    tr: "Web Sitesi ve Mobil Uygulama Fiyat Hesaplama | WoodstoneStudio",
-    en: "Website and App Cost Calculator — Estimated Price | WoodstoneStudio",
+    tr: "Web Sitesi ve Mobil Uygulama Fiyat Hesaplama",
+    en: "Website and App Cost Calculator — Estimated Price",
   } as const;
   const descs = {
     tr: "Web sitesi fiyatları ve mobil uygulama yapma maliyeti: kurumsal site, e-ticaret, mobil uygulama ve SaaS için tahmini fiyat aralığını ve süreyi birkaç seçimle hesaplayın.",

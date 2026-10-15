@@ -31,9 +31,9 @@ export function FaqPage({ locale }: { locale: Locale }) {
 
 export function faqMetadata(locale: Locale) {
   const titles = {
-    tr: "Sık Sorulan Sorular — WoodstoneStudio",
-    en: "Frequently Asked Questions — WoodstoneStudio",
-    sq: "Pyetje të Bëra Shpesh — WoodstoneStudio",
+    tr: "Sık Sorulan Sorular",
+    en: "Frequently Asked Questions",
+    sq: "Pyetje të Bëra Shpesh",
   } as const;
   const descs = {
     tr: "WoodstoneStudio hizmetleri hakkında sık sorulan sorular: web tasarım, mobil uygulama, SaaS, yapay zekâ, sosyal medya ve daha fazlası.",
