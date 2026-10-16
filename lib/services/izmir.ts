@@ -98,7 +98,7 @@ export const izmirTR: ServiceContent = {
       h: "Google'da İzmir aramalarında nasıl çıkılır?",
       p: [
         "\"İzmir\" ile başlayan aramalarda Google iki ayrı sonuç gösterir: üstte haritadaki işletmeler, altında web siteleri. Harita sonuçları için eksiksiz bir Google İşletme Profili, doğru kategori ve düzenli yorum gerekir. Web sonuçları için de her hizmetin ve hizmet verdiğiniz semtin ayrı, gerçek bilgi içeren bir sayfası olmalıdır. Sitenizdeki ad, adres ve telefon, profildekiyle birebir aynı olmalıdır.",
-        "Ücretsiz site analizi aracımızla sitenizin hızını ve temel SEO durumunu 20 saniyede görebilirsiniz.",
+        "Ücretsiz site analizi aracımızla sitenizin hızını, SEO durumunu ve Google/yapay zekâ botlarının erişimini bir dakikadan kısa sürede görebilirsiniz.",
       ],
     },
   ],

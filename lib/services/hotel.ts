@@ -94,7 +94,7 @@ export const hotelTR: ServiceContent = {
     {
       h: "Mevcut siteniz varsa",
       p: [
-        "Ücretsiz site analizi aracımızla hız, mobil uyum ve temel SEO durumunu 20 saniyede görebilirsiniz. Yenilemede eski adresleri yeni sayfalara yönlendirerek Google'daki mevcut konumunuzu koruruz; rezervasyon motorunuz varsa ona bağlanırız.",
+        "Ücretsiz site analizi aracımızla hız, mobil uyum, SEO ve Google/yapay zekâ botlarının erişimini bir dakikadan kısa sürede görebilirsiniz. Yenilemede eski adresleri yeni sayfalara yönlendirerek Google'daki mevcut konumunuzu koruruz; rezervasyon motorunuz varsa ona bağlanırız.",
       ],
     },
   ],
@@ -205,7 +205,7 @@ export const hotelEN: ServiceContent = {
     {
       h: "If you already have a site",
       p: [
-        "Our free site audit shows speed, mobile-friendliness and basic SEO in 20 seconds. When rebuilding we redirect old URLs to the new pages to keep your Google position, and connect to your existing booking engine if you have one.",
+        "Our free site audit shows speed, mobile-friendliness, SEO and Google/AI bot access in under a minute. When rebuilding we redirect old URLs to the new pages to keep your Google position, and connect to your existing booking engine if you have one.",
       ],
     },
   ],

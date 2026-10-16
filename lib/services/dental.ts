@@ -95,7 +95,7 @@ export const dentalTR: ServiceContent = {
     {
       h: "Mevcut sitenizi yenilemek",
       p: [
-        "Siteniz varsa sıfırdan başlamanız gerekmez. Ücretsiz site analizi aracımızla hız, mobil uyum ve temel SEO durumunu 20 saniyede görebilir; ön görüşmede hangi tedavi sayfalarının eksik olduğuna birlikte bakabiliriz. Yenilemede mevcut Google sıralamalarınızı korumak için eski adresleri yeni sayfalara yönlendiriyoruz.",
+        "Siteniz varsa sıfırdan başlamanız gerekmez. Ücretsiz site analizi aracımızla hız, mobil uyum, SEO ve Google/yapay zekâ botlarının erişimini bir dakikadan kısa sürede görebilir; ön görüşmede hangi tedavi sayfalarının eksik olduğuna birlikte bakabiliriz. Yenilemede mevcut Google sıralamalarınızı korumak için eski adresleri yeni sayfalara yönlendiriyoruz.",
       ],
     },
   ],
@@ -206,7 +206,7 @@ export const dentalEN: ServiceContent = {
     {
       h: "Renewing an existing site",
       p: [
-        "If you already have a site you don't need to start from scratch. Our free site audit shows speed, mobile-friendliness and basic SEO in 20 seconds, and in the consultation we look at which treatment pages are missing. When rebuilding, we redirect old URLs to the new pages to keep your existing Google rankings.",
+        "If you already have a site you don't need to start from scratch. Our free site audit shows speed, mobile-friendliness, SEO and Google/AI bot access in under a minute, and in the consultation we look at which treatment pages are missing. When rebuilding, we redirect old URLs to the new pages to keep your existing Google rankings.",
       ],
     },
   ],
