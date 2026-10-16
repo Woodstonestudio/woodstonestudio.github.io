@@ -31,6 +31,9 @@ jobs:
       - name: Build (static export)
         run: npm run build
 
+      - name: HTML ince ayarı (engelleyen betiklere defer)
+        run: node scripts/postbuild-html.mjs
+
       - name: Eski adresler için yönlendirme sayfaları
         run: node scripts/legacy-redirects.mjs
 
