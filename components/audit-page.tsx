@@ -130,7 +130,7 @@ export function auditMetadata(locale: Locale) {
     description: descs[l],
     alternates: {
       canonical: PATH[l],
-      languages: { tr: `${SITE}${PATH.tr}`, en: `${SITE}${PATH.en}` },
+      languages: { tr: `${SITE}${PATH.tr}`, en: `${SITE}${PATH.en}`, "x-default": `${SITE}${PATH.tr}` },
     },
     openGraph: { title: titles[l], description: descs[l], url: `${SITE}${PATH[l]}`, type: "website", images: ["/og-cover.jpg"] },
   };

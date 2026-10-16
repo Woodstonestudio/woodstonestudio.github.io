@@ -274,6 +274,7 @@ export function blogListMetadata(locale: Locale) {
       languages: {
         tr: `${SITE}/blog`,
         en: `${SITE}/en/blog`,
+        "x-default": `${SITE}/blog`,
       },
     },
     openGraph: { title: titles[locale], description: L.lead, url: `${SITE}${BLOG_BASE[locale]}`, type: "website", images: ["/og-cover.jpg"] },
@@ -284,6 +285,8 @@ export function blogPostMetadata(post: BlogPost, locale: Locale) {
   const langs: Record<string, string> = {};
   if (post.locales.includes("tr")) langs.tr = `${SITE}/blog/${post.slug}`;
   if (post.locales.includes("en")) langs.en = `${SITE}/en/blog/${post.slug}`;
+  // İki dil de varsa varsayılan (x-default) Türkçe; tek dilli yazıda x-default yazılmaz
+  if (langs.tr && langs.en) langs["x-default"] = langs.tr;
   return {
     title: post.title[locale],
     description: post.excerpt[locale],

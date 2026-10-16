@@ -171,6 +171,7 @@ export function aboutMetadata(c: AboutContent) {
       languages: {
         tr: `${SITE}${c.alternates.tr}`,
         en: `${SITE}${c.alternates.en}`,
+        "x-default": `${SITE}${c.alternates.tr}`,
       },
     },
     openGraph: { title: c.meta.title, description: c.meta.description, url: `${SITE}${c.slug}`, type: "website", images: ["/og-cover.jpg"] },

@@ -49,6 +49,7 @@ export function faqMetadata(locale: Locale) {
       languages: {
         tr: `${SITE}/sss`,
         en: `${SITE}/en/faq`,
+        "x-default": `${SITE}/sss`,
       },
     },
     openGraph: { title: titles[locale], description: descs[locale], url: `${SITE}${path[locale]}`, type: "website", images: ["/og-cover.jpg"] },

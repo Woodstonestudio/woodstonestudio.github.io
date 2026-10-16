@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "../globals.css";
@@ -57,8 +57,18 @@ export const metadata: Metadata = {
       "Web, mobile, AI and custom software — we design and build digital products with the discipline of a product team.",
     images: ["/og-cover.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
 };
+
+// Tarayıcı çubuğu ve "ana ekrana ekle" rengi (site zemin rengi)
+export const viewport: Viewport = { themeColor: "#E9E5DD" };
 
 export default function RootLayout({
   children,
@@ -84,6 +94,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://woodstonestudio.com/#organization",
               name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               logo: "https://woodstonestudio.com/brand/logo.png",
@@ -106,7 +117,7 @@ export default function RootLayout({
                 datePublished: "2026-09-20",
                 inLanguage: "en",
                 reviewBody: "They put exactly the gym we had in our heads onto the screen; the first time we opened the site we said 'yes, this is us.' Fast, clean and truly ours — and a real joy to work with.",
-                itemReviewed: { "@type": "Organization", name: "WoodstoneStudio" },
+                itemReviewed: { "@id": "https://woodstonestudio.com/#organization" },
               },
               sameAs: [
                 "https://www.linkedin.com/company/woodstonestudio/",
@@ -123,14 +134,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": "https://woodstonestudio.com/#website",
               name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               inLanguage: "en-US",
               ...(SITE_UPDATED ? { dateModified: SITE_UPDATED } : {}),
-              publisher: {
-                "@type": "Organization",
-                name: "WoodstoneStudio",
-              },
+              publisher: { "@id": "https://woodstonestudio.com/#organization" },
             }),
           }}
         />
@@ -153,11 +162,7 @@ export default function RootLayout({
                 "Social media management",
                 "Content production",
               ],
-              provider: {
-                "@type": "Organization",
-                name: "WoodstoneStudio",
-                url: "https://woodstonestudio.com",
-              },
+              provider: { "@id": "https://woodstonestudio.com/#organization" },
               areaServed: "Worldwide",
               availableLanguage: ["Turkish", "English"],
             }),

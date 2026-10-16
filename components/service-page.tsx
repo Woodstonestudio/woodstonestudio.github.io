@@ -413,6 +413,7 @@ export function serviceMetadata(c: ServiceContent) {
             languages: {
               tr: `${SITE}${c.alternates.tr}`,
               en: `${SITE}${c.alternates.en}`,
+              "x-default": `${SITE}${c.alternates.tr}`,
             },
           }
         : {}),

@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const [tr, en, priority] of PAGES) {
-    const languages = { tr: BASE + (tr === "/" ? "" : tr), en: BASE + en };
+    const languages = { tr: BASE + (tr === "/" ? "" : tr), en: BASE + en, "x-default": BASE + (tr === "/" ? "" : tr) };
     entries.push({ url: BASE + (tr === "/" ? "/" : tr), changeFrequency: "monthly", priority, alternates: { languages } });
     entries.push({ url: BASE + en, changeFrequency: "monthly", priority, alternates: { languages } });
   }
@@ -49,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const languages: Record<string, string> = {};
     if (hasTr) languages.tr = `${BASE}/blog/${p.slug}`;
     if (hasEn) languages.en = `${BASE}/en/blog/${p.slug}`;
+    if (hasTr && hasEn) languages["x-default"] = languages.tr;
     const alternates = hasTr && hasEn ? { languages } : undefined;
     if (hasTr) entries.push({ url: languages.tr, lastModified: p.date, changeFrequency: "yearly", priority: 0.6, alternates });
     if (hasEn) entries.push({ url: languages.en, lastModified: p.date, changeFrequency: "yearly", priority: 0.6, alternates });

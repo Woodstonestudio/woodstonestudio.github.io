@@ -55,7 +55,7 @@ export function privacyMetadata(locale: Locale) {
     description: t.meta.description,
     alternates: {
       canonical: PRIVACY_PATH[locale],
-      languages: { tr: `${SITE}${PRIVACY_PATH.tr}`, en: `${SITE}${PRIVACY_PATH.en}` },
+      languages: { tr: `${SITE}${PRIVACY_PATH.tr}`, en: `${SITE}${PRIVACY_PATH.en}`, "x-default": `${SITE}${PRIVACY_PATH.tr}` },
     },
   };
 }

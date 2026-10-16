@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "../globals.css";
@@ -57,13 +57,23 @@ export const metadata: Metadata = {
       "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
     images: ["/og-cover.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
   verification: {
     other: {
       "msvalidate.01": "6AE471271FBF2DD5F1F7B6A70C3E5C3D",
     },
   },
 };
+
+// Tarayıcı çubuğu ve "ana ekrana ekle" rengi (site zemin rengi)
+export const viewport: Viewport = { themeColor: "#E9E5DD" };
 
 export default function RootLayout({
   children,
@@ -89,6 +99,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://woodstonestudio.com/#organization",
               name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               logo: "https://woodstonestudio.com/brand/logo.png",
@@ -111,7 +122,7 @@ export default function RootLayout({
                 datePublished: "2026-09-20",
                 inLanguage: "tr-TR",
                 reviewBody: "Aklımızdaki salonu tam olarak ekrana taşıdılar; siteyi ilk açtığımızda 'İşte biz buyuz' dedik. Hızlı, sade ve tam bize benziyor. Çalışmak da gerçekten keyifliydi.",
-                itemReviewed: { "@type": "Organization", name: "WoodstoneStudio" },
+                itemReviewed: { "@id": "https://woodstonestudio.com/#organization" },
               },
               sameAs: [
                 "https://www.linkedin.com/company/woodstonestudio/",
@@ -128,14 +139,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": "https://woodstonestudio.com/#website",
               name: "WoodstoneStudio",
               url: "https://woodstonestudio.com",
               inLanguage: "tr-TR",
               ...(SITE_UPDATED ? { dateModified: SITE_UPDATED } : {}),
-              publisher: {
-                "@type": "Organization",
-                name: "WoodstoneStudio",
-              },
+              publisher: { "@id": "https://woodstonestudio.com/#organization" },
             }),
           }}
         />
@@ -158,11 +167,7 @@ export default function RootLayout({
                 "Sosyal medya yönetimi",
                 "İçerik üretimi",
               ],
-              provider: {
-                "@type": "Organization",
-                name: "WoodstoneStudio",
-                url: "https://woodstonestudio.com",
-              },
+              provider: { "@id": "https://woodstonestudio.com/#organization" },
               areaServed: "Worldwide",
               availableLanguage: ["Turkish", "English"],
             }),

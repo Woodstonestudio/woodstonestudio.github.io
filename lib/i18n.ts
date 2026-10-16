@@ -4,6 +4,22 @@
  * prop olarak alır (varsayılan: Türkçe).
  */
 
+import { BASE } from "@/lib/pricing";
+
+// Fiyat cevabı: rakamlar tek kaynaktan (lib/pricing.ts), tarih build ayından gelir.
+// AI cevaplarının alıntılayabileceği "marka + rakam + tarih" içeren tek cümle.
+const trNum = (n: number) => n.toLocaleString("tr-TR");
+const AS_OF_TR = new Intl.DateTimeFormat("tr-TR", { month: "long", year: "numeric" }).format(new Date());
+const AS_OF_EN = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(new Date());
+const PRICE_FAQ_TR = {
+  q: "WoodstoneStudio'da web sitesi ve uygulama fiyatları ne kadar?",
+  a: `${AS_OF_TR} itibarıyla WoodstoneStudio'da tanıtım siteleri ${trNum(BASE.tr.landing.min)} TL'den, kurumsal web siteleri ${trNum(BASE.tr.corporate.min)} TL'den, e-ticaret siteleri ${trNum(BASE.tr.ecommerce.min)} TL'den ve mobil uygulamalar ${trNum(BASE.tr.mobile.min)} TL'den başlıyor; ödeme %50 başlangıçta, %50 yayında alınır. Kesin fiyatı kapsamı konuştuktan sonra yazılı teklifle veriyoruz.`,
+};
+const PRICE_FAQ_EN = {
+  q: "How much does a website or app cost at WoodstoneStudio?",
+  a: `As of ${AS_OF_EN}, WoodstoneStudio builds landing pages from €${BASE.en.landing.min.toLocaleString("en-GB")}, business websites from €${BASE.en.corporate.min.toLocaleString("en-GB")}, e-commerce sites from €${BASE.en.ecommerce.min.toLocaleString("en-GB")} and mobile apps from €${BASE.en.mobile.min.toLocaleString("en-GB")}, with 50% paid upfront and 50% at launch. Exact pricing follows a written quote once the scope is agreed.`,
+};
+
 export const trNav = {
   locale: "tr",
   ariaLabel: "Ana menü",
@@ -152,6 +168,7 @@ export const trSections = {
     t1: "Aklınızdaki",
     t2: "sorular",
     faqs: [
+      PRICE_FAQ_TR,
       { q: "Sadece bir fikrim var, yardımcı olabilir misiniz?", a: "Evet. Birçok projeye yalnızca bir fikirle başlıyoruz. Fikri birlikte tanımlıyor, kapsamını netleştiriyor ve bir MVP ile hayata geçiriyoruz." },
       { q: "SaaS geliştiriyor musunuz?", a: "Evet. Abonelik tabanlı web uygulamaları dâhil, fikirden yayına kadar SaaS ürünleri geliştiriyoruz. Kullanıcı yönetimi, ödeme altyapısı ve ölçeklenebilir mimari kuruyoruz." },
       { q: "MVP geliştirebilir misiniz?", a: "Evet. Bir ürünü en kısa sürede test edilebilir hâle getirmek için önce çekirdek özellikleri içeren bir MVP geliştiriyor, ardından geri bildirimle büyütüyoruz." },
@@ -287,6 +304,7 @@ export const enSections: typeof trSections = {
     t1: "Questions on",
     t2: "your mind",
     faqs: [
+      PRICE_FAQ_EN,
       { q: "I only have an idea — can you help?", a: "Yes. Many of our projects start with nothing but an idea. We define it together, clarify the scope and bring it to life with an MVP." },
       { q: "Do you build SaaS products?", a: "Yes. We build SaaS products from idea to launch, including subscription-based web applications, with user management, payments and scalable architecture." },
       { q: "Can you build an MVP?", a: "Yes. To get a product testable as quickly as possible, we first build an MVP with the core features, then grow it with feedback." },
