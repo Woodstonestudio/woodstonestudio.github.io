@@ -2,16 +2,57 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["J2QYZYMV48.com.kurannuru.app"],
-        "components": [{ "/": "/apps/kuran-nuru/*", "comment": "Kur'an Nuru uygulama linkleri" }]
+        "appIDs": [
+          "J2QYZYMV48.com.kurannuru.app"
+        ],
+        "components": [
+          {
+            "/": "/apps/kuran-nuru/*",
+            "comment": "Kur'an Nuru uygulama linkleri"
+          }
+        ]
       },
       {
-        "appIDs": ["J2QYZYMV48.com.nexoragame.app"],
-        "components": [{ "/": "/apps/nexora/*", "comment": "NEXORA uygulama linkleri" }]
+        "appIDs": [
+          "J2QYZYMV48.com.nexoragame.app"
+        ],
+        "components": [
+          {
+            "/": "/apps/nexora/*",
+            "comment": "NEXORA uygulama linkleri"
+          }
+        ]
+      },
+      {
+        "appIDs": [
+          "J2QYZYMV48.com.jovvo.app"
+        ],
+        "components": [
+          {
+            "/": "/apps/jovvo/*",
+            "comment": "Jovvo uygulama linkleri"
+          }
+        ]
+      },
+      {
+        "appIDs": [
+          "J2QYZYMV48.com.izmiradami.queued"
+        ],
+        "components": [
+          {
+            "/": "/apps/queued/*",
+            "comment": "Queued uygulama linkleri"
+          }
+        ]
       }
     ]
   },
   "webcredentials": {
-    "apps": ["J2QYZYMV48.com.kurannuru.app", "J2QYZYMV48.com.nexoragame.app"]
+    "apps": [
+      "J2QYZYMV48.com.kurannuru.app",
+      "J2QYZYMV48.com.nexoragame.app",
+      "J2QYZYMV48.com.jovvo.app",
+      "J2QYZYMV48.com.izmiradami.queued"
+    ]
   }
 }
