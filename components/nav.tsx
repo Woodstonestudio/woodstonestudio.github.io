@@ -131,7 +131,7 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
           className="group flex items-center gap-3 text-[17px] font-medium tracking-tight text-bone"
         >
           <Image
-            src="/brand/logo-badge-v2.png"
+            src="/brand/logo-badge-v2.webp"
             alt=""
             width={64}
             height={64}

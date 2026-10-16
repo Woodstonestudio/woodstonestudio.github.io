@@ -10,6 +10,7 @@ import { IdeaCTA } from "@/components/idea-cta";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { FAQ } from "@/components/faq";
+import { QuickAnswers } from "@/components/quick-answers";
 import { enNav, enHero, enSections } from "@/lib/i18n";
 import type { Metadata } from "next";
 
@@ -30,6 +31,7 @@ export default function HomeEN() {
       <Nav t={enNav} />
       <main>
         <Hero t={enHero} />
+        <QuickAnswers locale="en" />
         <JoVVo t={enSections.jovvo} />
         <Services t={enSections.services} />
         <SalonBand locale="en" />

@@ -10,6 +10,7 @@ import { IdeaCTA } from "@/components/idea-cta";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { FAQ } from "@/components/faq";
+import { QuickAnswers } from "@/components/quick-answers";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <QuickAnswers locale="tr" />
         <JoVVo />
         <Services />
         <SalonBand locale="tr" />

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+import { GeistMono } from "@/lib/fonts/mono";
 import "./globals.css";
 
 /**
@@ -22,7 +22,7 @@ export default function NotFound() {
         <main className="relative flex min-h-svh flex-col items-center justify-center px-6 text-center">
           {/* Amblem */}
           <Image
-            src="/brand/monogram.png"
+            src="/brand/monogram.webp"
             alt="WoodstoneStudio"
             width={64}
             height={64}

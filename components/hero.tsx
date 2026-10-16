@@ -1,32 +1,32 @@
-import Image from "next/image";
-import { Reveal } from "@/components/motion/reveal";
 import { MacBook } from "@/components/mockups/macbook";
 import { trHero, type HeroDict } from "@/lib/i18n";
 
 /**
  * Hero — Direction B ("Machined").
  * Türkçe, tek dil. Marka ve teknik terimler orijinal bırakılır.
+ * Hero bilerek animasyonsuz: H1 sayfanın en büyük öğesi (LCP); JS yüklenmeden
+ * görünmesi mobil hızı belirler. Diğer bölümler Reveal ile açılmaya devam eder.
  */
 export function Hero({ t = trHero }: { t?: HeroDict }) {
   return (
     <section className="relative mx-auto flex min-h-svh max-w-6xl items-center overflow-x-clip px-6 pb-20 pt-28 sm:pb-28 sm:pt-36 lg:px-8">
       <div className="grid w-full items-center gap-20 lg:grid-cols-[0.92fr_1.4fr] lg:gap-12">
         <div>
-          <Reveal>
+          <div>
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">
               {t.eyebrow}
             </p>
-          </Reveal>
+          </div>
 
-          <Reveal delay={0.1}>
+          <div>
             <h1 className="mt-8 text-[54px] font-light leading-[1.03] tracking-tightest text-bone sm:text-[67px] lg:text-[80px]">
               {t.titleLine1}
               <br />
               {t.titleLine2}
             </h1>
-          </Reveal>
+          </div>
 
-          <Reveal delay={0.18}>
+          <div>
             <div className="mt-9 flex max-w-lg items-center gap-4">
               <span className="whitespace-nowrap font-mono text-[9.5px] uppercase tracking-[0.2em] text-gray-warm">
                 {t.strip1}
@@ -36,15 +36,15 @@ export function Hero({ t = trHero }: { t?: HeroDict }) {
                 {t.strip2}
               </span>
             </div>
-          </Reveal>
+          </div>
 
-          <Reveal delay={0.26}>
+          <div>
             <p className="mt-7 max-w-md text-lg leading-relaxed text-gray-warm">
               {t.lead}
             </p>
-          </Reveal>
+          </div>
 
-          <Reveal delay={0.34}>
+          <div>
             <div className="mt-11 flex flex-wrap items-center gap-4">
               <a
                 href="#work"
@@ -59,21 +59,29 @@ export function Hero({ t = trHero }: { t?: HeroDict }) {
                 {t.ctaSecondary}
               </a>
             </div>
-          </Reveal>
+          </div>
         </div>
 
-        <Reveal delay={0.22} y={24} className="hidden md:block">
+        <div className="hidden md:block">
           <MacBook>
-            <Image
-              src="/work/crossfit-bahcesehir.png"
-              alt="CrossFit Bahçeşehir web sitesi"
-              width={1891}
-              height={858}
-              priority
-              className="h-full w-full object-cover object-left-top"
-            />
+            {/* Görsel yalnızca md+ ekranlarda görünüyor; mobilde 1 piksellik boş görsel
+                indirilir, kapak görseli mobil bant genişliğini harcamaz. Masaüstünde
+                yüksek öncelikle, gecikmesiz yüklenir. */}
+            <picture>
+              <source media="(max-width: 767px)" srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+              <img
+                src="/work/crossfit-bahcesehir.webp"
+                alt="CrossFit Bahçeşehir web sitesi"
+                width={1600}
+                height={726}
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
+                className="h-full w-full object-cover object-left-top"
+              />
+            </picture>
           </MacBook>
-        </Reveal>
+        </div>
       </div>
 
       <div

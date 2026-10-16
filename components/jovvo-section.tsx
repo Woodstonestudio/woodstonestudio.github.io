@@ -8,9 +8,9 @@ import { trSections, type SectionsDict } from "@/lib/i18n";
  * JoVVo'nun neon-mint kimliği yalnızca bu panelde kullanılır.
  */
 const shots = [
-  { src: "/work/jovvo-chat.png", label: "David — yapay zekâ koçu" },
-  { src: "/work/jovvo-meal.png", label: "Fotoğrafla öğün analizi" },
-  { src: "/work/jovvo-program.png", label: "Branşına özel program" },
+  { src: "/work/jovvo-chat.webp", label: "David — yapay zekâ koçu" },
+  { src: "/work/jovvo-meal.webp", label: "Fotoğrafla öğün analizi" },
+  { src: "/work/jovvo-program.webp", label: "Branşına özel program" },
 ];
 
 export function JoVVo({ t = trSections.jovvo }: { t?: SectionsDict["jovvo"] }) {
@@ -107,8 +107,8 @@ export function JoVVo({ t = trSections.jovvo }: { t?: SectionsDict["jovvo"] }) {
                       <Image
                         src={s.src}
                         alt={`JoVVo — ${s.label}`}
-                        width={640}
-                        height={1386}
+                        width={600}
+                        height={1300}
                         className="h-auto w-full"
                       />
                     </div>

@@ -14,7 +14,7 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
         <div className="flex flex-col gap-10 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex items-center gap-4">
             <Image
-              src="/brand/logo-badge-v2.png"
+              src="/brand/logo-badge-v2.webp"
               alt="WoodstoneStudio"
               width={64}
               height={64}
@@ -38,6 +38,16 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
             ))}
           </nav>
         </div>
+
+        {/* İletişim: tıklanabilir e-posta ve telefon (tarayıcı ve botlar için açık iletişim sinyali) */}
+        <address className="mt-10 flex flex-wrap gap-x-8 gap-y-3 not-italic">
+          <a href="mailto:info@woodstonestudio.com" className="text-sm text-gray-warm transition-colors hover:text-bone">
+            info@woodstonestudio.com
+          </a>
+          <a href="tel:+905331932068" className="text-sm text-gray-warm transition-colors hover:text-bone">
+            +90 533 193 20 68
+          </a>
+        </address>
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-warm">

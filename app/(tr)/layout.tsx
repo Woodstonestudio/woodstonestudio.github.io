@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+import { GeistMono } from "@/lib/fonts/mono";
 import "../globals.css";
 import { Spotlight } from "@/components/fx/spotlight";
 import { WhatsAppButton } from "@/components/whatsapp-button";

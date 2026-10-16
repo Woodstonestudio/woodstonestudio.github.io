@@ -55,7 +55,7 @@ export function WorkShowcase({ t = trSections.work }: { t?: SectionsDict["work"]
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
-                    src={`${workMeta[i].img}${imgSuffix}.jpg`}
+                    src={`${workMeta[i].img}${imgSuffix}.webp`}
                     alt={`${w.title} — ${t.kind}`}
                     width={880}
                     height={545}
