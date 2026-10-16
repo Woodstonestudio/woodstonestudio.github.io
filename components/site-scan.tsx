@@ -6,9 +6,9 @@ import { useEffect, useRef, useState } from "react";
  * Ücretsiz site taraması (SEO · GEO · AEO) — lead magnet.
  *
  * 1) Ziyaretçi yalnızca adres yazar → Growth /api/scan siteyi 10 alanda ~75 sinyalle tarar.
- * 2) Puan, alanlar, bot tablosu, hız ve ilk 6 bulgu açık; kalan bulguların çözümü e-postayla açılır
- *    (o an panele talep düşer, tam rapor e-postayla gider).
- * 3) Sonuç ?r=<id> ile paylaşılabilir; "yeniden tara" önbelleği atlar.
+ * 2) Puan, alanlar, bot tablosu, hız ve ilk 6 bulgunun "neden önemli" açıklaması açık.
+ *    Çözüm adımları ve kalan bulgular e-postayla gelir (o an panele talep düşer).
+ * 3) Aynı site 7 gün içinde tekrar taranırsa kayıtlı sonuç döner; yeniden tarama yok.
  */
 const API = "https://woodstonestudio-growth.vercel.app/api/scan";
 
@@ -70,9 +70,7 @@ interface View {
   cached: boolean;
   unlocked: boolean;
   result: Result;
-  markdown?: string;
   emailed?: boolean;
-  rescanInMin?: number;
   error?: string;
 }
 
@@ -86,7 +84,7 @@ const T = {
     wait: "Genelde 20–45 saniye sürer.",
     errs: {
       invalid_url: "Bu adres taranamıyor. Herkese açık bir alan adı yazın (ör. ornek.com).",
-      rate_limited: "Kısa sürede çok fazla tarama yapıldı. Biraz sonra tekrar deneyin.",
+      rate_limited: "Günlük ücretsiz tarama sınırına ulaştınız. Sitenizi birlikte inceleyelim:",
       not_found: "Rapor bulunamadı ya da süresi doldu. Siteyi yeniden tarayın.",
       generic: "Tarama yapılamadı. Biraz sonra tekrar deneyin ya da bize yazın:",
     },
@@ -104,12 +102,12 @@ const T = {
     gateCap: "puan en fazla",
     areas: "Alanlar",
     findings: "Bulgular",
-    findingsLead: "Önem sırasına göre. Her madde için neden önemli olduğu ve nasıl düzeleceği yazıyor.",
+    findingsLead: "Önem sırasına göre, her birinin neden önemli olduğuyla.",
     why: "Neden önemli",
     fix: "Nasıl düzelir",
-    lockedTitle: (n: number) => `${n} bulgunun çözümü daha var`,
+    lockedTitle: (n: number) => `${n} bulgunun tamamı ve nasıl düzeleceği`,
     lockedList: (n: number) => `Bu ${n} bulgunun başlıklarını göster`,
-    lockedLead: "Tam raporu e-postanıza gönderelim: tüm bulgular, çözüm adımları, Markdown/JSON indirme ve paylaşılabilir link.",
+    lockedLead: "Tam raporu e-postanıza gönderelim: her bulgunun çözüm adımı ve önceliği. İsterseniz düzeltmeyi biz yapalım.",
     email: "E-posta",
     name: "Ad (isteğe bağlı)",
     consent: "Raporun bana gönderilmesi ve gerekirse dönüş yapılması için bilgilerimin işlenmesini kabul ediyorum.",
@@ -133,17 +131,8 @@ const T = {
     notMeasured: "Ölçülemeyen / uygulanmayanlar",
     blockedTitle: "Siteniz otomatik okumayı engelliyor",
     blockedLead: "Bot koruması (ör. Cloudflare doğrulama sayfası) taramayı durdurdu. Bu, Google ve AI botlarının da aynı engele takılıyor olabileceği anlamına gelir. Elle inceleyelim:",
-    cached: "Bu sonuç önbellekten geldi",
-    rescan: "Düzelttim, yeniden tara",
-    rescanWait: (m: number) => `Yeniden tarama için ${m} dk bekleyin`,
+    cached: "Kayıtlı sonuç (7 gün geçerli)",
     another: "Başka site tara",
-    md: "Markdown indir",
-    json: "JSON indir",
-    ai: "Yapay zekâya ver",
-    aiCopied: "Kopyalandı — ChatGPT/Claude'a yapıştırın",
-    share: "Linki kopyala",
-    shareCopied: "Link kopyalandı",
-    aiPrompt: "Aşağıdaki site tarama raporuna göre sorunları önem sırasıyla, adım adım nasıl düzelteceğimi anlat. Kodla çözülebilenler için örnek kod ver.\n\n",
     cta: "Bunları sizin için düzeltelim",
     ctaLead: "Kritik ve önemli maddelerin çoğu birkaç günde, mevcut siteyi bozmadan düzelir.",
     ctaQuote: "Teklif isteyin",
@@ -159,7 +148,7 @@ const T = {
     wait: "Usually takes 20–45 seconds.",
     errs: {
       invalid_url: "This address can't be scanned. Enter a public domain (e.g. example.com).",
-      rate_limited: "Too many scans in a short time. Please try again later.",
+      rate_limited: "You've reached the daily free scan limit. Let's review your site together:",
       not_found: "Report not found or expired. Scan the site again.",
       generic: "The scan failed. Try again later or write to us:",
     },
@@ -177,12 +166,12 @@ const T = {
     gateCap: "score at most",
     areas: "Areas",
     findings: "Findings",
-    findingsLead: "By priority. Each item says why it matters and how to fix it.",
+    findingsLead: "By priority, with why each one matters.",
     why: "Why it matters",
     fix: "How to fix",
-    lockedTitle: (n: number) => `${n} more findings with fixes`,
+    lockedTitle: (n: number) => `All ${n} findings and how to fix them`,
     lockedList: (n: number) => `Show the titles of these ${n} findings`,
-    lockedLead: "We'll email you the full report: every finding, fix steps, Markdown/JSON download and a shareable link.",
+    lockedLead: "We'll email you the full report: fix steps and priority for every finding. Or let us fix them for you.",
     email: "Email",
     name: "Name (optional)",
     consent: "I agree to my details being processed to send the report and follow up if needed.",
@@ -206,17 +195,8 @@ const T = {
     notMeasured: "Not measured / not applicable",
     blockedTitle: "Your site blocks automated reading",
     blockedLead: "Bot protection (e.g. a Cloudflare challenge page) stopped the scan. Google and AI bots may hit the same wall. Let us review it manually:",
-    cached: "This result came from cache",
-    rescan: "I fixed it, rescan",
-    rescanWait: (m: number) => `Wait ${m} min to rescan`,
+    cached: "Saved result (valid for 7 days)",
     another: "Scan another site",
-    md: "Download Markdown",
-    json: "Download JSON",
-    ai: "Give to AI",
-    aiCopied: "Copied — paste into ChatGPT/Claude",
-    share: "Copy link",
-    shareCopied: "Link copied",
-    aiPrompt: "Based on the site scan report below, explain step by step how to fix the issues in order of priority. Give example code where code fixes them.\n\n",
     cta: "Let us fix these for you",
     ctaLead: "Most critical and important items are fixed within days without breaking the current site.",
     ctaQuote: "Request a quote",
@@ -238,16 +218,6 @@ const C_OK = "#4E7D4A";
 const C_MUTED = "#8C867C";
 const statusColor = (s: Status) => (s === "fail" ? C_BAD : s === "partial" ? C_WARN : s === "pass" ? C_OK : C_MUTED);
 const scoreColor = (n: number | null) => (n == null ? C_MUTED : n >= 80 ? C_OK : n >= 60 ? C_WARN : C_BAD);
-
-function download(name: string, body: string, type: string) {
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([body], { type }));
-  a.download = name;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-}
 
 function Ring({ value, label, size = 120 }: { value: number | null; label: string; size?: number }) {
   const r = size / 2 - 10;
@@ -336,14 +306,14 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
     setTimeout(() => setFlash(null), 3000);
   }
 
-  async function runScan(url: string, rescan = false, honeypot = "") {
+  async function runScan(url: string, honeypot = "") {
     setPhase("running");
     setLastUrl(url);
     try {
       const r = await fetch(API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "scan", url, locale, rescan, website: honeypot, elapsedMs: Date.now() - openedAt.current }),
+        body: JSON.stringify({ action: "scan", url, locale, website: honeypot, elapsedMs: Date.now() - openedAt.current }),
       });
       const data = (await r.json().catch(() => null)) as View | null;
       if (r.ok && data?.ok) {
@@ -352,7 +322,6 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
         const u = new URL(window.location.href);
         u.searchParams.set("r", data.scanId);
         window.history.replaceState(null, "", u.toString());
-        if (data.rescanInMin) showFlash(t.rescanWait(data.rescanInMin));
         return;
       }
       setError(r.status === 429 ? "rate_limited" : data?.error === "invalid_url" || r.status === 400 ? "invalid_url" : "generic");
@@ -372,7 +341,7 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
       setPhase("error");
       return;
     }
-    await runScan(url, false, String(f.get("website") ?? ""));
+    await runScan(url, String(f.get("website") ?? ""));
   }
 
   async function onUnlock(e: React.FormEvent<HTMLFormElement>) {
@@ -478,6 +447,11 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
                 info@woodstonestudio.com
               </a>
             )}
+            {error === "rate_limited" && (
+              <a className="underline" href={WA}>
+                {t.ctaWa}
+              </a>
+            )}
           </p>
         )}
       </form>
@@ -509,7 +483,6 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
   const locked = findings.filter((s) => s.locked);
   const passing = r.signals.filter((s) => s.status === "pass");
   const skipped = r.signals.filter((s) => s.status === "na" || s.status === "unknown");
-  const shareUrl = typeof window !== "undefined" ? `${window.location.origin}${window.location.pathname}?r=${v.scanId}` : "";
   const fmtS = (ms?: number) => (ms == null ? "–" : `${(ms / 1000).toFixed(1)} ${locale === "tr" ? "sn" : "s"}`);
 
   return (
@@ -550,34 +523,7 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
         )}
 
         <div className="mt-6 flex flex-wrap gap-2">
-          <button type="button" onClick={() => runScan(r.url, true)} className={GHOST}>
-            ↻ {t.rescan}
-          </button>
-          <button
-            type="button"
-            onClick={() => navigator.clipboard?.writeText(shareUrl).then(() => showFlash(t.shareCopied))}
-            className={GHOST}
-          >
-            {t.share}
-          </button>
-          {v.unlocked && v.markdown && (
-            <>
-              <button type="button" onClick={() => download(`${r.domain}-tarama.md`, v.markdown!, "text/markdown")} className={GHOST}>
-                {t.md}
-              </button>
-              <button type="button" onClick={() => download(`${r.domain}-tarama.json`, JSON.stringify(r, null, 2), "application/json")} className={GHOST}>
-                {t.json}
-              </button>
-              <button
-                type="button"
-                onClick={() => navigator.clipboard?.writeText(t.aiPrompt + v.markdown).then(() => showFlash(t.aiCopied))}
-                className={GHOST}
-              >
-                {t.ai}
-              </button>
-            </>
-          )}
-          <button type="button" onClick={reset} className="px-2 text-[13px] text-gray-warm underline-offset-4 hover:underline">
+          <button type="button" onClick={reset} className="px-1 text-[13px] text-gray-warm underline-offset-4 hover:underline">
             {t.another}
           </button>
         </div>
@@ -636,13 +582,13 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
             ))}
           </ul>
 
-          {locked.length > 0 && (
+          {!v.unlocked && (
             <div className="mt-4">
               <form onSubmit={onUnlock} className="rounded-2xl border border-bone-dim/40 bg-[#F3F0EA] p-5" noValidate>
-                <p className="text-[17px] text-bone">{t.lockedTitle(locked.length)}</p>
+                <p className="text-[17px] text-bone">{t.lockedTitle(findings.length)}</p>
                 <p className="mt-1 text-[13px] text-gray-warm">
                   {([5, 3, 2, 1] as const)
-                    .map((sv) => [sv, locked.filter((x) => x.sev === sv).length] as const)
+                    .map((sv) => [sv, findings.filter((x) => x.sev === sv).length] as const)
                     .filter(([, n]) => n > 0)
                     .map(([sv, n]) => `${t.sev[sv]} ${n}`)
                     .join(" · ")}
@@ -665,6 +611,7 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
                   {unlockState === "sending" ? t.unlocking : t.unlock} <span aria-hidden>→</span>
                 </button>
               </form>
+              {locked.length > 0 && (
               <details className="mt-3">
                 <summary className="cursor-pointer list-none px-1 text-[13px] text-gray-warm underline-offset-4 hover:underline [&::-webkit-details-marker]:hidden">
                   {t.lockedList(locked.length)}
@@ -683,6 +630,7 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
                   ))}
                 </ul>
               </details>
+              )}
             </div>
           )}
         </div>
