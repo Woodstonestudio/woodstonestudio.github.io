@@ -7,6 +7,7 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import { BackToTop } from "@/components/back-to-top";
 import { CookieConsent } from "@/components/cookie-consent";
 import { posts } from "@/lib/blog";
+import { BASE } from "@/lib/pricing";
 
 // Sitenin son güncellenme tarihi = en yeni blog yazısı (dateModified sinyali)
 const SITE_UPDATED = posts
@@ -17,7 +18,7 @@ const SITE_UPDATED = posts
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
   title: {
-    default: "WoodstoneStudio — Digital Technology Studio",
+    default: "WoodstoneStudio — We turn your idea into a product",
     template: "%s — WoodstoneStudio",
   },
   description:
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     "software studio Turkey",
   ],
   openGraph: {
-    title: "WoodstoneStudio — Digital Technology Studio",
+    title: "WoodstoneStudio — We turn your idea into a product",
     description:
       "Web, mobile, AI and custom software — we design and build digital products with the discipline of a product team.",
     url: "https://woodstonestudio.com",
@@ -46,13 +47,13 @@ export const metadata: Metadata = {
         url: "/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "WoodstoneStudio — Digital Technology Studio",
+        alt: "WoodstoneStudio — We turn your idea into a product",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WoodstoneStudio — Digital Technology Studio",
+    title: "WoodstoneStudio — We turn your idea into a product",
     description:
       "Web, mobile, AI and custom software — we design and build digital products with the discipline of a product team.",
     images: ["/og-cover.jpg"],
@@ -119,6 +120,44 @@ export default function RootLayout({
                 reviewBody: "They put exactly the gym we had in our heads onto the screen; the first time we opened the site we said 'yes, this is us.' Fast, clean and truly ours — and a real joy to work with.",
                 itemReviewed: { "@id": "https://woodstonestudio.com/#organization" },
               },
+              areaServed: [
+                { "@type": "Country", name: "Turkey" },
+                { "@type": "Country", name: "Albania" },
+                { "@type": "Place", name: "Worldwide" },
+              ],
+              knowsAbout: ["Web design", "Business websites", "E-commerce", "Mobile app development", "SaaS development", "Next.js", "Flutter", "SEO", "AI search visibility (GEO/AEO)", "AI automation", "Social media management", "Online booking systems"],
+              makesOffer: [
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Landing page" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.en.landing.min, priceCurrency: "EUR" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Business website" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.en.corporate.min, priceCurrency: "EUR" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "E-commerce website" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.en.ecommerce.min, priceCurrency: "EUR" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Online booking system" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.en.booking.min, priceCurrency: "EUR" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Mobile app" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.en.mobile.min, priceCurrency: "EUR" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "SaaS / MVP development" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.en.saas.min, priceCurrency: "EUR" },
+                },
+              ],
               sameAs: [
                 "https://www.linkedin.com/company/woodstonestudio/",
                 "https://github.com/Woodstonestudio",
@@ -136,6 +175,7 @@ export default function RootLayout({
               "@type": "WebSite",
               "@id": "https://woodstonestudio.com/#website",
               name: "WoodstoneStudio",
+              alternateName: ["Woodstone Studio", "Woodstone"],
               url: "https://woodstonestudio.com",
               inLanguage: "en-US",
               ...(SITE_UPDATED ? { dateModified: SITE_UPDATED } : {}),

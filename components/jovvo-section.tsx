@@ -16,6 +16,32 @@ const shots = [
 export function JoVVo({ t = trSections.jovvo }: { t?: SectionsDict["jovvo"] }) {
   return (
     <section id="jovvo" className="relative scroll-mt-16 border-t border-line">
+      {/* Uygulama şeması: AI cevapları ve arama sonuçları için ad, platform, fiyat */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "@id": "https://woodstonestudio.com/#jovvo",
+            name: "JoVVo",
+            operatingSystem: "iOS",
+            applicationCategory: "HealthApplication",
+            description: t.lead,
+            url: t.url,
+            downloadUrl: t.url,
+            screenshot: shots.map((s) => `https://woodstonestudio.com${s.src}`),
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: t.url.includes("/tr/") ? "TRY" : "USD",
+              description: t.freeNote,
+            },
+            author: { "@id": "https://woodstonestudio.com/#organization" },
+            publisher: { "@id": "https://woodstonestudio.com/#organization" },
+          }),
+        }}
+      />
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24 lg:px-8 lg:py-32">
         <div className="grid gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:gap-16">
           {/* Sol — anlatı */}

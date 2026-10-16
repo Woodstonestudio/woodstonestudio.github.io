@@ -7,6 +7,7 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import { BackToTop } from "@/components/back-to-top";
 import { CookieConsent } from "@/components/cookie-consent";
 import { posts } from "@/lib/blog";
+import { BASE } from "@/lib/pricing";
 
 // Sitenin son güncellenme tarihi = en yeni blog yazısı (dateModified sinyali)
 const SITE_UPDATED = posts
@@ -17,7 +18,7 @@ const SITE_UPDATED = posts
 export const metadata: Metadata = {
   metadataBase: new URL("https://woodstonestudio.com"),
   title: {
-    default: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
+    default: "WoodstoneStudio — Fikrinizi ürüne, işinizi dijitale taşıyoruz",
     template: "%s — WoodstoneStudio",
   },
   description:
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     "yazılım stüdyosu",
   ],
   openGraph: {
-    title: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
+    title: "WoodstoneStudio — Fikrinizi ürüne, işinizi dijitale taşıyoruz",
     description:
       "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
     url: "https://woodstonestudio.com",
@@ -46,13 +47,13 @@ export const metadata: Metadata = {
         url: "/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
+        alt: "WoodstoneStudio — Fikrinizi ürüne, işinizi dijitale taşıyoruz",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WoodstoneStudio — Dijital Teknoloji Stüdyosu",
+    title: "WoodstoneStudio — Fikrinizi ürüne, işinizi dijitale taşıyoruz",
     description:
       "Web, mobil, yapay zekâ ve özel yazılım — dijital ürünleri bir ürün ekibinin titizliğiyle tasarlıyor ve geliştiriyoruz.",
     images: ["/og-cover.jpg"],
@@ -124,6 +125,44 @@ export default function RootLayout({
                 reviewBody: "Aklımızdaki salonu tam olarak ekrana taşıdılar; siteyi ilk açtığımızda 'İşte biz buyuz' dedik. Hızlı, sade ve tam bize benziyor. Çalışmak da gerçekten keyifliydi.",
                 itemReviewed: { "@id": "https://woodstonestudio.com/#organization" },
               },
+              areaServed: [
+                { "@type": "Country", name: "Turkey" },
+                { "@type": "Country", name: "Albania" },
+                { "@type": "Place", name: "Worldwide" },
+              ],
+              knowsAbout: ["Web tasarım", "Kurumsal web sitesi", "E-ticaret", "Mobil uygulama geliştirme", "SaaS geliştirme", "Next.js", "Flutter", "SEO", "Yapay zekâ ile arama görünürlüğü (GEO/AEO)", "Yapay zekâ otomasyonu", "Sosyal medya yönetimi", "Online randevu sistemleri"],
+              makesOffer: [
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Tanıtım sitesi" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.tr.landing.min, priceCurrency: "TRY" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Kurumsal web sitesi" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.tr.corporate.min, priceCurrency: "TRY" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "E-ticaret sitesi" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.tr.ecommerce.min, priceCurrency: "TRY" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Online randevu sistemi" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.tr.booking.min, priceCurrency: "TRY" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "Mobil uygulama" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.tr.mobile.min, priceCurrency: "TRY" },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: "SaaS / MVP geliştirme" },
+                  priceSpecification: { "@type": "PriceSpecification", minPrice: BASE.tr.saas.min, priceCurrency: "TRY" },
+                },
+              ],
               sameAs: [
                 "https://www.linkedin.com/company/woodstonestudio/",
                 "https://github.com/Woodstonestudio",
@@ -141,6 +180,7 @@ export default function RootLayout({
               "@type": "WebSite",
               "@id": "https://woodstonestudio.com/#website",
               name: "WoodstoneStudio",
+              alternateName: ["Woodstone Studio", "Woodstone"],
               url: "https://woodstonestudio.com",
               inLanguage: "tr-TR",
               ...(SITE_UPDATED ? { dateModified: SITE_UPDATED } : {}),
