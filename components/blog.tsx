@@ -128,6 +128,7 @@ const SERVICE_URL: Record<string, Record<Locale, string>> = {
   saas: { tr: "/saas-gelistirme", en: "/en/saas-development" },
   ai: { tr: "/yapay-zeka", en: "/en/ai-solutions" },
   social: { tr: "/sosyal-medya", en: "/en/social-media" },
+  seo: { tr: "/seo", en: "/en/seo" },
 };
 const SERVICE_LABEL: Record<Locale, string> = {
   tr: "İlgili hizmet →",

@@ -1,5 +1,449 @@
 [
   {
+    "slug": "turkiye-100-site-yapay-zeka-taramasi-2026",
+    "relatedService": "seo",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-10-18",
+    "readMin": 7,
+    "category": {
+      "tr": "GEO",
+      "en": "GEO"
+    },
+    "title": {
+      "tr": "Türkiye'nin 100 Büyük Sitesini Taradık: Yapay Zekâ Onları Okuyabiliyor mu?",
+      "en": "We Scanned Turkey's 100 Biggest Websites: Can AI Read Them?"
+    },
+    "excerpt": {
+      "tr": "Türkiye'nin bilinen 100 sitesini 78 sinyalle taradık. 37'si otomatik okumaya kapalı, okunabilenlerin %37'sinde yapısal veri yok, mobil hız ortalaması 43. Yöntem, rakamlar ve yapılması gerekenler.",
+      "en": "We scanned 100 well-known Turkish websites across 78 signals. 37 were closed to automated reading, 37% of the rest have no structured data and the average mobile speed score is 43. Method, numbers and what to do."
+    },
+    "answer": {
+      "tr": "Ekim 2026'da Türkiye'nin bilinen 100 sitesini taradık. 37'si yurt dışından gelen otomatik isteğe doğrulama sayfası ya da hata döndürdü. Okunabilen 63 sitenin %90'ı yapay zekâ arama botlarına izin veriyor; asıl eksik başka yerde: %37'sinde yapısal veri yok, mobil PageSpeed ortalaması 43 ve hiçbirinde ana içerik 2,5 saniyede görünmüyor. Kapı çoğunlukla açık, ama içeride tabela yok.",
+      "en": "In October 2026 we scanned 100 well-known Turkish websites. 37 returned a verification page or an error to automated requests from abroad. 90% of the 63 readable sites allow AI search bots; the real gap is elsewhere: 37% have no structured data, the average mobile PageSpeed score is 43 and none shows its main content within 2.5 seconds. The door is mostly open, but there's no sign inside."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "p",
+          "text": "İnsanlar artık \"hangi banka\", \"hangi hastane\", \"nereden alayım\" sorularını Google'a olduğu kadar ChatGPT, Claude ve Perplexity'ye de soruyor. Yapay zekâ cevap verirken siteleri kendi botlarıyla okuyor. Türkiye'nin bilinen sitelerinin bu okumaya ne kadar hazır olduğunu ölçtük."
+        },
+        {
+          "type": "h2",
+          "text": "Nasıl ölçtük"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Tarih: 16–17 Ekim 2026",
+            "Liste: 19 sektörden 100 bilinen site (e-ticaret, banka, haber, havayolu, hastane, üniversite, otomotiv, gıda ve diğerleri)",
+            "Araç: [WoodstoneStudio site taraması](/site-analizi). Her sitenin ana sayfası, robots.txt, site haritası, llms.txt ve bağlı dosyaları 10 alanda 78 sinyalle incelendi",
+            "Bot testi: Googlebot, Bingbot, ChatGPT ve Perplexity botlarının kimliğiyle ana sayfaya canlı istek",
+            "Hız: Google PageSpeed, mobil laboratuvar ölçümü"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Sınırlar, açıkça: Yalnızca ana sayfaya baktık; iç sayfalar farklı olabilir. Tarama yurt dışındaki bir sunucudan yapıldı; bazı siteler bu yüzden bizi başka bir ülke sürümüne yönlendirdi ya da hiç açılmadı. Canlı bot testi bir ipucudur: güvenlik duvarları sahte bot kimliğini haklı olarak reddedebilir. Rakamlar bir anın fotoğrafıdır."
+        },
+        {
+          "type": "h2",
+          "text": "Bulgu 1: 100 sitenin 37'si otomatik okumaya kapalı"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "27 site otomatik isteğe bir doğrulama sayfası (\"robot musunuz?\") döndürdü.",
+            "10 site hata kodu verdi ya da süre içinde yanıt vermedi."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bunlar arasında Türkiye'nin en çok ziyaret edilen e-ticaret, ilan ve market siteleri var. Bu, sitelerin kötü olduğu anlamına gelmiyor; bot koruması dolandırıcılığa ve aşırı yüke karşı meşru bir önlem. Ama ChatGPT, Claude ve Perplexity'nin botları da yurt dışındaki sunuculardan gelir. Bu sitelerin o botları ayrıca tanıyıp içeri alıp almadığını dışarıdan bilemeyiz. Almıyorlarsa, yapay zekâ cevaplarında kendi siteleri yerine başkalarının onlar hakkında yazdıkları kaynak gösterilir."
+        },
+        {
+          "type": "p",
+          "text": "Bu 37 siteyi aşağıdaki rakamlara katmadık. Kalan 63 sitenin ortalama puanı 100 üzerinden 72,6 (medyan 78)."
+        },
+        {
+          "type": "h2",
+          "text": "Bulgu 2: Botların önü çoğunlukla açık"
+        },
+        {
+          "type": "p",
+          "text": "63 sitenin 57'si (%90) yapay zekâ arama botlarına robots.txt'de izin veriyor. robots.txt ile engelleyen 6 site:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "amazon.com.tr: ChatGPT, Claude ve Perplexity arama botları ile eğitim botları",
+            "cnnturk.com: ChatGPT ve Perplexity arama botları ile eğitim botları",
+            "hurriyet.com.tr: ChatGPT ve Perplexity arama botları ile eğitim botları",
+            "milliyet.com.tr: ChatGPT ve Perplexity arama botları ile eğitim botları",
+            "ntv.com.tr: ChatGPT ve Perplexity arama botları ile eğitim botları",
+            "flo.com.tr: yalnızca Claude (arama ve eğitim)"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Beşinin haber ya da medya olması tesadüf değil: yayıncılar içeriklerinin yapay zekâ şirketlerince kullanılmasına karşı bilinçli tavır alıyor. Bu bir tercih, ama bedeli de var: arama botunu engelleyen site o yapay zekânın cevabında kaynak olarak geçemez. Yalnızca eğitimi kapatmak isteyen biri arama botlarını açık bırakıp yalnızca eğitim botlarını (GPTBot, ClaudeBot, Google-Extended) engelleyebilir."
+        },
+        {
+          "type": "p",
+          "text": "Sessiz engel: 4 sitede robots.txt izin verdiği halde ana sayfa, ChatGPT arama botunun kimliğiyle gelen isteğe hata ya da doğrulama sayfası döndürdü: beymen.com, setur.com.tr, turktelekom.com.tr, vakko.com. Bu genelde bir CDN ya da güvenlik duvarı ayarından kaynaklanır ve site sahibinin haberi olmayabilir. Kesin teyit için sitenin kendi sunucu kayıtlarına bakmak gerekir."
+        },
+        {
+          "type": "h2",
+          "text": "Bulgu 3: Kapı açık, tabela yok"
+        },
+        {
+          "type": "p",
+          "text": "Yapay zekâ bir siteyi okuyabiliyor olsa da onu doğru anlatabilmesi için makinenin hatasız okuyacağı bilgiye ihtiyaç var."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "%37'sinde (23 site) yapısal veri (JSON-LD) hiç yok. Yapısal veri \"bu site kimin, ne iş yapıyor, adresi, telefonu ne\" sorularının makine için yazılmış cevabıdır.",
+            "10 sitede kurum ya da marka bilgisi neredeyse hiç tanımlı değil (marka alanı puanı 30'un altında).",
+            "%60'ında (38 site) llms.txt yok. Bu dosyanın etkisi henüz sınırlı, ama maliyeti de yok."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Alan ortalamaları tabloyu net gösteriyor:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Yapay zekâ erişimi: 94",
+            "Teknik SEO: 92",
+            "Dil: 91",
+            "Güvenlik: 85",
+            "Hız: 68",
+            "İçerik ve cevaplar: 64",
+            "Marka ve kimlik: 60",
+            "Yapısal veri: 59",
+            "Paylaşım önizlemesi: 59"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Teknik altyapı sağlam. Zayıf olan, sitenin kendini anlatma biçimi: marka, yapısal veri, soru-cevap biçiminde içerik."
+        },
+        {
+          "type": "h2",
+          "text": "Bulgu 4: Telefonda yavaş"
+        },
+        {
+          "type": "p",
+          "text": "PageSpeed'in ölçebildiği 39 sitede:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Mobil puan ortalaması 100 üzerinden 43",
+            "23'ü 50'nin altında, yalnızca 1'i 90 ve üstünde",
+            "Ana içeriğin görünme süresi (LCP) medyanı 12,5 saniye; hiçbir site Google'ın önerdiği 2,5 saniyenin altında değil"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu bir laboratuvar ölçümü: yavaş bir mobil bağlantı taklit edilir, gerçek kullanıcılar daha hızlı deneyim yaşayabilir. Yine de sıralama aynıdır ve Google hızı sıralamada kullanır."
+        },
+        {
+          "type": "h2",
+          "text": "Sektörler"
+        },
+        {
+          "type": "p",
+          "text": "En az üç sitesi ölçülebilen sektörlerin ortalama puanı:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Ev ve yaşam (3 site): 84",
+            "Sağlık (5): 83",
+            "Telekom (3): 79",
+            "Haber ve medya (11): 78",
+            "Otomotiv (4): 78",
+            "Banka ve finans (9): 73",
+            "Seyahat (5): 71",
+            "Moda (7): 70",
+            "Üniversite (6): 60",
+            "Gıda (3): 54"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Üniversiteler dikkat çekiyor: ölçülen altı üniversitenin hiçbirinde yapısal veri yok."
+        },
+        {
+          "type": "h2",
+          "text": "En yüksek puanı alan 10 site"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "emlakjet.com: 91",
+            "madamecoco.com: 90",
+            "karaca.com: 89",
+            "amerikanhastanesi.org: 87",
+            "halkbank.com.tr: 87",
+            "toyota.com.tr: 87",
+            "turkcell.com.tr: 87",
+            "akbank.com: 86",
+            "milliyet.com.tr: 86",
+            "cnnturk.com: 85"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Kendi siteniz için 5 adım"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "robots.txt'ye bakın: arama botları (OAI-SearchBot, Claude-SearchBot, PerplexityBot, ChatGPT-User) açık mı? Eğitimi kapatmak istiyorsanız yalnızca GPTBot, ClaudeBot ve Google-Extended'ı engelleyin.",
+            "CDN ayarını kontrol edin: Cloudflare kullanıyorsanız AI Crawl Control'de \"Block\" yerine \"Disallow AI training\" seçeneğini kullanın, arama botlarını açık bırakın.",
+            "Yapısal veri ekleyin: en azından Organization (ya da LocalBusiness), WebSite ve varsa FAQPage.",
+            "Sık sorulan soruları sayfaya yazın: müşterinin gerçekten sorduğu soruyu başlık yapın, hemen altına 2–3 cümlelik net bir cevap koyun.",
+            "Telefonda hızı ölçün: kapak görselini küçültüp WebP'ye çevirin, gereksiz betikleri kaldırın."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Sitenizin bu 78 sinyalde nerede durduğunu ücretsiz görmek için: [woodstonestudio.com/site-analizi](/site-analizi)"
+        },
+        {
+          "type": "h2",
+          "text": "Bir site AI botlarını engelliyorsa bu kötü mü?"
+        },
+        {
+          "type": "p",
+          "text": "Bir tercih. Arama botunu engelleyen site o yapay zekânın cevaplarında kaynak olarak geçmez. Yalnızca eğitimi kapatmak isteyenler arama botlarını açık bırakabilir."
+        },
+        {
+          "type": "h2",
+          "text": "Rakamlar kesin mi?"
+        },
+        {
+          "type": "p",
+          "text": "Hayır, belirli bir tarihteki ana sayfa fotoğrafıdır. Siteler değişir, canlı bot testi bir ipucudur, hız ölçümü laboratuvar koşullarında yapılır. Hata görürseniz bize yazın, düzeltelim. Sitelerin adı yalnızca herkese açık ana sayfalarında ölçülen teknik sinyalleri aktarmak için geçmektedir."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "text": "People now ask ChatGPT, Claude and Perplexity \"which bank\", \"which hospital\", \"where should I buy\" as often as they ask Google. To answer, these assistants read websites with their own bots. We measured how ready Turkey's best-known websites are for that."
+        },
+        {
+          "type": "h2",
+          "text": "How we measured"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Date: 16–17 October 2026",
+            "List: 100 well-known sites from 19 sectors (e-commerce, banking, news, airlines, hospitals, universities, automotive, food and more)",
+            "Tool: [WoodstoneStudio site scan](/en/site-audit). Each homepage, robots.txt, sitemap, llms.txt and related files were checked across 10 areas and 78 signals",
+            "Bot test: live homepage requests with the identities of Googlebot, Bingbot, ChatGPT and Perplexity bots",
+            "Speed: Google PageSpeed, mobile lab measurement"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Limits, stated plainly: we looked at homepages only. The scan ran from a server outside Turkey, so some sites redirected us to another country version or didn't open at all. The live bot test is a hint: firewalls may rightly reject spoofed bot identities. The numbers are a snapshot."
+        },
+        {
+          "type": "h2",
+          "text": "Finding 1: 37 of 100 sites are closed to automated reading"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "27 sites returned a verification page (\"are you a robot?\").",
+            "10 sites returned an error code or didn't respond in time."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "These include some of Turkey's most visited e-commerce, classifieds and grocery sites. That doesn't make them bad sites; bot protection is a legitimate defence against fraud and load. But the bots of ChatGPT, Claude and Perplexity also come from servers abroad, and from the outside we can't tell whether these sites let them in separately. If they don't, AI answers will cite what others write about them instead of their own pages."
+        },
+        {
+          "type": "p",
+          "text": "We left these 37 sites out of the figures below. The remaining 63 sites averaged 72.6 out of 100 (median 78)."
+        },
+        {
+          "type": "h2",
+          "text": "Finding 2: the door is mostly open to bots"
+        },
+        {
+          "type": "p",
+          "text": "57 of the 63 sites (90%) allow AI search bots in robots.txt. The 6 that block them:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "amazon.com.tr: ChatGPT, Claude and Perplexity search bots plus training bots",
+            "cnnturk.com: ChatGPT and Perplexity search bots plus training bots",
+            "hurriyet.com.tr: ChatGPT and Perplexity search bots plus training bots",
+            "milliyet.com.tr: ChatGPT and Perplexity search bots plus training bots",
+            "ntv.com.tr: ChatGPT and Perplexity search bots plus training bots",
+            "flo.com.tr: Claude only (search and training)"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Five of them being news or media is no coincidence: publishers are deliberately pushing back on AI companies using their content. It's a choice, with a cost: a site that blocks a search bot can't be cited in that assistant's answers. Anyone who only wants to opt out of training can keep search bots open and block just the training bots (GPTBot, ClaudeBot, Google-Extended)."
+        },
+        {
+          "type": "p",
+          "text": "Silent block: on 4 sites robots.txt allowed the bots, yet the homepage returned an error or verification page to a request with the ChatGPT search bot's identity: beymen.com, setur.com.tr, turktelekom.com.tr, vakko.com. This usually comes from a CDN or firewall setting the owner may not know about. Server logs are needed to confirm it."
+        },
+        {
+          "type": "h2",
+          "text": "Finding 3: the door is open, but there's no sign"
+        },
+        {
+          "type": "p",
+          "text": "Even when AI can read a site, describing it correctly needs information machines can parse without errors."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "37% (23 sites) have no structured data (JSON-LD) at all. Structured data is the machine-readable answer to \"whose site is this, what do they do, where are they\".",
+            "On 10 sites, organisation or brand information is barely defined (brand area score below 30).",
+            "60% (38 sites) have no llms.txt. Its impact is still limited, but it costs nothing."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Area averages make the picture clear:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "AI access: 94",
+            "Technical SEO: 92",
+            "Language: 91",
+            "Security: 85",
+            "Speed: 68",
+            "Content and answers: 64",
+            "Brand and entity: 60",
+            "Structured data: 59",
+            "Share previews: 59"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The technical foundation is solid. What's weak is how sites describe themselves: brand, structured data and question-and-answer content."
+        },
+        {
+          "type": "h2",
+          "text": "Finding 4: slow on phones"
+        },
+        {
+          "type": "p",
+          "text": "Across the 39 sites PageSpeed could measure:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Average mobile score: 43 out of 100",
+            "23 below 50, only 1 at 90 or above",
+            "Median time for the main content to appear (LCP): 12.5 seconds; none under Google's recommended 2.5 seconds"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "This is a lab measurement that simulates a slow mobile connection; real users may see faster loads. The ranking holds, though, and Google uses speed in search rankings."
+        },
+        {
+          "type": "h2",
+          "text": "Sectors"
+        },
+        {
+          "type": "p",
+          "text": "Average scores for sectors with at least three measured sites:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Home and living (3 sites): 84",
+            "Health (5): 83",
+            "Telecom (3): 79",
+            "News and media (11): 78",
+            "Automotive (4): 78",
+            "Banking and finance (9): 73",
+            "Travel (5): 71",
+            "Fashion (7): 70",
+            "Universities (6): 60",
+            "Food (3): 54"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Universities stand out: none of the six measured universities has structured data."
+        },
+        {
+          "type": "h2",
+          "text": "Top 10 sites"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "emlakjet.com: 91",
+            "madamecoco.com: 90",
+            "karaca.com: 89",
+            "amerikanhastanesi.org: 87",
+            "halkbank.com.tr: 87",
+            "toyota.com.tr: 87",
+            "turkcell.com.tr: 87",
+            "akbank.com: 86",
+            "milliyet.com.tr: 86",
+            "cnnturk.com: 85"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "5 steps for your own site"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Check robots.txt: are search bots (OAI-SearchBot, Claude-SearchBot, PerplexityBot, ChatGPT-User) allowed? To opt out of training, block only GPTBot, ClaudeBot and Google-Extended.",
+            "Check your CDN: on Cloudflare's AI Crawl Control use \"Disallow AI training\" instead of \"Block\" and keep search bots allowed.",
+            "Add structured data: at least Organization (or LocalBusiness), WebSite and FAQPage if you have FAQs.",
+            "Write your FAQs on the page: turn the questions customers really ask into headings with a clear 2–3 sentence answer below.",
+            "Measure mobile speed: shrink the hero image, convert it to WebP and remove unneeded scripts."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "See where your site stands on these 78 signals for free: [woodstonestudio.com/en/site-audit](/en/site-audit)"
+        },
+        {
+          "type": "h2",
+          "text": "Is it bad if a site blocks AI bots?"
+        },
+        {
+          "type": "p",
+          "text": "It's a choice. A site that blocks a search bot isn't cited in that assistant's answers. Those who only want to opt out of training can keep search bots open."
+        },
+        {
+          "type": "h2",
+          "text": "Are the numbers definitive?"
+        },
+        {
+          "type": "p",
+          "text": "No. They are a snapshot of homepages on a given date. Sites change, the live bot test is a hint, and speed is measured in lab conditions. If you spot an error, write to us and we'll correct it. Site names appear only to report technical signals measured on their public homepages."
+        }
+      ]
+    }
+  },
+  {
     "slug": "web-sitesi-fiyatlari-2026",
     "relatedService": "web",
     "locales": [
