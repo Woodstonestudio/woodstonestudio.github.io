@@ -6,6 +6,7 @@ import { Spotlight } from "@/components/fx/spotlight";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { BackToTop } from "@/components/back-to-top";
 import { CookieConsent } from "@/components/cookie-consent";
+import { VisitTracker } from "@/components/visit-tracker";
 import { posts } from "@/lib/blog";
 import { BASE } from "@/lib/pricing";
 
@@ -217,6 +218,7 @@ export default function RootLayout({
         <div className="relative z-10">{children}</div>
         <WhatsAppButton label="WhatsApp'tan yazın" />
         <BackToTop label="Yukarı çık" />
+        <VisitTracker />
         <CookieConsent locale="tr" />
       </body>
     </html>

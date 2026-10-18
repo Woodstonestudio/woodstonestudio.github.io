@@ -43,6 +43,7 @@ export const privacy: Record<Locale, PrivacyDict> = {
         ul: [
           "İletişim formu: ad soyad, e-posta adresi, isteğe bağlı olarak telefon ve firma adı, ilgilendiğiniz hizmet ve mesajınız. Kötüye kullanımı ve spam'i önlemek için gönderim sırasında IP adresiniz ve gönderim zamanı da kaydedilir.",
           "E-posta ve WhatsApp yazışmaları: bize doğrudan yazdığınızda paylaştığınız iletişim bilgileri ve mesaj içeriği.",
+          "Anonim ziyaret sayımı (çerezsiz): açılan sayfa, geldiğiniz site (ör. Google, Instagram), dil, cihaz türü ve sunucunun tahmin ettiği yaklaşık ülke/şehir. IP adresiniz saklanmaz; aynı gün içindeki ziyaretleri saymak için IP ve tarayıcı bilgisinden her gün değişen, geri çevrilemeyen bir özet üretilir. Tarayıcınızda \"Do Not Track\" açıksa sayım yapılmaz.",
           "Analitik veriler (yalnızca onay verirseniz): ziyaret edilen sayfalar, ziyaret süresi, cihaz ve tarayıcı türü, yaklaşık konum (ülke/şehir) gibi kimliğinizi doğrudan belirlemeyen kullanım verileri.",
           "Teknik kayıtlar: sitenin barındırıldığı altyapı, güvenlik ve işletim amacıyla IP adresi ve istek bilgilerini içeren standart sunucu kayıtları tutabilir.",
         ],
@@ -52,6 +53,7 @@ export const privacy: Record<Locale, PrivacyDict> = {
         ul: [
           "Talebinize dönüş yapmak, teklif hazırlamak ve olası bir iş ilişkisini kurmak: KVKK md. 5/2-c (bir sözleşmenin kurulmasıyla doğrudan ilgili olması), GDPR md. 6/1-b.",
           "Formun ve sitenin güvenliğini sağlamak, spam ve kötüye kullanımı önlemek: KVKK md. 5/2-f (meşru menfaat), GDPR md. 6/1-f.",
+          "Kaç kişinin hangi sayfaya, hangi kaynaktan geldiğini anonim olarak saymak (çerezsiz sayaç): KVKK md. 5/2-f (meşru menfaat), GDPR md. 6/1-f. Kayıtlar 180 gün sonra silinir.",
           "Sitenin nasıl kullanıldığını ölçmek ve geliştirmek (Google Analytics): yalnızca açık rızanızla, KVKK md. 5/1, GDPR md. 6/1-a. Rızanızı istediğiniz zaman geri alabilirsiniz.",
         ],
       },
@@ -146,6 +148,7 @@ export const privacy: Record<Locale, PrivacyDict> = {
         ul: [
           "Contact form: full name, email address, optionally phone number and company name, the service you are interested in and your message. To prevent abuse and spam, your IP address and the submission time are also recorded.",
           "Email and WhatsApp messages: the contact details and message content you share when you write to us directly.",
+          "Anonymous visit counting (no cookies): the page opened, the site you came from (e.g. Google, Instagram), language, device type and the approximate country/city estimated by the server. Your IP address is not stored; to count visits within the same day, an irreversible hash that changes daily is derived from the IP and browser details. If \"Do Not Track\" is enabled in your browser, no counting takes place.",
           "Analytics data (only if you consent): usage data that does not directly identify you, such as pages visited, visit duration, device and browser type and approximate location (country/city).",
           "Technical logs: the hosting infrastructure may keep standard server logs, including IP address and request details, for security and operation.",
         ],
@@ -155,6 +158,7 @@ export const privacy: Record<Locale, PrivacyDict> = {
         ul: [
           "To respond to your request, prepare a quote and establish a possible business relationship: GDPR Art. 6(1)(b), KVKK Art. 5/2-c.",
           "To keep the form and the site secure and prevent spam and abuse: legitimate interest, GDPR Art. 6(1)(f), KVKK Art. 5/2-f.",
+          "To anonymously count how many people visit which page and from which source (cookie-free counter): legitimate interest, GDPR Art. 6(1)(f), KVKK Art. 5/2-f. Records are deleted after 180 days.",
           "To measure and improve how the site is used (Google Analytics): only with your consent, GDPR Art. 6(1)(a), KVKK Art. 5/1. You can withdraw your consent at any time.",
         ],
       },
