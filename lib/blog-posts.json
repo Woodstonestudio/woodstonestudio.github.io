@@ -1,5 +1,281 @@
 [
   {
+    "slug": "izmir-dis-klinigi-siteleri-yapay-zeka-taramasi-2026",
+    "relatedService": "dental",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-10-18",
+    "readMin": 5,
+    "category": {
+      "tr": "GEO",
+      "en": "GEO"
+    },
+    "title": {
+      "tr": "İzmir'deki 48 Diş Kliniği Sitesini Taradık: Yapay Zekâ Kliniğinizi Tanıyor mu?",
+      "en": "We Scanned 48 Dental Clinic Websites in Izmir: Does AI Recognise Your Clinic?"
+    },
+    "excerpt": {
+      "tr": "İzmir'deki 48 diş kliniği sitesini 78 sinyalle taradık. Ortalama 71,5; botlara kapı açık ama %42'sinde yapısal veri yok, %27'sinde WhatsApp önizlemesi çıkmıyor, 5'inde ciddi güvenlik eksiği var.",
+      "en": "We scanned 48 dental clinic websites in Izmir across 78 signals. Average 71.5; bots are welcome, but 42% have no structured data, 27% show no WhatsApp preview and 5 have serious security gaps."
+    },
+    "answer": {
+      "tr": "Ekim 2026'da İzmir'deki 48 diş kliniği sitesini taradık. Ölçülebilen 45 kliniğin ortalaması 71,5. Hiçbiri yapay zekâ botlarını engellemiyor, ama %42'sinde yapısal veri yok: adres, saat ve hekim bilgisi makinece okunamıyor, bu yüzden yapay zekâ kliniği tanımakta zorlanıyor. %27'sinde paylaşım önizlemesi yok, 5'inde ciddi güvenlik eksiği var.",
+      "en": "In October 2026 we scanned 48 dental clinic websites in Izmir. The 45 measurable clinics averaged 71.5. None blocks AI bots, but 42% have no structured data, so AI struggles to recognise the clinic. 27% have no share preview and 5 have serious security gaps."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "p",
+          "text": "\"İzmir'de iyi bir implantçı?\", \"Bornova'da hafta sonu açık diş kliniği?\" Hastalar bu soruları artık Google'a olduğu kadar ChatGPT'ye ve Perplexity'ye de soruyor. Sağlık, yapay zekâya satın alma öncesi en çok soru sorulan ikinci alan. Yapay zekâ cevap verirken klinik sitelerini kendi botlarıyla okuyor. İzmir'deki diş kliniklerinin bu okumaya ne kadar hazır olduğunu ölçtük."
+        },
+        {
+          "type": "h2",
+          "text": "Nasıl ölçtük"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Tarih: 18 Ekim 2026",
+            "Liste: Google Haritalar'da İzmir ilçeleri tek tek aranarak bulunan, kendi web sitesi olan 48 diş kliniği (yalnızca Instagram ya da randevu platformu sayfası olanlar listeye girmedi)",
+            "Araç: [WoodstoneStudio site taraması](/site-analizi). Her kliniğin ana sayfası 10 alanda 78 sinyalle incelendi",
+            "Hız: Google PageSpeed, mobil laboratuvar ölçümü"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "48 sitenin 3'ü ölçülemedi (biri otomatik okumayı engelledi, ikisi süre içinde yanıt vermedi). Rakamlar kalan 45 kliniğe göre. Yalnızca ana sayfaya baktık; rakamlar bir anın fotoğrafıdır."
+        },
+        {
+          "type": "h2",
+          "text": "Kısa tablo: ortalama 71,5"
+        },
+        {
+          "type": "p",
+          "text": "45 kliniğin ortalama puanı 100 üzerinden 71,5 (medyan 77). 21 klinik \"İyi\" bandında, 15'i \"Gelişmeli\", 8'i \"Zayıf\", 1'i \"Kritik\". Büyük Türk sitelerinin ortalaması (72,6) ile neredeyse aynı: İzmir'in diş klinikleri, dev şirketlerden geri değil."
+        },
+        {
+          "type": "h2",
+          "text": "İyi haber: kapı açık"
+        },
+        {
+          "type": "p",
+          "text": "Hiçbir klinik yapay zekâ botlarını robots.txt ile engellemiyor; yapay zekâ erişimi ortalaması 94. Yalnızca 3 sitede (%7) güvenlik katmanı ChatGPT arama botunun kimliğiyle gelen isteği reddetti. Bu genelde bir CDN ya da güvenlik eklentisi ayarından kaynaklanır."
+        },
+        {
+          "type": "h2",
+          "text": "Asıl eksik: yapay zekâ kliniği tanıyamıyor"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "%42'sinde (19 klinik) yapısal veri hiç yok. Yapısal veri adres, telefon, çalışma saatleri, hekimler ve tedaviler gibi bilgileri makinenin hatasız okuyacağı biçimde verir. Sağlık konusunda yapay zekâ kaynak seçerken özellikle temkinli davranır; kim olduğunu net söyleyen site öne geçer.",
+            "Marka ve kimlik alanı ortalaması 58, yapısal veri alanı 53: en zayıf iki alan.",
+            "%82'sinde llms.txt yok. Etkisi henüz sınırlı, ama maliyeti de yok."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Hastalar linki WhatsApp'tan paylaşıyor, önizleme çıkmıyor"
+        },
+        {
+          "type": "p",
+          "text": "12 klinikte (%27) paylaşım önizlemesi hiç yok: link WhatsApp ya da Instagram'da paylaşıldığında başlık ve görsel çıkmıyor. Diş kliniğini çoğu hasta bir yakınının WhatsApp'tan attığı linkle tanır; önizlemesiz link daha az tıklanır."
+        },
+        {
+          "type": "h2",
+          "text": "Hız: büyük sitelerden iyi, ama yine yavaş"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Mobil PageSpeed ortalaması 65 (büyük Türk sitelerinde 43)",
+            "42 ölçümden 5'i 90 ve üstünde, 8'i 50'nin altında",
+            "Ana içeriğin görünme süresi (LCP) medyanı 5,6 saniye; yalnızca 2 site Google'ın önerdiği 2,5 saniyenin altında"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Güvenlik: 5 sitede ciddi eksik"
+        },
+        {
+          "type": "p",
+          "text": "5 kliniğin güvenlik puanı 100 üzerinden 10'un altında. Bu, sitenin HTTPS ile düzgün açılmadığı ya da temel güvenlik ayarlarının olmadığı anlamına gelir. Tarayıcı \"Güvenli değil\" uyarısı gösterdiğinde hasta randevu formunu doldurmaz."
+        },
+        {
+          "type": "h2",
+          "text": "En yüksek puanı alan 10 klinik sitesi"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "locadentinternational.com: 91",
+            "ilkedis.com: 90",
+            "asprodent.com.tr: 88",
+            "ozeluraydent.com.tr: 87",
+            "dentglow.com: 86",
+            "omniaclinics.com: 84",
+            "dentleon.com: 84",
+            "korhandent.com.tr: 84",
+            "mlsdental.com: 84",
+            "dtmertcankose.com: 83"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Klinik siteniz için 5 adım"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Yapısal veri ekleyin: Dentist (LocalBusiness) şeması; adres, telefon, çalışma saatleri ve hekim bilgisiyle.",
+            "Sık sorulan soruları yazın: \"İmplant ne kadar sürer?\", \"Hafta sonu açık mısınız?\" gibi gerçek soruları başlık yapın, altına kısa ve net cevap koyun.",
+            "Paylaşım önizlemesini ayarlayın: og:title, og:description ve 1200×630 bir og:image.",
+            "HTTPS'i ve yönlendirmeyi kontrol edin: tüm sayfalar https ile açılmalı.",
+            "Telefonda hızı ölçün: kapak görselini küçültüp WebP'ye çevirin."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Kendi kliniğinizin sitesini aynı 78 kontrolle ücretsiz görmek için: [woodstonestudio.com/site-analizi](/site-analizi)"
+        },
+        {
+          "type": "h2",
+          "text": "Bu taramada sağlık bilgisi değerlendirildi mi?"
+        },
+        {
+          "type": "p",
+          "text": "Hayır. Yalnızca sitelerin teknik altyapısına baktık: yapay zekâ ve Google tarafından okunabilirlik, hız, güvenlik, paylaşım. Kliniklerin tedavi kalitesi hakkında hiçbir değerlendirme yapılmamıştır. Sitelerin adı yalnızca herkese açık ana sayfalarında ölçülen teknik sinyalleri aktarmak için geçmektedir."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "text": "Patients now ask ChatGPT and Perplexity \"a good implant dentist in Izmir?\" as often as they ask Google. Health is the second most common topic people research with AI before buying. To answer, AI reads clinic websites with its own bots. We measured how ready Izmir's dental clinics are."
+        },
+        {
+          "type": "h2",
+          "text": "How we measured"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Date: 18 October 2026",
+            "List: 48 dental clinics with their own website, found by searching Google Maps district by district in Izmir",
+            "Tool: [WoodstoneStudio site scan](/en/site-audit), 10 areas and 78 signals per homepage",
+            "Speed: Google PageSpeed, mobile lab measurement"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "3 of the 48 sites couldn't be measured. Figures are based on the remaining 45 clinics. Homepages only; the numbers are a snapshot."
+        },
+        {
+          "type": "h2",
+          "text": "At a glance: average 71.5"
+        },
+        {
+          "type": "p",
+          "text": "The 45 clinics averaged 71.5 out of 100 (median 77): 21 Good, 15 Needs work, 8 Weak, 1 Critical. That's almost the same as Turkey's biggest websites (72.6)."
+        },
+        {
+          "type": "h2",
+          "text": "Good news: the door is open"
+        },
+        {
+          "type": "p",
+          "text": "No clinic blocks AI bots in robots.txt; AI access averages 94. Only 3 sites (7%) had a security layer reject a request with the ChatGPT search bot's identity."
+        },
+        {
+          "type": "h2",
+          "text": "The real gap: AI can't recognise the clinic"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "42% (19 clinics) have no structured data at all, so address, phone, hours, dentists and treatments aren't machine-readable. AI is especially cautious when choosing health sources.",
+            "Brand and entity (58) and structured data (53) are the weakest areas.",
+            "82% have no llms.txt."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Shared on WhatsApp, no preview"
+        },
+        {
+          "type": "p",
+          "text": "12 clinics (27%) have no share preview: when the link is shared on WhatsApp or Instagram, no title or image appears."
+        },
+        {
+          "type": "h2",
+          "text": "Speed: better than big sites, still slow"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Average mobile PageSpeed 65 (43 for Turkey's biggest sites)",
+            "5 of 42 at 90 or above, 8 below 50",
+            "Median LCP 5.6 seconds; only 2 under Google's recommended 2.5 seconds"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Security: serious gaps on 5 sites"
+        },
+        {
+          "type": "p",
+          "text": "5 clinics score below 10 out of 100 on security, meaning HTTPS or basic security settings are missing. Patients won't fill in a booking form when the browser shows \"Not secure\"."
+        },
+        {
+          "type": "h2",
+          "text": "Top 10 clinic websites"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "locadentinternational.com: 91",
+            "ilkedis.com: 90",
+            "asprodent.com.tr: 88",
+            "ozeluraydent.com.tr: 87",
+            "dentglow.com: 86",
+            "omniaclinics.com: 84",
+            "dentleon.com: 84",
+            "korhandent.com.tr: 84",
+            "mlsdental.com: 84",
+            "dtmertcankose.com: 83"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "5 steps for your clinic website"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Add structured data: Dentist (LocalBusiness) schema with address, phone, hours and dentist details.",
+            "Write real FAQs as headings with short, clear answers.",
+            "Set up share previews: og:title, og:description and a 1200×630 og:image.",
+            "Check HTTPS and redirects.",
+            "Measure mobile speed: shrink and convert the hero image to WebP."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Check your own clinic's site with the same 78 signals for free: [woodstonestudio.com/en/site-audit](/en/site-audit)"
+        },
+        {
+          "type": "h2",
+          "text": "Was medical quality assessed?"
+        },
+        {
+          "type": "p",
+          "text": "No. We looked only at the technical side of the websites. No assessment of treatment quality was made. Clinic names appear only to report technical signals measured on their public homepages."
+        }
+      ]
+    }
+  },
+  {
     "slug": "turkiye-100-site-yapay-zeka-taramasi-2026",
     "relatedService": "seo",
     "locales": [

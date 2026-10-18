@@ -129,6 +129,7 @@ const SERVICE_URL: Record<string, Record<Locale, string>> = {
   ai: { tr: "/yapay-zeka", en: "/en/ai-solutions" },
   social: { tr: "/sosyal-medya", en: "/en/social-media" },
   seo: { tr: "/seo", en: "/en/seo" },
+  dental: { tr: "/dis-klinigi-web-sitesi", en: "/en/dental-clinic-website" },
 };
 const SERVICE_LABEL: Record<Locale, string> = {
   tr: "İlgili hizmet →",
