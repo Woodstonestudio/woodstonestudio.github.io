@@ -3,6 +3,7 @@ import { LatestPosts } from "@/components/latest-posts";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { JoVVo } from "@/components/jovvo-section";
+import { ShqipTR } from "@/components/shqiptr-section";
 import { Services } from "@/components/services";
 import { WorkShowcase } from "@/components/work-showcase";
 import { Testimonials } from "@/components/testimonials";
@@ -33,6 +34,7 @@ export default function HomeEN() {
         <Hero t={enHero} />
         <QuickAnswers locale="en" />
         <JoVVo t={enSections.jovvo} />
+        <ShqipTR t={enSections.shqiptr} />
         <Services t={enSections.services} />
         <SalonBand locale="en" />
         <Testimonials t={enSections.testimonials} />

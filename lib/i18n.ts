@@ -93,7 +93,7 @@ export type HeroDict = typeof trHero;
 
 export const trSections = {
   jovvo: {
-    eyebrow: "JoVVo · iOS Uygulaması",
+    eyebrow: "JoVVo · iOS ve Android",
     t1: "Cebindeki",
     t2: "yapay zekâ koçu",
     lead: "JoVVo, cebindeki yapay zekâ fitness ve beslenme koçu. Koçun David, hedeflerine ve seviyene göre sana özel antrenman programları hazırlar, öğünlerini analiz eder ve gün boyu yanında olur.",
@@ -106,7 +106,26 @@ export const trSections = {
     freeNote: "Tüm Premium özellikleri 3 gün ücretsiz dene.",
     cta: "App Store'dan İndir",
     url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
+    playCta: "Google Play'den İndir",
+    playUrl: "https://play.google.com/store/apps/details?id=com.jovvo.app",
     caption: "JoVVo ile hedefine giden yol cebinde.",
+  },
+  shqiptr: {
+    eyebrow: "ShqipTR · iOS ve Android",
+    t1: "Arnavutça ve Türkçe,",
+    t2: "her gün 15 dakika",
+    lead: "ShqipTR, Türkçe konuşanların Arnavutça, Arnavutça konuşanların Türkçe öğrenmesi için hazırladığımız dil uygulaması. A1'den B2'ye adım adım dersler, yapay zekâ konuşma partneri Mira ve telaffuz koçu tek uygulamada.",
+    features: [
+      { name: "A1'den B2'ye dersler", note: "1.000'den fazla kelime; her biri sesli telaffuz, örnek cümle ve Türkçe harflerle okunuş ipucuyla. Her ders kelime, gramer, quiz ve konuşma bölümlerinden oluşur." },
+      { name: "Mira ile sohbet", note: "Yapay zekâ partneri Mira seninle konuşur, hatalarını anında düzeltir. Kafede, doktorda, yolda: gerçek hayattan senaryolar." },
+      { name: "Telaffuz koçu", note: "Söylediğin cümleyi dinler, kelime kelime puan verir. Yavaş dinleme modu, seri, XP ve rozetler." },
+    ],
+    freeNote: "Ücretsiz indir, ilk derslere hemen başla.",
+    cta: "App Store'dan İndir",
+    url: "https://apps.apple.com/app/id6806021486",
+    playCta: "Google Play'den İndir",
+    playUrl: "https://play.google.com/store/apps/details?id=com.shqiptr.app",
+    imgAlt: "ShqipTR uygulaması — dersler, Mira ile yapay zekâ konuşma ve telaffuz koçu ekranları",
   },
   services: {
     eyebrow: "Hizmetler",
@@ -229,7 +248,7 @@ export const trSections = {
 
 export const enSections: typeof trSections = {
   jovvo: {
-    eyebrow: "JoVVo · iOS App",
+    eyebrow: "JoVVo · iOS and Android",
     t1: "Your AI coach,",
     t2: "right in your pocket",
     lead: "JoVVo is your AI fitness and nutrition coach in your pocket. Your coach David builds training programs tailored to your goals and level, analyses your meals and stays with you throughout the day.",
@@ -242,7 +261,26 @@ export const enSections: typeof trSections = {
     freeNote: "Explore all Premium features free for 3 days.",
     cta: "Download on the App Store",
     url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
+    playCta: "Get it on Google Play",
+    playUrl: "https://play.google.com/store/apps/details?id=com.jovvo.app",
     caption: "With JoVVo, the path to your goal is in your pocket.",
+  },
+  shqiptr: {
+    eyebrow: "ShqipTR · iOS and Android",
+    t1: "Albanian and Turkish,",
+    t2: "15 minutes a day",
+    lead: "ShqipTR is our language app for Turkish speakers learning Albanian and Albanian speakers learning Turkish. Step-by-step lessons from A1 to B2, Mira, an AI conversation partner, and a pronunciation coach in one app.",
+    features: [
+      { name: "Lessons from A1 to B2", note: "1,000+ words, each with audio pronunciation, an example sentence and a reading hint. Every lesson moves through vocabulary, grammar, a quiz and conversation." },
+      { name: "Chat with Mira", note: "Mira, your AI partner, talks with you and corrects mistakes instantly, in real-life scenarios: at a café, at the doctor's, on the road." },
+      { name: "Pronunciation coach", note: "It listens to your sentence and scores it word by word. Slow listening mode, streaks, XP and badges." },
+    ],
+    freeNote: "Free to download; start your first lessons right away.",
+    cta: "Download on the App Store",
+    url: "https://apps.apple.com/app/id6806021486",
+    playCta: "Get it on Google Play",
+    playUrl: "https://play.google.com/store/apps/details?id=com.shqiptr.app",
+    imgAlt: "ShqipTR app — lessons, AI conversation with Mira and pronunciation coach screens",
   },
   services: {
     eyebrow: "Services",

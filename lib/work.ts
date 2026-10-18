@@ -18,7 +18,7 @@ export type WorkPageDict = {
   productsEyebrow: string;
   productsTitle: [string, string];
   productsLead: string;
-  products: { title: string; platform: string; desc: string; tags: string[]; url: string; cta: string; img?: string }[];
+  products: { title: string; platform: string; desc: string; tags: string[]; url: string; cta: string; img?: string; links?: { label: string; url: string }[] }[];
   closingTitle: [string, string];
   closingLead: string;
   closingCta: string;
@@ -67,12 +67,29 @@ export const workPage: Record<Locale, WorkPageDict> = {
     products: [
       {
         title: "JoVVo",
-        platform: "iOS · App Store",
+        platform: "iOS · Android",
         desc: "Cebinizdeki yapay zekâ fitness ve beslenme koçu. Spora özel antrenman programları, fotoğraftan kalori ve makro analizi, su ve adım takibi ve 7/24 sohbet eden koç David.",
         tags: ["Mobil uygulama", "Yapay zekâ", "Abonelik"],
         url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
         cta: "App Store'da Gör",
         img: "/work/jovvo-meal.webp",
+        links: [
+          { label: "App Store", url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr" },
+          { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.jovvo.app" },
+        ],
+      },
+      {
+        title: "ShqipTR",
+        platform: "iOS · Android",
+        desc: "Türkçe konuşanlara Arnavutça, Arnavutça konuşanlara Türkçe öğreten dil uygulaması. A1'den B2'ye dersler, yapay zekâ konuşma partneri Mira ve kelime kelime puan veren telaffuz koçu.",
+        tags: ["Mobil uygulama", "Yapay zekâ", "Eğitim"],
+        url: "https://apps.apple.com/app/id6806021486",
+        cta: "App Store'da Gör",
+        img: "/work/shqiptr-phone.webp",
+        links: [
+          { label: "App Store", url: "https://apps.apple.com/app/id6806021486" },
+          { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.shqiptr.app" },
+        ],
       },
     ],
     closingTitle: ["Sıradaki proje", "sizinki olsun."],
@@ -121,12 +138,29 @@ export const workPage: Record<Locale, WorkPageDict> = {
     products: [
       {
         title: "JoVVo",
-        platform: "iOS · App Store",
+        platform: "iOS · Android",
         desc: "An AI fitness and nutrition coach in your pocket. Sport-specific training programs, calorie and macro analysis from a photo, water and step tracking, and David, a coach you can chat with 24/7.",
         tags: ["Mobile app", "AI", "Subscriptions"],
         url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr",
         cta: "View on the App Store",
         img: "/work/jovvo-meal.webp",
+        links: [
+          { label: "App Store", url: "https://apps.apple.com/tr/app/jovvo/id6794609486?l=tr" },
+          { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.jovvo.app" },
+        ],
+      },
+      {
+        title: "ShqipTR",
+        platform: "iOS · Android",
+        desc: "A language app that teaches Albanian to Turkish speakers and Turkish to Albanian speakers. Lessons from A1 to B2, Mira, an AI conversation partner, and a pronunciation coach that scores you word by word.",
+        tags: ["Mobile app", "AI", "Education"],
+        url: "https://apps.apple.com/app/id6806021486",
+        cta: "View on the App Store",
+        img: "/work/shqiptr-phone.webp",
+        links: [
+          { label: "App Store", url: "https://apps.apple.com/app/id6806021486" },
+          { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.shqiptr.app" },
+        ],
       },
     ],
     closingTitle: ["Make the next project", "yours."],

@@ -125,12 +125,7 @@ export function WorkPage({ locale }: { locale: Locale }) {
             <div className={`mt-16 grid gap-8 ${t.products.length > 1 ? "lg:grid-cols-2" : ""}`}>
               {t.products.map((p, i) => (
                 <Reveal key={p.title} delay={i * 0.06} y={24}>
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-[rgba(246,239,228,0.02)] transition-all duration-500 ease-soft hover:border-[rgba(38,35,30,0.2)] sm:flex-row"
-                  >
+                  <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-[rgba(246,239,228,0.02)] transition-all duration-500 ease-soft hover:border-[rgba(38,35,30,0.2)] sm:flex-row">
                     {p.img && (
                       <div className="relative aspect-[4/3] shrink-0 overflow-hidden border-b border-line bg-surface sm:aspect-auto sm:max-h-[440px] sm:w-[38%] lg:max-w-[320px] sm:border-b-0 sm:border-r">
                         <Image
@@ -153,12 +148,24 @@ export function WorkPage({ locale }: { locale: Locale }) {
                           </li>
                         ))}
                       </ul>
-                      <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-bone">
-                        {p.cta}
-                        <span aria-hidden className="text-gray-warm transition-transform duration-300 group-hover:translate-x-0.5">↗</span>
-                      </span>
+                      {/* Mağaza linkleri: iki mağazada da yayındaysa ikisi de; yoksa tek CTA */}
+                      <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                        {(p.links ?? [{ label: p.cta, url: p.url }]).map((l) => (
+                          <a
+                            key={l.url}
+                            href={l.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${p.title} — ${l.label}`}
+                            className="group/l inline-flex items-center gap-2 text-sm font-medium text-bone underline-offset-4 hover:underline"
+                          >
+                            {l.label}
+                            <span aria-hidden className="text-gray-warm transition-transform duration-300 group-hover/l:translate-x-0.5">↗</span>
+                          </a>
+                        ))}
+                      </div>
                     </div>
-                  </a>
+                  </div>
                 </Reveal>
               ))}
             </div>
