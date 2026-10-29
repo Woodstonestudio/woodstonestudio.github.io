@@ -132,13 +132,13 @@ export function Nav({ t = trNav }: { t?: NavDict }) {
         >
           <Image
             src="/brand/logo-badge-v2.webp"
-            alt=""
+            alt="WoodstoneStudio"
             width={64}
             height={64}
             priority
             className="h-12 w-12 shrink-0 object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] transition-transform duration-500 ease-soft group-hover:scale-105 sm:h-14 sm:w-14"
           />
-          <span className="hidden sm:inline">WoodstoneStudio</span>
+          <span aria-hidden className="hidden sm:inline">WoodstoneStudio</span>
         </Link>
 
         {/* Masaüstü (lg+): yatay linkler + dil seçici */}
