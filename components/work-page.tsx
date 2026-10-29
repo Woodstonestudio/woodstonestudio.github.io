@@ -42,7 +42,7 @@ export function WorkPage({ locale }: { locale: Locale }) {
           <Reveal delay={0.08}>
             <h1 className="mt-7 max-w-4xl text-[46px] font-light leading-[1.05] tracking-tightest text-bone sm:text-[58px] lg:text-[68px]">
               {t.h1[0]}
-              <br />
+              {" "}<br />
               {t.h1[1]}
             </h1>
           </Reveal>
@@ -112,7 +112,7 @@ export function WorkPage({ locale }: { locale: Locale }) {
                 <Reveal delay={0.08}>
                   <h2 className="mt-8 text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
                     {t.productsTitle[0]}
-                    <br />
+                    {" "}<br />
                     {t.productsTitle[1]}
                   </h2>
                 </Reveal>
@@ -182,7 +182,7 @@ export function WorkPage({ locale }: { locale: Locale }) {
               <Reveal>
                 <h2 className="max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
                   {t.closingTitle[0]}
-                  <br />
+                  {" "}<br />
                   {t.closingTitle[1]}
                 </h2>
               </Reveal>

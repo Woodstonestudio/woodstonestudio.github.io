@@ -183,7 +183,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
               <Reveal delay={0.08}>
                 <h1 className="mt-7 text-[46px] font-light leading-[1.05] tracking-tightest text-bone sm:text-[58px] lg:text-[68px]">
                   {c.h1[0]}
-                  <br />
+                  {" "}<br />
                   {c.h1[1]}
                 </h1>
               </Reveal>
@@ -230,7 +230,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
                 <Reveal>
                   <h2 className="text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
                     {c.scopeTitle[0]}
-                    <br />
+                    {" "}<br />
                     {c.scopeTitle[1]}
                   </h2>
                 </Reveal>
@@ -258,7 +258,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
             <Reveal>
               <h2 className="max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
                 {c.processTitle[0]}
-                <br />
+                {" "}<br />
                 {c.processTitle[1]}
               </h2>
             </Reveal>
@@ -315,7 +315,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
               <Reveal>
                 <h2 className="text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
                   {c.faqTitle[0]}
-                  <br />
+                  {" "}<br />
                   {c.faqTitle[1]}
                 </h2>
               </Reveal>
@@ -367,7 +367,7 @@ export function ServicePage({ c }: { c: ServiceContent }) {
               <Reveal>
                 <h2 className="max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
                   {c.closingTitle[0]}
-                  <br />
+                  {" "}<br />
                   {c.closingTitle[1]}
                 </h2>
               </Reveal>

@@ -67,7 +67,7 @@ export function BlogList({ locale }: { locale: Locale }) {
           <Reveal delay={0.08}>
             <h1 className="mt-7 max-w-3xl text-[42px] font-light leading-[1.05] tracking-tightest text-bone sm:text-[54px] lg:text-[62px]">
               {L.title[0]}
-              <br />
+              {" "}<br />
               {L.title[1]}
             </h1>
           </Reveal>

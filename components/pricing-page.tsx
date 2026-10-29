@@ -60,7 +60,7 @@ export function PricingPage({ locale }: { locale: Locale }) {
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-bone-dim">{c.eyebrow}</p>
             <h1 className="mt-8 max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
               {c.t1}
-              <br />
+              {" "}<br />
               {c.t2}
             </h1>
             <p className="mt-6 max-w-2xl text-[17px] leading-[1.8] text-gray-warm">{c.lead}</p>

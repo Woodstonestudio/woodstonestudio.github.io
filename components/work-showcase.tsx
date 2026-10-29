@@ -32,7 +32,7 @@ export function WorkShowcase({ t = trSections.work }: { t?: SectionsDict["work"]
             <Reveal delay={0.08}>
               <h2 className="mt-8 max-w-xl text-4xl font-light leading-[1.1] tracking-tightest text-bone sm:text-5xl">
                 {t.t1}
-                <br />
+                {" "}<br />
                 {t.t2}
               </h2>
             </Reveal>

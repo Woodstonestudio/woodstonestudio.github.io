@@ -21,7 +21,7 @@ export function Hero({ t = trHero }: { t?: HeroDict }) {
           <div>
             <h1 className="mt-8 text-[54px] font-light leading-[1.03] tracking-tightest text-bone sm:text-[67px] lg:text-[80px]">
               {t.titleLine1}
-              <br />
+              {" "}<br />
               {t.titleLine2}
             </h1>
           </div>

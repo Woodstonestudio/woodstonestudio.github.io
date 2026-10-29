@@ -53,7 +53,7 @@ export function JoVVo({ t = trSections.jovvo }: { t?: SectionsDict["jovvo"] }) {
             <Reveal delay={0.08}>
               <h2 className="mt-8 text-4xl font-light leading-[1.05] tracking-tightest text-bone sm:text-5xl">
                 {t.t1}
-                <br />
+                {" "}<br />
                 {t.t2}
               </h2>
             </Reveal>

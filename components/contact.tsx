@@ -32,7 +32,7 @@ export function Contact({
           <Reveal delay={0.08}>
             <h2 className="mt-8 max-w-4xl text-5xl font-light leading-[1.05] tracking-tightest text-bone sm:text-6xl lg:text-[64px]">
               {t.t1}
-              <br />
+              {" "}<br />
               {t.t2}
             </h2>
           </Reveal>
