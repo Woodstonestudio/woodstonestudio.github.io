@@ -1,5 +1,215 @@
 [
   {
+    "slug": "ai-search-readiness-checklist-2026",
+    "relatedService": "seo",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-11-01",
+    "readMin": 7,
+    "category": {
+      "tr": "GEO",
+      "en": "GEO"
+    },
+    "title": {
+      "tr": "ChatGPT Sitenizi Okuyabiliyor mu? Yapay Zekâ Araması İçin Kontrol Listesi (2026)",
+      "en": "Can ChatGPT Read Your Website? An AI Search Readiness Checklist (2026)"
+    },
+    "excerpt": {
+      "tr": "ChatGPT, Claude ve Perplexity bir soruyu cevaplarken siteleri kendi botlarıyla okur. Sitenizin bu okumaya hazır olup olmadığını 10 alanda nasıl kontrol edersiniz? 148 sitelik taramamızdan rakamlar ve 10 dakikalık kendin-yap kontrolü.",
+      "en": "ChatGPT, Claude and Perplexity read websites with their own bots when they answer a question. How do you check whether your site is ready, across 10 areas? Numbers from our scans of 148 sites and a 10-minute do-it-yourself check."
+    },
+    "answer": {
+      "tr": "Bir sitenin yapay zekâ aramasına hazır olması dört şeye bağlıdır: AI arama botlarının robots.txt'de ve güvenlik duvarında açık olması, sayfa metninin JavaScript beklemeden sunucudan gelmesi, işletmenin yapısal veriyle (JSON-LD) makinenin anlayacağı biçimde tanımlanması ve sık sorulan soruların sayfada net cevaplarla yer alması. Taradığımız sitelerde kapı çoğunlukla açıktı; asıl eksik yapısal veri, soru-cevap içeriği ve mobil hızdaydı.",
+      "en": "A site is ready for AI search when four things are true: AI search bots are allowed in robots.txt and by the firewall, the page text comes from the server without waiting for JavaScript, the business is described for machines with structured data (JSON-LD), and common questions are answered clearly on the page. In the sites we scanned the door was usually open; the real gaps were structured data, question-and-answer content and mobile speed."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "p",
+          "text": "İnsanlar artık \"hangi diş hekimi\", \"hangi otel\", \"hangi muhasebeci\" sorularını Google'a olduğu kadar ChatGPT'ye, Claude'a ve Perplexity'ye de soruyor. Bu araçlar cevap verirken internetteki sayfaları kendi botlarıyla okur ve en güvendiklerini kaynak gösterir. Siteniz bu okumaya hazır değilse, cevapta sizin yerinize başkası geçer."
+        },
+        {
+          "type": "p",
+          "text": "Bu yazı, WoodstoneStudio'nun site taramasında kullandığı 10 alanı ve en önemli kontrolleri anlatıyor. Rakamlar kendi taramalarımızdan: [Türkiye'nin bilinen 100 sitesi](/blog/turkiye-100-site-yapay-zeka-taramasi-2026) ve [İzmir'deki 48 diş kliniği](/blog/izmir-dis-klinigi-siteleri-yapay-zeka-taramasi-2026)."
+        },
+        {
+          "type": "h2",
+          "text": "1. Botlar kapıdan girebiliyor mu?"
+        },
+        {
+          "type": "p",
+          "text": "İlk soru basit: AI arama botlarına izin veriyor musunuz? Burada iki tür botu ayırmak gerekiyor. Arama botları (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, PerplexityBot) cevap verirken sitenizi okur; bunları engellerseniz cevapta kaynak olarak geçmezsiniz. Eğitim botları (GPTBot, ClaudeBot, Google-Extended) ise içeriği model eğitimi için toplar; bunları kapatmak bir tercihtir ve aramayı etkilemez. Eğitimi tek satırla kapatmanın yeni yolunu [bu yazıda](/blog/yapay-zeka-egitimi-robots-txt-ortak-kural) anlattık."
+        },
+        {
+          "type": "p",
+          "text": "Taramalarımızda robots.txt çoğunlukla açıktı: okunabilen büyük sitelerin %90'ı AI arama botlarına izin veriyordu, İzmir'deki diş kliniklerinin hiçbiri engellemiyordu. Ama bazı sitelerde robots.txt izin verdiği halde güvenlik duvarı ya da CDN botu kapıda çeviriyordu. Site sahibinin çoğu zaman bundan haberi olmuyor."
+        },
+        {
+          "type": "h2",
+          "text": "2. Metin sunucudan hazır geliyor mu?"
+        },
+        {
+          "type": "p",
+          "text": "Botların çoğu sayfadaki JavaScript'i çalıştırmaz ya da sınırlı çalıştırır. Sitenizin metni yalnızca tarayıcıda JavaScript ile oluşuyorsa, bot boş bir sayfa görür. Kontrolü kolay: tarayıcıda sayfaya sağ tıklayıp \"Sayfa kaynağını görüntüle\" deyin ve ana başlığınızı arayın. Kaynakta yoksa botlar da görmüyor demektir."
+        },
+        {
+          "type": "h2",
+          "text": "3. İşletmeniz makineye tanıtılmış mı?"
+        },
+        {
+          "type": "p",
+          "text": "Yapısal veri (JSON-LD), \"bu site kimin, ne iş yapıyor, adresi ve telefonu ne\" sorularının makine için yazılmış cevabıdır. Büyük sitelerin %37'sinde, İzmir'deki diş kliniği sitelerinin %42'sinde hiç yoktu. En az şunlar olmalı: Organization ya da LocalBusiness (klinikte Dentist, otelde Hotel gibi en özel tür), WebSite ve sayfada görünen sorular varsa FAQPage."
+        },
+        {
+          "type": "h2",
+          "text": "4. Sorulara net cevap veriyor musunuz?"
+        },
+        {
+          "type": "p",
+          "text": "AI cevapları en çok, bir soruya doğrudan cevap veren kısa paragrafları alıntılar. Müşterinin gerçekten sorduğu soruyu başlık yapın (\"İmplant tedavisi kaç seans sürer?\") ve hemen altına 2–3 cümlelik net bir cevap yazın. Uzun tanıtım metinleri bu işi yapmaz."
+        },
+        {
+          "type": "h2",
+          "text": "5. Diğer altı alan"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Teknik SEO: başlık ve açıklama uzunluğu, canonical, site haritası, olmayan sayfanın gerçekten 404 dönmesi.",
+            "Hız: telefonda ana içeriğin 2,5 saniyede görünmesi. Büyük sitelerde mobil PageSpeed ortalaması 43'tü; diş kliniklerinde ana içerik ortalama 5,6 saniyede açılıyordu.",
+            "Güvenlik: HTTPS, http'den kalıcı yönlendirme ve temel güvenlik başlıkları.",
+            "İletişim: telefon linki, WhatsApp, form ve net bir eylem çağrısı.",
+            "Paylaşım: WhatsApp ve LinkedIn'de görünen başlık, açıklama ve görsel (Open Graph).",
+            "Dil: sayfa dili ve varsa dil sürümlerinin birbirini doğru göstermesi."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "llms.txt dosyası da sık sorulan bir konu. Etkisi henüz sınırlı, ama maliyeti yok; taradığımız diş kliniklerinin %82'sinde yoktu."
+        },
+        {
+          "type": "h2",
+          "text": "10 dakikalık kendin-yap kontrolü"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "siteniz.com/robots.txt adresini açın: OAI-SearchBot, Claude-SearchBot veya PerplexityBot için \"Disallow: /\" var mı?",
+            "Ana sayfanın kaynağını açın: ana başlığınız ve hizmet metniniz kaynakta görünüyor mu?",
+            "Google'ın Rich Results Test aracına adresinizi girin: işletme bilgileriniz yapısal veri olarak çıkıyor mu?",
+            "pagespeed.web.dev'de mobil testi çalıştırın: puan 50'nin altında mı?",
+            "Müşterilerinizin en sık sorduğu 5 soruyu yazın: her biri sitenizde başlık ve kısa cevap olarak var mı?"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Daha hızlı yol"
+        },
+        {
+          "type": "p",
+          "text": "Bu kontrollerin 78 sinyallik tam hâlini [ücretsiz site taramamızda](/site-analizi) bir dakikada görebilirsiniz; kayıt istemiyoruz. Claude kullanıyorsanız aynı denetimi kendi bilgisayarınızda da yapabilirsiniz: 24 sinyallik [ücretsiz sürüm GitHub'da](https://github.com/Woodstonestudio/geo-audit-lite), yapıştırmaya hazır düzeltmeler ve rakip karşılaştırması içeren [GEO Ajan Ekibi](https://buy.polar.sh/polar_cl_f2U4MFgb5c5drxsz566CbomAj2BGhgQ2Ou8qG3Wf2CZ) ise tek seferlik ücretle."
+        },
+        {
+          "type": "p",
+          "text": "Sınırları da açıkça söyleyelim: bu kontroller ana sayfaya bakar ve bir anın fotoğrafıdır. Hiçbir araç yapay zekâ cevabında görünmeyi garanti etmez; yaptığı şey, sitenizin okunmasını ve doğru anlaşılmasını kolaylaştırmaktır."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "text": "People now ask ChatGPT, Claude and Perplexity \"which dentist\", \"which hotel\", \"which accountant\" as often as they ask Google. When these tools answer, they read web pages with their own bots and cite the sources they trust most. If your site isn't ready for that, someone else gets cited instead."
+        },
+        {
+          "type": "p",
+          "text": "This post walks through the 10 areas WoodstoneStudio's site scan checks and the checks that matter most. The numbers come from our own scans: [100 well-known Turkish websites](/en/blog/turkiye-100-site-yapay-zeka-taramasi-2026) and [48 dental clinics in Izmir](/en/blog/izmir-dis-klinigi-siteleri-yapay-zeka-taramasi-2026)."
+        },
+        {
+          "type": "h2",
+          "text": "1. Can the bots get through the door?"
+        },
+        {
+          "type": "p",
+          "text": "The first question is simple: do you let AI search bots in? Two kinds of bot need to be kept apart. Search bots (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, PerplexityBot) read your site while answering a question; block them and you won't be cited. Training bots (GPTBot, ClaudeBot, Google-Extended) collect content to train models; closing them is a choice and doesn't affect search. We covered the new one-line way to opt out of training [in this post](/en/blog/yapay-zeka-egitimi-robots-txt-ortak-kural)."
+        },
+        {
+          "type": "p",
+          "text": "In our scans robots.txt was usually open: 90% of the readable large sites allowed AI search bots, and none of the Izmir dental clinics blocked them. But on some sites a firewall or CDN turned the bot away even though robots.txt allowed it, often without the owner knowing."
+        },
+        {
+          "type": "h2",
+          "text": "2. Does the text come from the server?"
+        },
+        {
+          "type": "p",
+          "text": "Most bots don't run a page's JavaScript, or run it only partly. If your text is only built in the browser by JavaScript, the bot sees an empty page. The check is easy: right-click the page, choose \"View page source\" and search for your main heading. If it isn't in the source, the bots don't see it either."
+        },
+        {
+          "type": "h2",
+          "text": "3. Is your business introduced to machines?"
+        },
+        {
+          "type": "p",
+          "text": "Structured data (JSON-LD) is the machine-readable answer to \"whose site is this, what do they do, where are they, how do I reach them\". 37% of the large sites and 42% of the Izmir dental clinic sites had none. At minimum you want Organization or LocalBusiness (the most specific type, such as Dentist or Hotel), WebSite, and FAQPage if the questions are visible on the page."
+        },
+        {
+          "type": "h2",
+          "text": "4. Do you answer questions clearly?"
+        },
+        {
+          "type": "p",
+          "text": "AI answers most often quote short paragraphs that answer a question directly. Use the question your customers actually ask as a heading (\"How many sessions does an implant take?\") and put a clear 2–3 sentence answer right below it. Long promotional copy doesn't do this job."
+        },
+        {
+          "type": "h2",
+          "text": "5. The other six areas"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Technical SEO: title and description length, canonical, sitemap, missing pages that really return 404.",
+            "Speed: main content visible on a phone within 2.5 seconds. The large sites averaged 43 on mobile PageSpeed; at the dental clinics the main content took a median 5.6 seconds.",
+            "Security: HTTPS, a permanent redirect from http and the basic security headers.",
+            "Contact: tap-to-call, WhatsApp, a form and a clear call to action.",
+            "Sharing: the title, description and image shown on WhatsApp and LinkedIn (Open Graph).",
+            "Language: the page language, and language versions that point to each other correctly."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "llms.txt comes up a lot too. Its effect is still limited, but it costs nothing; 82% of the dental clinics we scanned didn't have one."
+        },
+        {
+          "type": "h2",
+          "text": "A 10-minute do-it-yourself check"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Open yoursite.com/robots.txt: is there a \"Disallow: /\" for OAI-SearchBot, Claude-SearchBot or PerplexityBot?",
+            "View the homepage source: do your main heading and service text appear in it?",
+            "Run your address through Google's Rich Results Test: do your business details show up as structured data?",
+            "Run the mobile test at pagespeed.web.dev: is the score below 50?",
+            "Write down the 5 questions customers ask most: is each one on your site as a heading with a short answer?"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "The faster way"
+        },
+        {
+          "type": "p",
+          "text": "You can see the full 78-signal version of these checks in about a minute with our [free site scan](/en/site-audit); no sign-up. If you use Claude, you can run the same audit on your own machine: the 24-signal [free version is on GitHub](https://github.com/Woodstonestudio/geo-audit-lite), and [GEO Agent Team](https://buy.polar.sh/polar_cl_f2U4MFgb5c5drxsz566CbomAj2BGhgQ2Ou8qG3Wf2CZ), with paste-ready fixes and a competitor benchmark, is a one-time purchase."
+        },
+        {
+          "type": "p",
+          "text": "To be clear about the limits: these checks look at the homepage and are a snapshot in time. No tool can guarantee that you'll appear in an AI answer; what it does is make your site easier to read and to understand correctly."
+        }
+      ]
+    }
+  },
+  {
     "slug": "yapay-zeka-egitimi-robots-txt-ortak-kural",
     "relatedService": "seo",
     "locales": [
