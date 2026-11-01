@@ -4,14 +4,15 @@ import { useEffect, useState } from "react";
 
 /**
  * Çerez onayı (KVKK / GDPR).
- * - Google Analytics (GA4) YALNIZCA "Kabul Et" sonrası yüklenir; onaysız
- *   hiçbir analitik çerez yazılmaz ve Google'a istek gitmez.
+ * - Google Analytics (GA4) ve Microsoft Clarity YALNIZCA "Kabul Et" sonrası yüklenir;
+ *   onaysız hiçbir analitik çerez yazılmaz, Google'a ve Microsoft'a istek gitmez.
  * - Seçim tarayıcıda saklanır; footer'daki "Çerez ayarları" ile yeniden açılır
  *   (window "wss:cookie-settings" olayı).
  * - Kabul ve Reddet eşit ağırlıkta sunulur.
  */
 
 const GA_ID = "G-V7NRECZQ92";
+const CLARITY_ID = "z6tb7b2vzo";
 const KEY = "wss-consent"; // "granted" | "denied"
 export const COOKIE_SETTINGS_EVENT = "wss:cookie-settings";
 
@@ -20,7 +21,7 @@ type Locale = "tr" | "en";
 const T = {
   tr: {
     title: "Çerez tercihiniz",
-    body: "Sitenin nasıl kullanıldığını anlamak için, yalnızca onay verirseniz Google Analytics çerezlerini kullanıyoruz. Zorunlu olmayan hiçbir çerez onayınız olmadan çalışmaz.",
+    body: "Sitenin nasıl kullanıldığını anlamak için, yalnızca onay verirseniz Google Analytics ve Microsoft Clarity çerezlerini kullanıyoruz. Zorunlu olmayan hiçbir çerez onayınız olmadan çalışmaz.",
     more: "Gizlilik ve Çerez Politikası",
     href: "/gizlilik",
     accept: "Kabul Et",
@@ -28,7 +29,7 @@ const T = {
   },
   en: {
     title: "Your cookie choice",
-    body: "We use Google Analytics cookies to understand how the site is used — only if you agree. No non-essential cookie runs without your consent.",
+    body: "We use Google Analytics and Microsoft Clarity cookies to understand how the site is used — only if you agree. No non-essential cookie runs without your consent.",
     more: "Privacy & Cookie Policy",
     href: "/en/privacy",
     accept: "Accept",
@@ -40,6 +41,7 @@ declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    clarity?: ((...args: unknown[]) => void) & { q?: unknown[] };
   }
 }
 
@@ -57,6 +59,28 @@ function loadAnalytics() {
   s.async = true;
   s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
   document.head.appendChild(s);
+  loadClarity();
+}
+
+/** Microsoft Clarity (ısı haritası, oturum kaydı, bot/AI ayrımı) — yalnızca onaydan sonra */
+function loadClarity() {
+  if (document.getElementById("clarity-src")) return;
+  const w = window;
+  w.clarity =
+    w.clarity ||
+    Object.assign(
+      function clarity(...args: unknown[]) {
+        (w.clarity!.q = w.clarity!.q || []).push(args);
+      },
+      { q: [] as unknown[] },
+    );
+  // Onay zaten alındı: Clarity'ye bildir (çerezleri yalnızca bu durumda yazar)
+  w.clarity("consentv2", { ad_Storage: "denied", analytics_Storage: "granted" });
+  const s = document.createElement("script");
+  s.id = "clarity-src";
+  s.async = true;
+  s.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
+  document.head.appendChild(s);
 }
 
 /** Onay geri çekildiğinde GA çerezlerini temizler. */
@@ -65,7 +89,7 @@ function clearAnalyticsCookies() {
   const domains = ["", host, `.${host}`, `.${host.replace(/^www\./, "")}`];
   document.cookie.split(";").forEach((c) => {
     const name = c.split("=")[0].trim();
-    if (name === "_ga" || name.startsWith("_ga_") || name === "_gid") {
+    if (name === "_ga" || name.startsWith("_ga_") || name === "_gid" || name === "_clck" || name === "_clsk") {
       domains.forEach((d) => {
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${d ? `; domain=${d}` : ""}`;
       });
@@ -114,8 +138,8 @@ export function CookieConsent({ locale = "tr" }: { locale?: Locale }) {
     write("denied");
     clearAnalyticsCookies();
     setOpen(false);
-    // GA zaten yüklendiyse tamamen durması için sayfayı yenile
-    if (wasGranted && document.getElementById("ga4-src")) window.location.reload();
+    // GA / Clarity zaten yüklendiyse tamamen durması için sayfayı yenile
+    if (wasGranted && (document.getElementById("ga4-src") || document.getElementById("clarity-src"))) window.location.reload();
   };
 
   if (!open) return null;
