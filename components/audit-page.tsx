@@ -36,6 +36,15 @@ const C = {
       ["Paylaşım", "WhatsApp, Instagram ve LinkedIn önizlemesi (Open Graph, X kartı)"],
       ["Dil", "lang etiketi, karakter kodlaması, hreflang karşılıklılığı, x-default"],
     ],
+    kit: {
+      eyebrow: "Claude kullanıyorsanız",
+      title: "Aynı denetimi kendi bilgisayarınızda yapın",
+      lead: "GEO Ajan Ekibi, bu sayfadaki taramanın yöntemini Claude'a taşır: sitenizi ya da müşterinizin sitesini 78 sinyalle ölçer, yapıştırmaya hazır düzeltmeleri üretir ve sitenizi seçtiğiniz rakiplerle karşılaştırır. Her raporu bağımsız bir denetçi ajan kanıta karşı kontrol eder.",
+      points: ["78 sinyal, 0–100 puan, öncelikli düzeltme listesi", "robots.txt, llms.txt, JSON-LD ve SSS blokları hazır", "Rakip karşılaştırması ve müşteriye verilecek rapor", "Türkçe ve İngilizce, tek seferlik ödeme"],
+      buy: "Tam sürüm · 19,99 $",
+      free: "Ücretsiz sürüm (24 sinyal)",
+      note: "Claude Code ya da Claude uygulaması ve Python 3 gerekir. Ödeme Polar üzerinden alınır.",
+    },
     back: "Ana sayfa",
     faqTitle: "Sık sorulanlar",
     faqs: [
@@ -77,6 +86,15 @@ const C = {
       ["Sharing", "WhatsApp, Instagram and LinkedIn previews (Open Graph, X card)"],
       ["Language", "lang attribute, character encoding, reciprocal hreflang, x-default"],
     ],
+    kit: {
+      eyebrow: "If you use Claude",
+      title: "Run the same audit on your own machine",
+      lead: "GEO Agent Team brings this scanner's method into Claude: it measures your site or a client's site with 78 signals, produces paste-ready fixes and benchmarks the site against competitors you name. An independent reviewer agent checks every report against the evidence.",
+      points: ["78 signals, 0–100 score, prioritised fix list", "Ready robots.txt, llms.txt, JSON-LD and FAQ blocks", "Competitor benchmark and a client-ready report", "Turkish and English, one-time payment"],
+      buy: "Full version · $19.99",
+      free: "Free version (24 signals)",
+      note: "Requires Claude Code or the Claude app and Python 3. Payment is handled by Polar.",
+    },
     back: "Home",
     faqTitle: "Frequently asked",
     faqs: [
@@ -151,6 +169,29 @@ export function AuditPage({ locale }: { locale: Locale }) {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        <section className="border-t border-line">
+          <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24">
+            <div className="rounded-3xl border border-line bg-surface/60 p-6 sm:p-10">
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-bone-dim">{c.kit.eyebrow}</p>
+              <h2 className="mt-3 text-2xl font-light tracking-tight text-bone">{c.kit.title}</h2>
+              <p className="mt-3 max-w-2xl text-[15px] leading-[1.8] text-gray-warm">{c.kit.lead}</p>
+              <ul className="mt-6 grid gap-x-10 gap-y-3 sm:grid-cols-2">
+                {c.kit.points.map((pt) => (
+                  <li key={pt} className="flex gap-3 text-[14px] leading-[1.7] text-gray-warm">
+                    <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-bone-dim" />
+                    {pt}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a href="https://buy.polar.sh/polar_cl_f2U4MFgb5c5drxsz566CbomAj2BGhgQ2Ou8qG3Wf2CZ" target="_blank" rel="noopener" className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-b from-[#26231E] to-[#3A3630] px-7 py-3.5 text-sm font-medium text-[#F3F0EA] shadow-[0_1px_2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]">{c.kit.buy} <span aria-hidden>→</span></a>
+                <a href="https://github.com/Woodstonestudio/geo-audit-lite" target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-[13px] text-bone transition-colors hover:border-bone-dim">{c.kit.free}</a>
+              </div>
+              <p className="mt-4 text-[12px] text-gray-warm">{c.kit.note}</p>
+            </div>
           </div>
         </section>
 
