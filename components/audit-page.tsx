@@ -117,6 +117,17 @@ const C = {
 export function AuditPage({ locale }: { locale: Locale }) {
   const l = locale === "en" ? "en" : "tr";
   const c = C[l];
+  const kitSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "GEO Agent Team for Claude",
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "Windows, macOS, Linux (Claude Code or the Claude app)",
+    description: c.kit.lead,
+    url: `https://woodstonestudio.com${PATH[l]}`,
+    publisher: { "@id": "https://woodstonestudio.com/#organization" },
+    offers: { "@type": "Offer", price: "19.99", priceCurrency: "USD", url: "https://buy.polar.sh/polar_cl_f2U4MFgb5c5drxsz566CbomAj2BGhgQ2Ou8qG3Wf2CZ", availability: "https://schema.org/InStock" },
+  };
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -127,6 +138,7 @@ export function AuditPage({ locale }: { locale: Locale }) {
       <Nav t={NAV[l]} />
       <main className="pt-20 lg:pt-28">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(kitSchema) }} />
         <section className="relative">
           <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:px-8 lg:py-28">
             <div className="grid gap-10 lg:grid-cols-[0.45fr_0.55fr] lg:gap-20">
