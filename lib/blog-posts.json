@@ -1,5 +1,225 @@
 [
   {
+    "slug": "yapay-zeka-egitimi-robots-txt-ortak-kural",
+    "relatedService": "seo",
+    "locales": [
+      "tr",
+      "en"
+    ],
+    "date": "2026-11-01",
+    "readMin": 5,
+    "category": {
+      "tr": "GEO",
+      "en": "GEO"
+    },
+    "title": {
+      "tr": "Tek Satırla Yapay Zekâ Eğitimini Kapatmak: OpenAI, Google, Microsoft ve Anthropic'in Ortak robots.txt Kuralı",
+      "en": "Opting Out of AI Training in One Line: The Shared robots.txt Rule Backed by OpenAI, Google, Microsoft and Anthropic"
+    },
+    "excerpt": {
+      "tr": "Dört büyük yapay zekâ şirketi, eğitim amaçlı veri toplamayı tek bir robots.txt kuralıyla kapatmayı destekleyecek. Kural nasıl yazılır, kim ne zaman uygulayacak ve sitenizin yapay zekâ aramasında görünürlüğünü neden etkilemez?",
+      "en": "Four major AI companies will support opting out of AI training with a single robots.txt rule. How to write it, who applies it when, and why it doesn't affect your visibility in AI search."
+    },
+    "answer": {
+      "tr": "30 Ekim 2026'da OpenAI, Google, Microsoft ve Anthropic, yapay zekâ eğitimi için veri toplamayı tek bir robots.txt kuralıyla kapatmayı destekleyeceklerini açıkladı. Kural \"User-agent: __usage_ai-training\" ve \"Disallow: /\" satırlarından oluşuyor. Yalnızca eğitimi kapatıyor; ChatGPT, Claude ve Perplexity'nin arama botlarını etkilemiyor, yani siteniz yapay zekâ cevaplarında kaynak olarak çıkmaya devam edebilir. Anthropic kuralı şimdiden uyguluyor; Microsoft'un 1 Şubat 2027'de, Google'ın 2027 başında başlayacağı bildiriliyor, OpenAI ise \"önümüzdeki aylarda\" diyor.",
+      "en": "On 30 October 2026, OpenAI, Google, Microsoft and Anthropic said they will support opting out of AI-training data collection with a single robots.txt rule: \"User-agent: __usage_ai-training\" followed by \"Disallow: /\". It only covers training; it does not affect the search bots of ChatGPT, Claude or Perplexity, so your site can still be cited in AI answers. Anthropic already honours it; Microsoft is reported to start on 1 February 2027 and Google in early 2027, while OpenAI says \"in the coming months\"."
+    },
+    "body": {
+      "tr": [
+        {
+          "type": "p",
+          "text": "Bugüne kadar sitenizin içeriğinin yapay zekâ modellerini eğitmek için kullanılmasını istemiyorsanız, her şirketin botunu robots.txt dosyasında tek tek engellemeniz gerekiyordu: OpenAI için GPTBot, Anthropic için ClaudeBot, Google için Google-Extended, Apple için Applebot-Extended ve diğerleri. Yeni bir bot çıktığında listeyi güncellemek de size kalıyordu."
+        },
+        {
+          "type": "p",
+          "text": "30 Ekim 2026'da OpenAI, Google, Microsoft ve Anthropic, bunun yerine tek bir ortak kuralı destekleyeceklerini açıkladı. Kural, robots.txt'yi yöneten İnternet Mühendisliği Görev Gücü'ne (IETF) taslak olarak sunuldu."
+        },
+        {
+          "type": "h2",
+          "text": "Kural nasıl yazılır?"
+        },
+        {
+          "type": "p",
+          "text": "Sitenizin kök dizinindeki robots.txt dosyasına şu iki satırı eklemeniz yeterli:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "User-agent: __usage_ai-training",
+            "Disallow: /"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Sitenin bir bölümünü eğitime açık bırakmak isterseniz (örneğin basın kiti ya da blog), altına izin satırı ekleyebilirsiniz:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "User-agent: __usage_ai-training",
+            "Disallow: /",
+            "Allow: /blog/"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Kim, ne zaman uygulayacak?"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Anthropic (Claude): kuralı şimdiden uyguluyor.",
+            "Microsoft: 1 Şubat 2027'de başlayacağı bildiriliyor.",
+            "Google: 2027 başında başlayacağı bildiriliyor.",
+            "OpenAI (ChatGPT): \"önümüzdeki aylarda\" diyor, kesin tarih vermedi.",
+            "Meta: fikri desteklediğini söylüyor ama uygulama sözü vermedi."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Bu tarihler gelene kadar eski yöntemi bırakmayın: GPTBot, ClaudeBot ve Google-Extended engelleriniz varsa yerinde kalsın. OpenAI de yeni kuralın mevcut ayarların yerini almayacağını söylüyor."
+        },
+        {
+          "type": "h2",
+          "text": "En önemli nokta: aramayı kapatmaz"
+        },
+        {
+          "type": "p",
+          "text": "Kural yalnızca eğitim amaçlı veri toplamayı kapsıyor. ChatGPT, Claude ve Perplexity bir soruya cevap verirken kaynak sayfaları okumak için ayrı arama botları kullanır (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, PerplexityBot). Bu botlar yeni kuraldan etkilenmez. Yani \"içeriğim modellerin eğitiminde kullanılmasın ama müşteriler ChatGPT'ye sorduğunda sitem kaynak olarak çıksın\" diyen bir işletme için bu kural tam aradığı şey."
+        },
+        {
+          "type": "p",
+          "text": "Tersini yapmak, yani arama botlarını engellemek ise sitenizi yapay zekâ cevaplarından tamamen düşürür. [Türkiye'nin 100 büyük sitesini taradığımızda](/blog/turkiye-100-site-yapay-zeka-taramasi-2026) beş haber sitesinin arama botlarını da engellediğini gördük; bu sitelerin içeriği ChatGPT ve Perplexity cevaplarında kaynak olarak gösterilemiyor."
+        },
+        {
+          "type": "h2",
+          "text": "Bilmeniz gereken sınırlar"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Bir tercih bildirir, teknik bir engel değildir: robots.txt'ye uymak gönüllülük esasına dayanır.",
+            "Kural henüz resmi bir standart değil, IETF'te taslak aşamasında.",
+            "Daha önce toplanmış verileri geri almaz; yalnızca bundan sonrası için geçerlidir.",
+            "Yalnızca üretken yapay zekâ eğitimini kapsar; arama dizini ve anlık okuma ayrı kurallara tabidir."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Sizin için hangisi doğru?"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Yerel işletme, klinik, salon, otel: büyük ihtimalle eğitime de açık kalmak işinize gelir; yapay zekâ sizi ne kadar iyi tanırsa o kadar doğru önerir.",
+            "Haber sitesi, yayıncı, özgün içerik üreten: eğitimi kapatıp aramayı açık bırakmak mantıklı bir orta yol.",
+            "Her durumda: arama botlarını (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, PerplexityBot) engellemeyin."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Sitenizin robots.txt dosyasının hangi botlara ne izin verdiğini ve yeni ortak kuralı kullanıp kullanmadığını [ücretsiz site taramamızla](/site-analizi) görebilirsiniz. Kaynaklar: [SiliconANGLE](https://siliconangle.com/2026/10/30/google-anthropic-and-others-to-support-new-ai-crawling-opt-out-standard/), [Engadget](https://www.engadget.com/2303225/google-openai-anthropic-ai-crawling-controls/)."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "text": "Until now, if you didn't want your content used to train AI models, you had to block each company's bot one by one in robots.txt: GPTBot for OpenAI, ClaudeBot for Anthropic, Google-Extended for Google, Applebot-Extended for Apple and so on. Keeping that list current as new bots appeared was up to you."
+        },
+        {
+          "type": "p",
+          "text": "On 30 October 2026, OpenAI, Google, Microsoft and Anthropic said they will support a single shared rule instead. It has been submitted as a draft to the Internet Engineering Task Force (IETF), which maintains robots.txt."
+        },
+        {
+          "type": "h2",
+          "text": "How to write the rule"
+        },
+        {
+          "type": "p",
+          "text": "Add these two lines to the robots.txt file at the root of your site:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "User-agent: __usage_ai-training",
+            "Disallow: /"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "To keep part of the site open to training (a press kit or blog, say), add an allow line:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "User-agent: __usage_ai-training",
+            "Disallow: /",
+            "Allow: /blog/"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Who applies it, and when?"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Anthropic (Claude): already honours it.",
+            "Microsoft: reported to start on 1 February 2027.",
+            "Google: reported to start in early 2027.",
+            "OpenAI (ChatGPT): \"in the coming months\", no firm date.",
+            "Meta: supports the idea but hasn't committed to implementing it."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Until those dates arrive, keep your existing rules: if you block GPTBot, ClaudeBot or Google-Extended, leave those lines in place. OpenAI also says the new signal won't replace its current controls."
+        },
+        {
+          "type": "h2",
+          "text": "The key point: it doesn't turn off search"
+        },
+        {
+          "type": "p",
+          "text": "The rule only covers data collection for training. When ChatGPT, Claude and Perplexity answer a question, they read source pages with separate search bots (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, PerplexityBot). Those bots are not affected. For a business that wants to stay out of model training but still be cited when customers ask ChatGPT, this rule is exactly what it needs."
+        },
+        {
+          "type": "p",
+          "text": "Blocking search bots instead removes your site from AI answers altogether. When we [scanned Turkey's 100 biggest websites](/en/blog/turkiye-100-site-yapay-zeka-taramasi-2026), five news sites were also blocking search bots, so their content can't be cited in ChatGPT or Perplexity answers."
+        },
+        {
+          "type": "h2",
+          "text": "Limits to keep in mind"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "It states a preference, not a technical barrier: compliance with robots.txt is voluntary.",
+            "It isn't a formal standard yet; it is a draft at the IETF.",
+            "It doesn't reach back to data already collected; it only applies going forward.",
+            "It only covers generative AI training; search indexing and real-time retrieval follow separate rules."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Which choice is right for you?"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Local business, clinic, salon or hotel: staying open to training probably helps; the better AI knows you, the more accurately it recommends you.",
+            "News site, publisher or original content creator: closing training while keeping search open is a sensible middle ground.",
+            "Either way: don't block the search bots (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, PerplexityBot)."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "See which bots your robots.txt allows, and whether it uses the new shared rule, with our [free site scan](/en/site-audit). Sources: [SiliconANGLE](https://siliconangle.com/2026/10/30/google-anthropic-and-others-to-support-new-ai-crawling-opt-out-standard/), [Engadget](https://www.engadget.com/2303225/google-openai-anthropic-ai-crawling-controls/)."
+        }
+      ]
+    }
+  },
+  {
     "slug": "izmir-dis-klinigi-siteleri-yapay-zeka-taramasi-2026",
     "relatedService": "dental",
     "locales": [
