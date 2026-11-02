@@ -138,6 +138,11 @@ const SERVICE_LABEL: Record<Locale, string> = {
 
 // ── Tekil yazı sayfası ──
 const SHORT_LABEL: Record<Locale, string> = { tr: "Kısa cevap", en: "Short answer" };
+// Yazar ve güncelleme tarihi sayfada görünür (yalnızca şemada değil): AEO kontrol listesi
+const BYLINE: Record<Locale, { by: string; author: string; updated: string }> = {
+  tr: { by: "Yazan", author: "WoodstoneStudio Ekibi", updated: "Güncellendi" },
+  en: { by: "By", author: "WoodstoneStudio Team", updated: "Updated" },
+};
 const SHORT_PREFIX = /^(Kısa cevap|Short answer):\s*/i;
 
 /** Yazının doğrudan cevabı: answer alanı, yoksa "Kısa cevap:" ile başlayan ilk paragraf. */
@@ -182,10 +187,19 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
             <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.2em] text-bone-dim">
               <span>{post.category[locale]}</span>
               <span aria-hidden className="text-gray-warm">·</span>
-              <span className="text-gray-warm">{fmtDate(post.date, locale)}</span>
+              <time dateTime={post.date} className="text-gray-warm">{fmtDate(post.date, locale)}</time>
               <span aria-hidden className="text-gray-warm">·</span>
               <span className="text-gray-warm">{post.readMin} {L.readSuffix}</span>
             </div>
+            <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-gray-warm">
+              {BYLINE[locale].by}: <span className="text-bone-dim">{BYLINE[locale].author}</span>
+              {post.updated && post.updated !== post.date && (
+                <>
+                  {" · "}
+                  {BYLINE[locale].updated}: <time dateTime={post.updated}>{fmtDate(post.updated, locale)}</time>
+                </>
+              )}
+            </p>
           </Reveal>
           <Reveal delay={0.08}>
             <h1 className="mt-6 text-[34px] font-light leading-[1.12] tracking-tightest text-bone sm:text-[44px]">
