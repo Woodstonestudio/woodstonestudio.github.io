@@ -14,7 +14,7 @@ export const ORG = {
   name: "WoodstoneStudio",
   url: BASE,
   email: "info@woodstonestudio.com",
-  whatsapp: "https://wa.me/905331932068",
+  instagram: "https://www.instagram.com/woodstonestudio35",
   description:
     "WoodstoneStudio is an independent digital technology studio working with clients in Turkey, Albania and worldwide. It designs and builds websites, e-commerce stores, mobile apps (iOS & Android), SaaS products and AI solutions, and offers SEO and social media management. The site is bilingual: Turkish (default, /) and English (/en).",
   languages: ["tr", "en"],
@@ -70,7 +70,7 @@ export function buildLlmsTxt(): string {
   L.push(`- [About WoodstoneStudio (TR)](${BASE}/hakkimizda) · [EN](${BASE}/en/about)`);
   L.push("- Type: digital technology studio (web, e-commerce, mobile, AI, custom software, SEO)");
   L.push("- Service area: Turkey, Albania and worldwide (remote)");
-  L.push(`- Contact: ${ORG.email} · [WhatsApp](${ORG.whatsapp})`);
+  L.push(`- Contact: ${ORG.email} · [Instagram](${ORG.instagram})`);
   L.push("");
   L.push("## Services", "");
   for (const s of SERVICES) L.push(`- [${s.name}](${BASE}${s.en}): ${s.detail} Turkish page: [${s.tr}](${BASE}${s.tr})`);
@@ -119,7 +119,7 @@ export function buildSummary() {
     type: "Digital technology studio",
     languages: ORG.languages,
     areaServed: ["Turkey", "Albania", "Worldwide"],
-    contact: { email: ORG.email, whatsapp: ORG.whatsapp },
+    contact: { email: ORG.email, instagram: ORG.instagram },
     sameAs: ORG.sameAs,
     services: SERVICES.map((s) => ({ name: s.name, url: BASE + s.en, urlTr: BASE + s.tr })),
     keyPages: TOOLS.map((t) => ({ name: t.name, url: BASE + t.en, urlTr: BASE + t.tr })),
@@ -135,7 +135,7 @@ export function buildService() {
     description: "Design and development studio for websites, e-commerce, mobile apps, SaaS and AI solutions.",
     capabilities: SERVICES.map((s) => ({ name: s.name, description: s.detail, url: BASE + s.en, urlTr: BASE + s.tr })),
     pricing: { calculator: `${BASE}/en/pricing-calculator`, calculatorTr: `${BASE}/fiyat-hesaplama` },
-    contact: { email: ORG.email, whatsapp: ORG.whatsapp },
+    contact: { email: ORG.email, instagram: ORG.instagram },
   };
 }
 

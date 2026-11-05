@@ -136,7 +136,7 @@ const T = {
     cta: "Bunları sizin için düzeltelim",
     ctaLead: "Kritik ve önemli maddelerin çoğu birkaç günde, mevcut siteyi bozmadan düzelir.",
     ctaQuote: "Teklif isteyin",
-    ctaWa: "WhatsApp'tan yazın",
+    ctaWa: "Instagram'dan yazın",
     scannedAt: "Tarama",
   },
   en: {
@@ -200,12 +200,12 @@ const T = {
     cta: "Let us fix these for you",
     ctaLead: "Most critical and important items are fixed within days without breaking the current site.",
     ctaQuote: "Request a quote",
-    ctaWa: "Message on WhatsApp",
+    ctaWa: "Message us on Instagram",
     scannedAt: "Scanned",
   },
 } as const;
 
-const WA = "https://wa.me/905331932068";
+const WA = "https://www.instagram.com/woodstonestudio35";
 const INPUT =
   "w-full rounded-2xl border border-line bg-transparent px-5 py-3.5 text-[15px] text-bone placeholder:text-gray-warm transition-colors focus:border-bone-dim focus:outline-none";
 const BTN =
@@ -448,7 +448,7 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
               </a>
             )}
             {error === "rate_limited" && (
-              <a className="underline" href={WA}>
+              <a className="underline" href={WA} target="_blank" rel="noopener noreferrer">
                 {t.ctaWa}
               </a>
             )}
@@ -467,7 +467,7 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
         <h3 className="mt-4 text-2xl font-light tracking-tight text-bone">{t.blockedTitle}</h3>
         <p className="mt-3 text-[15px] leading-[1.7] text-gray-warm">{t.blockedLead}</p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a href={WA} className={BTN}>
+          <a href={WA} target="_blank" rel="noopener noreferrer" className={BTN}>
             {t.ctaWa} →
           </a>
           <button type="button" onClick={reset} className={GHOST}>
@@ -761,7 +761,7 @@ export function SiteScan({ locale = "tr" }: { locale?: Locale }) {
         <p className="text-xl font-light tracking-tight">{t.cta}</p>
         <p className="mt-2 text-[14px] leading-[1.7] text-[#F3F0EA]/70">{t.ctaLead}</p>
         <div className="mt-5 flex flex-wrap gap-3">
-          <a href={WA} className="inline-flex items-center gap-2 rounded-full bg-[#F3F0EA] px-6 py-3 text-sm font-medium text-[#26231E] transition-transform hover:-translate-y-px">
+          <a href={WA} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#F3F0EA] px-6 py-3 text-sm font-medium text-[#26231E] transition-transform hover:-translate-y-px">
             {t.ctaWa} →
           </a>
           <a href={contactHref} className="inline-flex items-center gap-2 rounded-full border border-[#F3F0EA]/30 px-6 py-3 text-sm text-[#F3F0EA] transition-colors hover:border-[#F3F0EA]/60">

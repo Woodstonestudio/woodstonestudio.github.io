@@ -49,7 +49,7 @@ export const izmirTR: ServiceContent = {
   ],
   processTitle: ["Nasıl", "ilerliyoruz?"],
   process: [
-    { step: "01", title: "Ön görüşme", desc: "WhatsApp ya da görüntülü görüşmeyle işinizi, müşterinizi ve mevcut sitenizi dinliyoruz. Ofise gelmeniz gerekmez. Ücretsiz." },
+    { step: "01", title: "Ön görüşme", desc: "E-posta, Instagram ya da görüntülü görüşmeyle işinizi, müşterinizi ve mevcut sitenizi dinliyoruz. Ofise gelmeniz gerekmez. Ücretsiz." },
     { step: "02", title: "Yazılı teklif", desc: "Sayfa listesi, özellikler, süre ve fiyat tek bir yazılı teklifte. Gizli kalem yok; ödeme yarısı başta, yarısı teslimde." },
     { step: "03", title: "Tasarım ve geliştirme", desc: "İşinize özel tasarım, modern altyapı (Next.js) ile hızlı ve güvenli kod. Her aşamada önizleme bağlantısıyla siteyi telefonunuzda görürsünüz." },
     { step: "04", title: "Yayın ve Google", desc: "Alan adı, barındırma, Search Console ve Google İşletme Profili bağlantısı. Yayından sonra hangi aramalardan ziyaretçi geldiğini birlikte izliyoruz." },
@@ -104,7 +104,7 @@ export const izmirTR: ServiceContent = {
   ],
   faqTitle: ["Sık sorulan", "sorular"],
   faq: [
-    { q: "İzmir'de ofisiniz var mı, yüz yüze görüşüyor musunuz?", a: "Uzaktan çalışıyoruz. Ön görüşme, onaylar ve teslim WhatsApp ve görüntülü görüşmeyle ilerler; siteyi her aşamada önizleme bağlantısıyla telefonunuzdan görürsünüz. Bu sayede ofis maliyeti fiyata yansımaz." },
+    { q: "İzmir'de ofisiniz var mı, yüz yüze görüşüyor musunuz?", a: "Uzaktan çalışıyoruz. Ön görüşme, onaylar ve teslim e-posta, Instagram ve görüntülü görüşmeyle ilerler; siteyi her aşamada önizleme bağlantısıyla telefonunuzdan görürsünüz. Bu sayede ofis maliyeti fiyata yansımaz." },
     { q: "Web sitesi kaç günde hazır olur?", a: "Tek sayfalık tanıtım sitesi genellikle 1–2 haftada, 5–10 sayfalık kurumsal site 3–4 haftada, e-ticaret sitesi 4–8 haftada yayına girer. Süreyi en çok içeriğin (metin, fotoğraf) hazır olması belirler." },
     { q: "Fiyata neler dahil?", a: "Tasarım, geliştirme, mobil uyum, temel teknik SEO, Google Search Console kurulumu ve yayın. Alan adı ve barındırma sizin adınıza açılır; maliyeti teklifte ayrıca yazılır." },
     { q: "Mevcut sitemi yeniletebilir miyim?", a: "Evet. Yenilemede eski sayfa adreslerini yenilerine yönlendirerek mevcut Google sıralamalarınızı koruyoruz. Önce ücretsiz site analiziyle sorunlu noktaları birlikte görüyoruz." },

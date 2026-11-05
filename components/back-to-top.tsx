@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 /**
- * Yukarı çık — belirli bir kaydırmadan sonra sağ altta (WhatsApp butonunun
+ * Yukarı çık — belirli bir kaydırmadan sonra sağ altta (Instagram butonunun
  * üstünde) belirir. Tıklayınca sayfa başına yumuşakça döner.
  */
 export function BackToTop({ label = "Yukarı çık" }: { label?: string }) {

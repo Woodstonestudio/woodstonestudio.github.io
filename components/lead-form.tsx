@@ -44,7 +44,7 @@ const T = {
     send: "Gönder",
     sending: "Gönderiliyor…",
     ok: "Teşekkürler! Talebiniz bize ulaştı, en kısa sürede dönüş yapacağız.",
-    err: "Gönderilemedi. Lütfen tekrar deneyin ya da doğrudan e-posta / WhatsApp ile yazın:",
+    err: "Gönderilemedi. Lütfen tekrar deneyin ya da doğrudan e-posta / Instagram ile yazın:",
     limited: "Çok fazla deneme yapıldı. Lütfen biraz sonra tekrar deneyin ya da e-posta ile yazın:",
     invalid: "Lütfen zorunlu alanları kontrol edin (ad, geçerli e-posta, en az birkaç kelimelik mesaj ve onay).",
   },
@@ -66,7 +66,7 @@ const T = {
     send: "Send",
     sending: "Sending…",
     ok: "Thank you! We've received your request and will get back to you shortly.",
-    err: "Couldn't send. Please try again or reach us directly by email / WhatsApp:",
+    err: "Couldn't send. Please try again or reach us directly by email / Instagram:",
     limited: "Too many attempts. Please try again later or email us:",
     invalid: "Please check the required fields (name, valid email, a short message and consent).",
   },
@@ -199,7 +199,7 @@ export function LeadForm({ locale = "tr" }: { locale?: Locale }) {
             <>
               <a className="underline" href="mailto:info@woodstonestudio.com">info@woodstonestudio.com</a>
               {" · "}
-              <a className="underline" href="https://wa.me/905331932068" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a className="underline" href="https://www.instagram.com/woodstonestudio35" target="_blank" rel="noopener noreferrer">Instagram</a>
             </>
           )}
         </p>

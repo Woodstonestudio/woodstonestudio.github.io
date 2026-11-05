@@ -3,7 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "@/lib/fonts/mono";
 import "../globals.css";
 import { Spotlight } from "@/components/fx/spotlight";
-import { WhatsAppButton } from "@/components/whatsapp-button";
+import { InstagramButton } from "@/components/instagram-button";
 import { BackToTop } from "@/components/back-to-top";
 import { CookieConsent } from "@/components/cookie-consent";
 import { VisitTracker } from "@/components/visit-tracker";
@@ -211,7 +211,7 @@ export default function RootLayout({
         />
         <Spotlight />
         <div className="relative z-10">{children}</div>
-        <WhatsAppButton label="Message us on WhatsApp" />
+        <InstagramButton label="Message us on Instagram" />
         <BackToTop label="Back to top" />
         <VisitTracker />
         <CookieConsent locale="en" />
