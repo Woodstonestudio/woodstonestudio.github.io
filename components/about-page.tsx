@@ -139,6 +139,18 @@ export function AboutPage({ c }: { c: AboutContent }) {
               <Reveal delay={0.1}>
                 <div className="lg:pt-3">
                   <p className="max-w-md text-[16px] leading-[1.8] text-gray-warm">{c.closingLead}</p>
+                  {/* Şirket bilgileri (resmi unvan ve kayıtlı adres) */}
+                  <address className="mt-6 max-w-md text-[14px] not-italic leading-[1.7] text-gray-warm">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-bone-dim">
+                      {c.locale === "tr" ? "Şirket bilgileri" : "Company details"}
+                    </span>
+                    <br />
+                    WOODSTONESTUDIO LLC
+                    <br />
+                    30 N Gould St # N, Sheridan, WY 82801{c.locale === "tr" ? ", ABD" : ", USA"}
+                    <br />
+                    <a href="mailto:info@woodstonestudio.com" className="transition-colors hover:text-bone">info@woodstonestudio.com</a>
+                  </address>
                   <div className="mt-8 flex flex-wrap items-center gap-5">
                     <a
                       href={`${HOME[c.locale]}#contact`}

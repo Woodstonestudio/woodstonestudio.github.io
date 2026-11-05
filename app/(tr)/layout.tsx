@@ -103,6 +103,7 @@ export default function RootLayout({
               "@type": "Organization",
               "@id": "https://woodstonestudio.com/#organization",
               name: "WoodstoneStudio",
+              legalName: "WOODSTONESTUDIO LLC",
               url: "https://woodstonestudio.com",
               logo: "https://woodstonestudio.com/brand/logo.png",
               image: "https://woodstonestudio.com/og-cover.jpg",

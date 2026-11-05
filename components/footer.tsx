@@ -51,7 +51,7 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-warm">
-            © {year} WoodstoneStudio
+            © {year} WOODSTONESTUDIO LLC
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <a
