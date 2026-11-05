@@ -39,13 +39,13 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
           </nav>
         </div>
 
-        {/* İletişim: tıklanabilir e-posta ve telefon (tarayıcı ve botlar için açık iletişim sinyali) */}
+        {/* İletişim: tıklanabilir e-posta ve WhatsApp (telefon numarası yazılmaz) (tarayıcı ve botlar için açık iletişim sinyali) */}
         <address className="mt-10 flex flex-wrap gap-x-8 gap-y-3 not-italic">
           <a href="mailto:info@woodstonestudio.com" className="text-sm text-gray-warm transition-colors hover:text-bone">
             info@woodstonestudio.com
           </a>
-          <a href="tel:+905331932068" className="text-sm text-gray-warm transition-colors hover:text-bone">
-            +90 533 193 20 68
+          <a href="https://wa.me/905331932068" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-warm transition-colors hover:text-bone">
+            WhatsApp
           </a>
         </address>
 
