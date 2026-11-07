@@ -139,9 +139,10 @@ const SERVICE_LABEL: Record<Locale, string> = {
 // ── Tekil yazı sayfası ──
 const SHORT_LABEL: Record<Locale, string> = { tr: "Kısa cevap", en: "Short answer" };
 // Yazar ve güncelleme tarihi sayfada görünür (yalnızca şemada değil): AEO kontrol listesi
-const BYLINE: Record<Locale, { by: string; author: string; updated: string }> = {
-  tr: { by: "Yazan", author: "WoodstoneStudio Ekibi", updated: "Güncellendi" },
-  en: { by: "By", author: "WoodstoneStudio Team", updated: "Updated" },
+// Yazar kurum olarak görünür (kurgusal kişi adı yok); "Hakkımızda" sayfasına bağlanır
+const BYLINE: Record<Locale, { by: string; author: string; href: string; updated: string }> = {
+  tr: { by: "Yazan", author: "WoodstoneStudio", href: "/hakkimizda", updated: "Güncellendi" },
+  en: { by: "By", author: "WoodstoneStudio", href: "/en/about", updated: "Updated" },
 };
 const SHORT_PREFIX = /^(Kısa cevap|Short answer):\s*/i;
 
@@ -168,7 +169,7 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
     inLanguage: locale,
-    author: { "@type": "Organization", name: "WoodstoneStudio", url: SITE },
+    author: { "@type": "Organization", "@id": `${SITE}/#organization`, name: "WoodstoneStudio", url: `${SITE}${BYLINE[locale].href}` },
     publisher: {
       "@type": "Organization",
       name: "WoodstoneStudio",
@@ -192,7 +193,10 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
               <span className="text-gray-warm">{post.readMin} {L.readSuffix}</span>
             </div>
             <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-gray-warm">
-              {BYLINE[locale].by}: <span className="text-bone-dim">{BYLINE[locale].author}</span>
+              {BYLINE[locale].by}:{" "}
+              <Link href={BYLINE[locale].href} rel="author" className="text-bone-dim underline-offset-4 hover:underline">
+                {BYLINE[locale].author}
+              </Link>
               {post.updated && post.updated !== post.date && (
                 <>
                   {" · "}

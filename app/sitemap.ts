@@ -51,8 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (hasEn) languages.en = `${BASE}/en/blog/${p.slug}`;
     if (hasTr && hasEn) languages["x-default"] = languages.tr;
     const alternates = hasTr && hasEn ? { languages } : undefined;
-    if (hasTr) entries.push({ url: languages.tr, lastModified: p.date, changeFrequency: "yearly", priority: 0.6, alternates });
-    if (hasEn) entries.push({ url: languages.en, lastModified: p.date, changeFrequency: "yearly", priority: 0.6, alternates });
+    if (hasTr) entries.push({ url: languages.tr, lastModified: p.updated ?? p.date, changeFrequency: "yearly", priority: 0.6, alternates });
+    if (hasEn) entries.push({ url: languages.en, lastModified: p.updated ?? p.date, changeFrequency: "yearly", priority: 0.6, alternates });
   }
 
   return entries;

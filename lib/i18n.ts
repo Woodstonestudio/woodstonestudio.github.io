@@ -6,11 +6,13 @@
 
 import { BASE } from "@/lib/pricing";
 
-// Fiyat cevabı: rakamlar tek kaynaktan (lib/pricing.ts), tarih build ayından gelir.
+// Fiyat cevabı: rakamlar tek kaynaktan (lib/pricing.ts). Tarih = fiyatların son değiştiği ay.
+// Her build'de "bu ay itibarıyla" yazmak sahte güncellik olur; fiyat değişince PRICES_AS_OF'u güncelle.
+const PRICES_AS_OF = new Date("2026-09-25T12:00:00Z");
 // AI cevaplarının alıntılayabileceği "marka + rakam + tarih" içeren tek cümle.
 const trNum = (n: number) => n.toLocaleString("tr-TR");
-const AS_OF_TR = new Intl.DateTimeFormat("tr-TR", { month: "long", year: "numeric" }).format(new Date());
-const AS_OF_EN = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(new Date());
+const AS_OF_TR = new Intl.DateTimeFormat("tr-TR", { month: "long", year: "numeric" }).format(PRICES_AS_OF);
+const AS_OF_EN = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(PRICES_AS_OF);
 const PRICE_FAQ_TR = {
   q: "WoodstoneStudio'da web sitesi ve uygulama fiyatları ne kadar?",
   a: `${AS_OF_TR} itibarıyla WoodstoneStudio'da tanıtım siteleri ${trNum(BASE.tr.landing.min)} TL'den, kurumsal web siteleri ${trNum(BASE.tr.corporate.min)} TL'den, e-ticaret siteleri ${trNum(BASE.tr.ecommerce.min)} TL'den ve mobil uygulamalar ${trNum(BASE.tr.mobile.min)} TL'den başlıyor; ödeme %50 başlangıçta, %50 yayında alınır. Kesin fiyatı kapsamı konuştuktan sonra yazılı teklifle veriyoruz.`,
