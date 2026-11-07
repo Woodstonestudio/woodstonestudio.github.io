@@ -20,7 +20,7 @@ const BASE = "https://woodstonestudio.com";
 const MAP = {
   // Arnavutça bölüm (Eylül 2026'da kaldırıldı) → İngilizce karşılıkları
   "/sq": "/en",
-  "/sq/dizajn-web": "/en/web-design",
+  // "/sq/dizajn-web" Kasım 2026'da gerçek Arnavutça fiyat sayfası olarak geri açıldı (app/(sq))
   "/sq/aplikacione-mobile": "/en/mobile-apps",
   "/sq/zhvillim-saas": "/en/saas-development",
   "/sq/inteligjence-artificiale": "/en/ai-solutions",
@@ -54,7 +54,15 @@ const OLD_SQ_POSTS = [
 const fileFor = (path) => join(OUT, path === "/" ? "index.html" : `${path.replace(/^\//, "")}.html`);
 const exists = (path) => existsSync(fileFor(path));
 
+// Arnavutluk fiyat yazısı → yeni Arnavutça fiyat sayfası (aynı soru: "faqe interneti Shqipëri çmimi")
+const SQ_PRICE_PAGE = "/sq/dizajn-web";
+
 for (const slug of OLD_SQ_POSTS) {
+  if (slug === "faqe-interneti-shqiperi-cmimi" && exists(SQ_PRICE_PAGE)) {
+    MAP[`/sq/blog/${slug}`] = SQ_PRICE_PAGE;
+    if (!exists(`/en/blog/${slug}`)) MAP[`/en/blog/${slug}`] = SQ_PRICE_PAGE;
+    continue;
+  }
   MAP[`/sq/blog/${slug}`] = exists(`/en/blog/${slug}`) ? `/en/blog/${slug}` : "/en/blog";
   // İngilizcesi kaldırılmış eski yazılar da 404 veriyordu
   if (!exists(`/en/blog/${slug}`)) MAP[`/en/blog/${slug}`] = "/en/blog";

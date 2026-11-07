@@ -47,6 +47,9 @@ export function Footer({ t = trSections.footer }: { t?: SectionsDict["footer"] }
           <a href="https://www.instagram.com/woodstonestudio35" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-warm transition-colors hover:text-bone">
             Instagram
           </a>
+          <a href="/sq/dizajn-web" hrefLang="sq" className="text-sm text-gray-warm transition-colors hover:text-bone">
+            Shqip
+          </a>
         </address>
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8">
