@@ -231,6 +231,35 @@ export function BlogPostPage({ post, locale }: { post: BlogPost; locale: Locale 
                   </Reveal>
                 );
               }
+              if (block.type === "table") {
+                return (
+                  <Reveal key={i}>
+                    <div className="overflow-x-auto">
+                      <table className="w-full border-collapse text-left text-[15px]">
+                        <thead>
+                          <tr className="border-b border-line font-mono text-[11px] uppercase tracking-[0.16em] text-bone-dim">
+                            {block.head.map((h) => (
+                              <th key={h} className="py-3 pr-4 font-normal">{h}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {block.rows.map((row, ri) => (
+                            <tr key={ri} className="border-b border-line align-top">
+                              {row.map((cell, ci) => (
+                                <td key={ci} className={`py-3.5 pr-4 ${ci === 0 ? "min-w-[9rem] text-bone" : ci === row.length - 1 ? "whitespace-nowrap text-gray-warm" : "text-gray-warm"}`}>
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    {block.note && <p className="mt-3 text-[13.5px] leading-[1.6] text-gray-warm">{block.note}</p>}
+                  </Reveal>
+                );
+              }
               if (block.type === "ul") {
                 return (
                   <Reveal key={i}>

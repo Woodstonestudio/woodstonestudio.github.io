@@ -1,6 +1,13 @@
 import type { Locale } from "@/components/service-page";
 // Growth panelinin otomatik yayınladığı yazılar (GitHub API ile bu JSON'a eklenir).
 import generatedPosts from "./blog-posts.json";
+import { BASE as PRICE, FEATURES, CARE_MONTHLY, WEEKS, type ProjectKey } from "./pricing";
+
+/** Fiyat metinleri lib/pricing.ts'ten gelir; rakam değişince yazı da güncellenir */
+const tl = (n: number) => `${n.toLocaleString("tr-TR")} ₺`;
+const trRange = (k: ProjectKey) => `${PRICE.tr[k].min.toLocaleString("tr-TR")}–${tl(PRICE.tr[k].max)}`;
+const trWeeks = (k: ProjectKey) => `${WEEKS[k].min}–${WEEKS[k].max} hafta`;
+const trFeat = (k: keyof (typeof FEATURES)["tr"]) => `${FEATURES.tr[k].min.toLocaleString("tr-TR")}–${tl(FEATURES.tr[k].max)}`;
 
 export type BlogPost = {
   slug: string; // dil-bağımsız kısa kimlik (URL'de dile göre önek eklenir)
@@ -23,7 +30,9 @@ export type BlogPost = {
 export type Block =
   | { type: "h2"; text: string }
   | { type: "p"; text: string }
-  | { type: "ul"; items: string[] };
+  | { type: "ul"; items: string[] }
+  /** Başlık satırlı tablo — yapay zekâ aramaları tabloları daha sık alıntılıyor */
+  | { type: "table"; head: string[]; rows: string[][]; note?: string };
 
 export const BLOG_BASE: Record<Locale, string> = {
   tr: "/blog",
@@ -787,40 +796,66 @@ const handwrittenPosts: BlogPost[] = [
     relatedService: "web",
     locales: ["tr"],
     date: "2026-09-07",
-    updated: "2026-10-02",
+    updated: "2026-11-07",
     readMin: 5,
     category: { tr: "Web", en: "" },
     title: {
-      tr: "İzmir'de web tasarım fiyatları: neye göre değişir?",
+      tr: "İzmir web tasarım fiyatları 2026: site türüne göre fiyat tablosu",
       en: "",
     },
     excerpt: {
-      tr: "İzmir'de web sitesi yaptırmak isteyenlerin en çok merak ettiği soru: fiyat. Bir teklifin arkasındaki gerçek etkenleri ve doğru bütçeyi nasıl planlayacağınızı anlatıyoruz.",
+      tr: "İzmir'de web sitesi yaptırmak ne kadar tutar? Tanıtım sitesi, kurumsal site, e-ticaret ve randevu sistemi için 2026 fiyat aralıkları, süreler ve uygun fiyatlı bir sitede mutlaka olması gerekenler.",
       en: "",
     },
     answer: {
-      tr: "İzmir'de web tasarım fiyatları kapsam, sayfa sayısı, hazır tema ya da özel tasarım tercihi, özel işlevler ve SEO'nun dahil olup olmamasına göre değişir. WoodstoneStudio'da tanıtım siteleri 15.000 ₺'den, kurumsal siteler 30.000 ₺'den başlar; kesin fiyat kapsam netleşince yazılı olarak verilir.",
+      tr: `Eylül 2026 itibarıyla WoodstoneStudio'da İzmir'deki işletmeler için tanıtım sitesi ${trRange("landing")}, kurumsal web sitesi ${trRange("corporate")}, e-ticaret sitesi ${trRange("ecommerce")}, online randevu sistemi ${trRange("booking")} arasında. En uygun fiyatlı seçenek 1–5 sayfalık tanıtım sitesidir ve ${trWeeks("landing")}da yayına girer. Kesin fiyatı kapsam netleşince yazılı teklifle veriyoruz.`,
     },
     body: {
       en: [],
       tr: [
-        { type: "p", text: "İzmir'de bir işletme sahibiyseniz ve web sitesi yaptırmayı düşünüyorsanız, aklınızdaki ilk soru büyük ihtimalle şudur: \"Ne kadar tutar?\" Aldığınız teklifler birbirinden çok farklı çıkabilir ve bu kafa karıştırıcıdır. İşte fiyatı belirleyen gerçek etkenler." },
-        { type: "h2", text: "Fiyatlar neden bu kadar farklı?" },
-        { type: "p", text: "Çünkü \"web sitesi\" tek bir şey değil. Tek sayfalık bir tanıtım sitesiyle, onlarca sayfalı, çok dilli, e-ticaretli bir kurumsal site arasında dağlar kadar fark vardır. Teklifleri karşılaştırmadan önce aşağıdaki etkenleri bilmek işinizi kolaylaştırır." },
-        { type: "h2", text: "1. Kapsam ve sayfa sayısı" },
-        { type: "p", text: "Tek sayfalık landing, 5 sayfalık kurumsal site, 20 sayfalık büyük kurumsal site — hepsi farklı iş yüküdür. Ne kadar çok sayfa ve içerik, o kadar yüksek maliyet." },
-        { type: "h2", text: "2. Hazır tema mı, özel tasarım mı?" },
-        { type: "p", text: "Hazır bir şablon ucuzdur ama binlerce siteye benzer. Markanıza özel tasarım daha pahalıdır ama sizi rakiplerinizden ayırır. İzmir gibi rekabetin yoğun olduğu bir pazarda, özel tasarım çoğu zaman kendini amorti eder." },
-        { type: "h2", text: "3. Özel işlevler" },
-        { type: "p", text: "Temel fiyatın üstüne, her özel işlev maliyeti artırır:" },
-        { type: "ul", items: ["Çok dilli yapı (Türkçe, İngilizce, ihtiyaca göre başka diller)", "E-ticaret: ürün, sepet, online ödeme", "Randevu / rezervasyon sistemi", "Kendi içeriğinizi güncelleyebileceğiniz yönetim paneli"] },
-        { type: "h2", text: "4. SEO ve hız" },
-        { type: "p", text: "Sitenin Google'da çıkması ve hızlı açılması kendiliğinden olmaz. Teknik SEO ve performans, iyi bir teklife dahil olmalıdır. Ucuz tekliflerde bunlar genellikle atlanır ve sonradan \"neden Google'da çıkmıyorum?\" derdine dönüşür." },
-        { type: "h2", text: "5. Yayın sonrası bakım" },
-        { type: "p", text: "Site yayına girince iş bitmez. Güncelleme, küçük değişiklik ve teknik destek için bir anlaşma olup olmadığını baştan sorun. Ucuz tekliflerin çoğu burada eksik kalır." },
-        { type: "h2", text: "İzmir için gerçekçi bir bakış" },
-        { type: "p", text: "Kaba bir rehber: sade ama profesyonel bir kurumsal site birkaç yüz eurodan (ya da TL karşılığından) başlar; özel tasarımlı, çok sayfalı veya çok dilli, SEO'lu bir site daha yukarıdadır; e-ticaret ve özel işlevler fiyatı daha da artırır. Doğru soru \"en ucuz hangisi?\" değil, \"bana gerçekten ne lazım ve teklif bunu net anlatıyor mu?\" olmalı." },
-        { type: "p", text: "İzmir'deki işletmelerle ve Türkiye'nin her yerinden müşteriyle uzaktan çalışıyoruz. Güncel başlangıç fiyatlarımızı ve İzmir'e özgü ihtiyaçları [İzmir web tasarım](/izmir-web-tasarim) sayfasında, kendi projenizin tahmini maliyetini [fiyat hesaplama](/fiyat-hesaplama) aracında görebilirsiniz. Ücretsiz ön görüşmede kapsamı ve maliyeti birlikte netleştirebiliriz; gizli kalem olmadan." },
+        { type: "p", text: "Web sitesi tekliflerinin birbirinden bu kadar farklı çıkmasının sebebi, \"web sitesi\" denince herkesin başka bir şey anlaması. Bütçenizi planlayabilmeniz için kendi fiyatlarımızı açıkça paylaşıyoruz; aldığınız diğer teklifleri karşılaştırırken de aynı tabloyu kullanabilirsiniz." },
+        { type: "h2", text: "2026 fiyat tablosu" },
+        {
+          type: "table",
+          head: ["Site türü", "Fiyat", "Süre"],
+          rows: [
+            ["Tanıtım sitesi (1–5 sayfa)", trRange("landing"), trWeeks("landing")],
+            ["Kurumsal web sitesi", trRange("corporate"), trWeeks("corporate")],
+            ["E-ticaret sitesi", trRange("ecommerce"), trWeeks("ecommerce")],
+            ["Online randevu sistemi (salon, klinik, spor salonu)", trRange("booking"), trWeeks("booking")],
+            ["Mobil uygulama (iOS ve Android)", `${tl(PRICE.tr.mobile.min)}'den başlar`, trWeeks("mobile")],
+          ],
+          note: "Tek dil ve standart sayfa sayısı için tahmini aralıklar. Fiyatlar: Eylül 2026.",
+        },
+        { type: "h2", text: "Uygun fiyatlı bir sitede olması gerekenler" },
+        { type: "p", text: "En ucuz teklif her zaman en uygun teklif değildir. Fiyat ne olursa olsun şunlar teklifte yazılı olmalı:" },
+        { type: "ul", items: [
+          "Telefonda düzgün görünen ve hızlı açılan tasarım",
+          "Temel SEO: sayfa başlıkları, açıklamalar, yapısal veri ve Google Search Console kaydı",
+          "Ücretsiz SSL sertifikası (adres çubuğunda kilit, https)",
+          "Alan adı ve hosting hesabının sizin adınıza açılması; ajansla yollarınız ayrılırsa siteniz sizde kalır",
+          "Yayından sonra küçük değişiklikleri kimin, hangi ücretle yapacağı",
+        ] },
+        { type: "h2", text: "Fiyatı neler değiştirir?" },
+        { type: "ul", items: [
+          "Sayfa sayısı: 6–10 sayfa tabanı yaklaşık %25, 11–20 sayfa yaklaşık %60 artırır.",
+          "Ek dil: İngilizce gibi her ek dil yaklaşık %15 ekler; turistle çalışan otel, restoran ve kliniklerde genellikle gerekir.",
+          `Randevu ya da rezervasyon modülü: ${trFeat("booking")}`,
+          `Online ödeme: ${trFeat("payment")}`,
+          `Blog ve içerik yönetimi: ${trFeat("blog")}`,
+          "Hazır tema ya da özel tasarım: hazır tema ucuzdur ama binlerce siteye benzer; fiyatlarımız markanıza özel tasarım içindir.",
+        ] },
+        { type: "h2", text: "Her yıl ödenenler" },
+        { type: "p", text: `Tasarım ve geliştirme bir kerelik ödenir. Her yıl yalnızca alan adı ve hosting yenilenir. Güncelleme, yedekleme ve küçük değişiklikleri kapsayan bakım isteğe bağlıdır ve ayda ${CARE_MONTHLY.tr.min.toLocaleString("tr-TR")}–${tl(CARE_MONTHLY.tr.max)} arasındadır. Ayrıntılar için [web sitesi yıllık ücretleri](/blog/web-sitesi-yillik-ucretleri) yazımıza bakabilirsiniz.` },
+        { type: "h2", text: "Teklifleri karşılaştırırken sorulacak 5 soru" },
+        { type: "ul", items: [
+          "Fiyata kaç sayfa ve hangi özellikler dahil?",
+          "Tasarım markama özel mi, hazır tema mı?",
+          "SEO ve hız çalışması teklife dahil mi?",
+          "Alan adı, hosting ve sitenin dosyaları kimin adına olacak?",
+          "Yayından sonra bir metin ya da fotoğraf değiştirmek ne kadar sürer ve ücretli mi?",
+        ] },
+        { type: "p", text: "İzmir'deki işletmelerle uzaktan çalışıyoruz; ön görüşme, onaylar ve teslim e-posta ve görüntülü görüşmeyle ilerler. İzmir'e özel paketlerimiz [İzmir web tasarım](/izmir-web-tasarim) sayfasında. Kendi projenizin tahmini fiyatını [fiyat hesaplama](/fiyat-hesaplama) aracında görebilir, mevcut sitenizi [ücretsiz site analizi](/site-analizi) ile kontrol edebilirsiniz." },
       ],
     },
   },
