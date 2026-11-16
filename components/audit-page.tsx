@@ -41,7 +41,7 @@ const C = {
       title: "Aynı denetimi kendi bilgisayarınızda yapın",
       lead: "GEO Ajan Ekibi, bu sayfadaki taramanın yöntemini Claude'a taşır: sitenizi ya da müşterinizin sitesini 78 sinyalle ölçer, yapıştırmaya hazır düzeltmeleri üretir ve sitenizi seçtiğiniz rakiplerle karşılaştırır. Her raporu bağımsız bir denetçi ajan kanıta karşı kontrol eder.",
       points: ["78 sinyal, 0–100 puan, öncelikli düzeltme listesi", "robots.txt, llms.txt, JSON-LD ve SSS blokları hazır", "Rakip karşılaştırması ve müşteriye verilecek rapor", "Türkçe ve İngilizce, tek seferlik ödeme"],
-      buy: "Tam sürüm · 19,99 $",
+      buy: "Tam sürüm · 9,99 $",
       free: "Ücretsiz sürüm (24 sinyal)",
       note: "Claude Code ya da Claude uygulaması ve Python 3 gerekir. Ödeme Polar üzerinden alınır.",
     },
@@ -91,7 +91,7 @@ const C = {
       title: "Run the same audit on your own machine",
       lead: "GEO Agent Team brings this scanner's method into Claude: it measures your site or a client's site with 78 signals, produces paste-ready fixes and benchmarks the site against competitors you name. An independent reviewer agent checks every report against the evidence.",
       points: ["78 signals, 0–100 score, prioritised fix list", "Ready robots.txt, llms.txt, JSON-LD and FAQ blocks", "Competitor benchmark and a client-ready report", "Turkish and English, one-time payment"],
-      buy: "Full version · $19.99",
+      buy: "Full version · $9.99",
       free: "Free version (24 signals)",
       note: "Requires Claude Code or the Claude app and Python 3. Payment is handled by Polar.",
     },
@@ -126,7 +126,7 @@ export function AuditPage({ locale }: { locale: Locale }) {
     description: c.kit.lead,
     url: `https://woodstonestudio.com${PATH[l]}`,
     publisher: { "@id": "https://woodstonestudio.com/#organization" },
-    offers: { "@type": "Offer", price: "19.99", priceCurrency: "USD", url: "https://buy.polar.sh/polar_cl_f2U4MFgb5c5drxsz566CbomAj2BGhgQ2Ou8qG3Wf2CZ", availability: "https://schema.org/InStock" },
+    offers: { "@type": "Offer", price: "9.99", priceCurrency: "USD", url: "https://buy.polar.sh/polar_cl_f2U4MFgb5c5drxsz566CbomAj2BGhgQ2Ou8qG3Wf2CZ", availability: "https://schema.org/InStock" },
   };
   const faqSchema = {
     "@context": "https://schema.org",

@@ -81,7 +81,7 @@ export function buildLlmsTxt(): string {
   for (const t of TOOLS) L.push(`- [${t.name}](${BASE}${t.en}) · [Türkçe](${BASE}${t.tr})`);
   L.push("");
   L.push("## Products", "");
-  L.push(`- [GEO Agent Team for Claude](https://buy.polar.sh/polar_cl_f2U4MFgb5c5drxsz566CbomAj2BGhgQ2Ou8qG3Wf2CZ): paid Claude plugin (USD 19.99, one-time) that audits a website for Google and AI-search readiness with 78 evidence-based signals, generates paste-ready fixes (robots.txt, llms.txt, JSON-LD, FAQ blocks) and benchmarks a site against competitors the user names. Overview: [site audit page](${BASE}/en/site-audit)`);
+  L.push(`- [GEO Agent Team for Claude](https://buy.polar.sh/polar_cl_f2U4MFgb5c5drxsz566CbomAj2BGhgQ2Ou8qG3Wf2CZ): paid Claude plugin (USD 9.99, one-time) that audits a website for Google and AI-search readiness with 78 evidence-based signals, generates paste-ready fixes (robots.txt, llms.txt, JSON-LD, FAQ blocks) and benchmarks a site against competitors the user names. Overview: [site audit page](${BASE}/en/site-audit)`);
   L.push("- [GEO Audit Lite](https://github.com/Woodstonestudio/geo-audit-lite): free, MIT-licensed version with the 24 most important signals");
   L.push("");
   L.push("## Work", "");
