@@ -43,6 +43,7 @@ const C = {
       points: ["78 sinyal, 0–100 puan, öncelikli düzeltme listesi", "robots.txt, llms.txt, JSON-LD ve SSS blokları hazır", "Rakip karşılaştırması ve müşteriye verilecek rapor", "Türkçe ve İngilizce, tek seferlik ödeme"],
       buy: "Tam sürüm · 9,99 $",
       free: "Ücretsiz sürüm (24 sinyal)",
+      apify: "Bulutta toplu tarama (Apify) · site başına 0,02 $",
       note: "Claude Code ya da Claude uygulaması ve Python 3 gerekir. Ödeme Polar üzerinden alınır.",
     },
     back: "Ana sayfa",
@@ -93,6 +94,7 @@ const C = {
       points: ["78 signals, 0–100 score, prioritised fix list", "Ready robots.txt, llms.txt, JSON-LD and FAQ blocks", "Competitor benchmark and a client-ready report", "Turkish and English, one-time payment"],
       buy: "Full version · $9.99",
       free: "Free version (24 signals)",
+      apify: "Bulk audits in the cloud (Apify) · $0.02 per site",
       note: "Requires Claude Code or the Claude app and Python 3. Payment is handled by Polar.",
     },
     back: "Home",
@@ -201,6 +203,7 @@ export function AuditPage({ locale }: { locale: Locale }) {
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a href="https://buy.polar.sh/polar_cl_f2U4MFgb5c5drxsz566CbomAj2BGhgQ2Ou8qG3Wf2CZ" target="_blank" rel="noopener" className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-b from-[#26231E] to-[#3A3630] px-7 py-3.5 text-sm font-medium text-[#F3F0EA] shadow-[0_1px_2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-soft hover:-translate-y-px active:scale-[0.98]">{c.kit.buy} <span aria-hidden>→</span></a>
                 <a href="https://github.com/Woodstonestudio/geo-audit-lite" target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-[13px] text-bone transition-colors hover:border-bone-dim">{c.kit.free}</a>
+                <a href="https://apify.com/superstars/ai-search-readiness-audit" target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-[13px] text-bone transition-colors hover:border-bone-dim">{c.kit.apify}</a>
               </div>
               <p className="mt-4 text-[12px] text-gray-warm">{c.kit.note}</p>
             </div>
